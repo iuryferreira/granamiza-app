@@ -101,7 +101,7 @@
             this.txtConfirmeSenha.ForeColor = System.Drawing.Color.White;
             this.txtConfirmeSenha.Location = new System.Drawing.Point(14, 343);
             this.txtConfirmeSenha.Name = "txtConfirmeSenha";
-            this.txtConfirmeSenha.Size = new System.Drawing.Size(142, 23);
+            this.txtConfirmeSenha.Size = new System.Drawing.Size(140, 23);
             this.txtConfirmeSenha.TabIndex = 7;
             this.txtConfirmeSenha.Text = "Confirme a senha:";
             // 
@@ -169,7 +169,7 @@
             this.chkTermosUso.ForeColor = System.Drawing.Color.Gainsboro;
             this.chkTermosUso.Location = new System.Drawing.Point(131, 401);
             this.chkTermosUso.Name = "chkTermosUso";
-            this.chkTermosUso.Size = new System.Drawing.Size(178, 17);
+            this.chkTermosUso.Size = new System.Drawing.Size(173, 17);
             this.chkTermosUso.TabIndex = 25;
             this.chkTermosUso.Text = "Aceito todos os termos de uso";
             this.chkTermosUso.UseVisualStyleBackColor = true;
@@ -228,6 +228,7 @@
             this.btnSalvar.TabIndex = 26;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // FrmCadastro
             // 
