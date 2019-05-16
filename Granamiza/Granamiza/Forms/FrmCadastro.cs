@@ -26,6 +26,7 @@ namespace Granamiza.Forms
         {
             //Ao abrir form, cursor ativado na caixa de texto do nome.
             this.ActiveControl = txtNome;
+            rbJohn.Checked = true;
         }
 
         /// <summary>
@@ -52,25 +53,30 @@ namespace Granamiza.Forms
 
         /// <summary>
         /// Cor das linhas quando não estiverem em foco.
+        /// Limpando o label de validação a cada campo focado.
         /// </summary>
         private void TxtNome_Leave(object sender, EventArgs e)
         {
             MeusWidgets.CorLinhaForm(linhaNome);
+            lblNomeErro.Text = "";
         }
 
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
             MeusWidgets.CorLinhaForm(linhaEmail);
+            lblEmailErro.Text = "";
         }
 
         private void TxtSenha_Leave(object sender, EventArgs e)
         {
             MeusWidgets.CorLinhaForm(linhaSenha);
+            lblSenhaErro.Text = "";
         }
 
         private void TxtConSenha_Leave(object sender, EventArgs e)
         {
             MeusWidgets.CorLinhaForm(linhaConSenha);
+            lblConSenhaErro.Text = "";
         }
 
         //Evento do botão Salvar.
@@ -124,55 +130,57 @@ namespace Granamiza.Forms
         {
             string email = txtEmail.Text.Trim();
 
+            bool validou = true;
+
             //Valida nome
             if (txtNome.Text.Trim().Length < 3)
             {
-                MessageBox.Show("Preencha o nome corretamente (Mínino 3 caracteres).");
-                return false;
-            }
+                MeusWidgets.AvisoForm(lblNomeErro,"O nome precisa ser maior que 3 caracteres.");
+validou = false;            }
 
             //Valida senha.
             if (txtSenha.Text.Trim().Length < 5)
             {
-                MessageBox.Show("Preencha a senha corretamente (Mínimo 6 caracteres).");
-                return false;
+                MeusWidgets.AvisoForm(lblSenhaErro,"A senha precisa ter no mínimo 6 caracteres.");
+                validou = false;
             }
 
             //Valida se e-mail foi digitado.
             if (email == "")
             {
-                MessageBox.Show("Preencha o E-mail.");
-                return false;
+                MeusWidgets.AvisoForm(lblEmailErro,"O E-mail não pode ser vazio. Preencha o E-mail.");
+                validou = false;
             }
 
             //Valida senha com confirmação de senha.
-            if (txtSenha.Text.Trim() != txtConSenha.Text.Trim())
+            if (txtSenha.Text.Trim() != txtConSenha.Text.Trim() || txtConSenha.Text.Trim() == String.Empty)
             {
-                MessageBox.Show("As senhas não são iguais.");
-                return false;
+                MeusWidgets.AvisoForm(lblConSenhaErro,"As senhas digitadas não são iguais.");
+                validou = false;
             }
 
             //Valida e-mail (válido ou não válido).
             if (!ValidarEmail(email))
             {
-                MessageBox.Show("Digite um E-mail válido.");
-                return false;
-            }
-
-            //Valida e-mail (se é único ou já foi cadastrado).
-            if (!VerificarEmailUnico(email))
-            {
-                MessageBox.Show("Endereço de E-mail já cadastrado.");
-                return false;
+                MeusWidgets.AvisoForm(lblEmailErro,"Digite um E-mail válido.");
+                validou = false;
             }
 
             //Valida se checkbox de termos de uso está selecionado.
             if (!chkTermosUso.Checked)
             {
-                MessageBox.Show("Você precisa aceitar os termos de uso.");
-                return false;
+                MeusWidgets.AvisoForm(lblTermosDeUsoErro,"Você precisa aceitar os termos de uso.");
+                validou = false;
             }
-            return true;
+
+            //Valida e-mail (se é único ou já foi cadastrado).
+            if (!VerificarEmailUnico(email))
+            {
+                MeusWidgets.AvisoForm(lblEmailErro, "Endereço de E-mail digitado já está cadastrado.");
+                validou = false;
+            }
+
+            return validou;
         }
 
         //Valida E-mail através de expressão regular.
@@ -214,6 +222,16 @@ namespace Granamiza.Forms
         {
             //Usando algoritmo Sha256 + salt já implementados através da biblioteca Crypt.
             return Crypter.Sha256.Crypt(senhaText);
+        }
+
+        private void ChkTermosUso_CheckedChanged(object sender, EventArgs e)
+        {
+            lblTermosDeUsoErro.Text = String.Empty;
+        }
+
+        private void LblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
