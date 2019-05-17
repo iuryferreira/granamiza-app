@@ -19,6 +19,7 @@ namespace Granamiza.Modelo
         public sbyte dark_mode { get; set; }
         public sbyte transacao_email { get; set; }
         public int usuario_id { get; set; }
+        public sbyte email_verificado { get; set; }
     
         public virtual usuario usuario { get; set; }
     }

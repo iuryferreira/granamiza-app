@@ -7,7 +7,7 @@
       <Diagram DiagramId="138087e5ec41433787618698c0bf0a51" Name="Diagram1">
         <EntityTypeShape EntityType="granamizaModel.categoria" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.cotacao" Width="1.5" PointX="5.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.preferencias" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.preferencias" Width="1.5" PointX="2.875" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.simulacao" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.transacao" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.usuario" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />

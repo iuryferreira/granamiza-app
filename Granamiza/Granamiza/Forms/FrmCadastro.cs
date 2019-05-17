@@ -85,32 +85,66 @@ namespace Granamiza.Forms
             Salvar();
         }
 
-        //Salvar usuário. 
+        //Salvar usuário e suas preferências. 
         private void Salvar()
         {
+            string caminhoAvatar = "Granamiza\\Granamiza\\Imagens\\male";
+
             //Testa se validou ou não. Se validou prossegue com a operação.
             if (!Validar())
             {
                 return;
             }
-            //Bloco using estanciando objeto de contexto da base de dados.
-            using (var bd = new granamizaEntities())
+
+            try
             {
-                //Objeto DateTime para data_criacao do usuário.
-                DateTime dt = DateTime.Now;
-                //Preencher os dados do usuário.
-                usuario u = new usuario
+                //Bloco using estanciando objeto de contexto da base de dados.
+                using (var bd = new granamizaEntities())
                 {
-                    nome = txtNome.Text,
-                    email = txtEmail.Text.Trim(),
-                    //Receber retorno de método que faz hash da senha.
-                    senha = CriptografarSenha(txtSenha.Text.Trim()),
-                    data_criacao = dt
-                };
-                bd.usuario.Add(u);
-                bd.SaveChanges();
-                MessageBox.Show("Usuário cadastrado com sucesso!");
-                LimparForm();
+                    //Objeto DateTime para data_criacao do usuário.
+                    DateTime dt = DateTime.Now;
+                    //Preencher os dados do usuário.
+                    usuario u = new usuario
+                    {
+                        nome = txtNome.Text,
+                        email = txtEmail.Text.Trim(),
+                        //Receber retorno de método que faz hash da senha.
+                        senha = CriptografarSenha(txtSenha.Text.Trim()),
+                        data_criacao = dt
+                    };
+                    //Adicionar usuário
+                    bd.usuario.Add(u);
+
+                    if (rbJoana.Checked)
+                    {
+                        caminhoAvatar = "Granamiza\\Granamiza\\Imagens\\female";
+                    }
+
+                    //Preenhcer dados de preferência de usuário.
+                    preferencias p = new preferencias
+                    {
+                        avatar = caminhoAvatar,
+                        dark_mode = 0,
+                        transacao_email = 0,
+                        email_verificado = 0,
+                        usuario_id = u.id
+                    };
+                    //Adicionar preferências
+                    bd.preferencias.Add(p);
+
+                    bd.SaveChanges();
+                    MessageBox.Show("Usuário cadastrado com sucesso!");
+                    LimparForm();
+                }
+            }
+
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possível efetuar o cadastro.");
+            }
+
+            finally
+            {
                 Close();
             }
         }
@@ -135,55 +169,48 @@ namespace Granamiza.Forms
             //Valida nome
             if (txtNome.Text.Trim().Length < 3)
             {
-                MeusWidgets.AvisoForm(lblNomeErro,"O nome precisa ser maior que 3 caracteres.");
-validou = false;            }
-
-            //Valida senha.
-            if (txtSenha.Text.Trim().Length < 5)
-            {
-                MeusWidgets.AvisoForm(lblSenhaErro,"A senha precisa ter no mínimo 6 caracteres.");
+                MeusWidgets.AvisoForm(lblNomeErro, "O nome precisa ser maior que 3 caracteres.");
                 validou = false;
             }
 
             //Valida se e-mail foi digitado.
             if (email == "")
             {
-                MeusWidgets.AvisoForm(lblEmailErro,"O E-mail não pode ser vazio. Preencha o E-mail.");
+                MeusWidgets.AvisoForm(lblEmailErro, "O E-mail não pode ser vazio. Preencha o E-mail.");
+                validou = false;
+            }
+
+            //Valida e-mail (válido ou não válido) e valida se é único ou já foi cadastrado.
+            if (!ValidarEmail(email))
+            {
+                validou = false;
+            }
+
+            //Valida senha.
+            if (txtSenha.Text.Trim().Length < 5)
+            {
+                MeusWidgets.AvisoForm(lblSenhaErro, "A senha precisa ter no mínimo 6 caracteres.");
                 validou = false;
             }
 
             //Valida senha com confirmação de senha.
             if (txtSenha.Text.Trim() != txtConSenha.Text.Trim() || txtConSenha.Text.Trim() == String.Empty)
             {
-                MeusWidgets.AvisoForm(lblConSenhaErro,"As senhas digitadas não são iguais.");
-                validou = false;
-            }
-
-            //Valida e-mail (válido ou não válido).
-            if (!ValidarEmail(email))
-            {
-                MeusWidgets.AvisoForm(lblEmailErro,"Digite um E-mail válido.");
+                MeusWidgets.AvisoForm(lblConSenhaErro, "As senhas digitadas não são iguais.");
                 validou = false;
             }
 
             //Valida se checkbox de termos de uso está selecionado.
             if (!chkTermosUso.Checked)
             {
-                MeusWidgets.AvisoForm(lblTermosDeUsoErro,"Você precisa aceitar os termos de uso.");
-                validou = false;
-            }
-
-            //Valida e-mail (se é único ou já foi cadastrado).
-            if (!VerificarEmailUnico(email))
-            {
-                MeusWidgets.AvisoForm(lblEmailErro, "Endereço de E-mail digitado já está cadastrado.");
+                MeusWidgets.AvisoForm(lblTermosDeUsoErro, "Você precisa aceitar os termos de uso.");
                 validou = false;
             }
 
             return validou;
         }
 
-        //Valida E-mail através de expressão regular.
+        //Valida E-mail através de expressão regular, e se válido chama método para verificar se é único.
         private bool ValidarEmail(string email)
         {
             //Expressão regular.
@@ -191,8 +218,17 @@ validou = false;            }
 
             if (!rg.IsMatch(email))
             {
+                MeusWidgets.AvisoForm(lblEmailErro, "Digite um E-mail válido.");
                 return false;
             }
+
+            //Método para verificar se é único.
+            if (!VerificarEmailUnico(email))
+            {
+                MeusWidgets.AvisoForm(lblEmailErro, "Endereço de E-mail digitado já está cadastrado.");
+                return false;
+            }
+
             return true;
         }
 
@@ -229,9 +265,5 @@ validou = false;            }
             lblTermosDeUsoErro.Text = String.Empty;
         }
 
-        private void LblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

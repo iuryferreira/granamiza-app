@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="is_gasto" Type="tinyint" Nullable="false" />
           <Property Name="icone" Type="varchar" MaxLength="255" />
@@ -18,7 +18,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="data_horario" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="data_criacao" Type="datetime" Precision="0" Nullable="false" />
@@ -27,17 +27,18 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="avatar" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="dark_mode" Type="tinyint" Nullable="false" />
           <Property Name="transacao_email" Type="tinyint" Nullable="false" />
+          <Property Name="email_verificado" Type="tinyint" Nullable="false" />
           <Property Name="usuario_id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="simulacao">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="valor_inserido" Type="varchar" MaxLength="45" />
           <Property Name="juros" Type="varchar" MaxLength="45" />
           <Property Name="qnt_meses" Type="varchar" MaxLength="45" />
@@ -173,6 +174,7 @@
           <Property Name="transacao_email" Type="SByte" Nullable="false" />
           <Property Name="usuario_id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="usuario" Relationship="Self.fk_preferencias_usuario1" FromRole="preferencias" ToRole="usuario" />
+          <Property Name="email_verificado" Type="SByte" Nullable="false" />
         </EntityType>
         <EntityType Name="simulacao">
           <Key>
@@ -316,6 +318,7 @@
           <EntitySetMapping Name="preferencias">
             <EntityTypeMapping TypeName="granamizaModel.preferencias">
               <MappingFragment StoreEntitySet="preferencias">
+                <ScalarProperty Name="email_verificado" ColumnName="email_verificado" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="avatar" ColumnName="avatar" />
                 <ScalarProperty Name="dark_mode" ColumnName="dark_mode" />

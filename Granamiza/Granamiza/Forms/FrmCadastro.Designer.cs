@@ -38,27 +38,27 @@
             this.rbJoana = new System.Windows.Forms.RadioButton();
             this.rbJohn = new System.Windows.Forms.RadioButton();
             this.pnlDadosConta = new System.Windows.Forms.Panel();
-            this.pnlAvatar = new System.Windows.Forms.Panel();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.txtConfirmeSenha = new System.Windows.Forms.Label();
-            this.linhaEmail = new System.Windows.Forms.Panel();
-            this.linhaConSenha = new System.Windows.Forms.Panel();
-            this.linhaNome = new System.Windows.Forms.Panel();
-            this.linhaSenha = new System.Windows.Forms.Panel();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtConSenha = new System.Windows.Forms.TextBox();
-            this.chkTermosUso = new System.Windows.Forms.CheckBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.lblEmailErro = new System.Windows.Forms.Label();
-            this.lblConSenhaErro = new System.Windows.Forms.Label();
-            this.lblNomeErro = new System.Windows.Forms.Label();
-            this.lblSenhaErro = new System.Windows.Forms.Label();
-            this.lblTermosDeUsoErro = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTermosDeUsoErro = new System.Windows.Forms.Label();
+            this.lblSenhaErro = new System.Windows.Forms.Label();
+            this.lblNomeErro = new System.Windows.Forms.Label();
+            this.lblConSenhaErro = new System.Windows.Forms.Label();
+            this.lblEmailErro = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.chkTermosUso = new System.Windows.Forms.CheckBox();
+            this.txtConSenha = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.linhaSenha = new System.Windows.Forms.Panel();
+            this.linhaNome = new System.Windows.Forms.Panel();
+            this.linhaConSenha = new System.Windows.Forms.Panel();
+            this.linhaEmail = new System.Windows.Forms.Panel();
+            this.txtConfirmeSenha = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.pnlAvatar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarioCadastro)).BeginInit();
             this.gbAvatar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarFemale)).BeginInit();
@@ -90,7 +90,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(169, 45);
             this.lblTitulo.TabIndex = 14;
             this.lblTitulo.Text = "Cadastre-se";
-            this.lblTitulo.Click += new System.EventHandler(this.LblTitulo_Click);
             // 
             // gbAvatar
             // 
@@ -177,227 +176,6 @@
             this.pnlDadosConta.Size = new System.Drawing.Size(410, 374);
             this.pnlDadosConta.TabIndex = 33;
             // 
-            // pnlAvatar
-            // 
-            this.pnlAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlAvatar.AutoSize = true;
-            this.pnlAvatar.Location = new System.Drawing.Point(12, 107);
-            this.pnlAvatar.Name = "pnlAvatar";
-            this.pnlAvatar.Size = new System.Drawing.Size(413, 113);
-            this.pnlAvatar.TabIndex = 33;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(4, 89);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(55, 23);
-            this.lblEmail.TabIndex = 51;
-            this.lblEmail.Text = "Email:";
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(4, 41);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(57, 23);
-            this.lblNome.TabIndex = 52;
-            this.lblNome.Text = "Nome:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.SeaGreen;
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNome.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNome.Location = new System.Drawing.Point(91, 43);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(305, 20);
-            this.txtNome.TabIndex = 53;
-            this.txtNome.Enter += new System.EventHandler(this.TxtNome_Enter);
-            this.txtNome.Leave += new System.EventHandler(this.TxtNome_Leave);
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(4, 143);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(60, 23);
-            this.lblSenha.TabIndex = 54;
-            this.lblSenha.Text = "Senha:";
-            // 
-            // txtConfirmeSenha
-            // 
-            this.txtConfirmeSenha.AutoSize = true;
-            this.txtConfirmeSenha.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmeSenha.ForeColor = System.Drawing.Color.White;
-            this.txtConfirmeSenha.Location = new System.Drawing.Point(4, 191);
-            this.txtConfirmeSenha.Name = "txtConfirmeSenha";
-            this.txtConfirmeSenha.Size = new System.Drawing.Size(142, 23);
-            this.txtConfirmeSenha.TabIndex = 55;
-            this.txtConfirmeSenha.Text = "Confirme a senha:";
-            // 
-            // linhaEmail
-            // 
-            this.linhaEmail.BackColor = System.Drawing.Color.Gainsboro;
-            this.linhaEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaEmail.Location = new System.Drawing.Point(91, 112);
-            this.linhaEmail.Name = "linhaEmail";
-            this.linhaEmail.Size = new System.Drawing.Size(305, 2);
-            this.linhaEmail.TabIndex = 56;
-            // 
-            // linhaConSenha
-            // 
-            this.linhaConSenha.BackColor = System.Drawing.Color.Gainsboro;
-            this.linhaConSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaConSenha.Location = new System.Drawing.Point(163, 212);
-            this.linhaConSenha.Name = "linhaConSenha";
-            this.linhaConSenha.Size = new System.Drawing.Size(232, 2);
-            this.linhaConSenha.TabIndex = 59;
-            // 
-            // linhaNome
-            // 
-            this.linhaNome.BackColor = System.Drawing.Color.Gainsboro;
-            this.linhaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaNome.Location = new System.Drawing.Point(91, 63);
-            this.linhaNome.Name = "linhaNome";
-            this.linhaNome.Size = new System.Drawing.Size(305, 2);
-            this.linhaNome.TabIndex = 57;
-            // 
-            // linhaSenha
-            // 
-            this.linhaSenha.BackColor = System.Drawing.Color.Gainsboro;
-            this.linhaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaSenha.Location = new System.Drawing.Point(91, 161);
-            this.linhaSenha.Name = "linhaSenha";
-            this.linhaSenha.Size = new System.Drawing.Size(306, 2);
-            this.linhaSenha.TabIndex = 58;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.SeaGreen;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.Location = new System.Drawing.Point(93, 92);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(306, 20);
-            this.txtEmail.TabIndex = 60;
-            this.txtEmail.Enter += new System.EventHandler(this.TxtEmail_Enter);
-            this.txtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.BackColor = System.Drawing.Color.SeaGreen;
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSenha.Location = new System.Drawing.Point(91, 141);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(306, 20);
-            this.txtSenha.TabIndex = 61;
-            this.txtSenha.UseSystemPasswordChar = true;
-            this.txtSenha.Enter += new System.EventHandler(this.TxtSenha_Enter);
-            this.txtSenha.Leave += new System.EventHandler(this.TxtSenha_Leave);
-            // 
-            // txtConSenha
-            // 
-            this.txtConSenha.BackColor = System.Drawing.Color.SeaGreen;
-            this.txtConSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConSenha.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtConSenha.Location = new System.Drawing.Point(163, 191);
-            this.txtConSenha.Name = "txtConSenha";
-            this.txtConSenha.Size = new System.Drawing.Size(232, 20);
-            this.txtConSenha.TabIndex = 62;
-            this.txtConSenha.UseSystemPasswordChar = true;
-            this.txtConSenha.Enter += new System.EventHandler(this.TxtConSenha_Enter);
-            this.txtConSenha.Leave += new System.EventHandler(this.TxtConSenha_Leave);
-            // 
-            // chkTermosUso
-            // 
-            this.chkTermosUso.AutoSize = true;
-            this.chkTermosUso.Font = new System.Drawing.Font("Bahnschrift Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTermosUso.ForeColor = System.Drawing.Color.Gainsboro;
-            this.chkTermosUso.Location = new System.Drawing.Point(121, 265);
-            this.chkTermosUso.Name = "chkTermosUso";
-            this.chkTermosUso.Size = new System.Drawing.Size(178, 17);
-            this.chkTermosUso.TabIndex = 63;
-            this.chkTermosUso.Text = "Aceito todos os termos de uso";
-            this.chkTermosUso.UseVisualStyleBackColor = true;
-            this.chkTermosUso.CheckedChanged += new System.EventHandler(this.ChkTermosUso_CheckedChanged);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.FlatAppearance.BorderSize = 2;
-            this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(121, 300);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(170, 45);
-            this.btnSalvar.TabIndex = 64;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // lblEmailErro
-            // 
-            this.lblEmailErro.AutoSize = true;
-            this.lblEmailErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailErro.ForeColor = System.Drawing.Color.Brown;
-            this.lblEmailErro.Location = new System.Drawing.Point(89, 118);
-            this.lblEmailErro.Name = "lblEmailErro";
-            this.lblEmailErro.Size = new System.Drawing.Size(0, 13);
-            this.lblEmailErro.TabIndex = 65;
-            // 
-            // lblConSenhaErro
-            // 
-            this.lblConSenhaErro.AutoSize = true;
-            this.lblConSenhaErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConSenhaErro.ForeColor = System.Drawing.Color.Brown;
-            this.lblConSenhaErro.Location = new System.Drawing.Point(160, 217);
-            this.lblConSenhaErro.Name = "lblConSenhaErro";
-            this.lblConSenhaErro.Size = new System.Drawing.Size(0, 13);
-            this.lblConSenhaErro.TabIndex = 66;
-            // 
-            // lblNomeErro
-            // 
-            this.lblNomeErro.AutoSize = true;
-            this.lblNomeErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeErro.ForeColor = System.Drawing.Color.Brown;
-            this.lblNomeErro.Location = new System.Drawing.Point(85, 68);
-            this.lblNomeErro.Name = "lblNomeErro";
-            this.lblNomeErro.Size = new System.Drawing.Size(0, 13);
-            this.lblNomeErro.TabIndex = 67;
-            // 
-            // lblSenhaErro
-            // 
-            this.lblSenhaErro.AutoSize = true;
-            this.lblSenhaErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenhaErro.ForeColor = System.Drawing.Color.Brown;
-            this.lblSenhaErro.Location = new System.Drawing.Point(90, 166);
-            this.lblSenhaErro.Name = "lblSenhaErro";
-            this.lblSenhaErro.Size = new System.Drawing.Size(0, 13);
-            this.lblSenhaErro.TabIndex = 68;
-            // 
-            // lblTermosDeUsoErro
-            // 
-            this.lblTermosDeUsoErro.AutoSize = true;
-            this.lblTermosDeUsoErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTermosDeUsoErro.ForeColor = System.Drawing.Color.Brown;
-            this.lblTermosDeUsoErro.Location = new System.Drawing.Point(125, 281);
-            this.lblTermosDeUsoErro.Name = "lblTermosDeUsoErro";
-            this.lblTermosDeUsoErro.Size = new System.Drawing.Size(0, 12);
-            this.lblTermosDeUsoErro.TabIndex = 69;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblTermosDeUsoErro);
@@ -428,6 +206,227 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Preencha os dados:";
+            // 
+            // lblTermosDeUsoErro
+            // 
+            this.lblTermosDeUsoErro.AutoSize = true;
+            this.lblTermosDeUsoErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTermosDeUsoErro.ForeColor = System.Drawing.Color.Brown;
+            this.lblTermosDeUsoErro.Location = new System.Drawing.Point(125, 281);
+            this.lblTermosDeUsoErro.Name = "lblTermosDeUsoErro";
+            this.lblTermosDeUsoErro.Size = new System.Drawing.Size(0, 12);
+            this.lblTermosDeUsoErro.TabIndex = 69;
+            // 
+            // lblSenhaErro
+            // 
+            this.lblSenhaErro.AutoSize = true;
+            this.lblSenhaErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenhaErro.ForeColor = System.Drawing.Color.Brown;
+            this.lblSenhaErro.Location = new System.Drawing.Point(90, 166);
+            this.lblSenhaErro.Name = "lblSenhaErro";
+            this.lblSenhaErro.Size = new System.Drawing.Size(0, 13);
+            this.lblSenhaErro.TabIndex = 68;
+            // 
+            // lblNomeErro
+            // 
+            this.lblNomeErro.AutoSize = true;
+            this.lblNomeErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeErro.ForeColor = System.Drawing.Color.Brown;
+            this.lblNomeErro.Location = new System.Drawing.Point(85, 68);
+            this.lblNomeErro.Name = "lblNomeErro";
+            this.lblNomeErro.Size = new System.Drawing.Size(0, 13);
+            this.lblNomeErro.TabIndex = 67;
+            // 
+            // lblConSenhaErro
+            // 
+            this.lblConSenhaErro.AutoSize = true;
+            this.lblConSenhaErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConSenhaErro.ForeColor = System.Drawing.Color.Brown;
+            this.lblConSenhaErro.Location = new System.Drawing.Point(160, 217);
+            this.lblConSenhaErro.Name = "lblConSenhaErro";
+            this.lblConSenhaErro.Size = new System.Drawing.Size(0, 13);
+            this.lblConSenhaErro.TabIndex = 66;
+            // 
+            // lblEmailErro
+            // 
+            this.lblEmailErro.AutoSize = true;
+            this.lblEmailErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailErro.ForeColor = System.Drawing.Color.Brown;
+            this.lblEmailErro.Location = new System.Drawing.Point(89, 118);
+            this.lblEmailErro.Name = "lblEmailErro";
+            this.lblEmailErro.Size = new System.Drawing.Size(0, 13);
+            this.lblEmailErro.TabIndex = 65;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.FlatAppearance.BorderSize = 2;
+            this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(121, 300);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(170, 45);
+            this.btnSalvar.TabIndex = 64;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // chkTermosUso
+            // 
+            this.chkTermosUso.AutoSize = true;
+            this.chkTermosUso.Font = new System.Drawing.Font("Bahnschrift Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTermosUso.ForeColor = System.Drawing.Color.Gainsboro;
+            this.chkTermosUso.Location = new System.Drawing.Point(121, 265);
+            this.chkTermosUso.Name = "chkTermosUso";
+            this.chkTermosUso.Size = new System.Drawing.Size(173, 17);
+            this.chkTermosUso.TabIndex = 63;
+            this.chkTermosUso.Text = "Aceito todos os termos de uso";
+            this.chkTermosUso.UseVisualStyleBackColor = true;
+            this.chkTermosUso.CheckedChanged += new System.EventHandler(this.ChkTermosUso_CheckedChanged);
+            // 
+            // txtConSenha
+            // 
+            this.txtConSenha.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtConSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConSenha.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtConSenha.Location = new System.Drawing.Point(163, 191);
+            this.txtConSenha.Name = "txtConSenha";
+            this.txtConSenha.Size = new System.Drawing.Size(232, 20);
+            this.txtConSenha.TabIndex = 62;
+            this.txtConSenha.UseSystemPasswordChar = true;
+            this.txtConSenha.Enter += new System.EventHandler(this.TxtConSenha_Enter);
+            this.txtConSenha.Leave += new System.EventHandler(this.TxtConSenha_Leave);
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSenha.Location = new System.Drawing.Point(91, 141);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(306, 20);
+            this.txtSenha.TabIndex = 61;
+            this.txtSenha.UseSystemPasswordChar = true;
+            this.txtSenha.Enter += new System.EventHandler(this.TxtSenha_Enter);
+            this.txtSenha.Leave += new System.EventHandler(this.TxtSenha_Leave);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.Location = new System.Drawing.Point(93, 92);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(306, 20);
+            this.txtEmail.TabIndex = 60;
+            this.txtEmail.Enter += new System.EventHandler(this.TxtEmail_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
+            // 
+            // linhaSenha
+            // 
+            this.linhaSenha.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linhaSenha.Location = new System.Drawing.Point(91, 161);
+            this.linhaSenha.Name = "linhaSenha";
+            this.linhaSenha.Size = new System.Drawing.Size(306, 2);
+            this.linhaSenha.TabIndex = 58;
+            // 
+            // linhaNome
+            // 
+            this.linhaNome.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linhaNome.Location = new System.Drawing.Point(91, 63);
+            this.linhaNome.Name = "linhaNome";
+            this.linhaNome.Size = new System.Drawing.Size(305, 2);
+            this.linhaNome.TabIndex = 57;
+            // 
+            // linhaConSenha
+            // 
+            this.linhaConSenha.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaConSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linhaConSenha.Location = new System.Drawing.Point(163, 212);
+            this.linhaConSenha.Name = "linhaConSenha";
+            this.linhaConSenha.Size = new System.Drawing.Size(232, 2);
+            this.linhaConSenha.TabIndex = 59;
+            // 
+            // linhaEmail
+            // 
+            this.linhaEmail.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linhaEmail.Location = new System.Drawing.Point(91, 112);
+            this.linhaEmail.Name = "linhaEmail";
+            this.linhaEmail.Size = new System.Drawing.Size(305, 2);
+            this.linhaEmail.TabIndex = 56;
+            // 
+            // txtConfirmeSenha
+            // 
+            this.txtConfirmeSenha.AutoSize = true;
+            this.txtConfirmeSenha.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmeSenha.ForeColor = System.Drawing.Color.White;
+            this.txtConfirmeSenha.Location = new System.Drawing.Point(4, 191);
+            this.txtConfirmeSenha.Name = "txtConfirmeSenha";
+            this.txtConfirmeSenha.Size = new System.Drawing.Size(140, 23);
+            this.txtConfirmeSenha.TabIndex = 55;
+            this.txtConfirmeSenha.Text = "Confirme a senha:";
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.White;
+            this.lblSenha.Location = new System.Drawing.Point(4, 143);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(60, 23);
+            this.lblSenha.TabIndex = 54;
+            this.lblSenha.Text = "Senha:";
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNome.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNome.Location = new System.Drawing.Point(91, 43);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(305, 20);
+            this.txtNome.TabIndex = 53;
+            this.txtNome.Enter += new System.EventHandler(this.TxtNome_Enter);
+            this.txtNome.Leave += new System.EventHandler(this.TxtNome_Leave);
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(4, 41);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(57, 23);
+            this.lblNome.TabIndex = 52;
+            this.lblNome.Text = "Nome:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(4, 89);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(55, 23);
+            this.lblEmail.TabIndex = 51;
+            this.lblEmail.Text = "Email:";
+            // 
+            // pnlAvatar
+            // 
+            this.pnlAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAvatar.AutoSize = true;
+            this.pnlAvatar.Location = new System.Drawing.Point(12, 107);
+            this.pnlAvatar.Name = "pnlAvatar";
+            this.pnlAvatar.Size = new System.Drawing.Size(413, 113);
+            this.pnlAvatar.TabIndex = 33;
             // 
             // FrmCadastro
             // 
