@@ -37,11 +37,12 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.gbLogin = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lnkCadastrar = new System.Windows.Forms.LinkLabel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.chkConectado = new System.Windows.Forms.CheckBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblDesc = new System.Windows.Forms.Label();
             this.gbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -149,9 +150,23 @@
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Efetue o login para acessar seu gerenciador:";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Crimson;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift", 7.75F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Khaki;
+            this.linkLabel1.Location = new System.Drawing.Point(448, 166);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(112, 13);
+            this.linkLabel1.TabIndex = 73;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Esqueci minha senha";
+            // 
             // lnkCadastrar
             // 
-            this.lnkCadastrar.ActiveLinkColor = System.Drawing.Color.Crimson;
+            this.lnkCadastrar.ActiveLinkColor = System.Drawing.Color.MediumSeaGreen;
             this.lnkCadastrar.AutoSize = true;
             this.lnkCadastrar.Font = new System.Drawing.Font("Bahnschrift", 8.75F, System.Drawing.FontStyle.Bold);
             this.lnkCadastrar.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
@@ -167,7 +182,6 @@
             // btnEntrar
             // 
             this.btnEntrar.FlatAppearance.BorderSize = 2;
-            this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Khaki;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
@@ -178,8 +192,6 @@
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
-            this.btnEntrar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnEntrar_MouseDown);
-            this.btnEntrar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnEntrar_MouseUp);
             // 
             // chkConectado
             // 
@@ -205,19 +217,15 @@
             this.pbLogo.TabIndex = 73;
             this.pbLogo.TabStop = false;
             // 
-            // linkLabel1
+            // lblDesc
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Crimson;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift", 7.75F, System.Drawing.FontStyle.Bold);
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Khaki;
-            this.linkLabel1.Location = new System.Drawing.Point(464, 162);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(96, 13);
-            this.linkLabel1.TabIndex = 73;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Recupere a senha";
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblDesc.Location = new System.Drawing.Point(623, 103);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(133, 13);
+            this.lblDesc.TabIndex = 74;
+            this.lblDesc.Text = "Bem vindo ao Granamiza!\r\n";
             // 
             // FrmLogin
             // 
@@ -225,6 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(808, 483);
+            this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.gbLogin);
             this.Controls.Add(this.lblTitulo);
@@ -256,5 +265,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.LinkLabel lnkCadastrar;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lblDesc;
     }
 }

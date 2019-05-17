@@ -69,19 +69,6 @@ namespace Granamiza.Forms
 
         }
 
-        //cor do botão entrar ao clicar
-        private void BtnEntrar_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnEntrar.ForeColor = System.Drawing.Color.Black;
-        }
-
-        //cor do botão clicar ao soltar
-        private void BtnEntrar_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnEntrar.ForeColor = System.Drawing.Color.Gainsboro;
-
-        }
-
         //Evento de clique do entrar
         private void BtnEntrar_Click(object sender, EventArgs e)
         {

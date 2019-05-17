@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using CryptSharp;
 using Granamiza.Forms;
 using Granamiza.Modelo;
+using Granamiza.Forms.Popup;
 
 namespace Granamiza.Forms
 {
@@ -38,6 +39,7 @@ namespace Granamiza.Forms
             //Ao abrir form, cursor ativado na caixa de texto do nome.
             this.ActiveControl = txtNome;
             rbJohn.Checked = true;
+            btnSalvar.Enabled = false;
         }
 
         /// <summary>
@@ -143,21 +145,21 @@ namespace Granamiza.Forms
                     };
                     //Adicionar preferências
                     bd.preferencias.Add(p);
-
                     bd.SaveChanges();
-                    MessageBox.Show("Usuário cadastrado com sucesso!");
                     LimparForm();
                 }
             }
 
             catch (Exception)
             {
-                MessageBox.Show("Não foi possível efetuar o cadastro.");
+                //MessageBox.Show("Não foi possível efetuar o cadastro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             finally
             {
-                Close();
+                PopUpSucesso sucesso = new PopUpSucesso(this);
+
+                
             }
         }
 
@@ -209,13 +211,6 @@ namespace Granamiza.Forms
             if (txtSenha.Text.Trim() != txtConSenha.Text.Trim() || txtConSenha.Text.Trim() == String.Empty)
             {
                 MeusWidgets.AvisoForm(lblConSenhaErro, "As senhas digitadas não são iguais.");
-                validou = false;
-            }
-
-            //Valida se checkbox de termos de uso está selecionado.
-            if (!chkTermosUso.Checked)
-            {
-                MeusWidgets.AvisoForm(lblTermosDeUsoErro, "Você precisa aceitar os termos de uso.");
                 validou = false;
             }
 
@@ -275,7 +270,16 @@ namespace Granamiza.Forms
         //Limpa a mensagem de erro do checked termos de uso
         private void ChkTermosUso_CheckedChanged(object sender, EventArgs e)
         {
-            lblTermosDeUsoErro.Text = String.Empty;
+            if (!chkTermosUso.Checked)
+            {
+                btnSalvar.Enabled = false;
+            }
+
+            else
+            {
+                btnSalvar.Enabled = true;
+            }
+
         }
 
         //muda a cor caso o avatar john seja checkado
@@ -297,5 +301,6 @@ namespace Granamiza.Forms
         {
             this.frmlogin.WindowState = FormWindowState.Normal;
         }
+
     }
 }

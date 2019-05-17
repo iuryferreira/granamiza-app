@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,8 @@ namespace Granamiza.Forms
         //Escreve o texto no label de validação
         public static string AvisoForm(Label aviso, string texto)
         {
-            aviso.ForeColor = System.Drawing.Color.Khaki;
+           
+            aviso.ForeColor = Color.FromArgb(148, 39, 26);
             aviso.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             return aviso.Text = texto;
         }

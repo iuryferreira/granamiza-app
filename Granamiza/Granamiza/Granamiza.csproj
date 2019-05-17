@@ -69,6 +69,12 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MeusWidgets.cs" />
+    <Compile Include="Forms\Popup\PopUpSucesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popup\PopUpSucesso.Designer.cs">
+      <DependentUpon>PopUpSucesso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\categoria.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popup\PopUpSucesso.resx">
+      <DependentUpon>PopUpSucesso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
