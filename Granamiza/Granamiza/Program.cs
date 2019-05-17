@@ -17,7 +17,7 @@ namespace Granamiza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCadastro());
+            Application.Run(new FrmLogin());
         }
     }
 }

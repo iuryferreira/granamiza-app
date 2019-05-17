@@ -17,6 +17,17 @@ namespace Granamiza.Forms
 {
     public partial class FrmCadastro : Form
     {
+
+        //atributo para guardar o form de login
+        private Form frmlogin;
+
+        //Construtor que recebe o form de login para manter informaçoes sobre ele
+        public FrmCadastro(Form frmLogin)
+        {
+            this.frmlogin = frmLogin;
+            InitializeComponent();
+        }
+
         public FrmCadastro()
         {
             InitializeComponent();
@@ -36,6 +47,7 @@ namespace Granamiza.Forms
         {
             MeusWidgets.CorFocoLinhaForm(linhaNome);
         }
+
         private void TxtEmail_Enter(object sender, EventArgs e)
         {
             MeusWidgets.CorFocoLinhaForm(linhaEmail);
@@ -176,7 +188,7 @@ namespace Granamiza.Forms
             //Valida se e-mail foi digitado.
             if (email == "")
             {
-                MeusWidgets.AvisoForm(lblEmailErro, "O E-mail não pode ser vazio. Preencha o E-mail.");
+                MeusWidgets.AvisoForm(lblEmailErro, "O E-mail não pode ser vazio. Preencha o e-mail.");
                 validou = false;
             }
 
@@ -218,14 +230,14 @@ namespace Granamiza.Forms
 
             if (!rg.IsMatch(email))
             {
-                MeusWidgets.AvisoForm(lblEmailErro, "Digite um E-mail válido.");
+                MeusWidgets.AvisoForm(lblEmailErro, "Digite um e-mail válido.");
                 return false;
             }
 
             //Método para verificar se é único.
             if (!VerificarEmailUnico(email))
             {
-                MeusWidgets.AvisoForm(lblEmailErro, "Endereço de E-mail digitado já está cadastrado.");
+                MeusWidgets.AvisoForm(lblEmailErro, "Endereço de e-mail digitado já está cadastrado.");
                 return false;
             }
 
@@ -260,10 +272,30 @@ namespace Granamiza.Forms
             return Crypter.Sha256.Crypt(senhaText);
         }
 
+        //Limpa a mensagem de erro do checked termos de uso
         private void ChkTermosUso_CheckedChanged(object sender, EventArgs e)
         {
             lblTermosDeUsoErro.Text = String.Empty;
         }
 
+        //muda a cor caso o avatar john seja checkado
+        private void RbJohn_CheckedChanged(object sender, EventArgs e)
+        {
+            rbJohn.ForeColor = System.Drawing.Color.Khaki;
+            rbJoana.ForeColor = System.Drawing.Color.White;
+        }
+
+        //mudar a cor caso o avatar joana seja checkado
+        private void RbJoana_CheckedChanged(object sender, EventArgs e)
+        {
+            rbJohn.ForeColor = System.Drawing.Color.White;
+            rbJoana.ForeColor = System.Drawing.Color.Khaki;
+        }
+
+        //Ao fechar o form, exibirá novamente o form de login minimizado
+        private void FrmCadastro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.frmlogin.WindowState = FormWindowState.Normal;
+        }
     }
 }

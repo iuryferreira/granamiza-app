@@ -38,7 +38,7 @@
             this.rbJoana = new System.Windows.Forms.RadioButton();
             this.rbJohn = new System.Windows.Forms.RadioButton();
             this.pnlDadosConta = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbDadosUsuario = new System.Windows.Forms.GroupBox();
             this.lblTermosDeUsoErro = new System.Windows.Forms.Label();
             this.lblSenhaErro = new System.Windows.Forms.Label();
             this.lblNomeErro = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarFemale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarMale)).BeginInit();
             this.pnlDadosConta.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbDadosUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // picUsuarioCadastro
@@ -85,7 +85,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(53, 13);
+            this.lblTitulo.Location = new System.Drawing.Point(53, 20);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(169, 45);
             this.lblTitulo.TabIndex = 14;
@@ -99,7 +99,7 @@
             this.gbAvatar.Controls.Add(this.rbJoana);
             this.gbAvatar.Controls.Add(this.rbJohn);
             this.gbAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbAvatar.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbAvatar.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbAvatar.ForeColor = System.Drawing.Color.White;
             this.gbAvatar.Location = new System.Drawing.Point(12, 77);
             this.gbAvatar.Name = "gbAvatar";
@@ -143,7 +143,7 @@
             // 
             this.rbJoana.AutoSize = true;
             this.rbJoana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbJoana.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbJoana.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbJoana.ForeColor = System.Drawing.Color.White;
             this.rbJoana.Location = new System.Drawing.Point(303, 114);
             this.rbJoana.Name = "rbJoana";
@@ -152,12 +152,13 @@
             this.rbJoana.TabStop = true;
             this.rbJoana.Text = "Joana";
             this.rbJoana.UseVisualStyleBackColor = true;
+            this.rbJoana.CheckedChanged += new System.EventHandler(this.RbJoana_CheckedChanged);
             // 
             // rbJohn
             // 
             this.rbJohn.AutoSize = true;
             this.rbJohn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbJohn.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbJohn.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbJohn.ForeColor = System.Drawing.Color.White;
             this.rbJohn.Location = new System.Drawing.Point(49, 116);
             this.rbJohn.Name = "rbJohn";
@@ -166,53 +167,54 @@
             this.rbJohn.TabStop = true;
             this.rbJohn.Text = "John";
             this.rbJohn.UseVisualStyleBackColor = true;
+            this.rbJohn.CheckedChanged += new System.EventHandler(this.RbJohn_CheckedChanged);
             // 
             // pnlDadosConta
             // 
             this.pnlDadosConta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlDadosConta.Controls.Add(this.groupBox1);
-            this.pnlDadosConta.Location = new System.Drawing.Point(12, 220);
+            this.pnlDadosConta.Controls.Add(this.gbDadosUsuario);
+            this.pnlDadosConta.Location = new System.Drawing.Point(12, 231);
             this.pnlDadosConta.Name = "pnlDadosConta";
             this.pnlDadosConta.Size = new System.Drawing.Size(410, 374);
             this.pnlDadosConta.TabIndex = 33;
             // 
-            // groupBox1
+            // gbDadosUsuario
             // 
-            this.groupBox1.Controls.Add(this.lblTermosDeUsoErro);
-            this.groupBox1.Controls.Add(this.lblSenhaErro);
-            this.groupBox1.Controls.Add(this.lblNomeErro);
-            this.groupBox1.Controls.Add(this.lblConSenhaErro);
-            this.groupBox1.Controls.Add(this.lblEmailErro);
-            this.groupBox1.Controls.Add(this.btnSalvar);
-            this.groupBox1.Controls.Add(this.chkTermosUso);
-            this.groupBox1.Controls.Add(this.txtConSenha);
-            this.groupBox1.Controls.Add(this.txtSenha);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.linhaSenha);
-            this.groupBox1.Controls.Add(this.linhaNome);
-            this.groupBox1.Controls.Add(this.linhaConSenha);
-            this.groupBox1.Controls.Add(this.linhaEmail);
-            this.groupBox1.Controls.Add(this.txtConfirmeSenha);
-            this.groupBox1.Controls.Add(this.lblSenha);
-            this.groupBox1.Controls.Add(this.txtNome);
-            this.groupBox1.Controls.Add(this.lblNome);
-            this.groupBox1.Controls.Add(this.lblEmail);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(0, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(410, 365);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Preencha os dados:";
+            this.gbDadosUsuario.Controls.Add(this.lblTermosDeUsoErro);
+            this.gbDadosUsuario.Controls.Add(this.lblSenhaErro);
+            this.gbDadosUsuario.Controls.Add(this.lblNomeErro);
+            this.gbDadosUsuario.Controls.Add(this.lblConSenhaErro);
+            this.gbDadosUsuario.Controls.Add(this.lblEmailErro);
+            this.gbDadosUsuario.Controls.Add(this.btnSalvar);
+            this.gbDadosUsuario.Controls.Add(this.chkTermosUso);
+            this.gbDadosUsuario.Controls.Add(this.txtConSenha);
+            this.gbDadosUsuario.Controls.Add(this.txtSenha);
+            this.gbDadosUsuario.Controls.Add(this.txtEmail);
+            this.gbDadosUsuario.Controls.Add(this.linhaSenha);
+            this.gbDadosUsuario.Controls.Add(this.linhaNome);
+            this.gbDadosUsuario.Controls.Add(this.linhaConSenha);
+            this.gbDadosUsuario.Controls.Add(this.linhaEmail);
+            this.gbDadosUsuario.Controls.Add(this.txtConfirmeSenha);
+            this.gbDadosUsuario.Controls.Add(this.lblSenha);
+            this.gbDadosUsuario.Controls.Add(this.txtNome);
+            this.gbDadosUsuario.Controls.Add(this.lblNome);
+            this.gbDadosUsuario.Controls.Add(this.lblEmail);
+            this.gbDadosUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbDadosUsuario.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDadosUsuario.ForeColor = System.Drawing.Color.White;
+            this.gbDadosUsuario.Location = new System.Drawing.Point(0, 6);
+            this.gbDadosUsuario.Name = "gbDadosUsuario";
+            this.gbDadosUsuario.Size = new System.Drawing.Size(410, 365);
+            this.gbDadosUsuario.TabIndex = 10;
+            this.gbDadosUsuario.TabStop = false;
+            this.gbDadosUsuario.Text = "Preencha os dados:";
             // 
             // lblTermosDeUsoErro
             // 
             this.lblTermosDeUsoErro.AutoSize = true;
             this.lblTermosDeUsoErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTermosDeUsoErro.ForeColor = System.Drawing.Color.Brown;
-            this.lblTermosDeUsoErro.Location = new System.Drawing.Point(125, 281);
+            this.lblTermosDeUsoErro.Location = new System.Drawing.Point(110, 268);
             this.lblTermosDeUsoErro.Name = "lblTermosDeUsoErro";
             this.lblTermosDeUsoErro.Size = new System.Drawing.Size(0, 12);
             this.lblTermosDeUsoErro.TabIndex = 69;
@@ -240,8 +242,8 @@
             // lblConSenhaErro
             // 
             this.lblConSenhaErro.AutoSize = true;
-            this.lblConSenhaErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConSenhaErro.ForeColor = System.Drawing.Color.Brown;
+            this.lblConSenhaErro.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConSenhaErro.ForeColor = System.Drawing.Color.Crimson;
             this.lblConSenhaErro.Location = new System.Drawing.Point(160, 217);
             this.lblConSenhaErro.Name = "lblConSenhaErro";
             this.lblConSenhaErro.Size = new System.Drawing.Size(0, 13);
@@ -260,11 +262,11 @@
             // btnSalvar
             // 
             this.btnSalvar.FlatAppearance.BorderSize = 2;
-            this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(121, 300);
+            this.btnSalvar.Location = new System.Drawing.Point(121, 296);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(170, 45);
             this.btnSalvar.TabIndex = 64;
@@ -275,11 +277,11 @@
             // chkTermosUso
             // 
             this.chkTermosUso.AutoSize = true;
-            this.chkTermosUso.Font = new System.Drawing.Font("Bahnschrift Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTermosUso.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkTermosUso.ForeColor = System.Drawing.Color.Gainsboro;
-            this.chkTermosUso.Location = new System.Drawing.Point(121, 265);
+            this.chkTermosUso.Location = new System.Drawing.Point(119, 247);
             this.chkTermosUso.Name = "chkTermosUso";
-            this.chkTermosUso.Size = new System.Drawing.Size(173, 17);
+            this.chkTermosUso.Size = new System.Drawing.Size(188, 18);
             this.chkTermosUso.TabIndex = 63;
             this.chkTermosUso.Text = "Aceito todos os termos de uso";
             this.chkTermosUso.UseVisualStyleBackColor = true;
@@ -289,7 +291,7 @@
             // 
             this.txtConSenha.BackColor = System.Drawing.Color.SeaGreen;
             this.txtConSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConSenha.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConSenha.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtConSenha.Location = new System.Drawing.Point(163, 191);
             this.txtConSenha.Name = "txtConSenha";
@@ -303,7 +305,7 @@
             // 
             this.txtSenha.BackColor = System.Drawing.Color.SeaGreen;
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSenha.Location = new System.Drawing.Point(91, 141);
             this.txtSenha.Name = "txtSenha";
@@ -317,7 +319,7 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.SeaGreen;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmail.Location = new System.Drawing.Point(93, 92);
             this.txtEmail.Name = "txtEmail";
@@ -369,7 +371,7 @@
             this.txtConfirmeSenha.ForeColor = System.Drawing.Color.White;
             this.txtConfirmeSenha.Location = new System.Drawing.Point(4, 191);
             this.txtConfirmeSenha.Name = "txtConfirmeSenha";
-            this.txtConfirmeSenha.Size = new System.Drawing.Size(140, 23);
+            this.txtConfirmeSenha.Size = new System.Drawing.Size(142, 23);
             this.txtConfirmeSenha.TabIndex = 55;
             this.txtConfirmeSenha.Text = "Confirme a senha:";
             // 
@@ -388,7 +390,7 @@
             // 
             this.txtNome.BackColor = System.Drawing.Color.SeaGreen;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNome.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNome.Location = new System.Drawing.Point(91, 43);
             this.txtNome.Name = "txtNome";
@@ -423,7 +425,7 @@
             // 
             this.pnlAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAvatar.AutoSize = true;
-            this.pnlAvatar.Location = new System.Drawing.Point(12, 107);
+            this.pnlAvatar.Location = new System.Drawing.Point(12, 118);
             this.pnlAvatar.Name = "pnlAvatar";
             this.pnlAvatar.Size = new System.Drawing.Size(413, 113);
             this.pnlAvatar.TabIndex = 33;
@@ -434,7 +436,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(434, 597);
+            this.ClientSize = new System.Drawing.Size(434, 619);
             this.Controls.Add(this.picUsuarioCadastro);
             this.Controls.Add(this.gbAvatar);
             this.Controls.Add(this.pnlDadosConta);
@@ -448,6 +450,7 @@
             this.Name = "FrmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastre-se";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCadastro_FormClosing);
             this.Load += new System.EventHandler(this.FrmCadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarioCadastro)).EndInit();
             this.gbAvatar.ResumeLayout(false);
@@ -455,8 +458,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarFemale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarMale)).EndInit();
             this.pnlDadosConta.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbDadosUsuario.ResumeLayout(false);
+            this.gbDadosUsuario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,7 +475,7 @@
         private System.Windows.Forms.RadioButton rbJoana;
         private System.Windows.Forms.RadioButton rbJohn;
         private System.Windows.Forms.Panel pnlDadosConta;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbDadosUsuario;
         private System.Windows.Forms.Label lblTermosDeUsoErro;
         private System.Windows.Forms.Label lblSenhaErro;
         private System.Windows.Forms.Label lblNomeErro;
