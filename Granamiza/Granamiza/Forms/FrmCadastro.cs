@@ -127,6 +127,21 @@ namespace Granamiza.Forms
             rbJoana.ForeColor = System.Drawing.Color.Khaki;
         }
 
+        //Limpa a mensagem de erro do checked termos de uso
+        private void ChkTermosUso_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkTermosUso.Checked)
+            {
+                btnSalvar.Enabled = false;
+            }
+
+            else
+            {
+                btnSalvar.Enabled = true;
+            }
+
+        }
+
 
         //------------------------ Evento dos Botões ------------------------------------------
 
@@ -304,21 +319,6 @@ namespace Granamiza.Forms
         {
             //Usando algoritmo Sha256 + salt já implementados através da biblioteca Crypt.
             return Crypter.Sha256.Crypt(senhaText);
-        }
-
-        //Limpa a mensagem de erro do checked termos de uso
-        private void ChkTermosUso_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!chkTermosUso.Checked)
-            {
-                btnSalvar.Enabled = false;
-            }
-
-            else
-            {
-                btnSalvar.Enabled = true;
-            }
-
         }
 
 
