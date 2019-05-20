@@ -159,7 +159,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.Khaki;
             this.linkLabel1.Location = new System.Drawing.Point(448, 166);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(112, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(110, 13);
             this.linkLabel1.TabIndex = 73;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Esqueci minha senha";
@@ -173,7 +173,7 @@
             this.lnkCadastrar.LinkColor = System.Drawing.Color.Khaki;
             this.lnkCadastrar.Location = new System.Drawing.Point(281, 293);
             this.lnkCadastrar.Name = "lnkCadastrar";
-            this.lnkCadastrar.Size = new System.Drawing.Size(156, 14);
+            this.lnkCadastrar.Size = new System.Drawing.Size(153, 14);
             this.lnkCadastrar.TabIndex = 72;
             this.lnkCadastrar.TabStop = true;
             this.lnkCadastrar.Text = "Não tem conta? Cadastre-se";
@@ -202,7 +202,7 @@
             this.chkConectado.ForeColor = System.Drawing.Color.Gainsboro;
             this.chkConectado.Location = new System.Drawing.Point(288, 207);
             this.chkConectado.Name = "chkConectado";
-            this.chkConectado.Size = new System.Drawing.Size(139, 17);
+            this.chkConectado.Size = new System.Drawing.Size(138, 17);
             this.chkConectado.TabIndex = 70;
             this.chkConectado.Text = "Matenha-me conectado";
             this.chkConectado.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.lblDesc.ForeColor = System.Drawing.Color.Cornsilk;
             this.lblDesc.Location = new System.Drawing.Point(623, 103);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(133, 13);
+            this.lblDesc.Size = new System.Drawing.Size(129, 13);
             this.lblDesc.TabIndex = 74;
             this.lblDesc.Text = "Bem vindo ao Granamiza!\r\n";
             // 

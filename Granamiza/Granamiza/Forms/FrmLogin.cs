@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Granamiza.Forms.App.Validacao;
+using Granamiza.Forms.Popup;
 
 namespace Granamiza.Forms
 {
@@ -72,7 +74,16 @@ namespace Granamiza.Forms
         //Evento de clique do entrar
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-
+            
+            if (Validacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim()))
+            {
+                FrmPopUpSucesso sucesso = new FrmPopUpSucesso(this, "Autenticado com sucesso");
+                //MessageBox.Show("Logado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao logar");
+            }
         }
 
 

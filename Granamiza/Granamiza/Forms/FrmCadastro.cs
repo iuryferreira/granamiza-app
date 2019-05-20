@@ -13,6 +13,7 @@ using CryptSharp;
 using Granamiza.Forms;
 using Granamiza.Modelo;
 using Granamiza.Forms.Popup;
+using Granamiza.Forms.App.Validacao;
 
 namespace Granamiza.Forms
 {
@@ -157,10 +158,11 @@ namespace Granamiza.Forms
         //Salvar usuário e suas preferências. 
         private void Salvar()
         {
+            Label[] lblErros = { lblNomeErro, lblEmailErro, lblSenhaErro, lblConSenhaErro};
             string caminhoAvatar = "Granamiza\\Granamiza\\Imagens\\male";
 
             //Testa se validou ou não. Se validou prossegue com a operação.
-            if (!Validar())
+            if (!Validacao.Validar(txtNome, txtEmail, txtSenha, txtConSenha, lblErros))
             {
                 return;
             }
@@ -228,6 +230,7 @@ namespace Granamiza.Forms
         }
 
         //Validar campos do formulário.
+        /*
         private bool Validar()
         {
             string email = txtEmail.Text.Trim();
@@ -319,7 +322,7 @@ namespace Granamiza.Forms
         {
             //Usando algoritmo Sha256 + salt já implementados através da biblioteca Crypt.
             return Crypter.Sha256.Crypt(senhaText);
-        }
+        }*/
 
 
     }

@@ -42,9 +42,10 @@
             this.lblSucesso.ForeColor = System.Drawing.Color.Cornsilk;
             this.lblSucesso.Location = new System.Drawing.Point(30, 81);
             this.lblSucesso.Name = "lblSucesso";
-            this.lblSucesso.Size = new System.Drawing.Size(291, 23);
+            this.lblSucesso.Size = new System.Drawing.Size(284, 23);
             this.lblSucesso.TabIndex = 78;
             this.lblSucesso.Text = "Cadastro realizado com Sucesso!";
+            this.lblSucesso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnClose
             // 
@@ -86,7 +87,7 @@
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
-            // PopUpSucesso
+            // FrmPopUpSucesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -96,7 +97,7 @@
             this.Controls.Add(this.pnlBarra);
             this.Controls.Add(this.btnConfirmar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PopUpSucesso";
+            this.Name = "FrmPopUpSucesso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PopUpSucesso";
             this.pnlBarra.ResumeLayout(false);

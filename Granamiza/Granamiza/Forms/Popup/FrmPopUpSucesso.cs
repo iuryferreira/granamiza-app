@@ -29,6 +29,13 @@ namespace Granamiza.Forms.Popup
             InitializeComponent();
             this.Show();
         }
+        public FrmPopUpSucesso(Form frmCadastro, string texto)
+        {
+            this.frmCadastro = frmCadastro;
+            InitializeComponent();
+            this.lblSucesso.Text = texto;
+            this.Show();
+        }
 
         /// <summary>
         /// Eventos para arrastar pop-up
