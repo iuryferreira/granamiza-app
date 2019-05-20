@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Granamiza.Forms;
+using Granamiza.Forms.Popup;
 
 namespace Granamiza
 {
@@ -17,7 +18,7 @@ namespace Granamiza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCadastro());
+            Application.Run(new FrmLogin());
         }
     }
 }
