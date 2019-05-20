@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\App\Validacao\Validacao.cs" />
     <Compile Include="Forms\FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
