@@ -19,6 +19,9 @@ namespace Granamiza.Forms
     public partial class FrmCadastro : Form
     {
 
+
+        //------------------------------ Construtores --------------------------------------
+
         //Atributo para guardar o form de login
         private Form frmlogin;
 
@@ -29,11 +32,15 @@ namespace Granamiza.Forms
             InitializeComponent();
         }
 
+        //Construtor Padrão
         public FrmCadastro()
         {
             InitializeComponent();
         }
 
+        //------------------------- Eventos de Carregamento do Form -----------------------------
+
+        //Executado ao form ser carregado.
         private void FrmCadastro_Load(object sender, EventArgs e)
         {
             //Ao abrir form, cursor ativado na caixa de texto do nome.
@@ -42,9 +49,17 @@ namespace Granamiza.Forms
             btnSalvar.Enabled = false;
         }
 
-        /// <summary>
-        /// Cor das linhas quando estiverem em foco.
-        /// </summary>
+        //Executado ao form ser fechado
+        private void FrmCadastro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Ao fechar o form, exibirá novamente o form de login que foi minimizado
+            this.frmlogin.WindowState = FormWindowState.Normal;
+        }
+
+        //--------------------------- Eventos de Foco em Elemento Específico ----------------------
+
+        // Cor das linhas quando estiverem em foco.
+
         private void TxtNome_Enter(object sender, EventArgs e)
         {
             MeusWidgets.CorFocoLinhaForm(linhaNome);
@@ -65,10 +80,10 @@ namespace Granamiza.Forms
             MeusWidgets.CorFocoLinhaForm(linhaConSenha);
         }
 
-        /// <summary>
-        /// Cor das linhas quando não estiverem em foco.
-        /// Limpando o label de validação a cada campo focado.
-        /// </summary>
+
+        // Cor das linhas quando não estiverem em foco.
+        // Limpando o label de validação a cada campo focado.
+
         private void TxtNome_Leave(object sender, EventArgs e)
         {
             MeusWidgets.CorLinhaForm(linhaNome);
@@ -93,11 +108,36 @@ namespace Granamiza.Forms
             lblConSenhaErro.Text = "";
         }
 
+
+        //------------------------ Eventos do botão de radio do Avatar ----------------------
+
+
+        //Muda a cor do botão de rádio selecionado
+
+        private void RbJohn_CheckedChanged(object sender, EventArgs e)
+        {
+            rbJohn.ForeColor = System.Drawing.Color.Khaki;
+            rbJoana.ForeColor = System.Drawing.Color.White;
+        }
+
+        //mudar a cor caso o avatar joana seja checkado
+        private void RbJoana_CheckedChanged(object sender, EventArgs e)
+        {
+            rbJohn.ForeColor = System.Drawing.Color.White;
+            rbJoana.ForeColor = System.Drawing.Color.Khaki;
+        }
+
+
+        //------------------------ Evento dos Botões ------------------------------------------
+
         //Evento do botão Salvar.
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Salvar();
         }
+
+
+        //-------------------------- Métodos Utilizados nos Eventos -----------------------
 
         //Salvar usuário e suas preferências. 
         private void Salvar()
@@ -281,25 +321,6 @@ namespace Granamiza.Forms
 
         }
 
-        //muda a cor caso o avatar john seja checkado
-        private void RbJohn_CheckedChanged(object sender, EventArgs e)
-        {
-            rbJohn.ForeColor = System.Drawing.Color.Khaki;
-            rbJoana.ForeColor = System.Drawing.Color.White;
-        }
-
-        //mudar a cor caso o avatar joana seja checkado
-        private void RbJoana_CheckedChanged(object sender, EventArgs e)
-        {
-            rbJohn.ForeColor = System.Drawing.Color.White;
-            rbJoana.ForeColor = System.Drawing.Color.Khaki;
-        }
-
-        //Ao fechar o form, exibirá novamente o form de login minimizado
-        private void FrmCadastro_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.frmlogin.WindowState = FormWindowState.Normal;
-        }
 
     }
 }
