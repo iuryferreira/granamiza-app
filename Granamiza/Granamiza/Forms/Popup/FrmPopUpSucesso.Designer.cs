@@ -1,6 +1,6 @@
 ﻿namespace Granamiza.Forms.Popup
 {
-    partial class PopUpSucesso
+    partial class FrmPopUpSucesso
     {
         /// <summary>
         /// Required designer variable.

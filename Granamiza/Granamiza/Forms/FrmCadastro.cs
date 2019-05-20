@@ -19,7 +19,7 @@ namespace Granamiza.Forms
     public partial class FrmCadastro : Form
     {
 
-        //atributo para guardar o form de login
+        //Atributo para guardar o form de login
         private Form frmlogin;
 
         //Construtor que recebe o form de login para manter informaçoes sobre ele
@@ -157,9 +157,8 @@ namespace Granamiza.Forms
 
             finally
             {
-                PopUpSucesso sucesso = new PopUpSucesso(this);
-
-                
+                //Estanciar pop-up de sucesso passando form de cadastro como referência.
+                FrmPopUpSucesso sucesso = new FrmPopUpSucesso(this);
             }
         }
 

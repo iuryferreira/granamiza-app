@@ -10,25 +10,29 @@ using System.Windows.Forms;
 
 namespace Granamiza.Forms.Popup
 {
-    public partial class PopUpSucesso : Form
+    public partial class FrmPopUpSucesso : Form
     {
         int X = 0;
         int Y = 0;
-        private Form frmCaixa;
+        //Atributo para receber referência de formulário de cadastro
+        private Form frmCadastro;
 
-        public PopUpSucesso()
+        public FrmPopUpSucesso()
         {
             InitializeComponent();
         }
 
-        public PopUpSucesso(Form frmCaixa)
+        //Recebendo referência de formulário de cadastro e exibindo pop-up
+        public FrmPopUpSucesso(Form frmCadastro)
         {
-            
-            this.frmCaixa = frmCaixa;
+            this.frmCadastro = frmCadastro;
             InitializeComponent();
             this.Show();
         }
 
+        /// <summary>
+        /// Eventos para arrastar pop-up
+        /// </summary>
         private void PnlBarra_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left) return;
@@ -43,15 +47,17 @@ namespace Granamiza.Forms.Popup
             this.Top = Y + MousePosition.Y;
         }
 
+        //Fechar pop-up através do botão close
         private void BtnClose_Click(object sender, EventArgs e)
         {
-            frmCaixa.Close();
+            frmCadastro.Close();
             Close();
         }
 
+        //Fechar pop-up através do botão confirmar
         private void BtnConfirmar_Click(object sender, EventArgs e)
         {
-            frmCaixa.Close();
+            frmCadastro.Close();
             Close();
         }
     }
