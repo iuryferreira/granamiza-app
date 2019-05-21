@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Granamiza.Forms.App.Validacao;
+using Granamiza.App.Autenticacao;
 using Granamiza.Forms.Popup;
 
 namespace Granamiza.Forms
@@ -75,9 +68,9 @@ namespace Granamiza.Forms
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             
-            if (Validacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim()))
+            if (Autenticacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim()))
             {
-                FrmPopUpSucesso sucesso = new FrmPopUpSucesso(this, "Autenticado com sucesso");
+                _ = new FrmPopup("Autenticado com sucesso!", "Sucesso");
                 //MessageBox.Show("Logado com sucesso");
             }
             else

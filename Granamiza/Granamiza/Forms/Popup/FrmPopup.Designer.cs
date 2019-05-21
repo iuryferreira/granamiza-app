@@ -1,6 +1,6 @@
 ﻿namespace Granamiza.Forms.Popup
 {
-    partial class FrmPopUpSucesso
+    partial class FrmPopup
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblSucesso = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPopup));
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlBarra = new System.Windows.Forms.Panel();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.pnlComponentes = new System.Windows.Forms.Panel();
+            this.pbIcone = new System.Windows.Forms.PictureBox();
+            this.lblTextoSucesso = new System.Windows.Forms.Label();
             this.pnlBarra.SuspendLayout();
+            this.pnlComponentes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcone)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblSucesso
-            // 
-            this.lblSucesso.AutoSize = true;
-            this.lblSucesso.Font = new System.Drawing.Font("Bahnschrift", 13.75F);
-            this.lblSucesso.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblSucesso.Location = new System.Drawing.Point(30, 81);
-            this.lblSucesso.Name = "lblSucesso";
-            this.lblSucesso.Size = new System.Drawing.Size(284, 23);
-            this.lblSucesso.TabIndex = 78;
-            this.lblSucesso.Text = "Cadastro realizado com Sucesso!";
-            this.lblSucesso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnClose
             // 
@@ -64,8 +57,9 @@
             // 
             // pnlBarra
             // 
-            this.pnlBarra.BackColor = System.Drawing.Color.SeaGreen;
+            this.pnlBarra.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.pnlBarra.Controls.Add(this.btnClose);
+            this.pnlBarra.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.pnlBarra.Location = new System.Drawing.Point(-1, 1);
             this.pnlBarra.Name = "pnlBarra";
             this.pnlBarra.Size = new System.Drawing.Size(352, 30);
@@ -75,42 +69,78 @@
             // 
             // btnConfirmar
             // 
+            this.btnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnConfirmar.FlatAppearance.BorderSize = 2;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(101, 123);
+            this.btnConfirmar.Location = new System.Drawing.Point(135, 128);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(150, 47);
+            this.btnConfirmar.Size = new System.Drawing.Size(85, 32);
             this.btnConfirmar.TabIndex = 79;
             this.btnConfirmar.Text = "Vamos lá!";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
-            // FrmPopUpSucesso
+            // pnlComponentes
+            // 
+            this.pnlComponentes.Controls.Add(this.pbIcone);
+            this.pnlComponentes.Controls.Add(this.lblTextoSucesso);
+            this.pnlComponentes.Controls.Add(this.btnConfirmar);
+            this.pnlComponentes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlComponentes.Location = new System.Drawing.Point(0, 30);
+            this.pnlComponentes.Name = "pnlComponentes";
+            this.pnlComponentes.Size = new System.Drawing.Size(352, 181);
+            this.pnlComponentes.TabIndex = 81;
+            // 
+            // pbIcone
+            // 
+            this.pbIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbIcone.Sucesso")));
+            this.pbIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbIcone.Location = new System.Drawing.Point(132, 10);
+            this.pbIcone.Name = "pbIcone";
+            this.pbIcone.Size = new System.Drawing.Size(92, 63);
+            this.pbIcone.TabIndex = 80;
+            this.pbIcone.TabStop = false;
+            // 
+            // lblTextoSucesso
+            // 
+            this.lblTextoSucesso.AutoSize = true;
+            this.lblTextoSucesso.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextoSucesso.ForeColor = System.Drawing.Color.White;
+            this.lblTextoSucesso.Location = new System.Drawing.Point(56, 85);
+            this.lblTextoSucesso.Name = "lblTextoSucesso";
+            this.lblTextoSucesso.Size = new System.Drawing.Size(242, 19);
+            this.lblTextoSucesso.TabIndex = 79;
+            this.lblTextoSucesso.Text = "Cadastro efetuado com sucesso!";
+            this.lblTextoSucesso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FrmPopup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(352, 211);
-            this.Controls.Add(this.lblSucesso);
             this.Controls.Add(this.pnlBarra);
-            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.pnlComponentes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmPopUpSucesso";
+            this.Name = "FrmPopup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PopUpSucesso";
             this.pnlBarra.ResumeLayout(false);
+            this.pnlComponentes.ResumeLayout(false);
+            this.pnlComponentes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcone)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblSucesso;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel pnlBarra;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Panel pnlComponentes;
+        private System.Windows.Forms.Label lblTextoSucesso;
+        private System.Windows.Forms.PictureBox pbIcone;
     }
 }

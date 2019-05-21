@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Granamiza.Modelo;
 using Granamiza.Forms;
 using CryptSharp;
 using System.Text.RegularExpressions;
 
-namespace Granamiza.Forms.App.Validacao
+namespace Granamiza.App.Autenticacao
 {
     class Validacao
     {
@@ -100,41 +97,10 @@ namespace Granamiza.Forms.App.Validacao
         }
 
         //Faz o Hash da senha. (Recebe a senha em texto pleno e retorna o hash).
-        private string CriptografarSenha(string senhaText)
+        internal static string CriptografarSenha(string senhaText)
         {
             //Usando algoritmo Sha256 + salt já implementados através da biblioteca Crypt.
             return Crypter.Sha256.Crypt(senhaText);
-        }
-
-
-        //-- Autenticar -----
-        static internal bool Autenticar(string email, string senhaDigitada)
-        {
-            //Faz consulta do usuário através do email
-            //Select usuario from usuario where usuario.email = txtEmail.Text;
-            using (var bd = new granamizaEntities())
-            {
-                //Consulta usando LINQ
-                usuario user = (from u in bd.usuario
-                                 where u.email == email
-                                 select u).FirstOrDefault();
-                //Testa se achou usuário, para poder verificar senha.
-                if (user != null)
-                {
-                    if (VerificarSenha(senhaDigitada, user.senha))
-                    {
-                        return true;
-                    }
-                }
-            }
-            //Se não achar retorna false.
-            return false;
-        }
-
-        //Verifica senha através da senha.
-        internal static bool VerificarSenha(string senhaDigitada, string senhaHash)
-        {
-            return Crypter.CheckPassword(senhaDigitada, senhaHash);
         }
     }
 }
