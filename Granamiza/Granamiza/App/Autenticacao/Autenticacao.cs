@@ -1,37 +1,58 @@
 ﻿using CryptSharp;
+using Granamiza.Forms;
+using Granamiza.Forms.Popup;
 using Granamiza.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Granamiza.App.Autenticacao
 {
     class Autenticacao
     {
         //-- Autenticar -----
-        static internal bool Autenticar(string email, string senhaDigitada)
+        static internal bool Autenticar(string email, string senhaDigitada, Label lblErroAutenticacao)
         {
-            //Faz consulta do usuário através do email
-            //Select usuario from usuario where usuario.email = txtEmail.Text;
-            using (var bd = new granamizaEntities())
+            //Tenta conectar no banco para consultar usuário.
+            try
             {
-                //Consulta usando LINQ
-                usuario user = (from u in bd.usuario
-                                where u.email == email
-                                select u).FirstOrDefault();
-                //Testa se achou usuário, para poder verificar senha.
-                if (user != null)
+                //Faz consulta do usuário através do email
+                //Select usuario from usuario where usuario.email = txtEmail.Text;
+                using (var bd = new granamizaEntities())
                 {
-                    if (VerificarSenha(senhaDigitada, user.senha))
+                    //Consulta usando LINQ
+                    usuario user = (from u in bd.usuario
+                                    where u.email == email
+                                    select u).FirstOrDefault();
+                    //Testa se achou usuário, para poder verificar senha.
+                    if (user != null)
                     {
-                        return true;
+                        if (VerificarSenha(senhaDigitada, user.senha))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            lblErroAutenticacao.Visible = true;
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        lblErroAutenticacao.Visible = true;
+                        return false;
                     }
                 }
             }
-            //Se não achar retorna false.
-            return false;
+            //Se ocorrer erro ao conectar.
+            catch (Exception)
+            {
+                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                return false;
+            }
         }
 
         //Verifica senha através da senha.

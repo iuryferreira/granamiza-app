@@ -167,7 +167,6 @@ namespace Granamiza.Forms
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
                 LimparForm();
                 return;
-
             }
 
             finally

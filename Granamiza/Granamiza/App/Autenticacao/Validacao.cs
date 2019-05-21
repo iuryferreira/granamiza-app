@@ -5,6 +5,7 @@ using Granamiza.Modelo;
 using Granamiza.Forms;
 using CryptSharp;
 using System.Text.RegularExpressions;
+using Granamiza.Forms.Popup;
 
 namespace Granamiza.App.Autenticacao
 {
@@ -66,9 +67,9 @@ namespace Granamiza.App.Autenticacao
             }
 
             //Método para verificar se é único.
-            if (!VerificarEmailUnico(email))
+            if (!VerificarEmailUnico(email, lblErro))
             {
-                MeusWidgets.AvisoForm(lblErro, "Endereço de e-mail digitado já está cadastrado.");
+                //MeusWidgets.AvisoForm(lblErro, "Endereço de e-mail digitado já está cadastrado.");
                 return false;
             }
 
@@ -76,22 +77,34 @@ namespace Granamiza.App.Autenticacao
         }
 
         //Valida E-mail através da consulta para checar se não foi cadastrado.
-        private static bool VerificarEmailUnico(string email)
+        private static bool VerificarEmailUnico(string email, Label lblErro)
         {
-            //Se encontrar e-mail return false.
-            //Select usuario.email from usuario where usuario.email = txtEmail.Text;
-            using (var bd = new granamizaEntities())
+            //Tenta conectar no banco para consultar E-mail.
+            try
             {
-                //Consulta usando LINQ
-                string _email = (from u in bd.usuario
-                                 where u.email == email
-                                 select u.email).FirstOrDefault();
-                //Testa se encontrou algum e-mail igual ao informado na caixa de texto E-mail.
-                if (_email != null)
+                //Se encontrar e-mail return false.
+                //Select usuario.email from usuario where usuario.email = txtEmail.Text;
+                using (var bd = new granamizaEntities())
                 {
-                    return false;
+                    //Consulta usando LINQ
+                    string _email = (from u in bd.usuario
+                                     where u.email == email
+                                     select u.email).FirstOrDefault();
+                    //Testa se encontrou algum e-mail igual ao informado na caixa de texto E-mail.
+                    if (_email != null)
+                    {
+                        MeusWidgets.AvisoForm(lblErro, "Endereço de e-mail digitado já está cadastrado.");
+                        return false;
+                    }
                 }
             }
+            //Se ocorrer erro ao conectar.
+            catch (Exception)
+            {
+                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                return false;
+            }
+
             //Se não encontrou, E-mail pode ser usado para cadastro.
             return true;
         }

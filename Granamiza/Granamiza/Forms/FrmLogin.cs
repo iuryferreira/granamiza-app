@@ -73,14 +73,13 @@ namespace Granamiza.Forms
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             
-            if (Autenticacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim()))
+            if (Autenticacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim(), lblErroAutenticacao))
             {
                 _ = new FrmPopup("Autenticado com sucesso!", "Sucesso");
                 //MessageBox.Show("Logado com sucesso");
             }
             else
             {
-                lblErroAutenticacao.Visible = true;
                 LimparForm();
             }
         }
