@@ -85,7 +85,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(53, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(238, 45);
+            this.lblTitulo.Size = new System.Drawing.Size(227, 45);
             this.lblTitulo.TabIndex = 14;
             this.lblTitulo.Text = "Cadastre-se";
             // 
@@ -113,7 +113,7 @@
             this.lblOU.ForeColor = System.Drawing.Color.White;
             this.lblOU.Location = new System.Drawing.Point(183, 53);
             this.lblOU.Name = "lblOU";
-            this.lblOU.Size = new System.Drawing.Size(42, 25);
+            this.lblOU.Size = new System.Drawing.Size(40, 25);
             this.lblOU.TabIndex = 9;
             this.lblOU.Text = "OU";
             // 
@@ -258,7 +258,7 @@
             this.chkTermosUso.ForeColor = System.Drawing.Color.Gainsboro;
             this.chkTermosUso.Location = new System.Drawing.Point(119, 259);
             this.chkTermosUso.Name = "chkTermosUso";
-            this.chkTermosUso.Size = new System.Drawing.Size(183, 18);
+            this.chkTermosUso.Size = new System.Drawing.Size(188, 18);
             this.chkTermosUso.TabIndex = 63;
             this.chkTermosUso.Text = "Aceito todos os termos de uso";
             this.chkTermosUso.UseVisualStyleBackColor = true;
@@ -266,7 +266,7 @@
             // 
             // txtConSenha
             // 
-            this.txtConSenha.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtConSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
             this.txtConSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConSenha.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConSenha.ForeColor = System.Drawing.Color.Black;
@@ -280,7 +280,7 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.Black;
@@ -294,7 +294,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
@@ -348,7 +348,7 @@
             this.txtConfirmeSenha.ForeColor = System.Drawing.Color.White;
             this.txtConfirmeSenha.Location = new System.Drawing.Point(4, 191);
             this.txtConfirmeSenha.Name = "txtConfirmeSenha";
-            this.txtConfirmeSenha.Size = new System.Drawing.Size(160, 23);
+            this.txtConfirmeSenha.Size = new System.Drawing.Size(164, 23);
             this.txtConfirmeSenha.TabIndex = 55;
             this.txtConfirmeSenha.Text = "Confirme a senha:";
             // 
@@ -365,7 +365,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNome.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.Color.Black;
@@ -412,7 +412,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.SeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(434, 619);
             this.Controls.Add(this.picUsuarioCadastro);
             this.Controls.Add(this.gbAvatar);

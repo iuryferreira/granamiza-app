@@ -43,6 +43,7 @@
             this.chkConectado = new System.Windows.Forms.CheckBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblDesc = new System.Windows.Forms.Label();
+            this.lblErroAutenticacao = new System.Windows.Forms.Label();
             this.gbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblTitulo.Location = new System.Drawing.Point(81, 13);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(292, 64);
+            this.lblTitulo.Size = new System.Drawing.Size(283, 64);
             this.lblTitulo.TabIndex = 63;
             this.lblTitulo.Text = "Granamiza";
             this.lblTitulo.MouseEnter += new System.EventHandler(this.LblTitulo_MouseEnter);
@@ -63,10 +64,10 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSenha.ForeColor = System.Drawing.Color.Khaki;
             this.txtSenha.Location = new System.Drawing.Point(252, 131);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(306, 20);
@@ -77,10 +78,10 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.ForeColor = System.Drawing.Color.Khaki;
             this.txtEmail.Location = new System.Drawing.Point(254, 82);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(306, 20);
@@ -109,27 +110,28 @@
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(165, 133);
+            this.lblSenha.Location = new System.Drawing.Point(176, 130);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(68, 23);
+            this.lblSenha.Size = new System.Drawing.Size(60, 21);
             this.lblSenha.TabIndex = 65;
             this.lblSenha.Text = "Senha:";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(165, 82);
+            this.lblEmail.Location = new System.Drawing.Point(176, 84);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(62, 23);
+            this.lblEmail.Size = new System.Drawing.Size(57, 21);
             this.lblEmail.TabIndex = 64;
             this.lblEmail.Text = "Email:";
             // 
             // gbLogin
             // 
+            this.gbLogin.Controls.Add(this.lblErroAutenticacao);
             this.gbLogin.Controls.Add(this.linkLabel1);
             this.gbLogin.Controls.Add(this.lnkCadastrar);
             this.gbLogin.Controls.Add(this.btnEntrar);
@@ -154,12 +156,13 @@
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Crimson;
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift", 7.75F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
+            this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Khaki;
-            this.linkLabel1.Location = new System.Drawing.Point(434, 166);
+            this.linkLabel1.LinkColor = System.Drawing.Color.Moccasin;
+            this.linkLabel1.Location = new System.Drawing.Point(465, 166);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(129, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(95, 13);
             this.linkLabel1.TabIndex = 73;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Esqueci minha senha";
@@ -171,9 +174,9 @@
             this.lnkCadastrar.Font = new System.Drawing.Font("Bahnschrift", 8.75F, System.Drawing.FontStyle.Bold);
             this.lnkCadastrar.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkCadastrar.LinkColor = System.Drawing.Color.Khaki;
-            this.lnkCadastrar.Location = new System.Drawing.Point(270, 288);
+            this.lnkCadastrar.Location = new System.Drawing.Point(281, 286);
             this.lnkCadastrar.Name = "lnkCadastrar";
-            this.lnkCadastrar.Size = new System.Drawing.Size(179, 14);
+            this.lnkCadastrar.Size = new System.Drawing.Size(156, 14);
             this.lnkCadastrar.TabIndex = 72;
             this.lnkCadastrar.TabStop = true;
             this.lnkCadastrar.Text = "Não tem conta? Cadastre-se";
@@ -223,15 +226,28 @@
             this.lblDesc.ForeColor = System.Drawing.Color.Cornsilk;
             this.lblDesc.Location = new System.Drawing.Point(633, 103);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(129, 13);
+            this.lblDesc.Size = new System.Drawing.Size(133, 13);
             this.lblDesc.TabIndex = 74;
             this.lblDesc.Text = "Bem vindo ao Granamiza!\r\n";
+            // 
+            // lblErroAutenticacao
+            // 
+            this.lblErroAutenticacao.AutoSize = true;
+            this.lblErroAutenticacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblErroAutenticacao.Font = new System.Drawing.Font("Bahnschrift", 11.75F, System.Drawing.FontStyle.Bold);
+            this.lblErroAutenticacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(39)))), ((int)(((byte)(26)))));
+            this.lblErroAutenticacao.Location = new System.Drawing.Point(165, 44);
+            this.lblErroAutenticacao.Name = "lblErroAutenticacao";
+            this.lblErroAutenticacao.Size = new System.Drawing.Size(415, 19);
+            this.lblErroAutenticacao.TabIndex = 75;
+            this.lblErroAutenticacao.Text = "Email ou senha incorretos, verifique e tente novamente.";
+            this.lblErroAutenticacao.Visible = false;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(82)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(808, 483);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.pbLogo);
@@ -266,5 +282,6 @@
         private System.Windows.Forms.LinkLabel lnkCadastrar;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.Label lblErroAutenticacao;
     }
 }

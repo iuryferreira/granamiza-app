@@ -44,23 +44,28 @@ namespace Granamiza.Forms
         //cor da linha do email ao entrar em foco
         private void TxtEmail_Enter(object sender, EventArgs e)
         {
-            MeusWidgets.CorFocoLinhaForm(linhaEmail);
+            MeusWidgets.CorFocoLinhaForm(linhaEmail, txtEmail);
+            txtEmail.ForeColor = System.Drawing.Color.Khaki;
         }
         //cor da linha do email ao sair de foco
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
-            MeusWidgets.CorLinhaForm(linhaEmail);
+            MeusWidgets.CorLinhaForm(linhaEmail, txtEmail);
+            
+
 
         }
         //cor da linha da senha ao entrar em foco
         private void TxtSenha_Enter(object sender, EventArgs e)
         {
-            MeusWidgets.CorFocoLinhaForm(linhaSenha);
+            MeusWidgets.CorFocoLinhaForm(linhaSenha, txtSenha);
+            txtSenha.ForeColor = System.Drawing.Color.Khaki;
         }
         //cor da linha da senha ao sair de foco
         private void TxtSenha_Leave(object sender, EventArgs e)
         {
-            MeusWidgets.CorLinhaForm(linhaSenha);
+            MeusWidgets.CorLinhaForm(linhaSenha, txtSenha);
+            txtSenha.ForeColor = System.Drawing.Color.White;
 
         }
 
@@ -75,10 +80,16 @@ namespace Granamiza.Forms
             }
             else
             {
-                MessageBox.Show("Erro ao logar");
+                lblErroAutenticacao.Visible = true;
+                LimparForm();
             }
         }
 
+        private void LimparForm()
+        {
 
+            txtSenha.Text = String.Empty;
+            chkConectado.CheckState = CheckState.Unchecked;
+        }
     }
 }

@@ -16,11 +16,18 @@ namespace Granamiza.Forms
     class MeusWidgets
     {
         // Define a cor da linha em LimeGreen
-        public static void CorFocoLinhaForm(Panel linha) => linha.BackColor = System.Drawing.Color.Khaki;
+        public static void CorFocoLinhaForm(Panel linha, TextBox txtbox)
+        {
+            linha.BackColor = System.Drawing.Color.Khaki;
+            txtbox.ForeColor = System.Drawing.Color.Khaki;
+        }
 
         // Define a cor da linha em White
-        public static void CorLinhaForm(Panel linha) => linha.BackColor = System.Drawing.Color.White;
+        public static void CorLinhaForm(Panel linha, TextBox txtbox) {
 
+            linha.BackColor = System.Drawing.Color.White;
+            txtbox.ForeColor = System.Drawing.Color.White;
+        }
 
         //Escreve o texto no label de validação
         public static string AvisoForm(Label aviso, string texto)

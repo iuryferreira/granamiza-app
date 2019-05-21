@@ -53,22 +53,22 @@ namespace Granamiza.Forms
 
         private void TxtNome_Enter(object sender, EventArgs e)
         {
-            MeusWidgets.CorFocoLinhaForm(linhaNome);
+            MeusWidgets.CorFocoLinhaForm(linhaNome, txtNome);
         }
 
         private void TxtEmail_Enter(object sender, EventArgs e)
         {
-            MeusWidgets.CorFocoLinhaForm(linhaEmail);
+            MeusWidgets.CorFocoLinhaForm(linhaEmail, txtEmail);
         }
 
         private void TxtSenha_Enter(object sender, EventArgs e)
         {
-            MeusWidgets.CorFocoLinhaForm(linhaSenha);
+            MeusWidgets.CorFocoLinhaForm(linhaSenha, txtSenha);
         }
 
         private void TxtConSenha_Enter(object sender, EventArgs e)
         {
-            MeusWidgets.CorFocoLinhaForm(linhaConSenha);
+            MeusWidgets.CorFocoLinhaForm(linhaConSenha, txtConSenha);
         }
 
 
@@ -77,25 +77,25 @@ namespace Granamiza.Forms
 
         private void TxtNome_Leave(object sender, EventArgs e)
         {
-            MeusWidgets.CorLinhaForm(linhaNome);
+            MeusWidgets.CorLinhaForm(linhaNome, txtNome);
             lblNomeErro.Text = "";
         }
 
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
-            MeusWidgets.CorLinhaForm(linhaEmail);
+            MeusWidgets.CorLinhaForm(linhaEmail, txtEmail);
             lblEmailErro.Text = "";
         }
 
         private void TxtSenha_Leave(object sender, EventArgs e)
         {
-            MeusWidgets.CorLinhaForm(linhaSenha);
+            MeusWidgets.CorLinhaForm(linhaSenha, txtSenha);
             lblSenhaErro.Text = "";
         }
 
         private void TxtConSenha_Leave(object sender, EventArgs e)
         {
-            MeusWidgets.CorLinhaForm(linhaConSenha);
+            MeusWidgets.CorLinhaForm(linhaConSenha, txtConSenha);
             lblConSenhaErro.Text = "";
         }
 
