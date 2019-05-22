@@ -69,7 +69,6 @@ namespace Granamiza.App.Autenticacao
             //Método para verificar se é único.
             if (!VerificarEmailUnico(email, lblErro))
             {
-                //MeusWidgets.AvisoForm(lblErro, "Endereço de e-mail digitado já está cadastrado.");
                 return false;
             }
 

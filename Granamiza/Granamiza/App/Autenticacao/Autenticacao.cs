@@ -34,12 +34,14 @@ namespace Granamiza.App.Autenticacao
                         {
                             return true;
                         }
+                        //Senha incorreta.
                         else
                         {
                             lblErroAutenticacao.Visible = true;
                             return false;
                         }
                     }
+                    //E-mail incorreto.
                     else
                     {
                         lblErroAutenticacao.Visible = true;
@@ -55,7 +57,7 @@ namespace Granamiza.App.Autenticacao
             }
         }
 
-        //Verifica senha através da senha.
+        //Verifica se senha digita e senha do banco relacionada ao E-mail são iguais.
         internal static bool VerificarSenha(string senhaDigitada, string senhaHash)
         {
             return Crypter.CheckPassword(senhaDigitada, senhaHash);

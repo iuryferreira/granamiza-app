@@ -51,9 +51,6 @@ namespace Granamiza.Forms
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
             MeusWidgets.CorLinhaForm(linhaEmail, txtEmail);
-            
-
-
         }
         //cor da linha da senha ao entrar em foco
         private void TxtSenha_Enter(object sender, EventArgs e)
@@ -66,7 +63,6 @@ namespace Granamiza.Forms
         {
             MeusWidgets.CorLinhaForm(linhaSenha, txtSenha);
             txtSenha.ForeColor = System.Drawing.Color.White;
-
         }
 
         //Evento de clique do entrar
@@ -76,7 +72,6 @@ namespace Granamiza.Forms
             if (Autenticacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim(), lblErroAutenticacao))
             {
                 _ = new FrmPopup("Autenticado com sucesso!", "Sucesso");
-                //MessageBox.Show("Logado com sucesso");
             }
             else
             {
@@ -86,7 +81,6 @@ namespace Granamiza.Forms
 
         private void LimparForm()
         {
-
             txtSenha.Text = String.Empty;
             chkConectado.CheckState = CheckState.Unchecked;
         }
