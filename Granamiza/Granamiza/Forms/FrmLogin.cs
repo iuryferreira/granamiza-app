@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Granamiza.App.Autenticacao;
+using Granamiza.Forms.Popup;
 
 namespace Granamiza.Forms
 {
@@ -49,32 +44,45 @@ namespace Granamiza.Forms
         //cor da linha do email ao entrar em foco
         private void TxtEmail_Enter(object sender, EventArgs e)
         {
-            MeusWidgets.CorFocoLinhaForm(linhaEmail);
+            MeusWidgets.CorFocoLinhaForm(linhaEmail, txtEmail);
+            txtEmail.ForeColor = System.Drawing.Color.Khaki;
         }
         //cor da linha do email ao sair de foco
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
-            MeusWidgets.CorLinhaForm(linhaEmail);
-
+            MeusWidgets.CorLinhaForm(linhaEmail, txtEmail);
         }
         //cor da linha da senha ao entrar em foco
         private void TxtSenha_Enter(object sender, EventArgs e)
         {
-            MeusWidgets.CorFocoLinhaForm(linhaSenha);
+            MeusWidgets.CorFocoLinhaForm(linhaSenha, txtSenha);
+            txtSenha.ForeColor = System.Drawing.Color.Khaki;
         }
         //cor da linha da senha ao sair de foco
         private void TxtSenha_Leave(object sender, EventArgs e)
         {
-            MeusWidgets.CorLinhaForm(linhaSenha);
-
+            MeusWidgets.CorLinhaForm(linhaSenha, txtSenha);
+            txtSenha.ForeColor = System.Drawing.Color.White;
         }
 
         //Evento de clique do entrar
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-
+            
+            if (Autenticacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim(), lblErroAutenticacao))
+            {
+                _ = new FrmPopup("Autenticado com sucesso!", "Sucesso");
+            }
+            else
+            {
+                LimparForm();
+            }
         }
 
-
+        private void LimparForm()
+        {
+            txtSenha.Text = String.Empty;
+            chkConectado.CheckState = CheckState.Unchecked;
+        }
     }
 }
