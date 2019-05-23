@@ -11,7 +11,7 @@ namespace Granamiza.App.CRUD
 {
     class Categoria
     {
-        internal static void Salvar(TextBox txtNome, bool is_gasto, OpenFileDialog ofdIcone, int idCategoria)
+        internal static void Salvar(TextBox txtNome, RadioButton rbGasto, int idCategoria)
         {
             //Tenta se conectar com o banco de dados.
             try
@@ -21,12 +21,18 @@ namespace Granamiza.App.CRUD
                     //Salvar.
                     if (idCategoria < 0)
                     {
+                        SByte is_gasto = 0;
+
+                        if(rbGasto.Checked)
+                        {
+                            is_gasto = 1;
+                        }
                         //Preencher os dados da categoria.
                         categoria cat = new categoria
                         {
                             nome = txtNome.Text,
-                            is_gasto = Convert.ToSByte(is_gasto),
-                            icone = ofdIcone.FileName
+                            is_gasto = is_gasto,
+                            icone = "C:\\Users\\iuryf\\Documents\\GitHub\\granamiza-app\\Granamiza\\Granamiza\\Imagens\\info-icon"
                         };
                         //Adicionar categoria
                         bd.categoria.Add(cat);

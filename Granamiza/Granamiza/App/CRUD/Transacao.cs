@@ -28,7 +28,7 @@ namespace Granamiza.App.CRUD
                             descricao = txtDescricao.Text,
                             //É preciso restringir campo a valores numéricos
                             valor = Decimal.Parse(txtValor.Text),
-                            tipo_transacao = txtTipoTransacao.Text,
+                            tipo_transacao = SByte.Parse(txtTipoTransacao.Text),
                             //tr.data_insercao = ;
                             //tr.hora_insercao = ;
                             data_criacao = dt,
@@ -50,7 +50,7 @@ namespace Granamiza.App.CRUD
                             tr.descricao = txtDescricao.Text;
                             //É preciso restringir campo a valores numéricos
                             tr.valor = Decimal.Parse(txtValor.Text);
-                            tr.tipo_transacao = txtTipoTransacao.Text;
+                            tr.tipo_transacao = SByte.Parse(txtTipoTransacao.Text);
                             //tr.data_insercao = ;
                             //tr.hora_insercao = ;
                             //tr.data_criacao = ;

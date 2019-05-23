@@ -27,6 +27,7 @@ namespace Granamiza.App.Autenticacao
                     usuario user = (from u in bd.usuario
                                     where u.email == email
                                     select u).FirstOrDefault();
+
                     //Testa se achou usuário, para poder verificar senha.
                     if (user != null)
                     {
