@@ -52,10 +52,10 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="descricao" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
-          <Property Name="tipo_transacao" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="tipo_transacao" Type="tinyint" Nullable="false" />
           <Property Name="data_insercao" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="hora_insercao" Type="varchar" MaxLength="11" Nullable="false" />
-          <Property Name="data_criacao" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="data_criacao" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="categoria_id" Type="int" Nullable="false" />
           <Property Name="usuario_id" Type="int" Nullable="false" />
         </EntityType>
@@ -67,7 +67,7 @@
           <Property Name="nome" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="senha" Type="text" Nullable="false" />
-          <Property Name="data_criacao" Type="datetime" Precision="0" />
+          <Property Name="data_criacao" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
         </EntityType>
         <Association Name="fk_preferencias_usuario1">
           <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
@@ -195,7 +195,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="descricao" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="valor" Type="Decimal" Nullable="false" />
-          <Property Name="tipo_transacao" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipo_transacao" Type="SByte" Nullable="false" />
           <Property Name="data_insercao" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="hora_insercao" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="data_criacao" Type="DateTime" Nullable="false" />

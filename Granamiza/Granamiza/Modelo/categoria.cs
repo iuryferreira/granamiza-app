@@ -25,10 +25,5 @@ namespace Granamiza.Modelo
         public string icone { get; set; }
     
         public virtual ICollection<transacao> transacao { get; set; }
-
-        public static implicit operator categoria(categoria v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
