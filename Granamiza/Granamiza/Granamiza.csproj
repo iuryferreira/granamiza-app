@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="App\Autenticacao\Autenticacao.cs" />
     <Compile Include="App\Autenticacao\Validacao.cs" />
+    <Compile Include="App\CRUD\Categoria.cs" />
+    <Compile Include="App\CRUD\Transacao.cs" />
     <Compile Include="App\CRUD\Usuario.cs" />
     <Compile Include="Forms\FrmCadastro.cs">
       <SubType>Form</SubType>
