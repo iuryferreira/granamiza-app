@@ -21,14 +21,14 @@ namespace Granamiza.Forms
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Categoria.Salvar(txtNome, rbGasto, -1);
-            }
+            /*try
+            {*/
+                Categoria.Salvar(txtNome, rbGasto, 0);
+            /*}
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }
+            }*/
         }
     }
 }

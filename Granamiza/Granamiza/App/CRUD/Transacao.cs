@@ -19,7 +19,7 @@ namespace Granamiza.App.CRUD
                 using (var bd = new granamizaEntities())
                 {
                     //Salvar.
-                    if (idTransacao < 0)
+                    if (idTransacao == 0)
                     {
                         DateTime dt = DateTime.Now;
                         //Preencher os dados da categoria.
@@ -29,8 +29,8 @@ namespace Granamiza.App.CRUD
                             //É preciso restringir campo a valores numéricos
                             valor = Decimal.Parse(txtValor.Text),
                             tipo_transacao = SByte.Parse(txtTipoTransacao.Text),
-                            //tr.data_insercao = ;
-                            //tr.hora_insercao = ;
+                            hora_insercao = dt.Hour.ToString(),
+                            data_insercao = dt.Date.ToString(),
                             data_criacao = dt,
                             categoria_id = idCategoria,
                         };

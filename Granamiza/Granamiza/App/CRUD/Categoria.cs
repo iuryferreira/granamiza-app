@@ -14,12 +14,12 @@ namespace Granamiza.App.CRUD
         internal static void Salvar(TextBox txtNome, RadioButton rbGasto, int idCategoria)
         {
             //Tenta se conectar com o banco de dados.
-            try
-            {
+            /*try
+            {*/
                 using (var bd = new granamizaEntities())
                 {
                     //Salvar.
-                    if (idCategoria < 0)
+                    if (idCategoria == 0)
                     {
                         SByte is_gasto = 0;
 
@@ -32,6 +32,7 @@ namespace Granamiza.App.CRUD
                         {
                             nome = txtNome.Text,
                             is_gasto = is_gasto,
+                            //Icone padrão
                             icone = "C:\\Users\\iuryf\\Documents\\GitHub\\granamiza-app\\Granamiza\\Granamiza\\Imagens\\info-icon"
                         };
                         //Adicionar categoria
@@ -52,12 +53,12 @@ namespace Granamiza.App.CRUD
                     }
                     bd.SaveChanges();
                 }
-            }
+            /*}*/
             //Se ocorrer erro ao conectar.
-            catch (Exception)
+            /*catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }
+            }*/
         }
 
         internal static void Excluir(int idCategoria)
