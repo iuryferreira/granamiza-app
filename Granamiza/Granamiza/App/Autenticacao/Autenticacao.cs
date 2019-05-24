@@ -24,9 +24,11 @@ namespace Granamiza.App.Autenticacao
                 using (var bd = new granamizaEntities())
                 {
                     //Consulta usando LINQ
-                    usuario user = (from u in bd.usuario
-                                    where u.email == email
-                                    select u).FirstOrDefault();
+                    // usuario user = (from u in bd.usuario
+                    //               where u.email == email
+                    //             select u).FirstOrDefault();
+
+                    usuario user = bd.usuario.Where(u => u.email == email).FirstOrDefault<usuario>();
 
                     //Testa se achou usuário, para poder verificar senha.
                     if (user != null)

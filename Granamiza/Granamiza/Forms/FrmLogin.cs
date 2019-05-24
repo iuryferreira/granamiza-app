@@ -22,7 +22,7 @@ namespace Granamiza.Forms
         //Muda cor do titulo ao retirar o mouse
         private void LblTitulo_MouseLeave(object sender, EventArgs e)
         {
-            lblTitulo.ForeColor = System.Drawing.Color.Gainsboro;
+            lblTitulo.ForeColor = System.Drawing.Color.White;
         }
 
         //evento de clique de cadastratar
@@ -82,7 +82,16 @@ namespace Granamiza.Forms
         private void LimparForm()
         {
             txtSenha.Text = String.Empty;
-            chkConectado.CheckState = CheckState.Unchecked;
+        }
+
+        private void LnkCadastrar_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmCadastro frm = new FrmCadastro(this);
+            frm.Show();
+
+            this.WindowState = FormWindowState.Minimized;
+
+            frm.WindowState = FormWindowState.Normal;
         }
     }
 }
