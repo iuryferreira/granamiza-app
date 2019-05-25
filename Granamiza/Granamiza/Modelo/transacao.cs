@@ -17,7 +17,7 @@ namespace Granamiza.Modelo
         public int id { get; set; }
         public string descricao { get; set; }
         public decimal valor { get; set; }
-        public SByte tipo_transacao { get; set; }
+        public sbyte tipo_transacao { get; set; }
         public string data_insercao { get; set; }
         public string hora_insercao { get; set; }
         public System.DateTime data_criacao { get; set; }

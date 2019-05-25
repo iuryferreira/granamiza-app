@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.txtTipoTransacao = new System.Windows.Forms.TextBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtIdTransacao = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,26 +44,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtDescricao
             // 
-            this.textBox1.Location = new System.Drawing.Point(373, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtDescricao.Location = new System.Drawing.Point(373, 28);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(121, 20);
+            this.txtDescricao.TabIndex = 0;
             // 
-            // textBox2
+            // txtValor
             // 
-            this.textBox2.Location = new System.Drawing.Point(373, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtValor.Location = new System.Drawing.Point(373, 91);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(121, 20);
+            this.txtValor.TabIndex = 1;
             // 
-            // textBox3
+            // txtTipoTransacao
             // 
-            this.textBox3.Location = new System.Drawing.Point(373, 155);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtTipoTransacao.Location = new System.Drawing.Point(373, 155);
+            this.txtTipoTransacao.Name = "txtTipoTransacao";
+            this.txtTipoTransacao.Size = new System.Drawing.Size(121, 20);
+            this.txtTipoTransacao.TabIndex = 2;
             // 
             // cbCategoria
             // 
@@ -80,12 +80,12 @@
             // 
             this.categoriaBindingSource.DataSource = typeof(Granamiza.Modelo.categoria);
             // 
-            // textBox4
+            // txtIdTransacao
             // 
-            this.textBox4.Location = new System.Drawing.Point(373, 289);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtIdTransacao.Location = new System.Drawing.Point(373, 289);
+            this.txtIdTransacao.Name = "txtIdTransacao";
+            this.txtIdTransacao.Size = new System.Drawing.Size(121, 20);
+            this.txtIdTransacao.TabIndex = 4;
             // 
             // btnSalvar
             // 
@@ -95,6 +95,7 @@
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // label1
             // 
@@ -152,11 +153,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtIdTransacao);
             this.Controls.Add(this.cbCategoria);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTipoTransacao);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.txtDescricao);
             this.Name = "FrmTransacao";
             this.Text = "FrmTransacao";
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
@@ -167,11 +168,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.TextBox txtTipoTransacao;
         private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtIdTransacao;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -9,12 +9,12 @@
         <EntityTypeShape EntityType="granamizaModel.cotacao" Width="1.5" PointX="5.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.preferencias" Width="1.5" PointX="2.875" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.simulacao" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.transacao" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.usuario" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <AssociationConnector Association="granamizaModel.fk_remuneracao_categoria" ManuallyRouted="false" />
         <AssociationConnector Association="granamizaModel.fk_preferencias_usuario1" ManuallyRouted="false" />
         <AssociationConnector Association="granamizaModel.fk_simulacao_usuario1" ManuallyRouted="false" />
-        <AssociationConnector Association="granamizaModel.fk_transacao_usuario1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="granamizaModel.transacao" Width="1.5" PointX="6" PointY="4.875" />
+        <AssociationConnector Association="granamizaModel.fk_transacao_categoria1" />
+        <AssociationConnector Association="granamizaModel.fk_transacao_usuario1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
