@@ -11,6 +11,9 @@ namespace Granamiza.App.CRUD
 {
     class Categoria
     {
+
+        //Esse metodo é chamado quando vamos salvar uma categoria nova, caso ela já exista, retorna 
+        //o id para o usuário
         internal static int Salvar(string nomeCategoria, sbyte isGasto)
         {
 
@@ -28,6 +31,7 @@ namespace Granamiza.App.CRUD
                     
                     if(cat != null)
                     {
+                        //Retorna o id para o usuario
                         int id_categoria = cat.id;
                         return id_categoria;
                     }
@@ -36,6 +40,8 @@ namespace Granamiza.App.CRUD
                     // se não encontrou.
                     else
                     {
+
+                        //cria uma nova
                         categoria nova_cat = new categoria
                         {
                             nome = nomeCategoria,
@@ -45,8 +51,10 @@ namespace Granamiza.App.CRUD
                         bd.categoria.Add(nova_cat);
                         bd.SaveChanges();
 
+
                         int id = nova_cat.id;
 
+                        //Retorna o id ao usuário
                         return id;
 
                     }

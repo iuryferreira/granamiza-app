@@ -162,7 +162,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(160)))), ((int)(((byte)(112)))));
             this.btnSalvar.FlatAppearance.BorderSize = 2;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,7 +346,7 @@
             this.lblOU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblOU.Location = new System.Drawing.Point(196, 130);
             this.lblOU.Name = "lblOU";
-            this.lblOU.Size = new System.Drawing.Size(40, 25);
+            this.lblOU.Size = new System.Drawing.Size(42, 25);
             this.lblOU.TabIndex = 9;
             this.lblOU.Text = "OU";
             // 

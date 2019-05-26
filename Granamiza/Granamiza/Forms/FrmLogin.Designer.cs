@@ -56,7 +56,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(106, 12);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(283, 64);
+            this.lblTitulo.Size = new System.Drawing.Size(292, 64);
             this.lblTitulo.TabIndex = 63;
             this.lblTitulo.Text = "Granamiza";
             this.lblTitulo.MouseEnter += new System.EventHandler(this.LblTitulo_MouseEnter);
@@ -140,6 +140,7 @@
             this.btnEntrar.TabIndex = 82;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // lblEmail
             // 

@@ -7,6 +7,9 @@ namespace Granamiza.Forms
 {
     public partial class FrmLogin : Form
     {
+
+        FrmPrincipal frm;
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -71,7 +74,20 @@ namespace Granamiza.Forms
             
             if (Autenticacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim(), lblErroAutenticacao))
             {
-                _ = new FrmPopup("Autenticado com sucesso!", "Sucesso");
+                //Retornar os dados para a tela principal
+                //
+
+
+                //Solução somente para testes
+
+                //Oculta o login
+                this.Hide();
+                //chama o form principal
+                var formPrincipal = new FrmPrincipal();
+                formPrincipal.Closed += (s, args) => this.Close();
+                formPrincipal.Show();
+                
+
             }
             else
             {

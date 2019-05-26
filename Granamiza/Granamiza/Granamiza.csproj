@@ -99,6 +99,12 @@
     <Compile Include="Forms\Popup\FrmPopup.Designer.cs">
       <DependentUpon>FrmPopup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UControl\UcVisaoGeral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UControl\UcVisaoGeral.Designer.cs">
+      <DependentUpon>UcVisaoGeral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UControl\UserControlTransacao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="Modelo\usuario.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\vwtransacaocategoria.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmCadastro.resx">
@@ -157,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Popup\FrmPopup.resx">
       <DependentUpon>FrmPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UControl\UcVisaoGeral.resx">
+      <DependentUpon>UcVisaoGeral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
       <DependentUpon>UserControlTransacao.cs</DependentUpon>
@@ -179,6 +191,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Granamiza.Modelo.categoria.datasource" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.vwtransacaocategoria.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -195,18 +208,18 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Imagens\background.jpg" />
-    <None Include="Imagens\error-icon.png" />
-    <None Include="Imagens\info-icon.png" />
     <Content Include="Modelo\Modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Modelo.Context.cs</LastGenOutput>
       <DependentUpon>Modelo.edmx</DependentUpon>
+      <LastGenOutput>Modelo.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Modelo\Modelo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Modelo.edmx</DependentUpon>
       <LastGenOutput>Modelo.cs</LastGenOutput>
     </Content>
+    <None Include="Imagens\error-icon.png" />
+    <None Include="Imagens\info-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

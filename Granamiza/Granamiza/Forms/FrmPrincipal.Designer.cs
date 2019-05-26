@@ -33,18 +33,21 @@ namespace Granamiza.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHistorico = new System.Windows.Forms.Button();
+            this.btnCotacao = new System.Windows.Forms.Button();
+            this.btnSimulacao = new System.Windows.Forms.Button();
+            this.btnDespesa = new System.Windows.Forms.Button();
             this.linhaMenu = new System.Windows.Forms.Panel();
-            this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnReceita = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.avatarMale = new System.Windows.Forms.PictureBox();
-            this.lblDesc = new System.Windows.Forms.Label();
+            this.pbAvatar = new System.Windows.Forms.PictureBox();
+            this.lblBemVindo = new System.Windows.Forms.Label();
+            this.pnlConteudo = new System.Windows.Forms.Panel();
+            this.visaoGeralUC = new Granamiza.Forms.UControl.UcVisaoGeral();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avatarMale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            this.pnlConteudo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -53,12 +56,12 @@ namespace Granamiza.Forms
             this.pnlMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMenu.BackgroundImage")));
             this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMenu.Controls.Add(this.lblTitulo);
-            this.pnlMenu.Controls.Add(this.button4);
-            this.pnlMenu.Controls.Add(this.button3);
-            this.pnlMenu.Controls.Add(this.button2);
-            this.pnlMenu.Controls.Add(this.button1);
+            this.pnlMenu.Controls.Add(this.btnHistorico);
+            this.pnlMenu.Controls.Add(this.btnCotacao);
+            this.pnlMenu.Controls.Add(this.btnSimulacao);
+            this.pnlMenu.Controls.Add(this.btnDespesa);
             this.pnlMenu.Controls.Add(this.linhaMenu);
-            this.pnlMenu.Controls.Add(this.btnEntrar);
+            this.pnlMenu.Controls.Add(this.btnReceita);
             this.pnlMenu.Controls.Add(this.pbLogo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
@@ -77,85 +80,87 @@ namespace Granamiza.Forms
             this.lblTitulo.Size = new System.Drawing.Size(127, 28);
             this.lblTitulo.TabIndex = 74;
             this.lblTitulo.Text = "Granamiza";
+            this.lblTitulo.Click += new System.EventHandler(this.LblTitulo_Click);
             // 
-            // button4
+            // btnHistorico
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Enabled = false;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 315);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 55);
-            this.button4.TabIndex = 87;
-            this.button4.Text = "Histórico";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnHistorico.BackColor = System.Drawing.Color.Transparent;
+            this.btnHistorico.Enabled = false;
+            this.btnHistorico.FlatAppearance.BorderSize = 0;
+            this.btnHistorico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnHistorico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorico.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHistorico.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorico.Image")));
+            this.btnHistorico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorico.Location = new System.Drawing.Point(0, 315);
+            this.btnHistorico.Name = "btnHistorico";
+            this.btnHistorico.Size = new System.Drawing.Size(166, 55);
+            this.btnHistorico.TabIndex = 87;
+            this.btnHistorico.Text = "Histórico";
+            this.btnHistorico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHistorico.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnCotacao
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 260);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 55);
-            this.button3.TabIndex = 86;
-            this.button3.Text = "Cotações";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnCotacao.BackColor = System.Drawing.Color.Transparent;
+            this.btnCotacao.Enabled = false;
+            this.btnCotacao.FlatAppearance.BorderSize = 0;
+            this.btnCotacao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCotacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnCotacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCotacao.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCotacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCotacao.Image = ((System.Drawing.Image)(resources.GetObject("btnCotacao.Image")));
+            this.btnCotacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCotacao.Location = new System.Drawing.Point(0, 260);
+            this.btnCotacao.Name = "btnCotacao";
+            this.btnCotacao.Size = new System.Drawing.Size(166, 55);
+            this.btnCotacao.TabIndex = 86;
+            this.btnCotacao.Text = "Cotações";
+            this.btnCotacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCotacao.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnSimulacao
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 205);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 55);
-            this.button2.TabIndex = 85;
-            this.button2.Text = "Simulação";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSimulacao.BackColor = System.Drawing.Color.Transparent;
+            this.btnSimulacao.Enabled = false;
+            this.btnSimulacao.FlatAppearance.BorderSize = 0;
+            this.btnSimulacao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSimulacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnSimulacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSimulacao.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimulacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSimulacao.Image = ((System.Drawing.Image)(resources.GetObject("btnSimulacao.Image")));
+            this.btnSimulacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSimulacao.Location = new System.Drawing.Point(0, 205);
+            this.btnSimulacao.Name = "btnSimulacao";
+            this.btnSimulacao.Size = new System.Drawing.Size(166, 55);
+            this.btnSimulacao.TabIndex = 85;
+            this.btnSimulacao.Text = "Simulação";
+            this.btnSimulacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSimulacao.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnDespesa
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 55);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "Despesas";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDespesa.BackColor = System.Drawing.Color.Transparent;
+            this.btnDespesa.FlatAppearance.BorderSize = 0;
+            this.btnDespesa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnDespesa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnDespesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDespesa.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDespesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDespesa.Image = ((System.Drawing.Image)(resources.GetObject("btnDespesa.Image")));
+            this.btnDespesa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDespesa.Location = new System.Drawing.Point(0, 150);
+            this.btnDespesa.Name = "btnDespesa";
+            this.btnDespesa.Size = new System.Drawing.Size(166, 55);
+            this.btnDespesa.TabIndex = 84;
+            this.btnDespesa.Text = "Despesas";
+            this.btnDespesa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDespesa.UseVisualStyleBackColor = false;
+            this.btnDespesa.Click += new System.EventHandler(this.BtnDespesa_Click);
             // 
             // linhaMenu
             // 
@@ -165,24 +170,25 @@ namespace Granamiza.Forms
             this.linhaMenu.Size = new System.Drawing.Size(166, 2);
             this.linhaMenu.TabIndex = 1;
             // 
-            // btnEntrar
+            // btnReceita
             // 
-            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEntrar.FlatAppearance.BorderSize = 0;
-            this.btnEntrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
-            this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrar.Location = new System.Drawing.Point(0, 95);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(166, 55);
-            this.btnEntrar.TabIndex = 83;
-            this.btnEntrar.Text = "Receita";
-            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnReceita.BackColor = System.Drawing.Color.Transparent;
+            this.btnReceita.FlatAppearance.BorderSize = 0;
+            this.btnReceita.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnReceita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceita.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReceita.Image = ((System.Drawing.Image)(resources.GetObject("btnReceita.Image")));
+            this.btnReceita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReceita.Location = new System.Drawing.Point(0, 95);
+            this.btnReceita.Name = "btnReceita";
+            this.btnReceita.Size = new System.Drawing.Size(166, 55);
+            this.btnReceita.TabIndex = 83;
+            this.btnReceita.Text = "Receita";
+            this.btnReceita.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReceita.UseVisualStyleBackColor = false;
+            this.btnReceita.Click += new System.EventHandler(this.BtnReceita_Click);
             // 
             // pbLogo
             // 
@@ -197,31 +203,48 @@ namespace Granamiza.Forms
             this.pbLogo.TabStop = false;
             this.pbLogo.Click += new System.EventHandler(this.PbLogo_Click);
             // 
-            // avatarMale
+            // pbAvatar
             // 
-            this.avatarMale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.avatarMale.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("avatarMale.BackgroundImage")));
-            this.avatarMale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.avatarMale.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.avatarMale.Location = new System.Drawing.Point(703, 12);
-            this.avatarMale.Name = "avatarMale";
-            this.avatarMale.Size = new System.Drawing.Size(69, 69);
-            this.avatarMale.TabIndex = 7;
-            this.avatarMale.TabStop = false;
+            this.pbAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAvatar.BackgroundImage")));
+            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAvatar.Location = new System.Drawing.Point(703, 12);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(69, 69);
+            this.pbAvatar.TabIndex = 7;
+            this.pbAvatar.TabStop = false;
             // 
-            // lblDesc
+            // lblBemVindo
             // 
-            this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblDesc.AutoSize = true;
-            this.lblDesc.BackColor = System.Drawing.Color.Transparent;
-            this.lblDesc.Font = new System.Drawing.Font("SF Pro Display", 16F, System.Drawing.FontStyle.Bold);
-            this.lblDesc.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblDesc.Location = new System.Drawing.Point(312, 27);
-            this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(324, 26);
-            this.lblDesc.TabIndex = 75;
-            this.lblDesc.Text = "Bem vindo ao Granamiza, John.";
-            this.lblDesc.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblBemVindo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblBemVindo.AutoSize = true;
+            this.lblBemVindo.BackColor = System.Drawing.Color.Transparent;
+            this.lblBemVindo.Font = new System.Drawing.Font("SF Pro Display", 16F, System.Drawing.FontStyle.Bold);
+            this.lblBemVindo.ForeColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblBemVindo.Location = new System.Drawing.Point(312, 27);
+            this.lblBemVindo.Name = "lblBemVindo";
+            this.lblBemVindo.Size = new System.Drawing.Size(324, 26);
+            this.lblBemVindo.TabIndex = 75;
+            this.lblBemVindo.Text = "Bem vindo ao Granamiza, John.";
+            this.lblBemVindo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pnlConteudo
+            // 
+            this.pnlConteudo.Controls.Add(this.visaoGeralUC);
+            this.pnlConteudo.Font = new System.Drawing.Font("SF Pro Display", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlConteudo.Location = new System.Drawing.Point(176, 87);
+            this.pnlConteudo.Name = "pnlConteudo";
+            this.pnlConteudo.Size = new System.Drawing.Size(596, 463);
+            this.pnlConteudo.TabIndex = 76;
+            // 
+            // visaoGeralUC
+            // 
+            this.visaoGeralUC.Location = new System.Drawing.Point(12, 24);
+            this.visaoGeralUC.Name = "visaoGeralUC";
+            this.visaoGeralUC.Size = new System.Drawing.Size(574, 204);
+            this.visaoGeralUC.TabIndex = 1;
+            this.visaoGeralUC.Load += new System.EventHandler(this.VisaoGeralUC_Load);
             // 
             // FrmPrincipal
             // 
@@ -231,8 +254,9 @@ namespace Granamiza.Forms
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(784, 562);
-            this.Controls.Add(this.lblDesc);
-            this.Controls.Add(this.avatarMale);
+            this.Controls.Add(this.pnlConteudo);
+            this.Controls.Add(this.lblBemVindo);
+            this.Controls.Add(this.pbAvatar);
             this.Controls.Add(this.pnlMenu);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 600);
@@ -240,11 +264,11 @@ namespace Granamiza.Forms
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Granamiza";
-            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avatarMale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            this.pnlConteudo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,15 +277,17 @@ namespace Granamiza.Forms
         #endregion
 
         private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Button btnReceita;
         private System.Windows.Forms.Panel linhaMenu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox avatarMale;
-        private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.Button btnDespesa;
+        private System.Windows.Forms.Button btnCotacao;
+        private System.Windows.Forms.Button btnSimulacao;
+        private System.Windows.Forms.Button btnHistorico;
+        private System.Windows.Forms.PictureBox pbAvatar;
+        private System.Windows.Forms.Label lblBemVindo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Panel pnlConteudo;
+        private UControl.UcVisaoGeral visaoGeralUC;
     }
 }

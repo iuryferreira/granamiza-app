@@ -28,22 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransacao));
             this.dgvTransacao = new System.Windows.Forms.DataGridView();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datainsercaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwtransacaocategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.picInfo = new System.Windows.Forms.PictureBox();
             this.pbIconeCategoria = new System.Windows.Forms.PictureBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.linhaDesc = new System.Windows.Forms.Panel();
             this.txtDesc = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.linhaHora = new System.Windows.Forms.Panel();
             this.txtDsc = new System.Windows.Forms.Label();
             this.txtHora = new System.Windows.Forms.TextBox();
             this.lblHora = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.linhaData = new System.Windows.Forms.Panel();
             this.txtData = new System.Windows.Forms.TextBox();
             this.linhaCategoria = new System.Windows.Forms.Panel();
             this.lblData = new System.Windows.Forms.Label();
@@ -53,6 +58,7 @@
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwtransacaocategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconeCategoria)).BeginInit();
             this.SuspendLayout();
@@ -63,33 +69,64 @@
             this.dgvTransacao.AllowUserToDeleteRows = false;
             this.dgvTransacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTransacao.AutoGenerateColumns = false;
             this.dgvTransacao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransacao.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTransacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransacao.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTransacao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.valorDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.datainsercaoDataGridViewTextBoxColumn});
+            this.dgvTransacao.DataSource = this.vwtransacaocategoriaBindingSource;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransacao.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTransacao.EnableHeadersVisualStyles = false;
             this.dgvTransacao.GridColor = System.Drawing.Color.White;
-            this.dgvTransacao.Location = new System.Drawing.Point(14, 311);
+            this.dgvTransacao.Location = new System.Drawing.Point(20, 309);
             this.dgvTransacao.Name = "dgvTransacao";
             this.dgvTransacao.ReadOnly = true;
             this.dgvTransacao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvTransacao.Size = new System.Drawing.Size(538, 149);
             this.dgvTransacao.TabIndex = 115;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor R$";
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Categoria";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datainsercaoDataGridViewTextBoxColumn
+            // 
+            this.datainsercaoDataGridViewTextBoxColumn.DataPropertyName = "data_insercao";
+            this.datainsercaoDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.datainsercaoDataGridViewTextBoxColumn.Name = "datainsercaoDataGridViewTextBoxColumn";
+            this.datainsercaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vwtransacaocategoriaBindingSource
+            // 
+            this.vwtransacaocategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtransacaocategoria);
             // 
             // picInfo
             // 
@@ -105,7 +142,7 @@
             // pbIconeCategoria
             // 
             this.pbIconeCategoria.BackColor = System.Drawing.Color.Silver;
-            this.pbIconeCategoria.Location = new System.Drawing.Point(143, 81);
+            this.pbIconeCategoria.Location = new System.Drawing.Point(150, 81);
             this.pbIconeCategoria.Name = "pbIconeCategoria";
             this.pbIconeCategoria.Size = new System.Drawing.Size(28, 26);
             this.pbIconeCategoria.TabIndex = 113;
@@ -133,8 +170,9 @@
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(449, 254);
+            this.btnRemover.Location = new System.Drawing.Point(454, 254);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(103, 38);
             this.btnRemover.TabIndex = 111;
@@ -152,23 +190,25 @@
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
             this.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionar.Location = new System.Drawing.Point(450, 213);
+            this.btnAdicionar.Location = new System.Drawing.Point(452, 213);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(102, 39);
+            this.btnAdicionar.Size = new System.Drawing.Size(105, 39);
             this.btnAdicionar.TabIndex = 110;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
-            // panel4
+            // linhaDesc
             // 
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(22, 192);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(526, 2);
-            this.panel4.TabIndex = 103;
+            this.linhaDesc.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linhaDesc.Location = new System.Drawing.Point(22, 192);
+            this.linhaDesc.Name = "linhaDesc";
+            this.linhaDesc.Size = new System.Drawing.Size(526, 2);
+            this.linhaDesc.TabIndex = 103;
             // 
             // txtDesc
             // 
@@ -176,27 +216,27 @@
             this.txtDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDesc.Font = new System.Drawing.Font("SF Pro Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDesc.Location = new System.Drawing.Point(22, 148);
+            this.txtDesc.Location = new System.Drawing.Point(29, 148);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(526, 43);
             this.txtDesc.TabIndex = 101;
             // 
-            // panel3
+            // linhaHora
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(449, 105);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(99, 2);
-            this.panel3.TabIndex = 109;
+            this.linhaHora.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linhaHora.Location = new System.Drawing.Point(456, 105);
+            this.linhaHora.Name = "linhaHora";
+            this.linhaHora.Size = new System.Drawing.Size(99, 2);
+            this.linhaHora.TabIndex = 109;
             // 
             // txtDsc
             // 
             this.txtDsc.AutoSize = true;
             this.txtDsc.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
             this.txtDsc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDsc.Location = new System.Drawing.Point(17, 127);
+            this.txtDsc.Location = new System.Drawing.Point(24, 127);
             this.txtDsc.Name = "txtDsc";
             this.txtDsc.Size = new System.Drawing.Size(57, 14);
             this.txtDsc.TabIndex = 99;
@@ -208,7 +248,7 @@
             this.txtHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHora.Font = new System.Drawing.Font("SF Pro Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtHora.Location = new System.Drawing.Point(449, 80);
+            this.txtHora.Location = new System.Drawing.Point(456, 80);
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(99, 26);
             this.txtHora.TabIndex = 108;
@@ -218,20 +258,20 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblHora.Location = new System.Drawing.Point(444, 59);
+            this.lblHora.Location = new System.Drawing.Point(451, 59);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(31, 14);
             this.lblHora.TabIndex = 107;
             this.lblHora.Text = "Hora";
             // 
-            // panel2
+            // linhaData
             // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(327, 106);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(99, 2);
-            this.panel2.TabIndex = 106;
+            this.linhaData.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linhaData.Location = new System.Drawing.Point(334, 106);
+            this.linhaData.Name = "linhaData";
+            this.linhaData.Size = new System.Drawing.Size(99, 2);
+            this.linhaData.TabIndex = 106;
             // 
             // txtData
             // 
@@ -239,7 +279,7 @@
             this.txtData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtData.Font = new System.Drawing.Font("SF Pro Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtData.Location = new System.Drawing.Point(327, 81);
+            this.txtData.Location = new System.Drawing.Point(334, 81);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(99, 26);
             this.txtData.TabIndex = 105;
@@ -248,7 +288,7 @@
             // 
             this.linhaCategoria.BackColor = System.Drawing.Color.Gainsboro;
             this.linhaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaCategoria.Location = new System.Drawing.Point(143, 106);
+            this.linhaCategoria.Location = new System.Drawing.Point(150, 106);
             this.linhaCategoria.Name = "linhaCategoria";
             this.linhaCategoria.Size = new System.Drawing.Size(149, 2);
             this.linhaCategoria.TabIndex = 102;
@@ -258,7 +298,7 @@
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
             this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblData.Location = new System.Drawing.Point(322, 60);
+            this.lblData.Location = new System.Drawing.Point(329, 60);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(31, 14);
             this.lblData.TabIndex = 104;
@@ -270,7 +310,7 @@
             this.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCategoria.Font = new System.Drawing.Font("SF Pro Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCategoria.Location = new System.Drawing.Point(169, 81);
+            this.txtCategoria.Location = new System.Drawing.Point(176, 81);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(123, 26);
             this.txtCategoria.TabIndex = 100;
@@ -280,7 +320,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
             this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCategoria.Location = new System.Drawing.Point(143, 60);
+            this.lblCategoria.Location = new System.Drawing.Point(150, 60);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(56, 14);
             this.lblCategoria.TabIndex = 98;
@@ -290,7 +330,7 @@
             // 
             this.linhaValor.BackColor = System.Drawing.Color.Gainsboro;
             this.linhaValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaValor.Location = new System.Drawing.Point(24, 106);
+            this.linhaValor.Location = new System.Drawing.Point(31, 106);
             this.linhaValor.Name = "linhaValor";
             this.linhaValor.Size = new System.Drawing.Size(99, 2);
             this.linhaValor.TabIndex = 97;
@@ -301,7 +341,7 @@
             this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtValor.Font = new System.Drawing.Font("SF Pro Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtValor.Location = new System.Drawing.Point(24, 81);
+            this.txtValor.Location = new System.Drawing.Point(31, 81);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(99, 26);
             this.txtValor.TabIndex = 96;
@@ -311,7 +351,7 @@
             this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
             this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblValor.Location = new System.Drawing.Point(19, 60);
+            this.lblValor.Location = new System.Drawing.Point(26, 60);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(32, 14);
             this.lblValor.TabIndex = 95;
@@ -327,13 +367,13 @@
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnAdicionar);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.linhaDesc);
             this.Controls.Add(this.txtDesc);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.linhaHora);
             this.Controls.Add(this.txtDsc);
             this.Controls.Add(this.txtHora);
             this.Controls.Add(this.lblHora);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.linhaData);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.linhaCategoria);
             this.Controls.Add(this.lblData);
@@ -344,7 +384,9 @@
             this.Controls.Add(this.lblValor);
             this.Name = "UserControlTransacao";
             this.Size = new System.Drawing.Size(572, 467);
+            this.Load += new System.EventHandler(this.UserControlTransacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwtransacaocategoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconeCategoria)).EndInit();
             this.ResumeLayout(false);
@@ -360,13 +402,13 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnAdicionar;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel linhaDesc;
         private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel linhaHora;
         private System.Windows.Forms.Label txtDsc;
         private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel linhaData;
         private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.Panel linhaCategoria;
         private System.Windows.Forms.Label lblData;
@@ -375,5 +417,9 @@
         private System.Windows.Forms.Panel linhaValor;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datainsercaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource vwtransacaocategoriaBindingSource;
     }
 }

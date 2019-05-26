@@ -13,16 +13,35 @@ namespace Granamiza.Forms
 {
     public partial class FrmPrincipal : Form
     {
+
+        //Valores retornados do login
+        int id_usuario_logado;
+        string nome_usuario = "John";
+
+
         public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+
+        //Formulario anterior, passaria o id do usuario logado para cá.
+        public FrmPrincipal( int id_usuario, string nome)
         {
+            InitializeComponent();
+            this.id_usuario_logado = id_usuario;
+            this.nome_usuario = nome;
+        }
+
+        private void VisaoGeralUC_Load(object sender, EventArgs e)
+        {
+            //Aqui carregaria nos lbls de valor, os valores da calculo geral da receita e das despesas.
 
         }
 
+        //Menu
+
+        //Esconde o Menu
         private void PbLogo_Click(object sender, EventArgs e)
         {
             EsconderMenu();
@@ -41,16 +60,37 @@ namespace Granamiza.Forms
             }
         }
 
-        private void BtnAdicionarRemuneracao_Click(object sender, EventArgs e)
+        //Muda o nome de titulo, e mostra o usercontrol visão geral
+        private void LblTitulo_Click(object sender, EventArgs e)
         {
-            FrmReceita frmRemu = new FrmReceita();
-            frmRemu.Show();
+            lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario ;
+            lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
+            UcVisaoGeral uc = new UcVisaoGeral();
+            pnlConteudo.Controls.Clear();
+            pnlConteudo.Controls.Add(uc);
         }
 
-        private void BtnAdicionarDespesa_Click(object sender, EventArgs e)
+
+        //Limpa o painel de conteudo adicionar o titulo, e adiciona o usercontrol de transacao
+        private void BtnReceita_Click(object sender, EventArgs e)
         {
-            FrmDespesa frmDes = new FrmDespesa();
-            frmDes.Show();
+
+            lblBemVindo.Text = "Gerenciamento de Receita";
+            lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
+            UserControlTransacao uc = new UserControlTransacao(btnReceita);
+            pnlConteudo.Controls.Clear();
+            pnlConteudo.Controls.Add(uc);
+
+        }
+
+        //Volta pra tela inicial ao clicar no Label
+        private void BtnDespesa_Click(object sender, EventArgs e)
+        {
+            lblBemVindo.Text = "Gerenciamento de Despesa";
+            lblBemVindo.ForeColor = Color.FromArgb(191,93, 101);
+            UserControlTransacao uc = new UserControlTransacao(btnDespesa);
+            pnlConteudo.Controls.Clear();
+            pnlConteudo.Controls.Add(uc);
         }
     }
 }

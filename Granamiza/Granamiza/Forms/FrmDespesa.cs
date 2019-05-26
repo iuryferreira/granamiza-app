@@ -1,13 +1,8 @@
 ﻿using Granamiza.App.CRUD;
 using Granamiza.Forms.Popup;
+using Granamiza.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Granamiza.Forms
@@ -17,7 +12,23 @@ namespace Granamiza.Forms
         public FrmDespesa()
         {
             InitializeComponent();
+
+            try
+            {
+                using (var bd = new granamizaEntities())
+                {
+
+                    //Solução alternativa, falta um metodo para listar categorias por tipo
+                    cbCategoria.DataSource = bd.categoria.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+            }
         }
+
+        
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
@@ -25,11 +36,17 @@ namespace Granamiza.Forms
             try
             {
 
+                //passa a categoria digitada ou escolhida
                 string categoria = cbCategoria.Text;
+
+                //Chama o salvar categoria enviando a categoria inserida e 0 como sendo gasto
                 int idCategoria = Categoria.Salvar(categoria, 1);
+
+                //Recebe a descricao da transacao
                 string descricao = txtDesc.Text;
+
+                //Envia os valores já formatados para o metodo de salvar modificado
                 TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
-                this.Close();
             }
             catch (Exception)
             {

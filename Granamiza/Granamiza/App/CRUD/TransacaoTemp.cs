@@ -11,6 +11,7 @@ namespace Granamiza.App.CRUD
     class TransacaoTemp
     {
 
+        //Recebe os valores inseridos já formatados
         internal static void Salvar(decimal valorInserido, int idCategoria, string descricaoInserida, sbyte tipoTransacao)
         {
 
