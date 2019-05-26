@@ -83,7 +83,8 @@ namespace Granamiza.Forms
                 //Oculta o login
                 this.Hide();
                 //chama o form principal
-                var formPrincipal = new FrmPrincipal();
+                //var formPrincipal = new FrmPrincipal();
+                var formPrincipal = new FrmPrincipal(Sessao.IdUsuario, Sessao.NomeUsuario, Sessao.AvatarUsuario);
                 formPrincipal.Closed += (s, args) => this.Close();
                 formPrincipal.Show();
                 

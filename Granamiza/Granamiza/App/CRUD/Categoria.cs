@@ -24,7 +24,7 @@ namespace Granamiza.App.CRUD
 
                     
 
-                    //Recuperar categoria através do id.
+                    //Recuperar categoria através do nome.
                     categoria cat = (from c in bd.categoria
                                      where c.nome == nomeCategoria
                                      select c).FirstOrDefault();

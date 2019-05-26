@@ -13,24 +13,26 @@ namespace Granamiza.Forms
 {
     public partial class FrmPrincipal : Form
     {
-
         //Valores retornados do login
         int id_usuario_logado;
         string nome_usuario = "John";
-
+        string avatar_usuario = "Granamiza\\Granamiza\\Imagens\\male";
+        
 
         public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-
-        //Formulario anterior, passaria o id do usuario logado para cá.
-        public FrmPrincipal( int id_usuario, string nome)
+        //Formulario anterior, passa o id do usuario logado para cá.
+        public FrmPrincipal(int id_usuario, string nome, string avatar)
         {
             InitializeComponent();
             this.id_usuario_logado = id_usuario;
             this.nome_usuario = nome;
+            this.avatar_usuario = avatar;
+            lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario;
+
         }
 
         private void VisaoGeralUC_Load(object sender, EventArgs e)
@@ -63,7 +65,7 @@ namespace Granamiza.Forms
         //Muda o nome de titulo, e mostra o usercontrol visão geral
         private void LblTitulo_Click(object sender, EventArgs e)
         {
-            lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario ;
+            lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario;
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
             UcVisaoGeral uc = new UcVisaoGeral();
             pnlConteudo.Controls.Clear();

@@ -15,8 +15,8 @@ namespace Granamiza.App.CRUD
         internal static void Salvar(decimal valorInserido, int idCategoria, string descricaoInserida, sbyte tipoTransacao)
         {
 
-            try
-            {
+            /*try
+            {*/
                 using (var bd = new granamizaEntities())
                 {
                     //Salvar.
@@ -45,12 +45,12 @@ namespace Granamiza.App.CRUD
                     
 
                 }
-            }
+            //}
 
-            catch
+            /*catch
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }
+            }*/
         }
 
     }

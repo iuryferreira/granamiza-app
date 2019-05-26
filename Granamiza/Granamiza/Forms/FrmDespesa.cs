@@ -17,7 +17,6 @@ namespace Granamiza.Forms
             {
                 using (var bd = new granamizaEntities())
                 {
-
                     //Solução alternativa, falta um metodo para listar categorias por tipo
                     cbCategoria.DataSource = bd.categoria.ToList();
                 }
@@ -29,17 +28,18 @@ namespace Granamiza.Forms
         }
 
         
-
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
 
-            try
-            {
+            /*try
+            {*/
 
                 //passa a categoria digitada ou escolhida
                 string categoria = cbCategoria.Text;
+                //int id_categoria = int.Parse(cbCategoria.SelectedValue.ToString());
 
-                //Chama o salvar categoria enviando a categoria inserida e 0 como sendo gasto
+
+                //Chama o salvar categoria enviando a categoria inserida e 1 como sendo gasto
                 int idCategoria = Categoria.Salvar(categoria, 1);
 
                 //Recebe a descricao da transacao
@@ -47,11 +47,11 @@ namespace Granamiza.Forms
 
                 //Envia os valores já formatados para o metodo de salvar modificado
                 TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
-            }
+            /*}
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }
+            }*/
         }
     }
 }

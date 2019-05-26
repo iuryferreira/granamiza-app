@@ -24,18 +24,25 @@ namespace Granamiza.App.Autenticacao
                 using (var bd = new granamizaEntities())
                 {
                     //Consulta usando LINQ
-                    // usuario user = (from u in bd.usuario
-                    //               where u.email == email
-                    //             select u).FirstOrDefault();
+                    usuario user = (from u in bd.usuario
+                                    where u.email == email
+                                    select u).FirstOrDefault();
 
-                    usuario user = bd.usuario.Where(u => u.email == email).FirstOrDefault<usuario>();
+                    //usuario user = bd.usuario.Where(u => u.email == email).FirstOrDefault<usuario>();
 
                     //Testa se achou usuário, para poder verificar senha.
                     if (user != null)
                     {
                         if (VerificarSenha(senhaDigitada, user.senha))
                         {
-                            return true;
+                            if(DefinirUsuario(user.id, user.nome)) {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                            
                         }
                         //Senha incorreta.
                         else
@@ -65,5 +72,32 @@ namespace Granamiza.App.Autenticacao
         {
             return Crypter.CheckPassword(senhaDigitada, senhaHash);
         }
+
+        internal static bool DefinirUsuario(int id_usuario, string nome_usuario)
+        {
+            Sessao.IdUsuario = id_usuario;
+            Sessao.NomeUsuario = nome_usuario;
+            string avatar_usuario;
+
+            try
+            {
+                using (var bd = new granamizaEntities())
+                {
+                    avatar_usuario = (from p in bd.preferencias
+                                      where p.usuario_id == id_usuario
+                                      select p.avatar).FirstOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                return false;
+            }
+
+            Sessao.AvatarUsuario = avatar_usuario;
+
+            return true;
+        }
+
     }
 }

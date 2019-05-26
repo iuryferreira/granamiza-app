@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\Autenticacao\Autenticacao.cs" />
+    <Compile Include="App\Autenticacao\Sessao.cs" />
     <Compile Include="App\Autenticacao\Validacao.cs" />
     <Compile Include="App\CRUD\Categoria.cs" />
     <Compile Include="App\CRUD\Transacao.cs" />
