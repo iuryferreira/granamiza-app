@@ -12,23 +12,29 @@ using System.Windows.Forms;
 
 namespace Granamiza.Forms
 {
-    public partial class FrmCategoria : Form
+    public partial class FrmDespesa : Form
     {
-        public FrmCategoria()
+        public FrmDespesa()
         {
             InitializeComponent();
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            /*try
-            {*/
-                Categoria.Salvar(txtNome, rbGasto, 0);
-            /*}
+
+            try
+            {
+
+                string categoria = cbCategoria.Text;
+                int idCategoria = Categoria.Salvar(categoria, 1);
+                string descricao = txtDesc.Text;
+                TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
+                this.Close();
+            }
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }*/
+            }
         }
     }
 }

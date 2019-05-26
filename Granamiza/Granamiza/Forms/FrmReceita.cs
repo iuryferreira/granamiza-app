@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Granamiza.Forms
 {
-    public partial class FrmTransacao : Form
+    public partial class FrmReceita : Form
     {
-        public FrmTransacao()
+        public FrmReceita()
         {
             InitializeComponent();
 
@@ -30,13 +30,26 @@ namespace Granamiza.Forms
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
             }
+
         }
 
-        private void btnSalvar_Click_1(object sender, EventArgs e)
+        private void FrmRemuneracao_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+
+
             try
             {
-            Transacao.Salvar(txtDescricao, txtValor, txtTipoTransacao, cbCategoria, txtIdTransacao);
+
+                string categoria = cbCategoria.Text;
+                int idCategoria = Categoria.Salvar(categoria, 0);
+                string descricao = txtDesc.Text; 
+                TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 0);
+                this.Close();
             }
             catch (Exception)
             {

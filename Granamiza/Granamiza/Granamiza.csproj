@@ -60,6 +60,7 @@
     <Compile Include="App\Autenticacao\Validacao.cs" />
     <Compile Include="App\CRUD\Categoria.cs" />
     <Compile Include="App\CRUD\Transacao.cs" />
+    <Compile Include="App\CRUD\TransacaoTemp.cs" />
     <Compile Include="App\CRUD\Usuario.cs" />
     <Compile Include="Forms\FrmCadastro.cs">
       <SubType>Form</SubType>
@@ -67,11 +68,11 @@
     <Compile Include="Forms\FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCategoria.cs">
+    <Compile Include="Forms\FrmDespesa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCategoria.Designer.cs">
-      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    <Compile Include="Forms\FrmDespesa.Designer.cs">
+      <DependentUpon>FrmDespesa.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -79,11 +80,17 @@
     <Compile Include="Forms\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmTransacao.cs">
+    <Compile Include="Forms\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmTransacao.Designer.cs">
-      <DependentUpon>FrmTransacao.cs</DependentUpon>
+    <Compile Include="Forms\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceita.Designer.cs">
+      <DependentUpon>FrmReceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MeusWidgets.cs" />
     <Compile Include="Forms\Popup\FrmPopup.cs">
@@ -91,6 +98,12 @@
     </Compile>
     <Compile Include="Forms\Popup\FrmPopup.Designer.cs">
       <DependentUpon>FrmPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UControl\UserControlTransacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UControl\UserControlTransacao.Designer.cs">
+      <DependentUpon>UserControlTransacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\categoria.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
@@ -130,17 +143,23 @@
     <EmbeddedResource Include="Forms\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCategoria.resx">
-      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmDespesa.resx">
+      <DependentUpon>FrmDespesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmTransacao.resx">
-      <DependentUpon>FrmTransacao.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceita.resx">
+      <DependentUpon>FrmReceita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Popup\FrmPopup.resx">
       <DependentUpon>FrmPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
+      <DependentUpon>UserControlTransacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
