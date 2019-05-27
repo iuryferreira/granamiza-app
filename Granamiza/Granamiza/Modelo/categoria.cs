@@ -23,7 +23,9 @@ namespace Granamiza.Modelo
         public string nome { get; set; }
         public sbyte is_gasto { get; set; }
         public string icone { get; set; }
+        public int usuario_id { get; set; }
     
+        public virtual usuario usuario { get; set; }
         public virtual ICollection<transacao> transacao { get; set; }
     }
 }

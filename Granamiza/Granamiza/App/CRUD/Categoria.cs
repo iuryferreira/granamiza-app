@@ -1,4 +1,5 @@
-﻿using Granamiza.Forms.Popup;
+﻿using Granamiza.App.Autenticacao;
+using Granamiza.Forms.Popup;
 using Granamiza.Modelo;
 using System;
 using System.Collections.Generic;
@@ -40,12 +41,13 @@ namespace Granamiza.App.CRUD
                     // se não encontrou.
                     else
                     {
-
+                        int id_user = Sessao.IdUsuario;
                         //cria uma nova
                         categoria nova_cat = new categoria
                         {
                             nome = nomeCategoria,
-                            is_gasto = isGasto
+                            is_gasto = isGasto,
+                            usuario_id = id_user
                         };
 
                         bd.categoria.Add(nova_cat);

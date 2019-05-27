@@ -1,4 +1,5 @@
-﻿using Granamiza.Forms.Popup;
+﻿using Granamiza.App.Autenticacao;
+using Granamiza.Forms.Popup;
 using Granamiza.Modelo;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace Granamiza.App.CRUD
                     DateTime dt = DateTime.Now;
 
                     //Preencher os dados da categoria.
+                    int user_id = Sessao.IdUsuario;
 
                     transacao tr = new transacao
                     {
@@ -36,7 +38,7 @@ namespace Granamiza.App.CRUD
                         data_criacao = dt,
 
                         //Para teste
-                        usuario_id = 2,
+                        usuario_id = user_id,
                     };
                     //Adicionar Transacao
                     bd.transacao.Add(tr);

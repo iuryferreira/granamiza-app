@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="195cba5054b3406db06eacf2864a2b0c" Name="Diagram1" ZoomLevel="111">
+      <Diagram DiagramId="195cba5054b3406db06eacf2864a2b0c" Name="Diagram1" ZoomLevel="54">
         <EntityTypeShape EntityType="granamizaModel.categoria" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.cotacao" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.preferencias" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.simulacao" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.transacao" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.usuario" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.vwtransacaocategoria" Width="1.5" PointX="8.75" PointY="1.5" IsExpanded="true" />
-        <AssociationConnector Association="granamizaModel.fk_remuneracao_categoria" ManuallyRouted="false" />
         <AssociationConnector Association="granamizaModel.fk_preferencias_usuario1" ManuallyRouted="false" />
         <AssociationConnector Association="granamizaModel.fk_simulacao_usuario1" ManuallyRouted="false" />
-        <AssociationConnector Association="granamizaModel.fk_transacao_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="granamizaModel.fk_categoria_usuario1" />
+        <EntityTypeShape EntityType="granamizaModel.transacao" Width="1.5" PointX="6" PointY="4.875" />
+        <AssociationConnector Association="granamizaModel.fk_transacao_categoria1" />
+        <AssociationConnector Association="granamizaModel.fk_transacao_usuario1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -126,7 +126,7 @@
             // 
             // vwtransacaocategoriaBindingSource
             // 
-            this.vwtransacaocategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtransacaocategoria);
+            //this.vwtransacaocategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtransacaocategoria);
             // 
             // picInfo
             // 
