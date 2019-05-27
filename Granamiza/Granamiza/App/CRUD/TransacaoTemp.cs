@@ -38,9 +38,7 @@ namespace Granamiza.App.CRUD
                     };
                     //Adicionar Transacao
                     bd.transacao.Add(tr);
-                    bd.SaveChanges();
-                    _ = new FrmPopup("Remuneração inserida com sucesso!", "Sucesso");
-                    
+                    bd.SaveChanges();                    
 
                 }
             }

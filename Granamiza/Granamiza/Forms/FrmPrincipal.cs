@@ -1,4 +1,5 @@
 ﻿using Granamiza.App.Autenticacao;
+using Granamiza.Forms.Popup;
 using Granamiza.Forms.UControl;
 using Granamiza.Modelo;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +21,7 @@ namespace Granamiza.Forms
         int id_usuario_logado;
         string nome_usuario = "John";
         string avatar_usuario = "Granamiza\\Granamiza\\Imagens\\male";
-        
+
 
         public FrmPrincipal()
         {
@@ -34,12 +36,50 @@ namespace Granamiza.Forms
             this.nome_usuario = nome;
             this.avatar_usuario = avatar;
             lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario;
+
+            ReceberValores();
+
+
+
         }
 
-        private void VisaoGeralUC_Load(object sender, EventArgs e)
+
+
+        private void ReceberValores()
         {
-            //lbl//Aqui carregaria nos lbls de valor, os valores da calculo geral da receita e das despesas.
-             
+            using (var bd = new granamizaEntities())
+            {
+
+                var qtdReceita = bd.vwreceita.Count(r => r.usuario_id == Sessao.IdUsuario);
+                var qtdDespesas = bd.vwdespesa.Count(r => r.usuario_id == Sessao.IdUsuario);
+
+                if (qtdReceita != 0)
+                {
+
+                    decimal valorReceitaTotal = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor);
+                    var valorReceitaTotalFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:#,###.##} R$", valorReceitaTotal);
+                    lblValorReceitaTotal.Text = valorReceitaTotalFormatado;
+                }
+
+                else
+                {
+                    lblValorReceitaTotal.Text = "0,00 R$";
+                }
+
+                if (qtdDespesas != 0)
+                {
+                    decimal valorDespesaTotal = bd.vwdespesa.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor);
+                    var valorDespesaTotalFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), " {0:#,###.##} R$", valorDespesaTotal);
+                    lblValorDespesaTotal.Text = valorDespesaTotalFormatado;
+
+                }
+                else
+
+                {
+                    lblValorDespesaTotal.Text = "0,00 R$";
+                }
+            }
+
         }
 
         //Menu
@@ -68,9 +108,8 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario;
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
-            UcVisaoGeral uc = new UcVisaoGeral();
             pnlConteudo.Controls.Clear();
-            pnlConteudo.Controls.Add(uc);
+            pnlConteudo.Controls.Add(gpVisaoGeral);
         }
 
 
@@ -90,10 +129,38 @@ namespace Granamiza.Forms
         private void BtnDespesa_Click(object sender, EventArgs e)
         {
             lblBemVindo.Text = "Gerenciamento de Despesa";
-            lblBemVindo.ForeColor = Color.FromArgb(191,93, 101);
+            lblBemVindo.ForeColor = Color.FromArgb(191, 93, 101);
             UserControlTransacao uc = new UserControlTransacao(btnDespesa);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
+        }
+
+
+
+        private void BtnAdicionarDespesa_Click(object sender, EventArgs e)
+        {
+            FrmDespesa frmDes = new FrmDespesa();
+            frmDes.Show();
+            frmDes.Closed += (s, args) => this.ReceberValores();
+
+        }
+
+        private void BtnAdicionarReceita_Click(object sender, EventArgs e)
+        {
+            FrmReceita frmReceita = new FrmReceita();
+            frmReceita.Show();
+            frmReceita.Closed += (s, args) => this.ReceberValores();
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja sair do programa?",
+                       "Saindo...",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

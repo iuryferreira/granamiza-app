@@ -277,11 +277,12 @@
             this.Controls.Add(this.lblValor);
             this.Controls.Add(this.pnlTitulo);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmReceita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmRemuneracao";
+            this.Text = "Nova Receita";
             ((System.ComponentModel.ISupportInitialize)(this.pbIconeCategoria)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();

@@ -47,7 +47,7 @@ namespace Granamiza.Forms
                 string descricao = txtDesc.Text;
 
                 //Envia os valores já formatados para o metodo de salvar modificado
-                Transacao.Salvar(-1, numValor.Value, idCategoria, descricao, 1);
+                TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
                 //TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
                 this.Close();
             /*}

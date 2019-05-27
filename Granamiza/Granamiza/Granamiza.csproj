@@ -100,12 +100,6 @@
     <Compile Include="Forms\Popup\FrmPopup.Designer.cs">
       <DependentUpon>FrmPopup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UControl\UcVisaoGeral.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\UControl\UcVisaoGeral.Designer.cs">
-      <DependentUpon>UcVisaoGeral.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\UControl\UserControlTransacao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,9 +174,6 @@
     <EmbeddedResource Include="Forms\Popup\FrmPopup.resx">
       <DependentUpon>FrmPopup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UControl\UcVisaoGeral.resx">
-      <DependentUpon>UcVisaoGeral.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
       <DependentUpon>UserControlTransacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +196,8 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Granamiza.Modelo.categoria.datasource" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.vwdespesa.datasource" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.vwreceita.datasource" />
     <None Include="Properties\DataSources\Granamiza.Modelo.vwtransacaocategoria.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

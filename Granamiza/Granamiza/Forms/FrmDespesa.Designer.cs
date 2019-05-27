@@ -268,11 +268,12 @@
             this.Controls.Add(this.linhaNome);
             this.Controls.Add(this.linhaCategoria);
             this.Controls.Add(this.lblCategoria);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmDespesa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDespesa";
+            this.Text = "Nova Despesa";
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
