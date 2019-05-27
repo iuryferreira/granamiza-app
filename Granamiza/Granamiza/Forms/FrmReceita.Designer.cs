@@ -282,7 +282,6 @@
             this.Name = "FrmReceita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmRemuneracao";
-            this.Load += new System.EventHandler(this.FrmRemuneracao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbIconeCategoria)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();

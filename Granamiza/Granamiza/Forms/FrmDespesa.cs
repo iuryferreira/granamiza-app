@@ -1,4 +1,5 @@
-﻿using Granamiza.App.CRUD;
+﻿using Granamiza.App.Autenticacao;
+using Granamiza.App.CRUD;
 using Granamiza.Forms.Popup;
 using Granamiza.Modelo;
 using System;
@@ -17,8 +18,8 @@ namespace Granamiza.Forms
             {
                 using (var bd = new granamizaEntities())
                 {
-                    //Solução alternativa, falta um metodo para listar categorias por tipo
-                    cbCategoria.DataSource = bd.categoria.ToList();
+                    //viewcategoriadespesa
+                    cbCategoria.DataSource = bd.vwcategoriadespesa.Where(c => c.usuario_id == Sessao.IdUsuario).ToList();
                 }
             }
             catch (Exception)
@@ -31,8 +32,8 @@ namespace Granamiza.Forms
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
 
-            /*try
-            {*/
+            try
+            {
 
                 //passa a categoria digitada ou escolhida
                 string categoria = cbCategoria.Text;
@@ -46,12 +47,14 @@ namespace Granamiza.Forms
                 string descricao = txtDesc.Text;
 
                 //Envia os valores já formatados para o metodo de salvar modificado
-                TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
-            /*}
+                Transacao.Salvar(-1, numValor.Value, idCategoria, descricao, 1);
+                //TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
+                this.Close();
+            }
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }*/
+            }
         }
     }
 }

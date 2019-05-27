@@ -70,6 +70,38 @@
           <Property Name="senha" Type="text" Nullable="false" />
           <Property Name="data_criacao" Type="datetime" Precision="0" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'def.granamiza.vwcategoriadespesa' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwcategoriadespesa">
+          <Key>
+            <PropertyRef Name="nome" />
+            <PropertyRef Name="usuario_id" />
+          </Key>
+          <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="usuario_id" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'def.granamiza.vwcategoriareceita' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwcategoriareceita">
+          <Key>
+            <PropertyRef Name="nome" />
+            <PropertyRef Name="usuario_id" />
+          </Key>
+          <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="usuario_id" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'def.granamiza.vwdespesatotal' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vwdespesatotal">
+          <Property Name="usuario_id" Type="int" />
+          <Property Name="sum(t.valor)" Type="decimal" Precision="32" Scale="0" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'def.granamiza.vwreceitatotal' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vwreceitatotal">
+          <Property Name="usuario_id" Type="int" />
+          <Property Name="sum(t.valor)" Type="decimal" Precision="32" Scale="0" />
+        </EntityType>-->
         <Association Name="fk_categoria_usuario1">
           <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
           <End Role="categoria" Type="Self.categoria" Multiplicity="*" />
@@ -137,6 +169,18 @@
           <EntitySet Name="simulacao" EntityType="Self.simulacao" Schema="granamiza" store:Type="Tables" />
           <EntitySet Name="transacao" EntityType="Self.transacao" Schema="granamiza" store:Type="Tables" />
           <EntitySet Name="usuario" EntityType="Self.usuario" Schema="granamiza" store:Type="Tables" />
+          <EntitySet Name="vwcategoriadespesa" EntityType="Self.vwcategoriadespesa" store:Type="Views" store:Schema="granamiza">
+            <DefiningQuery>SELECT
+`vwcategoriadespesa`.`nome`, 
+`vwcategoriadespesa`.`usuario_id`
+FROM `vwcategoriadespesa` AS `vwcategoriadespesa`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwcategoriareceita" EntityType="Self.vwcategoriareceita" store:Type="Views" store:Schema="granamiza">
+            <DefiningQuery>SELECT
+`vwcategoriareceita`.`nome`, 
+`vwcategoriareceita`.`usuario_id`
+FROM `vwcategoriareceita` AS `vwcategoriareceita`</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="fk_categoria_usuario1" Association="Self.fk_categoria_usuario1">
             <End Role="usuario" EntitySet="usuario" />
             <End Role="categoria" EntitySet="categoria" />
@@ -272,6 +316,8 @@
             <End Role="usuario" EntitySet="usuario" />
             <End Role="transacao" EntitySet="transacao" />
           </AssociationSet>
+          <EntitySet Name="vwcategoriadespesa" EntityType="granamizaModel.vwcategoriadespesa" />
+          <EntitySet Name="vwcategoriareceita" EntityType="granamizaModel.vwcategoriareceita" />
         </EntityContainer>
         <Association Name="fk_categoria_usuario1">
           <End Type="granamizaModel.usuario" Role="usuario" Multiplicity="1" />
@@ -325,6 +371,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="vwcategoriadespesa">
+          <Key>
+            <PropertyRef Name="nome" />
+            <PropertyRef Name="usuario_id" />
+          </Key>
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="usuario_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vwcategoriareceita">
+          <Key>
+            <PropertyRef Name="nome" />
+            <PropertyRef Name="usuario_id" />
+          </Key>
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="usuario_id" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -402,6 +464,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="vwcategoriadespesa">
+            <EntityTypeMapping TypeName="granamizaModel.vwcategoriadespesa">
+              <MappingFragment StoreEntitySet="vwcategoriadespesa">
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwcategoriareceita">
+            <EntityTypeMapping TypeName="granamizaModel.vwcategoriareceita">
+              <MappingFragment StoreEntitySet="vwcategoriareceita">
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -417,7 +495,7 @@
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

@@ -31,5 +31,7 @@ namespace Granamiza.Modelo
         public DbSet<simulacao> simulacao { get; set; }
         public DbSet<usuario> usuario { get; set; }
         public DbSet<transacao> transacao { get; set; }
+        public DbSet<vwcategoriadespesa> vwcategoriadespesa { get; set; }
+        public DbSet<vwcategoriareceita> vwcategoriareceita { get; set; }
     }
 }

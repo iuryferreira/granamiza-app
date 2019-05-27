@@ -53,7 +53,6 @@ namespace Granamiza.App.CRUD
                         bd.categoria.Add(nova_cat);
                         bd.SaveChanges();
 
-
                         int id = nova_cat.id;
 
                         //Retorna o id ao usuário
@@ -65,40 +64,40 @@ namespace Granamiza.App.CRUD
 
             }
 
-        //Se ocorrer erro ao conectar.
+            //Se ocorrer erro ao conectar.
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-
                 return 0;
             }
         }
 
-        //internal static void Excluir(int idCategoria)
-        //{
-        //    //Tenta se conectar com o banco de dados.
-        //    try
-        //    {
-        //        using (var bd = new granamizaEntities())
-        //        {
-        //            categoria cat = (from c in bd.categoria
-        //                             where c.id == idCategoria
-        //                             select c).FirstOrDefault();
-        //            if (cat != null)
-        //            {
-        //                //Essa linha permite que transações que possuem id dessa categoria sejam removidas.
-        //                cat.transacao.Clear();
-        //                bd.categoria.Remove(cat);
-        //                bd.SaveChanges();
-        //            }
-        //        }
-        //    }
 
-        //    //Se ocorrer erro ao conectar.
-        //    catch (Exception)
-        //    {
-        //        _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-        //    }
-        //}
+        internal static void Excluir(int idCategoria)
+        {
+            //Tenta se conectar com o banco de dados.
+            try
+            {
+                using (var bd = new granamizaEntities())
+                {
+                    categoria cat = (from c in bd.categoria
+                                     where c.id == idCategoria
+                                     select c).FirstOrDefault();
+                    if (cat != null)
+                    {
+                        //Essa linha permite que transações que possuem id dessa categoria sejam removidas.
+                        cat.transacao.Clear();
+                        bd.categoria.Remove(cat);
+                        bd.SaveChanges();
+                    }
+                }
+            }
+
+            //Se ocorrer erro ao conectar.
+            catch (Exception)
+            {
+                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+            }
+        }
     }
 }

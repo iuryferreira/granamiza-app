@@ -1,4 +1,5 @@
-﻿using Granamiza.Forms.Popup;
+﻿using Granamiza.App.Autenticacao;
+using Granamiza.Forms.Popup;
 using Granamiza.Modelo;
 using System;
 using System.Collections.Generic;
@@ -11,25 +12,26 @@ namespace Granamiza.App.CRUD
 {
     class Transacao
     {
-        internal static void Salvar(TextBox txtDescricao, TextBox txtValor, TextBox txtTipoTransacao, ComboBox cbCategoria, TextBox txtIdTransacao)
+        //internal static void Salvar(TextBox txtDescricao, TextBox txtValor, TextBox txtTipoTransacao, ComboBox cbCategoria, TextBox txtIdTransacao)
+        internal static void Salvar(int idTransacao, decimal valorInserido, int idCategoria, string descricaoInserida, sbyte tipoTransacao)
         {
             //Tenta se conectar com o banco de dados.
             try
             {
             using (var bd = new granamizaEntities())
             {
-                int idTransacao = int.Parse(txtIdTransacao.Text);
-                int idCategoria = int.Parse(cbCategoria.SelectedValue.ToString());
                 //Salvar.
                 if (idTransacao == -1)
                 {
                     DateTime dt = DateTime.Now;
+                    int user_id = Sessao.IdUsuario;
+                    
                     //Preencher os dados da categoria.
                     transacao tr = new transacao
                     {
-                        descricao = txtDescricao.Text,
-                        valor = Decimal.Parse(txtValor.Text.Trim()),
-                        //tipo_transacao = SByte.Parse(txtTipoTransacao.Text),
+                        descricao = descricaoInserida,
+                        valor = valorInserido,
+                        tipo_transacao = tipoTransacao,
                         hora_insercao = dt.Hour.ToString() + ":" + dt.Minute.ToString(),
                         data_insercao = dt.Day.ToString() + ":" + dt.Month + ":" + dt.Year,
                         data_criacao = dt,
@@ -49,9 +51,8 @@ namespace Granamiza.App.CRUD
                     //Testar se encontrou.
                     if (tr != null)
                     {
-                        tr.descricao = txtDescricao.Text;
-                        tr.valor = Decimal.Parse(txtValor.Text);
-                        //tr.tipo_transacao = SByte.Parse(txtTipoTransacao.Text);
+                        tr.descricao = descricaoInserida;
+                        tr.valor = valorInserido;
                         tr.categoria_id = idCategoria;
                     }
                 }

@@ -1,4 +1,5 @@
-﻿using Granamiza.App.CRUD;
+﻿using Granamiza.App.Autenticacao;
+using Granamiza.App.CRUD;
 using Granamiza.Forms.Popup;
 using Granamiza.Modelo;
 using System;
@@ -17,9 +18,8 @@ namespace Granamiza.Forms
             {
                 using (var bd = new granamizaEntities())
                 {
-
-                    //Solução alternativa, falta um metodo para listar categorias por tipo
-                    cbCategoria.DataSource = bd.categoria.ToList();
+                    //viewcategoriareceita
+                    cbCategoria.DataSource = bd.vwcategoriareceita.Where(c => c.usuario_id == Sessao.IdUsuario).ToList();
                 }
             }
             catch (Exception)
@@ -29,10 +29,6 @@ namespace Granamiza.Forms
 
         }
 
-        private void FrmRemuneracao_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
@@ -40,7 +36,6 @@ namespace Granamiza.Forms
 
             try
             {
-
 
                 //passa a categoria digitada ou escolhida
                 string categoria = cbCategoria.Text;

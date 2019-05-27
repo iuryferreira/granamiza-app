@@ -16,16 +16,15 @@ namespace Granamiza.App.CRUD
         internal static void Salvar(decimal valorInserido, int idCategoria, string descricaoInserida, sbyte tipoTransacao)
         {
 
-            /*try
-            {*/
+            try
+            {
                 using (var bd = new granamizaEntities())
                 {
                     //Salvar.
                     DateTime dt = DateTime.Now;
-
-                    //Preencher os dados da categoria.
                     int user_id = Sessao.IdUsuario;
 
+                    //Preencher os dados da categoria.
                     transacao tr = new transacao
                     {
                         valor = valorInserido,
@@ -47,12 +46,12 @@ namespace Granamiza.App.CRUD
                     
 
                 }
-            //}
+            }
 
-            /*catch
+            catch
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }*/
+            }
         }
 
     }
