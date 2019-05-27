@@ -30,13 +30,10 @@ namespace Granamiza.App.CRUD
                         valor = valorInserido,
                         categoria_id = idCategoria,
                         descricao = descricaoInserida,
-                        //É preciso restringir campo a valores numéricos
                         tipo_transacao = tipoTransacao,
                         hora_insercao = dt.Hour.ToString() + ":" + dt.Minute.ToString(),
                         data_insercao = dt.Day.ToString() + ":" + dt.Month + ":" + dt.Year,
                         data_criacao = dt,
-
-                        //Para teste
                         usuario_id = user_id,
                     };
                     //Adicionar Transacao

@@ -151,6 +151,15 @@
     <Compile Include="Modelo\vwcategoriareceita.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\vwdespesa.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\vwreceita.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\vwtransacaocategoria.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmCadastro.resx">
@@ -192,6 +201,7 @@
     </EntityDeploy>
     <None Include="Modelo\Modelo.edmx.diagram">
       <DependentUpon>Modelo.edmx</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Granamiza.Modelo.categoria.datasource" />

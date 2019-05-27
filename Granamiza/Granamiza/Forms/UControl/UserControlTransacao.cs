@@ -29,7 +29,7 @@ namespace Granamiza.Forms.UControl
         //Metodo mais relevante!
         private void UserControlTransacao_Load(object sender, EventArgs e)
         {
-            //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasouce
+            //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que não são gastos
 
             if (btn_clicado.Name == "btnReceita")
@@ -37,7 +37,7 @@ namespace Granamiza.Forms.UControl
 
                 //Transacao.ListaReceita();
             }
-            //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasouce
+            //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que são gastos
             if (btn_clicado.Name == "btnDespesa")
             {

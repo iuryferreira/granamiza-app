@@ -1,4 +1,6 @@
-﻿using Granamiza.Forms.UControl;
+﻿using Granamiza.App.Autenticacao;
+using Granamiza.Forms.UControl;
+using Granamiza.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,13 +34,12 @@ namespace Granamiza.Forms
             this.nome_usuario = nome;
             this.avatar_usuario = avatar;
             lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario;
-
         }
 
         private void VisaoGeralUC_Load(object sender, EventArgs e)
         {
-            //Aqui carregaria nos lbls de valor, os valores da calculo geral da receita e das despesas.
-
+            //lbl//Aqui carregaria nos lbls de valor, os valores da calculo geral da receita e das despesas.
+             
         }
 
         //Menu

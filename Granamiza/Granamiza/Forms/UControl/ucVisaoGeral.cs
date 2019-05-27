@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Granamiza.Modelo;
+using Granamiza.App.Autenticacao;
+using System.Globalization;
 
 namespace Granamiza.Forms.UControl
 {
@@ -15,6 +18,16 @@ namespace Granamiza.Forms.UControl
         public UcVisaoGeral()
         {
             InitializeComponent();
+            using (var bd = new granamizaEntities())
+            {
+                //lblValorReceitaTotal.Text = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor) + " R$";
+                var valorFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "US$ {0:#,###.##}", bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor) + " R$");
+                lblValorReceitaTotal.Text = valorFormatado;
+
+                var despesa = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "US$ {0:#,###.##}", bd.vwdespesa.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor) + " R$");
+                lblValorDespesaTotal.Text = despesa;
+            }
+
         }
 
         private void BtnAdicionarDespesa_Click(object sender, EventArgs e)

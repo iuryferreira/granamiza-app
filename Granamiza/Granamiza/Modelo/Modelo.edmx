@@ -91,17 +91,83 @@ warning 6002: The table/view 'def.granamiza.vwcategoriareceita' does not have a 
           <Property Name="usuario_id" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6013: The table/view 'def.granamiza.vwdespesatotal' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="vwdespesatotal">
-          <Property Name="usuario_id" Type="int" />
-          <Property Name="sum(t.valor)" Type="decimal" Precision="32" Scale="0" />
-        </EntityType>-->
+warning 6002: The table/view 'def.granamiza.vwdespesa' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwdespesa">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="descricao" />
+            <PropertyRef Name="valor" />
+            <PropertyRef Name="tipo_transacao" />
+            <PropertyRef Name="data_insercao" />
+            <PropertyRef Name="hora_insercao" />
+            <PropertyRef Name="data_criacao" />
+            <PropertyRef Name="usuario_id" />
+            <PropertyRef Name="categoria_id" />
+            <PropertyRef Name="nome" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="tipo_transacao" Type="tinyint" Nullable="false" />
+          <Property Name="data_insercao" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="hora_insercao" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="data_criacao" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="usuario_id" Type="int" Nullable="false" />
+          <Property Name="categoria_id" Type="int" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
         <!--Errors Found During Generation:
-warning 6013: The table/view 'def.granamiza.vwreceitatotal' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="vwreceitatotal">
-          <Property Name="usuario_id" Type="int" />
-          <Property Name="sum(t.valor)" Type="decimal" Precision="32" Scale="0" />
-        </EntityType>-->
+warning 6002: The table/view 'def.granamiza.vwreceita' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwreceita">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="descricao" />
+            <PropertyRef Name="valor" />
+            <PropertyRef Name="tipo_transacao" />
+            <PropertyRef Name="data_insercao" />
+            <PropertyRef Name="hora_insercao" />
+            <PropertyRef Name="data_criacao" />
+            <PropertyRef Name="usuario_id" />
+            <PropertyRef Name="categoria_id" />
+            <PropertyRef Name="nome" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="tipo_transacao" Type="tinyint" Nullable="false" />
+          <Property Name="data_insercao" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="hora_insercao" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="data_criacao" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="usuario_id" Type="int" Nullable="false" />
+          <Property Name="categoria_id" Type="int" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'def.granamiza.vwtransacaocategoria' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwtransacaocategoria">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="descricao" />
+            <PropertyRef Name="valor" />
+            <PropertyRef Name="tipo_transacao" />
+            <PropertyRef Name="data_insercao" />
+            <PropertyRef Name="hora_insercao" />
+            <PropertyRef Name="data_criacao" />
+            <PropertyRef Name="usuario_id" />
+            <PropertyRef Name="categoria_id" />
+            <PropertyRef Name="nome" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="tipo_transacao" Type="tinyint" Nullable="false" />
+          <Property Name="data_insercao" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="hora_insercao" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="data_criacao" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="usuario_id" Type="int" Nullable="false" />
+          <Property Name="categoria_id" Type="int" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
         <Association Name="fk_categoria_usuario1">
           <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
           <End Role="categoria" Type="Self.categoria" Multiplicity="*" />
@@ -180,6 +246,48 @@ FROM `vwcategoriadespesa` AS `vwcategoriadespesa`</DefiningQuery>
 `vwcategoriareceita`.`nome`, 
 `vwcategoriareceita`.`usuario_id`
 FROM `vwcategoriareceita` AS `vwcategoriareceita`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwdespesa" EntityType="Self.vwdespesa" store:Type="Views" store:Schema="granamiza">
+            <DefiningQuery>SELECT
+`vwdespesa`.`id`, 
+`vwdespesa`.`descricao`, 
+`vwdespesa`.`valor`, 
+`vwdespesa`.`tipo_transacao`, 
+`vwdespesa`.`data_insercao`, 
+`vwdespesa`.`hora_insercao`, 
+`vwdespesa`.`data_criacao`, 
+`vwdespesa`.`usuario_id`, 
+`vwdespesa`.`categoria_id`, 
+`vwdespesa`.`nome`
+FROM `vwdespesa` AS `vwdespesa`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwreceita" EntityType="Self.vwreceita" store:Type="Views" store:Schema="granamiza">
+            <DefiningQuery>SELECT
+`vwreceita`.`id`, 
+`vwreceita`.`descricao`, 
+`vwreceita`.`valor`, 
+`vwreceita`.`tipo_transacao`, 
+`vwreceita`.`data_insercao`, 
+`vwreceita`.`hora_insercao`, 
+`vwreceita`.`data_criacao`, 
+`vwreceita`.`usuario_id`, 
+`vwreceita`.`categoria_id`, 
+`vwreceita`.`nome`
+FROM `vwreceita` AS `vwreceita`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwtransacaocategoria" EntityType="Self.vwtransacaocategoria" store:Type="Views" store:Schema="granamiza">
+            <DefiningQuery>SELECT
+`vwtransacaocategoria`.`id`, 
+`vwtransacaocategoria`.`descricao`, 
+`vwtransacaocategoria`.`valor`, 
+`vwtransacaocategoria`.`tipo_transacao`, 
+`vwtransacaocategoria`.`data_insercao`, 
+`vwtransacaocategoria`.`hora_insercao`, 
+`vwtransacaocategoria`.`data_criacao`, 
+`vwtransacaocategoria`.`usuario_id`, 
+`vwtransacaocategoria`.`categoria_id`, 
+`vwtransacaocategoria`.`nome`
+FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="fk_categoria_usuario1" Association="Self.fk_categoria_usuario1">
             <End Role="usuario" EntitySet="usuario" />
@@ -318,6 +426,9 @@ FROM `vwcategoriareceita` AS `vwcategoriareceita`</DefiningQuery>
           </AssociationSet>
           <EntitySet Name="vwcategoriadespesa" EntityType="granamizaModel.vwcategoriadespesa" />
           <EntitySet Name="vwcategoriareceita" EntityType="granamizaModel.vwcategoriareceita" />
+          <EntitySet Name="vwreceita" EntityType="granamizaModel.vwreceita" />
+          <EntitySet Name="vwtransacaocategoria" EntityType="granamizaModel.vwtransacaocategoria" />
+          <EntitySet Name="vwdespesa" EntityType="granamizaModel.vwdespesa" />
         </EntityContainer>
         <Association Name="fk_categoria_usuario1">
           <End Type="granamizaModel.usuario" Role="usuario" Multiplicity="1" />
@@ -386,6 +497,78 @@ FROM `vwcategoriareceita` AS `vwcategoriareceita`</DefiningQuery>
           </Key>
           <Property Name="nome" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="usuario_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vwreceita">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="descricao" />
+            <PropertyRef Name="valor" />
+            <PropertyRef Name="tipo_transacao" />
+            <PropertyRef Name="data_insercao" />
+            <PropertyRef Name="hora_insercao" />
+            <PropertyRef Name="data_criacao" />
+            <PropertyRef Name="usuario_id" />
+            <PropertyRef Name="categoria_id" />
+            <PropertyRef Name="nome" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="valor" Type="Decimal" Nullable="false" />
+          <Property Name="tipo_transacao" Type="SByte" Nullable="false" />
+          <Property Name="data_insercao" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="hora_insercao" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="data_criacao" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_id" Type="Int32" Nullable="false" />
+          <Property Name="categoria_id" Type="Int32" Nullable="false" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vwtransacaocategoria">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="descricao" />
+            <PropertyRef Name="valor" />
+            <PropertyRef Name="tipo_transacao" />
+            <PropertyRef Name="data_insercao" />
+            <PropertyRef Name="hora_insercao" />
+            <PropertyRef Name="data_criacao" />
+            <PropertyRef Name="usuario_id" />
+            <PropertyRef Name="categoria_id" />
+            <PropertyRef Name="nome" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="valor" Type="Decimal" Nullable="false" />
+          <Property Name="tipo_transacao" Type="SByte" Nullable="false" />
+          <Property Name="data_insercao" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="hora_insercao" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="data_criacao" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_id" Type="Int32" Nullable="false" />
+          <Property Name="categoria_id" Type="Int32" Nullable="false" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vwdespesa">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="descricao" />
+            <PropertyRef Name="valor" />
+            <PropertyRef Name="tipo_transacao" />
+            <PropertyRef Name="data_insercao" />
+            <PropertyRef Name="hora_insercao" />
+            <PropertyRef Name="data_criacao" />
+            <PropertyRef Name="usuario_id" />
+            <PropertyRef Name="categoria_id" />
+            <PropertyRef Name="nome" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="valor" Type="Decimal" Nullable="false" />
+          <Property Name="tipo_transacao" Type="SByte" Nullable="false" />
+          <Property Name="data_insercao" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="hora_insercao" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="data_criacao" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_id" Type="Int32" Nullable="false" />
+          <Property Name="categoria_id" Type="Int32" Nullable="false" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -477,6 +660,54 @@ FROM `vwcategoriareceita` AS `vwcategoriareceita`</DefiningQuery>
               <MappingFragment StoreEntitySet="vwcategoriareceita">
                 <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
                 <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwreceita">
+            <EntityTypeMapping TypeName="granamizaModel.vwreceita">
+              <MappingFragment StoreEntitySet="vwreceita">
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+                <ScalarProperty Name="data_criacao" ColumnName="data_criacao" />
+                <ScalarProperty Name="hora_insercao" ColumnName="hora_insercao" />
+                <ScalarProperty Name="data_insercao" ColumnName="data_insercao" />
+                <ScalarProperty Name="tipo_transacao" ColumnName="tipo_transacao" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwtransacaocategoria">
+            <EntityTypeMapping TypeName="granamizaModel.vwtransacaocategoria">
+              <MappingFragment StoreEntitySet="vwtransacaocategoria">
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+                <ScalarProperty Name="data_criacao" ColumnName="data_criacao" />
+                <ScalarProperty Name="hora_insercao" ColumnName="hora_insercao" />
+                <ScalarProperty Name="data_insercao" ColumnName="data_insercao" />
+                <ScalarProperty Name="tipo_transacao" ColumnName="tipo_transacao" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwdespesa">
+            <EntityTypeMapping TypeName="granamizaModel.vwdespesa">
+              <MappingFragment StoreEntitySet="vwdespesa">
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+                <ScalarProperty Name="data_criacao" ColumnName="data_criacao" />
+                <ScalarProperty Name="hora_insercao" ColumnName="hora_insercao" />
+                <ScalarProperty Name="data_insercao" ColumnName="data_insercao" />
+                <ScalarProperty Name="tipo_transacao" ColumnName="tipo_transacao" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

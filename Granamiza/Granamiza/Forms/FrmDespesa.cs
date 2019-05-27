@@ -32,8 +32,8 @@ namespace Granamiza.Forms
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
 
-            try
-            {
+            /*try
+            {*/
 
                 //passa a categoria digitada ou escolhida
                 string categoria = cbCategoria.Text;
@@ -50,11 +50,11 @@ namespace Granamiza.Forms
                 Transacao.Salvar(-1, numValor.Value, idCategoria, descricao, 1);
                 //TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
                 this.Close();
-            }
+            /*}
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }
+            }*/
         }
     }
 }

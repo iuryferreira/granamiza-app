@@ -16,8 +16,8 @@ namespace Granamiza.App.CRUD
         internal static void Salvar(int idTransacao, decimal valorInserido, int idCategoria, string descricaoInserida, sbyte tipoTransacao)
         {
             //Tenta se conectar com o banco de dados.
-            try
-            {
+            /*try
+            {*/
             using (var bd = new granamizaEntities())
             {
                 //Salvar.
@@ -36,7 +36,7 @@ namespace Granamiza.App.CRUD
                         data_insercao = dt.Day.ToString() + ":" + dt.Month + ":" + dt.Year,
                         data_criacao = dt,
                         categoria_id = idCategoria,
-                        usuario_id = 18,
+                        usuario_id = user_id,
                     };
                     //Adicionar categoria
                     bd.transacao.Add(tr);
@@ -58,12 +58,12 @@ namespace Granamiza.App.CRUD
                 }
                 bd.SaveChanges();
             }
-            }
+            /*}
             //Se ocorrer erro ao conectar.
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }
+            }*/
         }
 
         internal static void Excluir(int idTransacao)

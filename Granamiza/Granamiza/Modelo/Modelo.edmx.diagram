@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="195cba5054b3406db06eacf2864a2b0c" Name="Diagram1" ZoomLevel="47">
+      <Diagram DiagramId="195cba5054b3406db06eacf2864a2b0c" Name="Diagram1" ZoomLevel="60">
         <EntityTypeShape EntityType="granamizaModel.categoria" Width="1.5" PointX="4.875" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.cotacao" Width="1.5" PointX="7.375" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.preferencias" Width="1.5" PointX="2.75" PointY="4.375" IsExpanded="true" />
@@ -16,8 +16,11 @@
         <EntityTypeShape EntityType="granamizaModel.transacao" Width="1.5" PointX="7.375" PointY="5.375" />
         <AssociationConnector Association="granamizaModel.fk_transacao_categoria1" />
         <AssociationConnector Association="granamizaModel.fk_transacao_usuario1" />
-        <EntityTypeShape EntityType="granamizaModel.vwcategoriadespesa" Width="1.5" PointX="11.5" PointY="2.25" />
-        <EntityTypeShape EntityType="granamizaModel.vwcategoriareceita" Width="1.5" PointX="12.375" PointY="4.75" />
+        <EntityTypeShape EntityType="granamizaModel.vwcategoriadespesa" Width="1.5" PointX="10.375" PointY="2.5" />
+        <EntityTypeShape EntityType="granamizaModel.vwcategoriareceita" Width="1.5" PointX="12.625" PointY="4.75" />
+        <EntityTypeShape EntityType="granamizaModel.vwreceita" Width="1.5" PointX="9.375" PointY="4.75" />
+        <EntityTypeShape EntityType="granamizaModel.vwtransacaocategoria" Width="1.5" PointX="6.375" PointY="9.75" />
+        <EntityTypeShape EntityType="granamizaModel.vwdespesa" Width="1.5" PointX="9.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
