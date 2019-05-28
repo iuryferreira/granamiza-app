@@ -74,7 +74,7 @@ namespace Granamiza.Forms
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(170, 562);
+            this.pnlMenu.Size = new System.Drawing.Size(170, 561);
             this.pnlMenu.TabIndex = 0;
             // 
             // lblTitulo
@@ -214,12 +214,14 @@ namespace Granamiza.Forms
             // pbAvatar
             // 
             this.pbAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAvatar.BackgroundImage")));
             this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAvatar.ErrorImage = null;
+            this.pbAvatar.InitialImage = null;
             this.pbAvatar.Location = new System.Drawing.Point(703, 7);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Size = new System.Drawing.Size(69, 69);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvatar.TabIndex = 7;
             this.pbAvatar.TabStop = false;
             // 
@@ -363,7 +365,7 @@ namespace Granamiza.Forms
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.pnlConteudo);
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.pbAvatar);

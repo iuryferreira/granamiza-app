@@ -16,54 +16,54 @@ namespace Granamiza.App.CRUD
         internal static void Salvar(int idTransacao, decimal valorInserido, int idCategoria, string descricaoInserida, sbyte tipoTransacao)
         {
             //Tenta se conectar com o banco de dados.
-            /*try
-            {*/
-            using (var bd = new granamizaEntities())
+            try
             {
-                //Salvar.
-                if (idTransacao == -1)
+                using (var bd = new granamizaEntities())
                 {
-                    DateTime dt = DateTime.Now;
-                    int user_id = Sessao.IdUsuario;
+                    //Salvar.
+                    if (idTransacao == -1)
+                    {
+                        DateTime dt = DateTime.Now;
+                        int user_id = Sessao.IdUsuario;
                     
-                    //Preencher os dados da categoria.
-                    transacao tr = new transacao
-                    {
-                        descricao = descricaoInserida,
-                        valor = valorInserido,
-                        tipo_transacao = tipoTransacao,
-                        hora_insercao = dt.Hour.ToString() + ":" + dt.Minute.ToString(),
-                        data_insercao = dt.Day.ToString() + ":" + dt.Month + ":" + dt.Year,
-                        data_criacao = dt,
-                        categoria_id = idCategoria,
-                        usuario_id = user_id,
-                    };
-                    //Adicionar categoria
-                    bd.transacao.Add(tr);
-                }
-                //Atualizar
-                else
-                {
-                    //Recuperar transacao através do id.
-                    transacao tr = (from c in bd.transacao
-                                    where c.id == idTransacao
-                                    select c).FirstOrDefault();
-                    //Testar se encontrou.
-                    if (tr != null)
-                    {
-                        tr.descricao = descricaoInserida;
-                        tr.valor = valorInserido;
-                        tr.categoria_id = idCategoria;
+                        //Preencher os dados da categoria.
+                        transacao tr = new transacao
+                        {
+                            descricao = descricaoInserida,
+                            valor = valorInserido,
+                            tipo_transacao = tipoTransacao,
+                            hora_insercao = dt.Hour.ToString() + ":" + dt.Minute.ToString(),
+                            data_insercao = dt.Day.ToString() + "/" + dt.Month + "/" + dt.Year,
+                            data_criacao = dt,
+                            categoria_id = idCategoria,
+                            usuario_id = user_id,
+                        };
+                        //Adicionar categoria
+                        bd.transacao.Add(tr);
                     }
+                    //Atualizar
+                    else
+                    {
+                        //Recuperar transacao através do id.
+                        transacao tr = (from c in bd.transacao
+                                        where c.id == idTransacao
+                                        select c).FirstOrDefault();
+                        //Testar se encontrou.
+                        if (tr != null)
+                        {
+                            tr.descricao = descricaoInserida;
+                            tr.valor = valorInserido;
+                            tr.categoria_id = idCategoria;
+                        }
+                    }
+                    bd.SaveChanges();
                 }
-                bd.SaveChanges();
             }
-            /*}
             //Se ocorrer erro ao conectar.
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }*/
+            }
         }
 
         internal static void Excluir(int idTransacao)

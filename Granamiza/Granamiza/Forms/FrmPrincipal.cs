@@ -17,11 +17,10 @@ namespace Granamiza.Forms
 {
     public partial class FrmPrincipal : Form
     {
-        //Valores retornados do login
+        //Valores padrões
         int id_usuario_logado;
         string nome_usuario = "John";
-        string avatar_usuario = "Granamiza\\Granamiza\\Imagens\\male";
-
+        string avatar_usuario = "C:\\Users\\Mag\\source\\repos\\iuryferreira\\granamiza-app\\Granamiza\\Granamiza\\Imagens\\female.png";
 
         public FrmPrincipal()
         {
@@ -35,15 +34,12 @@ namespace Granamiza.Forms
             this.id_usuario_logado = id_usuario;
             this.nome_usuario = nome;
             this.avatar_usuario = avatar;
+
             lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario;
+            pbAvatar.ImageLocation = avatar_usuario;
 
             ReceberValores();
-
-
-
         }
-
-
 
         private void ReceberValores()
         {
@@ -55,7 +51,6 @@ namespace Granamiza.Forms
 
                 if (qtdReceita != 0)
                 {
-
                     decimal valorReceitaTotal = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor);
                     var valorReceitaTotalFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:#,###.##} R$", valorReceitaTotal);
                     lblValorReceitaTotal.Text = valorReceitaTotalFormatado;
@@ -73,8 +68,8 @@ namespace Granamiza.Forms
                     lblValorDespesaTotal.Text = valorDespesaTotalFormatado;
 
                 }
-                else
 
+                else
                 {
                     lblValorDespesaTotal.Text = "0,00 R$";
                 }
@@ -83,7 +78,6 @@ namespace Granamiza.Forms
         }
 
         //Menu
-
         //Esconde o Menu
         private void PbLogo_Click(object sender, EventArgs e)
         {
@@ -116,7 +110,6 @@ namespace Granamiza.Forms
         //Limpa o painel de conteudo adicionar o titulo, e adiciona o usercontrol de transacao
         private void BtnReceita_Click(object sender, EventArgs e)
         {
-
             lblBemVindo.Text = "Gerenciamento de Receita";
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
             UserControlTransacao uc = new UserControlTransacao(btnReceita);

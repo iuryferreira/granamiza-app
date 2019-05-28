@@ -32,7 +32,7 @@ namespace Granamiza.App.CRUD
                         descricao = descricaoInserida,
                         tipo_transacao = tipoTransacao,
                         hora_insercao = dt.Hour.ToString() + ":" + dt.Minute.ToString(),
-                        data_insercao = dt.Day.ToString() + ":" + dt.Month + ":" + dt.Year,
+                        data_insercao = dt.Day.ToString() + "/" + dt.Month + "/" + dt.Year,
                         data_criacao = dt,
                         usuario_id = user_id,
                     };

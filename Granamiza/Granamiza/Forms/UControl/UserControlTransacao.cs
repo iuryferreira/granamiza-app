@@ -25,7 +25,7 @@ namespace Granamiza.Forms.UControl
             InitializeComponent();
         }
 
-        //O construtor que vamos usar é esse!
+        //Construtor!
         public UserControlTransacao(Button botao_clicado)
         {
             InitializeComponent();
@@ -37,44 +37,29 @@ namespace Granamiza.Forms.UControl
         {
             //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que não são gastos
-
             if (btn_clicado.Name == "btnReceita")
             {
-
-
                 AtualizarGrid("receita");
-
-
-
-
             }
 
             //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que são gastos
             if (btn_clicado.Name == "btnDespesa")
             {
-
-
                 AtualizarGrid("despesa");
             }
 
         }
 
-
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
 
             //Se o botão clicado no menu lateral for o de receita,  ele vai chamar o form de receita
-
             if (btn_clicado.Name == "btnReceita")
             {
-
                 FrmReceita frm = new FrmReceita();
                 frm.Show();
-
                 frm.Closed += (s, args) => this.AtualizarGrid("receita");
-
-
             }
 
             //  Se o botao clicado no menu lateral for o de despesa ele chama o form de despesa
@@ -91,38 +76,42 @@ namespace Granamiza.Forms.UControl
 
             if (btn_clicado == "receita")
             {
-                using (var bd = new granamizaEntities())
+
+                try
                 {
-
-                    this.dgvTransacao.DataSource = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
-
+                    using (var bd = new granamizaEntities())
+                    {
+                        this.dgvTransacao.DataSource = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
+                    }
+                }
+                catch (Exception)
+                {
+                    _ = new FrmPopup("Falha ao tentar selecionar o registro.", "Erro");
                 }
             }
 
             if (btn_clicado == "despesa")
             {
 
-                using (var bd = new granamizaEntities())
+                try
                 {
-
-                    this.dgvTransacao.DataSource = bd.vwdespesa.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
-
+                    using (var bd = new granamizaEntities())
+                    {
+                        this.dgvTransacao.DataSource = bd.vwdespesa.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
+                    }
                 }
-
+                catch (Exception)
+                {
+                    _ = new FrmPopup("Falha ao tentar selecionar o registro.", "Erro");
+                }
             }
-
-
         }
 
         private void DgvTransacao_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-
-
                 idTransacao = int.Parse(dgvTransacao.Rows[e.RowIndex].Cells[0].Value.ToString());
-
-
                 CarregarDadosTransacao();
             }
             catch (Exception)
@@ -133,10 +122,8 @@ namespace Granamiza.Forms.UControl
 
         private void CarregarDadosTransacao()
         {
-
             if (btn_clicado.Name == "btnReceita")
             {
-
 
                 using (var bd = new granamizaEntities())
                 {
@@ -146,10 +133,8 @@ namespace Granamiza.Forms.UControl
                                        where re.id == idTransacao
                                        select re).FirstOrDefault();
 
-
                         if (r != null) //Testa se localizou o registro
                         {
-
                             txtValor.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), " {0:#,###.##} R$", r.valor); ;
                             txtCategoria.Text = r.nome;
                             txtData.Text = r.data_insercao;
@@ -158,37 +143,36 @@ namespace Granamiza.Forms.UControl
                         }
                     }
                 }
-
             }
+
             if (btn_clicado.Name == "btnDespesa")
             {
-                using (var bd = new granamizaEntities())
+                try
                 {
-                    if (idTransacao > 0)
+                    using (var bd = new granamizaEntities())
                     {
-                        vwdespesa d = (from de in bd.vwdespesa
-                                       where de.id == idTransacao
-                                       select de).FirstOrDefault();
-
-
-                        if (d != null) //Testa se localizou o registro
+                        if (idTransacao > 0)
                         {
+                            vwdespesa d = (from de in bd.vwdespesa
+                                           where de.id == idTransacao
+                                           select de).FirstOrDefault();
 
-                            txtValor.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), " {0:#,###.##} R$", d.valor);
-                            txtCategoria.Text = d.nome;
-                            txtData.Text = d.data_insercao;
-                            txtHora.Text = d.hora_insercao;
-                            txtDesc.Text = d.descricao;
+                            if (d != null) //Testa se localizou o registro
+                            {
+                                txtValor.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), " {0:#,###.##} R$", d.valor);
+                                txtCategoria.Text = d.nome;
+                                txtData.Text = d.data_insercao;
+                                txtHora.Text = d.hora_insercao;
+                                txtDesc.Text = d.descricao;
+                            }
                         }
                     }
                 }
+                catch (Exception)
+                {
+                    _ = new FrmPopup("Falha ao tentar selecionar o registro.", "Erro");
+                }
             }
-
-
-
-
-
-
         }
     }
 }

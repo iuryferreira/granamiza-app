@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransacao));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTransacao = new System.Windows.Forms.DataGridView();
@@ -109,6 +110,8 @@
             this.dgvTransacao.Name = "dgvTransacao";
             this.dgvTransacao.ReadOnly = true;
             this.dgvTransacao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTransacao.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTransacao.Size = new System.Drawing.Size(538, 149);
             this.dgvTransacao.TabIndex = 115;
             this.dgvTransacao.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTransacao_CellDoubleClick);

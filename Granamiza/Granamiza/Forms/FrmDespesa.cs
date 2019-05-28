@@ -27,14 +27,12 @@ namespace Granamiza.Forms
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
             }
         }
-
         
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
 
-            /*try
-            {*/
-
+            try
+            {
                 //passa a categoria digitada ou escolhida
                 string categoria = cbCategoria.Text;
                 //int id_categoria = int.Parse(cbCategoria.SelectedValue.ToString());
@@ -50,11 +48,11 @@ namespace Granamiza.Forms
                 TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
                 //TransacaoTemp.Salvar(numValor.Value, idCategoria, descricao, 1);
                 this.Close();
-            /*}
+            }
             catch (Exception)
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
-            }*/
+            }
         }
     }
 }

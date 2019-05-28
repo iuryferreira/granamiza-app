@@ -26,17 +26,13 @@ namespace Granamiza.Forms
             {
                 _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
             }
-
         }
 
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-
-
             try
             {
-
                 //passa a categoria digitada ou escolhida
                 string categoria = cbCategoria.Text;
 
