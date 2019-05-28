@@ -1,6 +1,6 @@
 # Granamiza - Gerenciar é economizar!
 
-##O que é o Granamiza?
+## O que é o Granamiza?
 -------------------------------
 
 
