@@ -4,6 +4,7 @@ using Granamiza.Modelo;
 using Granamiza.Forms.Popup;
 using Granamiza.App.Autenticacao;
 using Granamiza.App.CRUD;
+using System.Drawing;
 
 namespace Granamiza.Forms
 {
@@ -107,15 +108,15 @@ namespace Granamiza.Forms
 
         private void RbJohn_CheckedChanged(object sender, EventArgs e)
         {
-            rbJohn.ForeColor = System.Drawing.Color.Khaki;
-            rbJoana.ForeColor = System.Drawing.Color.White;
+            rbJohn.ForeColor = Color.SeaGreen;
+            rbJoana.ForeColor = Color.FromArgb(64, 64, 64);
         }
 
         //mudar a cor caso o avatar joana seja checkado
         private void RbJoana_CheckedChanged(object sender, EventArgs e)
         {
-            rbJohn.ForeColor = System.Drawing.Color.White;
-            rbJoana.ForeColor = System.Drawing.Color.Khaki;
+            rbJohn.ForeColor = Color.FromArgb(64, 64, 64);
+            rbJoana.ForeColor = System.Drawing.Color.SeaGreen;
         }
 
         //Limpa a mensagem de erro do checked termos de uso
@@ -185,6 +186,11 @@ namespace Granamiza.Forms
             txtSenha.Text = String.Empty;
             txtConSenha.Text = String.Empty;
             chkTermosUso.CheckState = CheckState.Unchecked;
+        }
+
+        private void GbDadosUsuario_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

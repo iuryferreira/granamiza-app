@@ -9,7 +9,7 @@ namespace Granamiza.App.CRUD
     {
         internal static bool Salvar(TextBox txtNome, TextBox txtEmail, TextBox txtSenha, RadioButton rbJoana)
         {
-            string caminhoAvatar = "Granamiza\\Granamiza\\Imagens\\male";
+            string caminhoAvatar = "C:\\Users\\Mag\\source\\repos\\iuryferreira\\granamiza-app\\Granamiza\\Granamiza\\Imagens\\male.png";
 
             using (var bd = new granamizaEntities())
             {
@@ -29,7 +29,7 @@ namespace Granamiza.App.CRUD
 
                 if (rbJoana.Checked)
                 {
-                    caminhoAvatar = "Granamiza\\Granamiza\\Imagens\\female";
+                    caminhoAvatar = "C:\\Users\\Mag\\source\\repos\\iuryferreira\\granamiza-app\\Granamiza\\Granamiza\\Imagens\\female.png";
                 }
 
                 //Preenhcer dados de preferência de usuário.

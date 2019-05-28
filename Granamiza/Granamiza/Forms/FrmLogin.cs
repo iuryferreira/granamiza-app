@@ -7,6 +7,9 @@ namespace Granamiza.Forms
 {
     public partial class FrmLogin : Form
     {
+
+        FrmPrincipal frm;
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace Granamiza.Forms
         //Muda cor do titulo ao retirar o mouse
         private void LblTitulo_MouseLeave(object sender, EventArgs e)
         {
-            lblTitulo.ForeColor = System.Drawing.Color.Gainsboro;
+            lblTitulo.ForeColor = System.Drawing.Color.White;
         }
 
         //evento de clique de cadastratar
@@ -71,7 +74,21 @@ namespace Granamiza.Forms
             
             if (Autenticacao.Autenticar(txtEmail.Text.Trim(), txtSenha.Text.Trim(), lblErroAutenticacao))
             {
-                _ = new FrmPopup("Autenticado com sucesso!", "Sucesso");
+                //Retornar os dados para a tela principal
+                //
+
+
+                //Solução somente para testes
+
+                //Oculta o login
+                this.Hide();
+                //chama o form principal
+                //var formPrincipal = new FrmPrincipal();
+                var formPrincipal = new FrmPrincipal(Sessao.IdUsuario, Sessao.NomeUsuario, Sessao.AvatarUsuario);
+                formPrincipal.Closed += (s, args) => this.Close();
+                formPrincipal.Show();
+                
+
             }
             else
             {
@@ -82,7 +99,16 @@ namespace Granamiza.Forms
         private void LimparForm()
         {
             txtSenha.Text = String.Empty;
-            chkConectado.CheckState = CheckState.Unchecked;
+        }
+
+        private void LnkCadastrar_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmCadastro frm = new FrmCadastro(this);
+            frm.Show();
+
+            this.WindowState = FormWindowState.Minimized;
+
+            frm.WindowState = FormWindowState.Normal;
         }
     }
 }

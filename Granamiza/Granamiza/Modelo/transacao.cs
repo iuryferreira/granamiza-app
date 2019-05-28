@@ -17,12 +17,12 @@ namespace Granamiza.Modelo
         public int id { get; set; }
         public string descricao { get; set; }
         public decimal valor { get; set; }
-        public string tipo_transacao { get; set; }
+        public sbyte tipo_transacao { get; set; }
         public string data_insercao { get; set; }
         public string hora_insercao { get; set; }
         public System.DateTime data_criacao { get; set; }
-        public int categoria_id { get; set; }
         public int usuario_id { get; set; }
+        public int categoria_id { get; set; }
     
         public virtual categoria categoria { get; set; }
         public virtual usuario usuario { get; set; }

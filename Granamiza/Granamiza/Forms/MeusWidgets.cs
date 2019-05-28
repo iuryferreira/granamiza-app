@@ -18,15 +18,15 @@ namespace Granamiza.Forms
         // Define a cor da linha em LimeGreen
         public static void CorFocoLinhaForm(Panel linha, TextBox txtbox)
         {
-            linha.BackColor = System.Drawing.Color.Khaki;
-            txtbox.ForeColor = System.Drawing.Color.Khaki;
+            linha.BackColor = System.Drawing.Color.SeaGreen;
+            txtbox.ForeColor = System.Drawing.Color.SeaGreen;
         }
 
         // Define a cor da linha em White
         public static void CorLinhaForm(Panel linha, TextBox txtbox) {
 
-            linha.BackColor = System.Drawing.Color.White;
-            txtbox.ForeColor = System.Drawing.Color.White;
+            linha.BackColor = System.Drawing.Color.DarkGray;
+            txtbox.ForeColor = System.Drawing.Color.DarkGray;
         }
 
         //Escreve o texto no label de validação

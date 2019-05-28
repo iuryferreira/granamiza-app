@@ -18,6 +18,7 @@ namespace Granamiza.Modelo
         {
             this.preferencias = new HashSet<preferencias>();
             this.simulacao = new HashSet<simulacao>();
+            this.categoria = new HashSet<categoria>();
             this.transacao = new HashSet<transacao>();
         }
     
@@ -29,6 +30,7 @@ namespace Granamiza.Modelo
     
         public virtual ICollection<preferencias> preferencias { get; set; }
         public virtual ICollection<simulacao> simulacao { get; set; }
+        public virtual ICollection<categoria> categoria { get; set; }
         public virtual ICollection<transacao> transacao { get; set; }
     }
 }

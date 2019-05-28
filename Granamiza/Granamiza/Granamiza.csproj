@@ -57,7 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\Autenticacao\Autenticacao.cs" />
+    <Compile Include="App\Autenticacao\Sessao.cs" />
     <Compile Include="App\Autenticacao\Validacao.cs" />
+    <Compile Include="App\CRUD\Categoria.cs" />
+    <Compile Include="App\CRUD\Transacao.cs" />
+    <Compile Include="App\CRUD\TransacaoTemp.cs" />
     <Compile Include="App\CRUD\Usuario.cs" />
     <Compile Include="Forms\FrmCadastro.cs">
       <SubType>Form</SubType>
@@ -65,11 +69,29 @@
     <Compile Include="Forms\FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDespesa.Designer.cs">
+      <DependentUpon>FrmDespesa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceita.Designer.cs">
+      <DependentUpon>FrmReceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MeusWidgets.cs" />
     <Compile Include="Forms\Popup\FrmPopup.cs">
@@ -77,6 +99,12 @@
     </Compile>
     <Compile Include="Forms\Popup\FrmPopup.Designer.cs">
       <DependentUpon>FrmPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UControl\UserControlTransacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UControl\UserControlTransacao.Designer.cs">
+      <DependentUpon>UserControlTransacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\categoria.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
@@ -111,16 +139,43 @@
     <Compile Include="Modelo\usuario.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\vwcategoriadespesa.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\vwcategoriareceita.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\vwdespesa.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\vwreceita.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\vwtransacaocategoria.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDespesa.resx">
+      <DependentUpon>FrmDespesa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceita.resx">
+      <DependentUpon>FrmReceita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Popup\FrmPopup.resx">
       <DependentUpon>FrmPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
+      <DependentUpon>UserControlTransacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,8 +192,13 @@
     </EntityDeploy>
     <None Include="Modelo\Modelo.edmx.diagram">
       <DependentUpon>Modelo.edmx</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.categoria.datasource" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.vwdespesa.datasource" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.vwreceita.datasource" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.vwtransacaocategoria.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,18 +215,18 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Imagens\background.jpg" />
-    <None Include="Imagens\error-icon.png" />
-    <None Include="Imagens\info-icon.png" />
     <Content Include="Modelo\Modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Modelo.Context.cs</LastGenOutput>
       <DependentUpon>Modelo.edmx</DependentUpon>
+      <LastGenOutput>Modelo.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Modelo\Modelo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Modelo.edmx</DependentUpon>
       <LastGenOutput>Modelo.cs</LastGenOutput>
     </Content>
+    <None Include="Imagens\error-icon.png" />
+    <None Include="Imagens\info-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
