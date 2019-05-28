@@ -1,4 +1,4 @@
-#Granamiza - Gerenciar é economizar!
+# Granamiza - Gerenciar é economizar!
 
 ##O que é o Granamiza?
 -------------------------------
