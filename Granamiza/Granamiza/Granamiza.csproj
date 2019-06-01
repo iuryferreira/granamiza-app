@@ -92,11 +92,11 @@
     <Compile Include="Forms\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRecuperarSenha.cs">
+    <Compile Include="Forms\FrmRecuperarSenhaTemp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRecuperarSenha.Designer.cs">
-      <DependentUpon>FrmRecuperarSenha.cs</DependentUpon>
+    <Compile Include="Forms\FrmRecuperarSenhaTemp.Designer.cs">
+      <DependentUpon>FrmRecuperarSenhaTemp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MeusWidgets.cs" />
     <Compile Include="Forms\Popup\FrmPopup.cs">
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRecuperarSenha.resx">
-      <DependentUpon>FrmRecuperarSenha.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmRecuperarSenhaTemp.resx">
+      <DependentUpon>FrmRecuperarSenhaTemp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Popup\FrmPopup.resx">
       <DependentUpon>FrmPopup.cs</DependentUpon>

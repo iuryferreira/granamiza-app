@@ -1,6 +1,6 @@
 ﻿namespace Granamiza.Forms
 {
-    partial class FrmRecuperarSenha
+    partial class FrmRecuperarSenhaTemp
     {
         /// <summary>
         /// Required designer variable.
