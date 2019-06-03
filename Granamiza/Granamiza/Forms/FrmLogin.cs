@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Granamiza.App.Autenticacao;
 using Granamiza.Forms.Popup;
+using Granamiza.Forms.RedefinirSenha;
 
 namespace Granamiza.Forms
 {
@@ -109,6 +110,13 @@ namespace Granamiza.Forms
             this.WindowState = FormWindowState.Minimized;
 
             frm.WindowState = FormWindowState.Normal;
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var frmRedefinirSenha = new FrmRedefinirSenha();
+            this.Hide();
+            frmRedefinirSenha.Show();
         }
     }
 }

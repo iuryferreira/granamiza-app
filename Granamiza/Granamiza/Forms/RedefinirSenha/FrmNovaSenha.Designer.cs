@@ -34,16 +34,16 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlConteudo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.lblSenhaErro = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
             this.lblConSenhaErro = new System.Windows.Forms.Label();
+            this.txtConfirmeSenha = new System.Windows.Forms.Label();
             this.txtConSenha = new System.Windows.Forms.TextBox();
+            this.linhaConSenha = new System.Windows.Forms.Panel();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.linhaSenha = new System.Windows.Forms.Panel();
-            this.linhaConSenha = new System.Windows.Forms.Panel();
-            this.txtConfirmeSenha = new System.Windows.Forms.Label();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.btnContinuar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlConteudo.SuspendLayout();
@@ -98,7 +98,7 @@
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.btnContinuar);
+            this.pnlConteudo.Controls.Add(this.btnSalvar);
             this.pnlConteudo.Controls.Add(this.lblSenhaErro);
             this.pnlConteudo.Controls.Add(this.lblSenha);
             this.pnlConteudo.Controls.Add(this.lblConSenhaErro);
@@ -112,19 +112,20 @@
             this.pnlConteudo.Size = new System.Drawing.Size(385, 224);
             this.pnlConteudo.TabIndex = 123;
             // 
-            // label1
+            // btnSalvar
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("SF Pro Display", 10.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(60, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(575, 16);
-            this.label1.TabIndex = 120;
-            this.label1.Text = "Deu tudo certo! Insira sua nova senha e logo após será redirecionado para a tela " +
-    "de Login.";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSalvar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSalvar.FlatAppearance.BorderSize = 2;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("SF Pro Display", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.ForeColor = System.Drawing.Color.Ivory;
+            this.btnSalvar.Location = new System.Drawing.Point(97, 174);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(196, 40);
+            this.btnSalvar.TabIndex = 124;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // lblSenhaErro
             // 
@@ -136,6 +137,17 @@
             this.lblSenhaErro.Size = new System.Drawing.Size(0, 13);
             this.lblSenhaErro.TabIndex = 131;
             // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblSenha.Location = new System.Drawing.Point(15, 19);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(38, 14);
+            this.lblSenha.TabIndex = 124;
+            this.lblSenha.Text = "Senha";
+            // 
             // lblConSenhaErro
             // 
             this.lblConSenhaErro.AutoSize = true;
@@ -145,6 +157,17 @@
             this.lblConSenhaErro.Name = "lblConSenhaErro";
             this.lblConSenhaErro.Size = new System.Drawing.Size(0, 13);
             this.lblConSenhaErro.TabIndex = 130;
+            // 
+            // txtConfirmeSenha
+            // 
+            this.txtConfirmeSenha.AutoSize = true;
+            this.txtConfirmeSenha.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.txtConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtConfirmeSenha.Location = new System.Drawing.Point(15, 84);
+            this.txtConfirmeSenha.Name = "txtConfirmeSenha";
+            this.txtConfirmeSenha.Size = new System.Drawing.Size(134, 14);
+            this.txtConfirmeSenha.TabIndex = 125;
+            this.txtConfirmeSenha.Text = "Digite a senha novamente";
             // 
             // txtConSenha
             // 
@@ -157,6 +180,15 @@
             this.txtConSenha.Size = new System.Drawing.Size(351, 20);
             this.txtConSenha.TabIndex = 129;
             this.txtConSenha.UseSystemPasswordChar = true;
+            // 
+            // linhaConSenha
+            // 
+            this.linhaConSenha.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaConSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linhaConSenha.Location = new System.Drawing.Point(20, 131);
+            this.linhaConSenha.Name = "linhaConSenha";
+            this.linhaConSenha.Size = new System.Drawing.Size(351, 2);
+            this.linhaConSenha.TabIndex = 127;
             // 
             // txtSenha
             // 
@@ -179,51 +211,19 @@
             this.linhaSenha.Size = new System.Drawing.Size(351, 2);
             this.linhaSenha.TabIndex = 126;
             // 
-            // linhaConSenha
+            // label1
             // 
-            this.linhaConSenha.BackColor = System.Drawing.Color.Gainsboro;
-            this.linhaConSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaConSenha.Location = new System.Drawing.Point(20, 131);
-            this.linhaConSenha.Name = "linhaConSenha";
-            this.linhaConSenha.Size = new System.Drawing.Size(351, 2);
-            this.linhaConSenha.TabIndex = 127;
-            // 
-            // txtConfirmeSenha
-            // 
-            this.txtConfirmeSenha.AutoSize = true;
-            this.txtConfirmeSenha.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
-            this.txtConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtConfirmeSenha.Location = new System.Drawing.Point(15, 84);
-            this.txtConfirmeSenha.Name = "txtConfirmeSenha";
-            this.txtConfirmeSenha.Size = new System.Drawing.Size(134, 14);
-            this.txtConfirmeSenha.TabIndex = 125;
-            this.txtConfirmeSenha.Text = "Digite a senha novamente";
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
-            this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblSenha.Location = new System.Drawing.Point(15, 19);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(38, 14);
-            this.lblSenha.TabIndex = 124;
-            this.lblSenha.Text = "Senha";
-            // 
-            // btnContinuar
-            // 
-            this.btnContinuar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnContinuar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnContinuar.FlatAppearance.BorderSize = 2;
-            this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContinuar.Font = new System.Drawing.Font("SF Pro Display", 11F, System.Drawing.FontStyle.Bold);
-            this.btnContinuar.ForeColor = System.Drawing.Color.Ivory;
-            this.btnContinuar.Location = new System.Drawing.Point(109, 174);
-            this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(196, 40);
-            this.btnContinuar.TabIndex = 124;
-            this.btnContinuar.Text = "Salvar";
-            this.btnContinuar.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("SF Pro Display", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(60, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(575, 16);
+            this.label1.TabIndex = 120;
+            this.label1.Text = "Deu tudo certo! Insira sua nova senha e logo após será redirecionado para a tela " +
+    "de Login.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmNovaSenha
             // 
@@ -234,8 +234,10 @@
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlConteudo);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNovaSenha";
-            this.Text = "FrmNovaSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Redefinir Senha";
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
@@ -262,6 +264,6 @@
         private System.Windows.Forms.Panel linhaConSenha;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Panel linhaSenha;
-        private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

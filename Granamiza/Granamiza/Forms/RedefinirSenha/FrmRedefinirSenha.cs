@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Granamiza.App.Autenticacao;
+using Granamiza.App.Email;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,17 @@ namespace Granamiza.Forms.RedefinirSenha
 
         private void BtnContinuar_Click(object sender, EventArgs e)
         {
-            var ucCodigo = new UserControlCodigoSenha();
+
+            if (!Email.Validar(txtEmail))
+            {
+                return;
+            }
+
+            //Gerar código que será enviado para o E-mail
+            Sessao.GerarCodigo();
+            EnviarEmail();
+
+            var ucCodigo = new UserControlCodigoSenha(this);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(ucCodigo);
             lblDesc.Text = "Insira o código recebido por você  no seu email, \r\npara que possamos redefinir a" +
@@ -27,5 +39,9 @@ namespace Granamiza.Forms.RedefinirSenha
             linkVoltar.Visible = true;
         }
 
+        internal static async void EnviarEmail()
+        {
+            await Email.EnviarAsync();
+        }
     }
 }

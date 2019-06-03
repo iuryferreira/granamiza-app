@@ -94,6 +94,7 @@
             this.btnConfirmar.TabIndex = 122;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
             // UserControlCodigoSenha
             // 

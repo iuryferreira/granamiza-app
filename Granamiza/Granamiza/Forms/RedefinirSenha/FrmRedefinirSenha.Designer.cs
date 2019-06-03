@@ -30,18 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRedefinirSenha));
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.linkVoltar = new System.Windows.Forms.LinkLabel();
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
             this.pnlConteudo = new System.Windows.Forms.Panel();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.gpEmail = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.linhaEmail = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.linkVoltar = new System.Windows.Forms.LinkLabel();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlConteudo.SuspendLayout();
@@ -60,6 +58,22 @@
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(459, 150);
             this.pnlTitulo.TabIndex = 110;
+            // 
+            // linkVoltar
+            // 
+            this.linkVoltar.ActiveLinkColor = System.Drawing.Color.SeaGreen;
+            this.linkVoltar.AutoSize = true;
+            this.linkVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.linkVoltar.Font = new System.Drawing.Font("Webdings", 19.25F);
+            this.linkVoltar.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkVoltar.LinkColor = System.Drawing.Color.White;
+            this.linkVoltar.Location = new System.Drawing.Point(12, 8);
+            this.linkVoltar.Name = "linkVoltar";
+            this.linkVoltar.Size = new System.Drawing.Size(39, 29);
+            this.linkVoltar.TabIndex = 120;
+            this.linkVoltar.TabStop = true;
+            this.linkVoltar.Text = "3";
+            this.linkVoltar.Visible = false;
             // 
             // lblSubtitulo
             // 
@@ -95,18 +109,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(233, 35);
             this.lblTitulo.TabIndex = 63;
             this.lblTitulo.Text = "Redefinir Senha";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(68, 283);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(317, 20);
-            this.txtEmail.TabIndex = 113;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblDesc
             // 
@@ -149,36 +151,26 @@
             // 
             // gpEmail
             // 
-            this.gpEmail.Controls.Add(this.textBox1);
-            this.gpEmail.Controls.Add(this.linhaEmail);
+            this.gpEmail.Controls.Add(this.txtEmail);
             this.gpEmail.Controls.Add(this.lblEmail);
             this.gpEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gpEmail.Location = new System.Drawing.Point(28, 26);
+            this.gpEmail.Location = new System.Drawing.Point(33, 27);
             this.gpEmail.Name = "gpEmail";
             this.gpEmail.Size = new System.Drawing.Size(326, 85);
             this.gpEmail.TabIndex = 120;
             this.gpEmail.TabStop = false;
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("SF Pro Display", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(8, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(306, 23);
-            this.textBox1.TabIndex = 120;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // linhaEmail
-            // 
-            this.linhaEmail.BackColor = System.Drawing.Color.Gainsboro;
-            this.linhaEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaEmail.Location = new System.Drawing.Point(4, 72);
-            this.linhaEmail.Name = "linhaEmail";
-            this.linhaEmail.Size = new System.Drawing.Size(314, 2);
-            this.linhaEmail.TabIndex = 112;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.Location = new System.Drawing.Point(3, 53);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(317, 20);
+            this.txtEmail.TabIndex = 114;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblEmail
             // 
@@ -191,33 +183,17 @@
             this.lblEmail.TabIndex = 111;
             this.lblEmail.Text = "Email cadastrado";
             // 
-            // linkVoltar
-            // 
-            this.linkVoltar.ActiveLinkColor = System.Drawing.Color.SeaGreen;
-            this.linkVoltar.AutoSize = true;
-            this.linkVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.linkVoltar.Font = new System.Drawing.Font("Webdings", 19.25F);
-            this.linkVoltar.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkVoltar.LinkColor = System.Drawing.Color.White;
-            this.linkVoltar.Location = new System.Drawing.Point(12, 8);
-            this.linkVoltar.Name = "linkVoltar";
-            this.linkVoltar.Size = new System.Drawing.Size(39, 29);
-            this.linkVoltar.TabIndex = 120;
-            this.linkVoltar.TabStop = true;
-            this.linkVoltar.Text = "3";
-            this.linkVoltar.Visible = false;
-            // 
             // FrmRedefinirSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(457, 471);
-            this.Controls.Add(this.pnlConteudo);
             this.Controls.Add(this.lblDesc);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.pnlTitulo);
+            this.Controls.Add(this.pnlConteudo);
             this.Name = "FrmRedefinirSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Redefinir Senha - Granamiza";
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
@@ -236,14 +212,12 @@
         private System.Windows.Forms.Label lblSubtitulo;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.Panel pnlConteudo;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.GroupBox gpEmail;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel linhaEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.LinkLabel linkVoltar;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
