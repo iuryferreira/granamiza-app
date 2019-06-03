@@ -30,9 +30,9 @@ namespace Granamiza.Forms.RedefinirSenha
             Sessao.GerarCodigo();
             EnviarEmail();
 
-            var ucCodigo = new UserControlCodigoSenha(this);
+            //var ucCodigo = new UserControlCodigoSenha(this);
             pnlConteudo.Controls.Clear();
-            pnlConteudo.Controls.Add(ucCodigo);
+            //pnlConteudo.Controls.Add(ucCodigo);
             lblDesc.Text = "Insira o código recebido por você  no seu email, \r\npara que possamos redefinir a" +
     " sua senha.\r\n \r\n";
             linkVoltar.Visible = true;

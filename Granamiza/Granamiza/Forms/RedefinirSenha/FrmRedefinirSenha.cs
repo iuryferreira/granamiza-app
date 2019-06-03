@@ -14,8 +14,16 @@ namespace Granamiza.Forms.RedefinirSenha
 {
     public partial class FrmRedefinirSenha : Form
     {
+        Form frmPai;
+
         public FrmRedefinirSenha()
         {
+            InitializeComponent();
+        }
+
+        public FrmRedefinirSenha(Form frmPai)
+        {
+            this.frmPai = frmPai;
             InitializeComponent();
         }
 
@@ -31,7 +39,7 @@ namespace Granamiza.Forms.RedefinirSenha
             Sessao.GerarCodigo();
             EnviarEmail();
 
-            var ucCodigo = new UserControlCodigoSenha(this);
+            var ucCodigo = new UserControlCodigoSenha(this, frmPai);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(ucCodigo);
             lblDesc.Text = "Insira o código recebido por você  no seu email, \r\npara que possamos redefinir a" +

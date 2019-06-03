@@ -92,7 +92,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(285, 41);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(177, 35);
+            this.lblTitulo.Size = new System.Drawing.Size(167, 35);
             this.lblTitulo.TabIndex = 63;
             this.lblTitulo.Text = "Nova Senha";
             // 
@@ -126,6 +126,7 @@
             this.btnSalvar.TabIndex = 124;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // lblSenhaErro
             // 

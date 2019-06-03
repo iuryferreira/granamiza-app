@@ -114,7 +114,7 @@ namespace Granamiza.Forms
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var frmRedefinirSenha = new FrmRedefinirSenha();
+            var frmRedefinirSenha = new FrmRedefinirSenha(this);
             this.Hide();
             frmRedefinirSenha.Show();
         }

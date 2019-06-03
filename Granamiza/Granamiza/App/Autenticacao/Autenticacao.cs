@@ -95,6 +95,7 @@ namespace Granamiza.App.Autenticacao
             }
 
             Sessao.AvatarUsuario = avatar_usuario;
+            Sessao.CodigoUsuario = String.Empty;
 
             return true;
         }
