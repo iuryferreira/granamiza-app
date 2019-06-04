@@ -24,7 +24,7 @@ namespace Granamiza.Forms
             }
             catch (Exception)
             {
-                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                _ = new FrmPopupErro();
             }
         }
 
@@ -48,7 +48,7 @@ namespace Granamiza.Forms
             }
             catch (Exception)
             {
-                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                _ = new FrmPopupErro();
             }
         }
     }

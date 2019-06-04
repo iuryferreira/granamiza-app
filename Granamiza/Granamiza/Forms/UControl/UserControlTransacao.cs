@@ -86,7 +86,7 @@ namespace Granamiza.Forms.UControl
                 }
                 catch (Exception)
                 {
-                    _ = new FrmPopup("Falha ao tentar selecionar o registro.", "Erro");
+                    _ = new FrmPopupErro();
                 }
             }
 
@@ -102,7 +102,7 @@ namespace Granamiza.Forms.UControl
                 }
                 catch (Exception)
                 {
-                    _ = new FrmPopup("Falha ao tentar selecionar o registro.", "Erro");
+                    _ = new FrmPopupErro();
                 }
             }
         }
@@ -116,7 +116,7 @@ namespace Granamiza.Forms.UControl
             }
             catch (Exception)
             {
-                _ = new FrmPopup("Falha ao tentar selecionar o registro.", "Erro");
+                _ = new FrmPopupErro();
             }
         }
 
@@ -170,7 +170,7 @@ namespace Granamiza.Forms.UControl
                 }
                 catch (Exception)
                 {
-                    _ = new FrmPopup("Falha ao tentar selecionar o registro.", "Erro");
+                    _ = new FrmPopupErro();
                 }
             }
         }

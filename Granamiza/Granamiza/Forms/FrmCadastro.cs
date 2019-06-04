@@ -161,11 +161,12 @@ namespace Granamiza.Forms
             try
             {
                 Usuario.Salvar(txtNome, txtEmail, txtSenha, rbJoana);
+                _ = new FrmPopupSucesso(this);
             }
 
             catch (Exception)
             {
-                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                _ = new FrmPopupErro();
                 LimparForm();
                 return;
             }
@@ -173,8 +174,8 @@ namespace Granamiza.Forms
             finally
             {
                 //instanciar pop-up de sucesso passando form de cadastro como referência, o texto desejado, e o tipo de aviso.
-                _ = new FrmPopup(this, "Cadastro efetuado com sucesso!", "Sucesso");
-                LimparForm();
+               
+                
             }
         }
 

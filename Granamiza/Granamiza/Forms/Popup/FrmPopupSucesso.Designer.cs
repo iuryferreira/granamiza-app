@@ -1,6 +1,6 @@
 ﻿namespace Granamiza.Forms.Popup
 {
-    partial class FrmPopup
+    partial class FrmPopupSucesso
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPopup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPopupSucesso));
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlBarra = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.pnlComponentes = new System.Windows.Forms.Panel();
             this.pbIcone = new System.Windows.Forms.PictureBox();
@@ -57,7 +58,8 @@
             // 
             // pnlBarra
             // 
-            this.pnlBarra.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.pnlBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.pnlBarra.Controls.Add(this.label1);
             this.pnlBarra.Controls.Add(this.btnClose);
             this.pnlBarra.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.pnlBarra.Location = new System.Drawing.Point(-1, 1);
@@ -67,10 +69,22 @@
             this.pnlBarra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlBarra_MouseDown);
             this.pnlBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PnlBarra_MouseMove);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(9, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 14);
+            this.label1.TabIndex = 81;
+            this.label1.Text = "Granamiza";
+            // 
             // btnConfirmar
             // 
             this.btnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnConfirmar.FlatAppearance.BorderSize = 2;
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
@@ -78,12 +92,13 @@
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(85, 32);
             this.btnConfirmar.TabIndex = 79;
-            this.btnConfirmar.Text = "Vamos lá!";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Text = "OK";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
             // pnlComponentes
             // 
+            this.pnlComponentes.BackColor = System.Drawing.Color.White;
             this.pnlComponentes.Controls.Add(this.pbIcone);
             this.pnlComponentes.Controls.Add(this.lblTextoSucesso);
             this.pnlComponentes.Controls.Add(this.btnConfirmar);
@@ -95,7 +110,7 @@
             // 
             // pbIcone
             // 
-            this.pbIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbIcone.Sucesso")));
+            this.pbIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbIcone.BackgroundImage")));
             this.pbIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbIcone.Location = new System.Drawing.Point(132, 10);
             this.pbIcone.Name = "pbIcone";
@@ -107,8 +122,8 @@
             // 
             this.lblTextoSucesso.AutoSize = true;
             this.lblTextoSucesso.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextoSucesso.ForeColor = System.Drawing.Color.White;
-            this.lblTextoSucesso.Location = new System.Drawing.Point(56, 85);
+            this.lblTextoSucesso.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTextoSucesso.Location = new System.Drawing.Point(56, 90);
             this.lblTextoSucesso.Name = "lblTextoSucesso";
             this.lblTextoSucesso.Size = new System.Drawing.Size(242, 19);
             this.lblTextoSucesso.TabIndex = 79;
@@ -128,6 +143,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PopUpSucesso";
             this.pnlBarra.ResumeLayout(false);
+            this.pnlBarra.PerformLayout();
             this.pnlComponentes.ResumeLayout(false);
             this.pnlComponentes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcone)).EndInit();
@@ -142,5 +158,6 @@
         private System.Windows.Forms.Panel pnlComponentes;
         private System.Windows.Forms.Label lblTextoSucesso;
         private System.Windows.Forms.PictureBox pbIcone;
+        private System.Windows.Forms.Label label1;
     }
 }
