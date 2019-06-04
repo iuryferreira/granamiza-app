@@ -1,6 +1,8 @@
 ﻿using Granamiza.App.Autenticacao;
+using Granamiza.Forms.Popup;
 using Granamiza.Modelo;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Granamiza.App.CRUD
@@ -46,6 +48,38 @@ namespace Granamiza.App.CRUD
                 bd.SaveChanges();
 
                 return true;
+            }
+
+        }
+
+        internal static bool RedefinirSenha(string senhaText)
+        {
+            string senha = Validacao.CriptografarSenha(senhaText);
+
+            try
+            {
+                using (var bd = new granamizaEntities())
+                {
+                    //Consulta usando LINQ
+                    usuario user = (from u in bd.usuario
+                                    where u.id == Sessao.IdUsuario
+                                    select u).FirstOrDefault();
+
+                    if (user == null)
+                    {
+                        return false;
+                    }
+
+                    user.senha = senha;
+                    bd.SaveChanges();
+                    return true;
+                }
+
+            }
+            catch (Exception)
+            {
+                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                return false;
             }
 
         }
