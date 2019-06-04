@@ -35,7 +35,7 @@ namespace Granamiza.Forms
             this.nome_usuario = nome;
             this.avatar_usuario = avatar;
 
-            lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario;
+            lblBemVindo.Text = "                                 Seja bem vindo(a), " + nome_usuario;
             pbAvatar.ImageLocation = avatar_usuario;
 
             ReceberValores();
@@ -145,15 +145,35 @@ namespace Granamiza.Forms
             frmReceita.Closed += (s, args) => this.ReceberValores();
         }
 
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+
+        }
+
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Deseja sair do programa?",
-                       "Saindo...",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Information) == DialogResult.No)
+            if (MessageBox.Show("Deseja sair do programa?", "Saindo...", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
+
                 e.Cancel = true;
             }
+        }
+
+        private void PbAvatar_MouseHover(object sender, EventArgs e)
+        {
+            tpAvatar.SetToolTip(pbAvatar, "Clique aqui para abrir suas preferências");
+        }
+
+        private void PbAvatar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

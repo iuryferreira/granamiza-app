@@ -30,6 +30,7 @@ namespace Granamiza.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -51,6 +52,8 @@ namespace Granamiza.Forms
             this.linhaDivisao = new System.Windows.Forms.Panel();
             this.lblDespesa = new System.Windows.Forms.Label();
             this.lblReceita = new System.Windows.Forms.Label();
+            this.tpAvatar = new System.Windows.Forms.ToolTip(this.components);
+            this.lnkLogout = new System.Windows.Forms.LinkLabel();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -74,7 +77,7 @@ namespace Granamiza.Forms
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(170, 561);
+            this.pnlMenu.Size = new System.Drawing.Size(170, 562);
             this.pnlMenu.TabIndex = 0;
             // 
             // lblTitulo
@@ -102,7 +105,7 @@ namespace Granamiza.Forms
             this.btnHistorico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnHistorico.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorico.Image")));
             this.btnHistorico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorico.Location = new System.Drawing.Point(0, 315);
+            this.btnHistorico.Location = new System.Drawing.Point(0, 360);
             this.btnHistorico.Name = "btnHistorico";
             this.btnHistorico.Size = new System.Drawing.Size(166, 55);
             this.btnHistorico.TabIndex = 87;
@@ -122,7 +125,7 @@ namespace Granamiza.Forms
             this.btnCotacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCotacao.Image = ((System.Drawing.Image)(resources.GetObject("btnCotacao.Image")));
             this.btnCotacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCotacao.Location = new System.Drawing.Point(0, 260);
+            this.btnCotacao.Location = new System.Drawing.Point(0, 305);
             this.btnCotacao.Name = "btnCotacao";
             this.btnCotacao.Size = new System.Drawing.Size(166, 55);
             this.btnCotacao.TabIndex = 86;
@@ -142,7 +145,7 @@ namespace Granamiza.Forms
             this.btnSimulacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSimulacao.Image = ((System.Drawing.Image)(resources.GetObject("btnSimulacao.Image")));
             this.btnSimulacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSimulacao.Location = new System.Drawing.Point(0, 205);
+            this.btnSimulacao.Location = new System.Drawing.Point(0, 250);
             this.btnSimulacao.Name = "btnSimulacao";
             this.btnSimulacao.Size = new System.Drawing.Size(166, 55);
             this.btnSimulacao.TabIndex = 85;
@@ -161,7 +164,7 @@ namespace Granamiza.Forms
             this.btnDespesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDespesa.Image = ((System.Drawing.Image)(resources.GetObject("btnDespesa.Image")));
             this.btnDespesa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDespesa.Location = new System.Drawing.Point(0, 150);
+            this.btnDespesa.Location = new System.Drawing.Point(0, 195);
             this.btnDespesa.Name = "btnDespesa";
             this.btnDespesa.Size = new System.Drawing.Size(166, 55);
             this.btnDespesa.TabIndex = 84;
@@ -189,7 +192,7 @@ namespace Granamiza.Forms
             this.btnReceita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReceita.Image = ((System.Drawing.Image)(resources.GetObject("btnReceita.Image")));
             this.btnReceita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReceita.Location = new System.Drawing.Point(0, 95);
+            this.btnReceita.Location = new System.Drawing.Point(0, 140);
             this.btnReceita.Name = "btnReceita";
             this.btnReceita.Size = new System.Drawing.Size(166, 55);
             this.btnReceita.TabIndex = 83;
@@ -214,29 +217,32 @@ namespace Granamiza.Forms
             // pbAvatar
             // 
             this.pbAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAvatar.BackgroundImage")));
             this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pbAvatar.ErrorImage = null;
             this.pbAvatar.InitialImage = null;
-            this.pbAvatar.Location = new System.Drawing.Point(703, 7);
+            this.pbAvatar.Location = new System.Drawing.Point(707, 0);
             this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Size = new System.Drawing.Size(69, 69);
+            this.pbAvatar.Size = new System.Drawing.Size(65, 61);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvatar.TabIndex = 7;
             this.pbAvatar.TabStop = false;
+            this.pbAvatar.Click += new System.EventHandler(this.PbAvatar_Click);
+            this.pbAvatar.MouseHover += new System.EventHandler(this.PbAvatar_MouseHover);
             // 
             // lblBemVindo
             // 
             this.lblBemVindo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBemVindo.AutoSize = true;
             this.lblBemVindo.BackColor = System.Drawing.Color.Transparent;
-            this.lblBemVindo.Font = new System.Drawing.Font("SF Pro Display", 13F, System.Drawing.FontStyle.Bold);
-            this.lblBemVindo.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblBemVindo.Location = new System.Drawing.Point(201, 26);
+            this.lblBemVindo.Font = new System.Drawing.Font("SF Pro Display", 16F, System.Drawing.FontStyle.Bold);
+            this.lblBemVindo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblBemVindo.Location = new System.Drawing.Point(176, 18);
             this.lblBemVindo.Name = "lblBemVindo";
-            this.lblBemVindo.Size = new System.Drawing.Size(268, 21);
+            this.lblBemVindo.Size = new System.Drawing.Size(433, 26);
             this.lblBemVindo.TabIndex = 75;
-            this.lblBemVindo.Text = "Bem vindo ao Granamiza, John.";
+            this.lblBemVindo.Text = "                                          Seja Bem Vinda, Amanda.";
             this.lblBemVindo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnlConteudo
@@ -245,7 +251,7 @@ namespace Granamiza.Forms
             this.pnlConteudo.Font = new System.Drawing.Font("SF Pro Display", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlConteudo.Location = new System.Drawing.Point(176, 87);
             this.pnlConteudo.Name = "pnlConteudo";
-            this.pnlConteudo.Size = new System.Drawing.Size(596, 463);
+            this.pnlConteudo.Size = new System.Drawing.Size(604, 463);
             this.pnlConteudo.TabIndex = 76;
             // 
             // gpVisaoGeral
@@ -259,7 +265,7 @@ namespace Granamiza.Forms
             this.gpVisaoGeral.Controls.Add(this.lblReceita);
             this.gpVisaoGeral.Location = new System.Drawing.Point(16, 19);
             this.gpVisaoGeral.Name = "gpVisaoGeral";
-            this.gpVisaoGeral.Size = new System.Drawing.Size(567, 200);
+            this.gpVisaoGeral.Size = new System.Drawing.Size(580, 200);
             this.gpVisaoGeral.TabIndex = 2;
             this.gpVisaoGeral.TabStop = false;
             this.gpVisaoGeral.Text = "Visão Geral";
@@ -358,6 +364,26 @@ namespace Granamiza.Forms
             this.lblReceita.TabIndex = 0;
             this.lblReceita.Text = "Receita:";
             // 
+            // tpAvatar
+            // 
+            this.tpAvatar.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tpAvatar.ToolTipTitle = "Preferências";
+            // 
+            // lnkLogout
+            // 
+            this.lnkLogout.AutoSize = true;
+            this.lnkLogout.BackColor = System.Drawing.Color.Transparent;
+            this.lnkLogout.Font = new System.Drawing.Font("Bahnschrift", 10.25F);
+            this.lnkLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkLogout.LinkColor = System.Drawing.Color.Gray;
+            this.lnkLogout.Location = new System.Drawing.Point(721, 64);
+            this.lnkLogout.Name = "lnkLogout";
+            this.lnkLogout.Size = new System.Drawing.Size(39, 17);
+            this.lnkLogout.TabIndex = 3;
+            this.lnkLogout.TabStop = true;
+            this.lnkLogout.Text = "SAIR";
+            this.lnkLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLogout_LinkClicked);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,14 +391,13 @@ namespace Granamiza.Forms
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.lnkLogout);
             this.Controls.Add(this.pnlConteudo);
-            this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.pbAvatar);
+            this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.pnlMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -412,5 +437,7 @@ namespace Granamiza.Forms
         private System.Windows.Forms.Panel linhaDivisao;
         private System.Windows.Forms.Label lblDespesa;
         private System.Windows.Forms.Label lblReceita;
+        private System.Windows.Forms.ToolTip tpAvatar;
+        private System.Windows.Forms.LinkLabel lnkLogout;
     }
 }
