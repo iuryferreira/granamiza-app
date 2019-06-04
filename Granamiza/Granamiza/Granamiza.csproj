@@ -237,8 +237,6 @@
     <EmbeddedResource Include="Forms\RedefinirSenha\FrmRedefinirSenha.resx">
       <DependentUpon>FrmRedefinirSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Popup\FrmPopup.resx">
-      <DependentUpon>FrmPopup.cs</DependentUpon>
     <EmbeddedResource Include="Forms\Popup\FrmPopupSucesso.resx">
       <DependentUpon>FrmPopupSucesso.cs</DependentUpon>
     </EmbeddedResource>
