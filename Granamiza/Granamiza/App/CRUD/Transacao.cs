@@ -62,7 +62,7 @@ namespace Granamiza.App.CRUD
             //Se ocorrer erro ao conectar.
             catch (Exception)
             {
-                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                _ = new FrmPopupErro();
             }
         }
 
@@ -87,7 +87,7 @@ namespace Granamiza.App.CRUD
             //Se ocorrer erro ao conectar.
             catch (Exception)
             {
-                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                _ = new FrmPopupErro();
             }
         }
     }

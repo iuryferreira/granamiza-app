@@ -45,7 +45,7 @@ namespace Granamiza.App.CRUD
 
             catch
             {
-                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                _ = new FrmPopupErro();
             }
         }
 

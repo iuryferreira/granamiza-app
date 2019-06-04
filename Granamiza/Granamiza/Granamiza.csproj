@@ -94,11 +94,23 @@
       <DependentUpon>FrmReceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MeusWidgets.cs" />
-    <Compile Include="Forms\Popup\FrmPopup.cs">
+    <Compile Include="Forms\Popup\FrmPopupSucesso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Popup\FrmPopup.Designer.cs">
-      <DependentUpon>FrmPopup.cs</DependentUpon>
+    <Compile Include="Forms\Popup\FrmPopupSucesso.Designer.cs">
+      <DependentUpon>FrmPopupSucesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popup\FrmPopupErro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popup\FrmPopupErro.Designer.cs">
+      <DependentUpon>FrmPopupErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popup\FrmPopupInformacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popup\FrmPopupInformacao.Designer.cs">
+      <DependentUpon>FrmPopupInformacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UControl\UserControlTransacao.cs">
       <SubType>UserControl</SubType>
@@ -171,8 +183,14 @@
     <EmbeddedResource Include="Forms\FrmReceita.resx">
       <DependentUpon>FrmReceita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Popup\FrmPopup.resx">
-      <DependentUpon>FrmPopup.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Popup\FrmPopupSucesso.resx">
+      <DependentUpon>FrmPopupSucesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popup\FrmPopupErro.resx">
+      <DependentUpon>FrmPopupErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popup\FrmPopupInformacao.resx">
+      <DependentUpon>FrmPopupInformacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
       <DependentUpon>UserControlTransacao.cs</DependentUpon>
