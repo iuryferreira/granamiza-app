@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -133,11 +133,23 @@
       <DependentUpon>FrmRedefinirSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MeusWidgets.cs" />
-    <Compile Include="Forms\Popup\FrmPopup.cs">
+    <Compile Include="Forms\Popup\FrmPopupSucesso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Popup\FrmPopup.Designer.cs">
-      <DependentUpon>FrmPopup.cs</DependentUpon>
+    <Compile Include="Forms\Popup\FrmPopupSucesso.Designer.cs">
+      <DependentUpon>FrmPopupSucesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popup\FrmPopupErro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popup\FrmPopupErro.Designer.cs">
+      <DependentUpon>FrmPopupErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Popup\FrmPopupInformacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popup\FrmPopupInformacao.Designer.cs">
+      <DependentUpon>FrmPopupInformacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RedefinirSenha\UserControlCodigoSenha.cs">
       <SubType>UserControl</SubType>
@@ -227,6 +239,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Popup\FrmPopup.resx">
       <DependentUpon>FrmPopup.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Popup\FrmPopupSucesso.resx">
+      <DependentUpon>FrmPopupSucesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popup\FrmPopupErro.resx">
+      <DependentUpon>FrmPopupErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popup\FrmPopupInformacao.resx">
+      <DependentUpon>FrmPopupInformacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RedefinirSenha\UserControlCodigoSenha.resx">
       <DependentUpon>UserControlCodigoSenha.cs</DependentUpon>

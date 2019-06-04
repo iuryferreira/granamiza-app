@@ -467,9 +467,6 @@
         private System.Windows.Forms.Panel linhaValor;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datainsercaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource vwtransacaocategoriaBindingSource;
         private System.Windows.Forms.BindingSource vwreceitaBindingSource;
         private System.Windows.Forms.BindingSource vwdespesaBindingSource;

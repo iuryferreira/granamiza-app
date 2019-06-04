@@ -62,7 +62,7 @@ namespace Granamiza.App.Autenticacao
             //Se ocorrer erro ao conectar.
             catch (Exception)
             {
-                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                _ = new FrmPopupErro();
                 return false;
             }
         }
@@ -90,7 +90,7 @@ namespace Granamiza.App.Autenticacao
             }
             catch (Exception)
             {
-                _ = new FrmPopup("Ocorreu um erro, contate o suporte!", "Erro");
+                _ = new FrmPopupErro();
                 return false;
             }
 

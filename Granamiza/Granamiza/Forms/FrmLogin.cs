@@ -9,8 +9,6 @@ namespace Granamiza.Forms
     public partial class FrmLogin : Form
     {
 
-        FrmPrincipal frm;
-
         public FrmLogin()
         {
             InitializeComponent();
