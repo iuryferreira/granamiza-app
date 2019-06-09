@@ -133,7 +133,6 @@ namespace Granamiza.Forms
             // btnSimulacao
             // 
             this.btnSimulacao.BackColor = System.Drawing.Color.Transparent;
-            this.btnSimulacao.Enabled = false;
             this.btnSimulacao.FlatAppearance.BorderSize = 0;
             this.btnSimulacao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnSimulacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
@@ -149,6 +148,7 @@ namespace Granamiza.Forms
             this.btnSimulacao.Text = "Simulação";
             this.btnSimulacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSimulacao.UseVisualStyleBackColor = false;
+            this.btnSimulacao.Click += new System.EventHandler(this.BtnSimulacao_Click);
             // 
             // btnDespesa
             // 

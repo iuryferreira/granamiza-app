@@ -17,6 +17,8 @@ namespace Granamiza
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmNovaSenha());
             Application.Run(new FrmLogin());
+            //Application.Run(new FrmSimularInvestimentoTmp());
+
         }
     }
 }
