@@ -132,7 +132,7 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Simulador de Investimentos";
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
-            UserControlSimularInvestimento uc = new UserControlSimularInvestimento(btnSimulacao);
+            UserControlSimularInvestimento uc = new UserControlSimularInvestimento();
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
         }

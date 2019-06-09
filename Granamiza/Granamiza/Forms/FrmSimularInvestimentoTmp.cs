@@ -27,7 +27,6 @@ namespace Granamiza.Forms
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Valor juros: " + numJuros.Value);
             double rendTotal;
             rendTotal = CalcularInvestimento(numValor.Value, numJuros.Value, numAplicacoesMensais.Value, Convert.ToInt32(numQntMeses.Value));
 
