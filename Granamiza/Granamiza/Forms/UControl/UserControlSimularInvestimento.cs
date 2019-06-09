@@ -43,6 +43,7 @@ namespace Granamiza.Forms.UControl
         //Calcula rendimento total do investimento com base nos valores inseridos pelo usuário
         private double CalcularInvestimento(decimal valor, decimal juros, decimal aplicacoesMensais, int meses)
         {
+            //Converter demais valores para double para cálculo
             double valorTotal = Convert.ToDouble(valor);
             double jurosDouble = Convert.ToDouble(juros);
             double aplicacoesM = Convert.ToDouble(aplicacoesMensais);
@@ -57,11 +58,12 @@ namespace Granamiza.Forms.UControl
             return valorTotal;
         }
 
-        //
+        //Excluir simulação selecionada
         private void BtnRemover_Click(object sender, EventArgs e)
         {
             SimulacaoInvestimento.Excluir(idSimulacao);
             AtualizarGrid();
+            LimparDados();
         }
 
         //Atualizar dados do data grid view
@@ -81,14 +83,8 @@ namespace Granamiza.Forms.UControl
 
         }
 
-        //Recupera o id da simulação com clique simples, possibilitando uma ação de exclusão mais prática
-        private void dgvSimulacao_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            idSimulacao = int.Parse(dgvSimulacao.Rows[e.RowIndex].Cells[0].Value.ToString());
-        }
-
-        //Evento de duplo clique em linha - Chama método de recuperar os valores de simulação selecionada para caixas de texto
-        private void DgvSimulacao_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //Chama método de recuperar os valores de simulação selecionada para caixas de texto
+        private void DgvSimulacao_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -132,7 +128,46 @@ namespace Granamiza.Forms.UControl
                 _ = new FrmPopupErro();
             }
         }
+        
+        //--- Ao clicar em algum campo, invoca método que apagam data e hora
+        private void NumValor_Click(object sender, EventArgs e)
+        {
+            LimparDataHora();
+        }
 
+        private void NumJuros_Click(object sender, EventArgs e)
+        {
+            LimparDataHora();
+        }
+
+        private void NumAplicacoesMensais_Click(object sender, EventArgs e)
+        {
+            LimparDataHora();
+        }
+
+        private void NumQntMeses_Click(object sender, EventArgs e)
+        {
+            LimparDataHora();
+        }
+
+        //Limpa data e hora
+        private void LimparDataHora()
+        {
+            txtData.Text = String.Empty;
+            txtHora.Text = String.Empty;
+        }
+
+        //Limpa todos os dados das caixas de texto
+        private void LimparDados()
+        {
+            numValor.Value = 0;
+            numJuros.Value = 0;
+            numAplicacoesMensais.Value = 0;
+            numQntMeses.Value = 0;
+            lblRendimentoTotal.Text = String.Empty;
+            txtData.Text = String.Empty;
+            txtHora.Text = String.Empty;
+        }
     }
 }
 
