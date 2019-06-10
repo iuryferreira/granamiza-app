@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlSimularInvestimento));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSimulacao = new System.Windows.Forms.DataGridView();
             this.picInfo = new System.Windows.Forms.PictureBox();
             this.btnRemover = new System.Windows.Forms.Button();
@@ -93,14 +93,14 @@
             this.dgvSimulacao.AutoGenerateColumns = false;
             this.dgvSimulacao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSimulacao.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSimulacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSimulacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSimulacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSimulacao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -111,22 +111,22 @@
             this.aplicacoesmensaisDataGridViewTextBoxColumn,
             this.rendimentototalDataGridViewTextBoxColumn});
             this.dgvSimulacao.DataSource = this.simulacaoBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSimulacao.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSimulacao.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvSimulacao.EnableHeadersVisualStyles = false;
             this.dgvSimulacao.GridColor = System.Drawing.Color.White;
             this.dgvSimulacao.Location = new System.Drawing.Point(20, 309);
             this.dgvSimulacao.Name = "dgvSimulacao";
             this.dgvSimulacao.ReadOnly = true;
             this.dgvSimulacao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSimulacao.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSimulacao.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvSimulacao.Size = new System.Drawing.Size(538, 149);
             this.dgvSimulacao.TabIndex = 115;
             this.dgvSimulacao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSimulacao_CellClick);
@@ -310,19 +310,20 @@
             // 
             this.numValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numValor.DecimalPlaces = 2;
+            this.numValor.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
             this.numValor.Increment = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.numValor.Location = new System.Drawing.Point(55, 89);
+            this.numValor.Location = new System.Drawing.Point(63, 84);
             this.numValor.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.numValor.Name = "numValor";
-            this.numValor.Size = new System.Drawing.Size(122, 16);
+            this.numValor.Size = new System.Drawing.Size(114, 22);
             this.numValor.TabIndex = 119;
             this.numValor.ThousandsSeparator = true;
             this.numValor.Click += new System.EventHandler(this.NumValor_Click);
@@ -331,14 +332,15 @@
             // 
             this.numJuros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numJuros.DecimalPlaces = 2;
+            this.numJuros.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
             this.numJuros.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.numJuros.Location = new System.Drawing.Point(209, 89);
+            this.numJuros.Location = new System.Drawing.Point(209, 84);
             this.numJuros.Name = "numJuros";
-            this.numJuros.Size = new System.Drawing.Size(99, 16);
+            this.numJuros.Size = new System.Drawing.Size(99, 22);
             this.numJuros.TabIndex = 120;
             this.numJuros.Click += new System.EventHandler(this.NumJuros_Click);
             // 
@@ -346,11 +348,12 @@
             // 
             this.txtData.BackColor = System.Drawing.SystemColors.Window;
             this.txtData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtData.Location = new System.Drawing.Point(334, 91);
+            this.txtData.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.txtData.Location = new System.Drawing.Point(334, 86);
             this.txtData.Mask = "00/00/0000";
             this.txtData.Name = "txtData";
             this.txtData.ReadOnly = true;
-            this.txtData.Size = new System.Drawing.Size(99, 13);
+            this.txtData.Size = new System.Drawing.Size(99, 19);
             this.txtData.TabIndex = 121;
             this.txtData.ValidatingType = typeof(System.DateTime);
             // 
@@ -358,11 +361,12 @@
             // 
             this.txtHora.BackColor = System.Drawing.SystemColors.Window;
             this.txtHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHora.Location = new System.Drawing.Point(456, 91);
+            this.txtHora.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.txtHora.Location = new System.Drawing.Point(456, 86);
             this.txtHora.Mask = "00:00";
             this.txtHora.Name = "txtHora";
             this.txtHora.ReadOnly = true;
-            this.txtHora.Size = new System.Drawing.Size(99, 13);
+            this.txtHora.Size = new System.Drawing.Size(99, 19);
             this.txtHora.TabIndex = 122;
             this.txtHora.ValidatingType = typeof(System.DateTime);
             // 
@@ -370,19 +374,20 @@
             // 
             this.numAplicacoesMensais.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numAplicacoesMensais.DecimalPlaces = 2;
+            this.numAplicacoesMensais.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
             this.numAplicacoesMensais.Increment = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.numAplicacoesMensais.Location = new System.Drawing.Point(55, 156);
+            this.numAplicacoesMensais.Location = new System.Drawing.Point(63, 151);
             this.numAplicacoesMensais.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numAplicacoesMensais.Name = "numAplicacoesMensais";
-            this.numAplicacoesMensais.Size = new System.Drawing.Size(122, 16);
+            this.numAplicacoesMensais.Size = new System.Drawing.Size(114, 22);
             this.numAplicacoesMensais.TabIndex = 123;
             this.numAplicacoesMensais.ThousandsSeparator = true;
             this.numAplicacoesMensais.Click += new System.EventHandler(this.NumAplicacoesMensais_Click);
@@ -390,14 +395,15 @@
             // numQntMeses
             // 
             this.numQntMeses.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numQntMeses.Location = new System.Drawing.Point(209, 156);
+            this.numQntMeses.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.numQntMeses.Location = new System.Drawing.Point(209, 151);
             this.numQntMeses.Maximum = new decimal(new int[] {
             800,
             0,
             0,
             0});
             this.numQntMeses.Name = "numQntMeses";
-            this.numQntMeses.Size = new System.Drawing.Size(99, 16);
+            this.numQntMeses.Size = new System.Drawing.Size(99, 22);
             this.numQntMeses.TabIndex = 125;
             this.numQntMeses.Click += new System.EventHandler(this.NumQntMeses_Click);
             // 
@@ -415,33 +421,33 @@
             // lblValorRs
             // 
             this.lblValorRs.AutoSize = true;
-            this.lblValorRs.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.lblValorRs.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
             this.lblValorRs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblValorRs.Location = new System.Drawing.Point(28, 88);
+            this.lblValorRs.Location = new System.Drawing.Point(28, 84);
             this.lblValorRs.Name = "lblValorRs";
-            this.lblValorRs.Size = new System.Drawing.Size(21, 14);
+            this.lblValorRs.Size = new System.Drawing.Size(29, 19);
             this.lblValorRs.TabIndex = 126;
             this.lblValorRs.Text = "R$";
             // 
             // lblJurosPorcentagem
             // 
             this.lblJurosPorcentagem.AutoSize = true;
-            this.lblJurosPorcentagem.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.lblJurosPorcentagem.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
             this.lblJurosPorcentagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblJurosPorcentagem.Location = new System.Drawing.Point(240, 88);
+            this.lblJurosPorcentagem.Location = new System.Drawing.Point(255, 84);
             this.lblJurosPorcentagem.Name = "lblJurosPorcentagem";
-            this.lblJurosPorcentagem.Size = new System.Drawing.Size(16, 14);
+            this.lblJurosPorcentagem.Size = new System.Drawing.Size(22, 19);
             this.lblJurosPorcentagem.TabIndex = 127;
             this.lblJurosPorcentagem.Text = "%";
             // 
             // lblAplicacoesMensaisRs
             // 
             this.lblAplicacoesMensaisRs.AutoSize = true;
-            this.lblAplicacoesMensaisRs.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.lblAplicacoesMensaisRs.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
             this.lblAplicacoesMensaisRs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAplicacoesMensaisRs.Location = new System.Drawing.Point(28, 155);
+            this.lblAplicacoesMensaisRs.Location = new System.Drawing.Point(28, 151);
             this.lblAplicacoesMensaisRs.Name = "lblAplicacoesMensaisRs";
-            this.lblAplicacoesMensaisRs.Size = new System.Drawing.Size(21, 14);
+            this.lblAplicacoesMensaisRs.Size = new System.Drawing.Size(29, 19);
             this.lblAplicacoesMensaisRs.TabIndex = 128;
             this.lblAplicacoesMensaisRs.Text = "R$";
             // 
@@ -478,9 +484,9 @@
             // valorinseridoDataGridViewTextBoxColumn
             // 
             this.valorinseridoDataGridViewTextBoxColumn.DataPropertyName = "valor_inserido";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.valorinseridoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.valorinseridoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.valorinseridoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
             this.valorinseridoDataGridViewTextBoxColumn.HeaderText = "Valor";
             this.valorinseridoDataGridViewTextBoxColumn.Name = "valorinseridoDataGridViewTextBoxColumn";
@@ -489,9 +495,9 @@
             // jurosDataGridViewTextBoxColumn
             // 
             this.jurosDataGridViewTextBoxColumn.DataPropertyName = "juros";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.jurosDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Format = "N2";
+            dataGridViewCellStyle11.NullValue = null;
+            this.jurosDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.jurosDataGridViewTextBoxColumn.FillWeight = 63.03066F;
             this.jurosDataGridViewTextBoxColumn.HeaderText = "Juros";
             this.jurosDataGridViewTextBoxColumn.Name = "jurosDataGridViewTextBoxColumn";
@@ -508,9 +514,9 @@
             // datacriacaoDataGridViewTextBoxColumn
             // 
             this.datacriacaoDataGridViewTextBoxColumn.DataPropertyName = "data_criacao";
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.datacriacaoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Format = "d";
+            dataGridViewCellStyle12.NullValue = null;
+            this.datacriacaoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.datacriacaoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
             this.datacriacaoDataGridViewTextBoxColumn.HeaderText = "Data";
             this.datacriacaoDataGridViewTextBoxColumn.Name = "datacriacaoDataGridViewTextBoxColumn";
@@ -519,9 +525,9 @@
             // aplicacoesmensaisDataGridViewTextBoxColumn
             // 
             this.aplicacoesmensaisDataGridViewTextBoxColumn.DataPropertyName = "aplicacoes_mensais";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Format = "C2";
+            dataGridViewCellStyle13.NullValue = null;
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.aplicacoesmensaisDataGridViewTextBoxColumn.FillWeight = 119.0139F;
             this.aplicacoesmensaisDataGridViewTextBoxColumn.HeaderText = "Aplicações Mensais";
             this.aplicacoesmensaisDataGridViewTextBoxColumn.Name = "aplicacoesmensaisDataGridViewTextBoxColumn";
@@ -530,9 +536,9 @@
             // rendimentototalDataGridViewTextBoxColumn
             // 
             this.rendimentototalDataGridViewTextBoxColumn.DataPropertyName = "rendimento_total";
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.rendimentototalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Format = "C2";
+            dataGridViewCellStyle14.NullValue = null;
+            this.rendimentototalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.rendimentototalDataGridViewTextBoxColumn.FillWeight = 119.0139F;
             this.rendimentototalDataGridViewTextBoxColumn.HeaderText = "Rendimento Total";
             this.rendimentototalDataGridViewTextBoxColumn.Name = "rendimentototalDataGridViewTextBoxColumn";
