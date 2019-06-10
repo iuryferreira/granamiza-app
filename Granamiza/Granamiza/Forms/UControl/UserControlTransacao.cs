@@ -135,7 +135,7 @@ namespace Granamiza.Forms.UControl
 
                         if (r != null) //Testa se localizou o registro
                         {
-                            txtValor.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), " {0:#,###.##} R$", r.valor); ;
+                            txtValor.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), " {0:#,###.##} R$", r.valor);
                             txtCategoria.Text = r.nome;
                             txtData.Text = r.data_insercao;
                             txtHora.Text = r.hora_insercao;

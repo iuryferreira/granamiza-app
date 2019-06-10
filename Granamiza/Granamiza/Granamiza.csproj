@@ -83,6 +83,7 @@
     <Compile Include="App\Autenticacao\Sessao.cs" />
     <Compile Include="App\Autenticacao\Validacao.cs" />
     <Compile Include="App\CRUD\Categoria.cs" />
+    <Compile Include="App\CRUD\SimulacaoInvestimento.cs" />
     <Compile Include="App\CRUD\Transacao.cs" />
     <Compile Include="App\CRUD\TransacaoTemp.cs" />
     <Compile Include="App\CRUD\Usuario.cs" />
@@ -171,6 +172,12 @@
     </Compile>
     <Compile Include="Forms\UControl\UserControlCotacao.Designer.cs">
       <DependentUpon>UserControlCotacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UControl\UserControlSimularInvestimento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UControl\UserControlSimularInvestimento.Designer.cs">
+      <DependentUpon>UserControlSimularInvestimento.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UControl\UserControlTransacao.cs">
       <SubType>UserControl</SubType>
@@ -270,6 +277,9 @@
     <EmbeddedResource Include="Forms\UControl\UserControlCotacao.resx">
       <DependentUpon>UserControlCotacao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UControl\UserControlSimularInvestimento.resx">
+      <DependentUpon>UserControlSimularInvestimento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
       <DependentUpon>UserControlTransacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +302,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Granamiza.Modelo.categoria.datasource" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.simulacao.datasource" />
     <None Include="Properties\DataSources\Granamiza.Modelo.vwdespesa.datasource" />
     <None Include="Properties\DataSources\Granamiza.Modelo.vwreceita.datasource" />
     <None Include="Properties\DataSources\Granamiza.Modelo.vwtransacaocategoria.datasource" />
