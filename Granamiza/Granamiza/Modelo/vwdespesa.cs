@@ -23,6 +23,7 @@ namespace Granamiza.Modelo
         public System.DateTime data_criacao { get; set; }
         public int usuario_id { get; set; }
         public int categoria_id { get; set; }
+        public Nullable<bool> debitada { get; set; }
         public string nome { get; set; }
     }
 }

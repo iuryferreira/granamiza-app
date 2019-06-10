@@ -20,9 +20,9 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="data_horario" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="data_criacao" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="valor_baixa" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="valor_alta" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="data_consulta" Type="datetime" Precision="0" Nullable="false" />
         </EntityType>
         <EntityType Name="preferencias">
           <Key>
@@ -59,6 +59,7 @@
           <Property Name="data_insercao" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="hora_insercao" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="data_criacao" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="debitada" Type="bool" />
           <Property Name="usuario_id" Type="int" Nullable="false" />
           <Property Name="categoria_id" Type="int" Nullable="false" />
         </EntityType>
@@ -116,6 +117,7 @@ warning 6002: The table/view 'def.granamiza.vwdespesa' does not have a primary k
           <Property Name="data_criacao" Type="datetime" Precision="0" Nullable="false" />
           <Property Name="usuario_id" Type="int" Nullable="false" />
           <Property Name="categoria_id" Type="int" Nullable="false" />
+          <Property Name="debitada" Type="bool" />
           <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -260,6 +262,7 @@ FROM `vwcategoriareceita` AS `vwcategoriareceita`</DefiningQuery>
 `vwdespesa`.`data_criacao`, 
 `vwdespesa`.`usuario_id`, 
 `vwdespesa`.`categoria_id`, 
+`vwdespesa`.`debitada`, 
 `vwdespesa`.`nome`
 FROM `vwdespesa` AS `vwdespesa`</DefiningQuery>
           </EntitySet>
@@ -333,9 +336,9 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="valor" Type="Decimal" Nullable="false" />
-          <Property Name="data_horario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="data_criacao" Type="DateTime" Nullable="false" />
+          <Property Name="valor_baixa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="valor_alta" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="data_consulta" Type="DateTime" Nullable="false" />
         </EntityType>
         <EntityType Name="preferencias">
           <Key>
@@ -461,6 +464,7 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
           <Property Name="categoria_id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="categoria" Relationship="granamizaModel.fk_transacao_categoria1" FromRole="transacao" ToRole="categoria" />
           <NavigationProperty Name="usuario" Relationship="granamizaModel.fk_transacao_usuario1" FromRole="transacao" ToRole="usuario" />
+          <Property Name="debitada" Type="Boolean" />
         </EntityType>
         <Association Name="fk_transacao_categoria1">
           <End Type="granamizaModel.categoria" Role="categoria" Multiplicity="1" />
@@ -572,6 +576,7 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
           <Property Name="data_criacao" Type="DateTime" Nullable="false" />
           <Property Name="usuario_id" Type="Int32" Nullable="false" />
           <Property Name="categoria_id" Type="Int32" Nullable="false" />
+          <Property Name="debitada" Type="Boolean" />
           <Property Name="nome" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
@@ -594,11 +599,11 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
           <EntitySetMapping Name="cotacao">
             <EntityTypeMapping TypeName="granamizaModel.cotacao">
               <MappingFragment StoreEntitySet="cotacao">
+                <ScalarProperty Name="data_consulta" ColumnName="data_consulta" />
+                <ScalarProperty Name="valor_alta" ColumnName="valor_alta" />
+                <ScalarProperty Name="valor_baixa" ColumnName="valor_baixa" />
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="valor" ColumnName="valor" />
-                <ScalarProperty Name="data_horario" ColumnName="data_horario" />
-                <ScalarProperty Name="data_criacao" ColumnName="data_criacao" />
-              </MappingFragment>
+                </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="preferencias">
@@ -641,6 +646,7 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
           <EntitySetMapping Name="transacao">
             <EntityTypeMapping TypeName="granamizaModel.transacao">
               <MappingFragment StoreEntitySet="transacao">
+                <ScalarProperty Name="debitada" ColumnName="debitada" />
                 <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
                 <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
                 <ScalarProperty Name="data_criacao" ColumnName="data_criacao" />
@@ -705,6 +711,7 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
             <EntityTypeMapping TypeName="granamizaModel.vwdespesa">
               <MappingFragment StoreEntitySet="vwdespesa">
                 <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="debitada" ColumnName="debitada" />
                 <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
                 <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
                 <ScalarProperty Name="data_criacao" ColumnName="data_criacao" />

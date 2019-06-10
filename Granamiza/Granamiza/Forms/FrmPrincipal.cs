@@ -48,10 +48,11 @@ namespace Granamiza.Forms
 
                 var qtdReceita = bd.vwreceita.Count(r => r.usuario_id == Sessao.IdUsuario);
                 var qtdDespesas = bd.vwdespesa.Count(r => r.usuario_id == Sessao.IdUsuario);
+                decimal despesasPagas = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada == true).Sum(d => d.valor);
 
                 if (qtdReceita != 0)
                 {
-                    decimal valorReceitaTotal = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor);
+                    decimal valorReceitaTotal = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor) - despesasPagas;
                     var valorReceitaTotalFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:#,###.##} R$", valorReceitaTotal);
                     lblValorReceitaTotal.Text = valorReceitaTotalFormatado;
                 }

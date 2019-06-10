@@ -49,6 +49,21 @@ namespace Granamiza.App.CRUD
             }
         }
 
+        internal static void Pagar(int idTransacao)
+        {
+            using (var bd = new granamizaEntities())
+            {
+                transacao tr = (from c in bd.transacao
+                                where c.id == idTransacao
+                                select c).FirstOrDefault();
+                //Testar se encontrou.
+                if (tr != null)
+                {
+                    tr.debitada = true;
+                    bd.SaveChanges();
+                }
+            }
+        }
     }
 
 }

@@ -15,8 +15,8 @@ namespace Granamiza.Modelo
     public partial class cotacao
     {
         public int id { get; set; }
-        public decimal valor { get; set; }
-        public string data_horario { get; set; }
-        public System.DateTime data_criacao { get; set; }
+        public string valor_baixa { get; set; }
+        public string valor_alta { get; set; }
+        public System.DateTime data_consulta { get; set; }
     }
 }

@@ -11,6 +11,7 @@ using Granamiza.Modelo;
 using Granamiza.Forms.Popup;
 using System.Globalization;
 using Granamiza.App.Autenticacao;
+using Granamiza.App.CRUD;
 
 namespace Granamiza.Forms.UControl
 {
@@ -173,6 +174,11 @@ namespace Granamiza.Forms.UControl
                     _ = new FrmPopupErro();
                 }
             }
+        }
+
+        private void BtnPagar_Click(object sender, EventArgs e)
+        {
+            TransacaoTemp.Pagar(idTransacao);
         }
     }
 }
