@@ -32,9 +32,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransacao));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransacao));
             this.dgvTransacao = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horainsercaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwdespesaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwtransacaocategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.picInfo = new System.Windows.Forms.PictureBox();
             this.pbIconeCategoria = new System.Windows.Forms.PictureBox();
@@ -56,18 +62,12 @@
             this.linhaValor = new System.Windows.Forms.Panel();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horainsercaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwdespesaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwreceitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwtransacaocategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconeCategoria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwreceitaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +115,49 @@
             this.dgvTransacao.Size = new System.Drawing.Size(538, 149);
             this.dgvTransacao.TabIndex = 115;
             this.dgvTransacao.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTransacao_CellDoubleClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "valor";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "data_insercao";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Data";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // horainsercaoDataGridViewTextBoxColumn
+            // 
+            this.horainsercaoDataGridViewTextBoxColumn.DataPropertyName = "hora_insercao";
+            this.horainsercaoDataGridViewTextBoxColumn.HeaderText = "Hora";
+            this.horainsercaoDataGridViewTextBoxColumn.Name = "horainsercaoDataGridViewTextBoxColumn";
+            this.horainsercaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vwdespesaBindingSource
+            // 
+            this.vwdespesaBindingSource.DataSource = typeof(Granamiza.Modelo.vwdespesa);
             // 
             // picInfo
             // 
@@ -357,49 +400,6 @@
             this.lblValor.TabIndex = 95;
             this.lblValor.Text = "Valor";
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "valor";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "data_insercao";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Data";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // horainsercaoDataGridViewTextBoxColumn
-            // 
-            this.horainsercaoDataGridViewTextBoxColumn.DataPropertyName = "hora_insercao";
-            this.horainsercaoDataGridViewTextBoxColumn.HeaderText = "Hora";
-            this.horainsercaoDataGridViewTextBoxColumn.Name = "horainsercaoDataGridViewTextBoxColumn";
-            this.horainsercaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vwdespesaBindingSource
-            // 
-            this.vwdespesaBindingSource.DataSource = typeof(Granamiza.Modelo.vwdespesa);
-            // 
             // vwreceitaBindingSource
             // 
             this.vwreceitaBindingSource.DataSource = typeof(Granamiza.Modelo.vwreceita);
@@ -434,10 +434,10 @@
             this.Size = new System.Drawing.Size(572, 467);
             this.Load += new System.EventHandler(this.UserControlTransacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwtransacaocategoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconeCategoria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwreceitaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -116,7 +116,6 @@ namespace Granamiza.Forms
             // btnCotacao
             // 
             this.btnCotacao.BackColor = System.Drawing.Color.Transparent;
-            this.btnCotacao.Enabled = false;
             this.btnCotacao.FlatAppearance.BorderSize = 0;
             this.btnCotacao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnCotacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
@@ -132,6 +131,7 @@ namespace Granamiza.Forms
             this.btnCotacao.Text = "Cotações";
             this.btnCotacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCotacao.UseVisualStyleBackColor = false;
+            this.btnCotacao.Click += new System.EventHandler(this.BtnCotacao_Click);
             // 
             // btnSimulacao
             // 

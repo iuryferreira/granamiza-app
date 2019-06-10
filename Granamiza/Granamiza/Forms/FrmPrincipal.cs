@@ -145,6 +145,16 @@ namespace Granamiza.Forms
             frmReceita.Closed += (s, args) => this.ReceberValores();
         }
 
+
+        private void BtnCotacao_Click(object sender, EventArgs e)
+        {
+            lblBemVindo.Text = "Cotações";
+            lblBemVindo.ForeColor = Color.FromArgb(191, 93, 101);
+            UserControlCotacao uc = new UserControlCotacao();
+            pnlConteudo.Controls.Clear();
+            pnlConteudo.Controls.Add(uc);
+        }
+
         private void BtnLogout_Click(object sender, EventArgs e)
         {
 
@@ -175,5 +185,7 @@ namespace Granamiza.Forms
         {
             this.Close();
         }
+
+
     }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -76,6 +76,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\API\Cotacao.cs" />
+    <Compile Include="App\API\Dolar.cs" />
+    <Compile Include="App\API\Euro.cs" />
     <Compile Include="App\Autenticacao\Autenticacao.cs" />
     <Compile Include="App\Autenticacao\Sessao.cs" />
     <Compile Include="App\Autenticacao\Validacao.cs" />
@@ -89,6 +92,12 @@
     </Compile>
     <Compile Include="Forms\FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCotacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCotacao.Designer.cs">
+      <DependentUpon>FrmCotacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmDespesa.cs">
       <SubType>Form</SubType>
@@ -157,6 +166,12 @@
     <Compile Include="Forms\RedefinirSenha\UserControlCodigoSenha.Designer.cs">
       <DependentUpon>UserControlCodigoSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UControl\UserControlCotacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UControl\UserControlCotacao.Designer.cs">
+      <DependentUpon>UserControlCotacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UControl\UserControlTransacao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -216,6 +231,9 @@
     <EmbeddedResource Include="Forms\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCotacao.resx">
+      <DependentUpon>FrmCotacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDespesa.resx">
       <DependentUpon>FrmDespesa.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RedefinirSenha\UserControlCodigoSenha.resx">
       <DependentUpon>UserControlCodigoSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UControl\UserControlCotacao.resx">
+      <DependentUpon>UserControlCotacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
       <DependentUpon>UserControlTransacao.cs</DependentUpon>
