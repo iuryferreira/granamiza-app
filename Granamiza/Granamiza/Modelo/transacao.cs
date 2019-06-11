@@ -21,9 +21,9 @@ namespace Granamiza.Modelo
         public string data_insercao { get; set; }
         public string hora_insercao { get; set; }
         public System.DateTime data_criacao { get; set; }
+        public Nullable<bool> debitada { get; set; }
         public int usuario_id { get; set; }
         public int categoria_id { get; set; }
-        public Nullable<bool> debitada { get; set; }
     
         public virtual categoria categoria { get; set; }
         public virtual usuario usuario { get; set; }
