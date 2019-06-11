@@ -77,12 +77,13 @@ namespace Granamiza.Forms.UControl
 
             if (btn_clicado == "receita")
             {
+                tcDespesa.Visible = false;
 
                 try
                 {
                     using (var bd = new granamizaEntities())
                     {
-                        this.dgvTransacao.DataSource = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
+                        this.dgvDespesas.DataSource = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
                     }
                 }
                 catch (Exception)
@@ -98,7 +99,7 @@ namespace Granamiza.Forms.UControl
                 {
                     using (var bd = new granamizaEntities())
                     {
-                        this.dgvTransacao.DataSource = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada != true).ToList();
+                        dgvDespesas.DataSource = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada != true).ToList();
                         dgvDespesasPagas.DataSource = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada == true).ToList();
                     }
                 }
@@ -113,7 +114,7 @@ namespace Granamiza.Forms.UControl
         {
             try
             {
-                idTransacao = int.Parse(dgvTransacao.Rows[e.RowIndex].Cells[0].Value.ToString());
+                idTransacao = int.Parse(dgvDespesas.Rows[e.RowIndex].Cells[0].Value.ToString());
                 CarregarDadosTransacao();
             }
             catch (Exception)
@@ -179,7 +180,7 @@ namespace Granamiza.Forms.UControl
 
         private void BtnPagar_Click(object sender, EventArgs e)
         {
-            tcDespesas.Visible = false;
+            tcDespesa.Visible = false;
             TransacaoTemp.Pagar(idTransacao);
             AtualizarGrid("despesa");
             LimparDadosTransacao();
