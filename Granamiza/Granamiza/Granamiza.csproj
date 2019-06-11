@@ -168,6 +168,12 @@
     <Compile Include="Forms\RedefinirSenha\UserControlCodigoSenha.Designer.cs">
       <DependentUpon>UserControlCodigoSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UControl\UserControlTransacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Ucontrol\UserControlTransacao.Designer.cs">
+      <DependentUpon>UserControlTransacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UControl\UserControlCotacao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,12 +185,6 @@
     </Compile>
     <Compile Include="Forms\UControl\UserControlSimularInvestimento.Designer.cs">
       <DependentUpon>UserControlSimularInvestimento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\UControl\UserControlVisaoGeral.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\UControl\UserControlVisaoGeral.Designer.cs">
-      <DependentUpon>UserControlVisaoGeral.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\categoria.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
@@ -281,11 +281,11 @@
     <EmbeddedResource Include="Forms\UControl\UserControlCotacao.resx">
       <DependentUpon>UserControlCotacao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
+      <DependentUpon>UserControlTransacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UControl\UserControlSimularInvestimento.resx">
       <DependentUpon>UserControlSimularInvestimento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UControl\UserControlVisaoGeral.resx">
-      <DependentUpon>UserControlVisaoGeral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

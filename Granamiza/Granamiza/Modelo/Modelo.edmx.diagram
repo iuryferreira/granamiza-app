@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9a4d88d4726f4e4892183801a6e7338f" Name="Diagram1">
+      <Diagram DiagramId="190012e4b12f493a960a1aa761453581" Name="Diagram1">
         <EntityTypeShape EntityType="granamizaModel.categoria" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.cotacao" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="granamizaModel.preferencias" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
