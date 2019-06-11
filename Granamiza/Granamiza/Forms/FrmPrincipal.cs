@@ -145,7 +145,6 @@ namespace Granamiza.Forms
             UserControlTransacao uc = new UserControlTransacao(btnMenuReceita);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
-
         }
 
         //Volta pra tela inicial ao clicar no Label

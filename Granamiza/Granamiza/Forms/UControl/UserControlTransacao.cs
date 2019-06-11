@@ -38,14 +38,14 @@ namespace Granamiza.Forms.UControl
         {
             //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que não são gastos
-            if (btn_clicado.Name == "btnReceita")
+            if (btn_clicado.Name == "btnMenuReceita")
             {
                 AtualizarGrid("receita");
             }
 
             //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que são gastos
-            if (btn_clicado.Name == "btnDespesa")
+            if (btn_clicado.Name == "btnMenuDespesa")
             {
                 AtualizarGrid("despesa");
             }
@@ -56,7 +56,7 @@ namespace Granamiza.Forms.UControl
         {
 
             //Se o botão clicado no menu lateral for o de receita,  ele vai chamar o form de receita
-            if (btn_clicado.Name == "btnReceita")
+            if (btn_clicado.Name == "btnMenuReceita")
             {
                 FrmReceita frm = new FrmReceita();
                 frm.Show();
@@ -64,7 +64,7 @@ namespace Granamiza.Forms.UControl
             }
 
             //  Se o botao clicado no menu lateral for o de despesa ele chama o form de despesa
-            if (btn_clicado.Name == "btnDespesa")
+            if (btn_clicado.Name == "btnMenuDespesa")
             {
                 FrmDespesa frm = new FrmDespesa();
                 frm.Show();
@@ -83,7 +83,7 @@ namespace Granamiza.Forms.UControl
                 {
                     using (var bd = new granamizaEntities())
                     {
-                        this.dgvDespesas.DataSource = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
+                        dgvReceitas.DataSource = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
                     }
                 }
                 catch (Exception)
@@ -125,7 +125,7 @@ namespace Granamiza.Forms.UControl
 
         private void CarregarDadosTransacao()
         {
-            if (btn_clicado.Name == "btnReceita")
+            if (btn_clicado.Name == "btnMenuReceita")
             {
 
                 using (var bd = new granamizaEntities())
@@ -148,7 +148,7 @@ namespace Granamiza.Forms.UControl
                 }
             }
 
-            if (btn_clicado.Name == "btnDespesa")
+            if (btn_clicado.Name == "btnMenuDespesa")
             {
                 try
                 {
