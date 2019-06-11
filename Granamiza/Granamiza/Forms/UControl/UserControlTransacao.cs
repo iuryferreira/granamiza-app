@@ -179,6 +179,7 @@ namespace Granamiza.Forms.UControl
 
         private void BtnPagar_Click(object sender, EventArgs e)
         {
+            tcDespesas.Visible = false;
             TransacaoTemp.Pagar(idTransacao);
             AtualizarGrid("despesa");
             LimparDadosTransacao();
