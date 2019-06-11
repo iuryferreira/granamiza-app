@@ -13,7 +13,7 @@ namespace Granamiza.App.CRUD
     {
 
         //Recebe os valores inseridos já formatados
-        internal static void Salvar(decimal valorInserido, int idCategoria, string descricaoInserida, sbyte tipoTransacao)
+        internal static void Salvar(decimal valorInserido, int idCategoria, string descricaoInserida, sbyte tipoTransacao, bool debitada)
         {
 
             try
@@ -31,6 +31,7 @@ namespace Granamiza.App.CRUD
                         categoria_id = idCategoria,
                         descricao = descricaoInserida,
                         tipo_transacao = tipoTransacao,
+                        debitada = debitada,
                         hora_insercao = dt.Hour.ToString() + ":" + dt.Minute.ToString(),
                         data_insercao = dt.Day.ToString() + "/" + dt.Month + "/" + dt.Year,
                         data_criacao = dt,

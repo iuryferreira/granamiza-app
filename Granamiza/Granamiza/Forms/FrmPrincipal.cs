@@ -42,12 +42,11 @@ namespace Granamiza.Forms
             decimal saldoAtual = 0;
             using (var bd = new granamizaEntities())
             {
-
                 graficoGastoCategoria.DataSource = bd.vwtotalcategoria.Where(u => u.usuario_id == Sessao.IdUsuario).ToList();
 
                 int qtdReceita = bd.vwreceita.Count(r => r.usuario_id == Sessao.IdUsuario);
-                int qtdDespesas = bd.vwdespesa.Count(r => r.usuario_id == Sessao.IdUsuario);
-                int qtdDespesasPagas = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada == true).Count();
+                int qtdDespesas = bd.vwdespesa.Count(d => d.usuario_id == Sessao.IdUsuario);
+                int qtdDespesasPagas = bd.vwdespesa.Where(dp => dp.usuario_id == Sessao.IdUsuario).Where(dp => dp.debitada == true).Count();
                 decimal despesasPagas;
 
                 if(qtdDespesasPagas != 0)
@@ -79,7 +78,7 @@ namespace Granamiza.Forms
 
                 if (qtdDespesas != 0)
                 {
-                    decimal valorDespesaTotal = bd.vwdespesa.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor) - despesasPagas;
+                    decimal valorDespesaTotal = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Sum(d => d.valor) - despesasPagas;
                     var valorDespesaTotalFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), " {0:#,###.##} R$", valorDespesaTotal);
                     btnDespesa.Text = valorDespesaTotalFormatado;
 
@@ -131,7 +130,6 @@ namespace Granamiza.Forms
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(gpVisaoGeral);
-           
         }
 
 
@@ -176,16 +174,13 @@ namespace Granamiza.Forms
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-
             this.Close();
-
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Deseja sair do programa?", "Saindo...", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
-
                 e.Cancel = true;
             }
         }

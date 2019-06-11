@@ -98,7 +98,8 @@ namespace Granamiza.Forms.UControl
                 {
                     using (var bd = new granamizaEntities())
                     {
-                        this.dgvTransacao.DataSource = bd.vwdespesa.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
+                        this.dgvTransacao.DataSource = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada != true).ToList();
+                        dgvDespesasPagas.DataSource = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada == true).ToList();
                     }
                 }
                 catch (Exception)
@@ -178,7 +179,19 @@ namespace Granamiza.Forms.UControl
 
         private void BtnPagar_Click(object sender, EventArgs e)
         {
+            tcDespesas.Visible = false;
             TransacaoTemp.Pagar(idTransacao);
+            AtualizarGrid("despesa");
+            LimparDadosTransacao();
+        }
+
+        private void LimparDadosTransacao()
+        {
+            txtValor.Text = string.Empty;
+            txtCategoria.Text = string.Empty;
+            txtData.Text = string.Empty;
+            txtHora.Text = string.Empty;
+            txtDesc.Text = string.Empty;
         }
     }
 }
