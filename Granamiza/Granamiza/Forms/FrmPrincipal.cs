@@ -130,6 +130,10 @@ namespace Granamiza.Forms
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(gpVisaoGeral);
+            pnlConteudo.Controls.Add(graficoGastoCategoria);
+            pnlConteudo.Controls.Add(pbAjuda);
+            pnlConteudo.Controls.Add(lblAjuda);
+            pnlConteudo.Controls.Add(lblOla);
         }
 
 
@@ -193,6 +197,16 @@ namespace Granamiza.Forms
         private void LnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnDespesa_Click(object sender, EventArgs e)
+        {
+            this.BtnMenuDespesa_Click(sender, e);
+        }
+
+        private void BtnReceita_Click(object sender, EventArgs e)
+        {
+            this.BtnMenuReceita_Click(sender, e);
         }
     }
 }
