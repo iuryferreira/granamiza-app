@@ -479,7 +479,7 @@
         vQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnDespesa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnMenuDespesa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAN5SURBVFhHxZdd
@@ -500,7 +500,7 @@
         bL2v+PkaPDWrcL487LeWhAPW6yBf3ppInL0VJ/IAQsUH0PhJHwv1G3efhKoWAKqGAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnReceita.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnMenuReceita.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAZbSURBVFhHtVfp
@@ -2542,31 +2542,7 @@
         IECAAAECBAgQIECAAAECBAgQGAj8/yMqQKx9Ng5HAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnAdicionarDespesa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        pQAAAKUBcMTeVQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEoSURBVEhLY/j/
-        /z8DPrzZ3qtzs4PXf6wYKEdIP17DQZqBBt8AWnIXSE9AwRCxG1SxYIuD1wZ0g0BioxaA4wcUDCM8iLY6
-        +nRtcfK+hQtvdvT6CQyiI/8ZGBiRUxIw6NYDk+9PcDLGhYH5BBTG//f4R/w/npyFFR+KSoJkMkfvaciW
-        bHbyNQJZAoofbBiad8CR+P98Udn/L5s24MTn8kuwWoK3BIBkTOIsAFlOqiXQXE+8BaRaQpYFpFiCYgG+
-        SAZF/t3ObpT4gQeXvVcvLB52urlxAw2dDYtwRCQ7eu3Em0wdvH6BLEFPBKDUBdIHs2Cjs5840IJDKEkW
-        lEwJFbcgQ7BZABJDtgCXOaMWwONghAcRKJ+AyitkDBKjSioCFee4mi0gOULJHABrZiz4/G2gAwAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="btnAdicionarReceita.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        pQAAAKUBcMTeVQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEkSURBVEhLY/j/
-        /z8DPhxQG90ZUBPzHysGyhHSj9dwkGagwTcCqmPuAukJKBgidoM6FtRGb0A3COizDaMWgOMHHAcjO4gC
-        62K6gmpjbuHCwCD66V8Tc4SBgYEROSUBxdeD5MBBiAsD8wkojP8ndqf+L19QgBXnTs+GZbJpyJYEVcUY
-        gS0BJVdsGJJPwJH4v31d5f/zH+bhxC1ryrFagrcEgGRM4iwAWU6qJdBcT7wFpFpClgWkWIJiAb5IBkX+
-        wmNtKPEDD67amF5YPLiVxHIHVsfMhkc4UiTvxJdMA2tifoEsQU8EoNQF0gezwK8qUhzo6kMoSRaUTAkV
-        tyBDsFkAEkO2AJc5oxbA42CEBxEon4DKK2QMEqNKKgIV57iaLSA5QskcAJ27GqwB/CK+AAAAAElFTkSu
-        QmCC
-</value>
-  </data>
-  <metadata name="tpAvatar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="vwtotalcategoriaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -18,10 +18,10 @@ namespace Granamiza.Modelo
         public decimal valor_inserido { get; set; }
         public decimal juros { get; set; }
         public int qnt_meses { get; set; }
-        public Nullable<System.DateTime> data_criacao { get; set; }
-        public int usuario_id { get; set; }
         public decimal aplicacoes_mensais { get; set; }
         public double rendimento_total { get; set; }
+        public Nullable<System.DateTime> data_criacao { get; set; }
+        public int usuario_id { get; set; }
     
         public virtual usuario usuario { get; set; }
     }
