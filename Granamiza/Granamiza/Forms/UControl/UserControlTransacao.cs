@@ -110,11 +110,37 @@ namespace Granamiza.Forms.UControl
             }
         }
 
-        private void DgvTransacao_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvDespesa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 idTransacao = int.Parse(dgvDespesas.Rows[e.RowIndex].Cells[0].Value.ToString());
+                CarregarDadosTransacao();
+            }
+            catch (Exception)
+            {
+                _ = new FrmPopupErro();
+            }
+        }
+
+        private void DgvDespesaPagas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                idTransacao = int.Parse(dgvDespesasPagas.Rows[e.RowIndex].Cells[0].Value.ToString());
+                CarregarDadosTransacao();
+            }
+            catch (Exception)
+            {
+                _ = new FrmPopupErro();
+            }
+        }
+
+        private void DgvReceita_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                idTransacao = int.Parse(dgvReceitas.Rows[e.RowIndex].Cells[0].Value.ToString());
                 CarregarDadosTransacao();
             }
             catch (Exception)
@@ -180,7 +206,6 @@ namespace Granamiza.Forms.UControl
 
         private void BtnPagar_Click(object sender, EventArgs e)
         {
-            tcDespesa.Visible = false;
             TransacaoTemp.Pagar(idTransacao);
             AtualizarGrid("despesa");
             LimparDadosTransacao();
@@ -194,6 +219,24 @@ namespace Granamiza.Forms.UControl
             txtHora.Text = string.Empty;
             txtDesc.Text = string.Empty;
         }
+
+        private void tcDespesa_VisibleChanged(object sender, EventArgs e)
+        {
+            btnPagar.Visible = false;
+        }
+
+        private void tabDespesasPagas_Enter(object sender, EventArgs e)
+        {
+            btnPagar.Visible = false;
+            btnAdicionar.Visible = false;
+        }
+
+        private void tabDespesasAPagar_Enter(object sender, EventArgs e)
+        {
+            btnPagar.Visible = true;
+            btnAdicionar.Visible = true;
+        }
+
     }
 }
 

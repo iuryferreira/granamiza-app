@@ -146,7 +146,7 @@
             this.dgvDespesas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDespesas.Size = new System.Drawing.Size(520, 168);
             this.dgvDespesas.TabIndex = 115;
-            this.dgvDespesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTransacao_CellDoubleClick);
+            this.dgvDespesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDespesa_CellDoubleClick);
             // 
             // id
             // 
@@ -200,7 +200,7 @@
             this.btnPagar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPagar.Image = ((System.Drawing.Image)(resources.GetObject("btnPagar.Image")));
             this.btnPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagar.Location = new System.Drawing.Point(438, 213);
+            this.btnPagar.Location = new System.Drawing.Point(323, 213);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(116, 38);
             this.btnPagar.TabIndex = 111;
@@ -221,7 +221,7 @@
             this.btnAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
             this.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionar.Location = new System.Drawing.Point(324, 213);
+            this.btnAdicionar.Location = new System.Drawing.Point(449, 212);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(105, 39);
             this.btnAdicionar.TabIndex = 110;
@@ -410,6 +410,7 @@
             this.tcDespesa.Size = new System.Drawing.Size(538, 200);
             this.tcDespesa.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcDespesa.TabIndex = 116;
+            this.tcDespesa.VisibleChanged += new System.EventHandler(this.tcDespesa_VisibleChanged);
             // 
             // tabDespesasAPagar
             // 
@@ -421,6 +422,7 @@
             this.tabDespesasAPagar.TabIndex = 0;
             this.tabDespesasAPagar.Text = "Despesas à Pagar";
             this.tabDespesasAPagar.UseVisualStyleBackColor = true;
+            this.tabDespesasAPagar.Enter += new System.EventHandler(this.tabDespesasAPagar_Enter);
             // 
             // tabDespesasPagas
             // 
@@ -432,6 +434,7 @@
             this.tabDespesasPagas.TabIndex = 1;
             this.tabDespesasPagas.Text = "Despesas Pagas";
             this.tabDespesasPagas.UseVisualStyleBackColor = true;
+            this.tabDespesasPagas.Enter += new System.EventHandler(this.tabDespesasPagas_Enter);
             // 
             // dgvDespesasPagas
             // 
@@ -476,6 +479,7 @@
             this.dgvDespesasPagas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDespesasPagas.Size = new System.Drawing.Size(520, 168);
             this.dgvDespesasPagas.TabIndex = 116;
+            this.dgvDespesasPagas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDespesaPagas_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -552,6 +556,7 @@
             this.dgvReceitas.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvReceitas.Size = new System.Drawing.Size(520, 168);
             this.dgvReceitas.TabIndex = 115;
+            this.dgvReceitas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReceita_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -559,7 +564,6 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "ID";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Visible = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
