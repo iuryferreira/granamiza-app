@@ -134,6 +134,7 @@ namespace Granamiza.Forms
             pnlConteudo.Controls.Add(pbAjuda);
             pnlConteudo.Controls.Add(lblAjuda);
             pnlConteudo.Controls.Add(lblOla);
+            ReceberValores();
         }
 
 
