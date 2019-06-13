@@ -249,9 +249,9 @@ namespace Granamiza.Forms
             this.lblBemVindo.ForeColor = System.Drawing.Color.DimGray;
             this.lblBemVindo.Location = new System.Drawing.Point(206, 39);
             this.lblBemVindo.Name = "lblBemVindo";
-            this.lblBemVindo.Size = new System.Drawing.Size(331, 20);
+            this.lblBemVindo.Size = new System.Drawing.Size(205, 20);
             this.lblBemVindo.TabIndex = 75;
-            this.lblBemVindo.Text = "                                          Seja Bem Vinda, Amanda.";
+            this.lblBemVindo.Text = "Seja Bem Vinda, Amanda.";
             this.lblBemVindo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnlConteudo
@@ -375,6 +375,7 @@ namespace Granamiza.Forms
             this.btnReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReceita.Font = new System.Drawing.Font("SF Pro Display", 10.75F, System.Drawing.FontStyle.Bold);
             this.btnReceita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(160)))), ((int)(((byte)(112)))));
+            this.btnReceita.Image = ((System.Drawing.Image)(resources.GetObject("btnReceita.Image")));
             this.btnReceita.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReceita.Location = new System.Drawing.Point(0, 157);
             this.btnReceita.Name = "btnReceita";
@@ -408,6 +409,7 @@ namespace Granamiza.Forms
             this.btnDespesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDespesa.Font = new System.Drawing.Font("SF Pro Display", 10.75F, System.Drawing.FontStyle.Bold);
             this.btnDespesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(93)))), ((int)(((byte)(101)))));
+            this.btnDespesa.Image = ((System.Drawing.Image)(resources.GetObject("btnDespesa.Image")));
             this.btnDespesa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDespesa.Location = new System.Drawing.Point(0, 101);
             this.btnDespesa.Name = "btnDespesa";

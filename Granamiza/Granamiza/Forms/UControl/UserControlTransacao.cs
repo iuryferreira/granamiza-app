@@ -19,12 +19,7 @@ namespace Granamiza.Forms.UControl
     {
 
         Button btn_clicado;
-
         int idTransacao;
-        public UserControlTransacao()
-        {
-            InitializeComponent();
-        }
 
         //Construtor!
         public UserControlTransacao(Button botao_clicado)
@@ -41,34 +36,13 @@ namespace Granamiza.Forms.UControl
             if (btn_clicado.Name == "btnMenuReceita")
             {
                 AtualizarGrid("receita");
-            }
 
+            }
             //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que são gastos
             if (btn_clicado.Name == "btnMenuDespesa")
             {
                 AtualizarGrid("despesa");
-            }
-
-        }
-
-        private void BtnAdicionar_Click(object sender, EventArgs e)
-        {
-
-            //Se o botão clicado no menu lateral for o de receita,  ele vai chamar o form de receita
-            if (btn_clicado.Name == "btnMenuReceita")
-            {
-                FrmReceita frm = new FrmReceita();
-                frm.Show();
-                frm.Closed += (s, args) => this.AtualizarGrid("receita");
-            }
-
-            //  Se o botao clicado no menu lateral for o de despesa ele chama o form de despesa
-            if (btn_clicado.Name == "btnMenuDespesa")
-            {
-                FrmDespesa frm = new FrmDespesa();
-                frm.Show();
-                frm.Closed += (s, args) => this.AtualizarGrid("despesa");
             }
         }
 
@@ -77,40 +51,43 @@ namespace Granamiza.Forms.UControl
 
             if (btn_clicado == "receita")
             {
-                tcDespesa.Visible = false;
+                //Remover abas denecessárias
+                tcTransacao.TabPages.Remove(tabDespesasAPagar);
+                tcTransacao.TabPages.Remove(tabDespesasPagas);
 
-                try
+                var dadosReceita = Transacao.ListarReceitas();
+
+                if (dadosReceita != null)
                 {
-                    using (var bd = new granamizaEntities())
-                    {
-                        dgvReceitas.DataSource = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).ToList();
-                    }
+                    //Recupera as receitas
+                    dgvReceitas.DataSource = dadosReceita;
                 }
-                catch (Exception)
-                {
-                    _ = new FrmPopupErro();
-                }
+
             }
 
             if (btn_clicado == "despesa")
             {
 
-                try
+                tcTransacao.TabPages.Remove(tabReceitasCadastradas);
+
+                var DadosDespesas = Transacao.ListarDespesas();
+                var DadosDespesasPagas = Transacao.ListarDespesas(true);
+
+                if(DadosDespesas != null)
                 {
-                    using (var bd = new granamizaEntities())
-                    {
-                        dgvDespesas.DataSource = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada != true).ToList();
-                        dgvDespesasPagas.DataSource = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada == true).ToList();
-                    }
+                    dgvDespesas.DataSource = DadosDespesas;
                 }
-                catch (Exception)
+
+                if (DadosDespesasPagas != null)
                 {
-                    _ = new FrmPopupErro();
+                    dgvDespesasPagas.DataSource = DadosDespesasPagas;
+
                 }
             }
+
         }
 
-        private void DgvDespesa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvDespesas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -204,9 +181,29 @@ namespace Granamiza.Forms.UControl
             }
         }
 
+        private void BtnAdicionar_Click(object sender, EventArgs e)
+        {
+
+            //Se o botão clicado no menu lateral for o de receita,  ele vai chamar o form de receita
+            if (btn_clicado.Name == "btnMenuReceita")
+            {
+                FrmReceita frm = new FrmReceita();
+                frm.Show();
+                frm.Closed += (s, args) => this.AtualizarGrid("receita");
+            }
+
+            //  Se o botao clicado no menu lateral for o de despesa ele chama o form de despesa
+            if (btn_clicado.Name == "btnMenuDespesa")
+            {
+                FrmDespesa frm = new FrmDespesa();
+                frm.Show();
+                frm.Closed += (s, args) => this.AtualizarGrid("despesa");
+            }
+        }
+
         private void BtnPagar_Click(object sender, EventArgs e)
         {
-            TransacaoTemp.Pagar(idTransacao);
+            Transacao.Pagar(idTransacao);
             AtualizarGrid("despesa");
             LimparDadosTransacao();
         }

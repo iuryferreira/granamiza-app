@@ -86,7 +86,6 @@
     <Compile Include="App\CRUD\Categoria.cs" />
     <Compile Include="App\CRUD\SimulacaoInvestimento.cs" />
     <Compile Include="App\CRUD\Transacao.cs" />
-    <Compile Include="App\CRUD\TransacaoTemp.cs" />
     <Compile Include="App\CRUD\Usuario.cs" />
     <Compile Include="App\Email\Email.cs" />
     <Compile Include="Forms\FrmCadastro.cs">
