@@ -84,8 +84,10 @@
     <Compile Include="App\Autenticacao\Sessao.cs" />
     <Compile Include="App\Autenticacao\Validacao.cs" />
     <Compile Include="App\CRUD\Categoria.cs" />
+    <Compile Include="App\CRUD\Transacao\ITransacao.cs" />
+    <Compile Include="App\CRUD\Transacao\Receita.cs" />
     <Compile Include="App\CRUD\SimulacaoInvestimento.cs" />
-    <Compile Include="App\CRUD\Transacao.cs" />
+    <Compile Include="App\CRUD\Transacao\Despesa.cs" />
     <Compile Include="App\CRUD\Usuario.cs" />
     <Compile Include="App\Email\Email.cs" />
     <Compile Include="Forms\FrmCadastro.cs">
@@ -294,6 +296,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Modelo\Modelo.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -326,6 +329,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Imagens\background.jpg" />
+    <None Include="Imagens\plus%282%29.png" />
+    <None Include="Imagens\plus %282%29.png" />
+    <None Include="Imagens\edit.png" />
     <Content Include="Modelo\Modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Modelo.edmx</DependentUpon>
