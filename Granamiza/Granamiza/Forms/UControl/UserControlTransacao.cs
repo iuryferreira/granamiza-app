@@ -26,8 +26,8 @@ namespace Granamiza.Forms.UControl
         decimal valor;
         string nomeCategoria;
         string descricao;
-        private Receita objReceita;
-        private Despesa objDespesa;
+        private readonly Receita objReceita;
+        private readonly Despesa objDespesa;
 
 
         //Construtor!

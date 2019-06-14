@@ -32,18 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransacao));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransacao));
             this.dgvDespesas = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horainsercaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwdespesaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblInfo = new System.Windows.Forms.Label();
             this.linhaDesc = new System.Windows.Forms.Panel();
             this.txtDesc = new System.Windows.Forms.TextBox();
@@ -63,9 +68,17 @@
             this.tabDespesasPagas = new System.Windows.Forms.TabPage();
             this.dgvDespesasPagas = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabReceitasCadastradas = new System.Windows.Forms.TabPage();
             this.dgvReceitas = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -74,22 +87,10 @@
             this.btnPagar = new System.Windows.Forms.Button();
             this.vwtransacaocategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtValor = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horainsercaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwdespesaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwreceitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).BeginInit();
             this.tcTransacao.SuspendLayout();
             this.tabDespesasAPagar.SuspendLayout();
             this.tabDespesasPagas.SuspendLayout();
@@ -98,7 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwtransacaocategoriaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwreceitaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +121,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDespesas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDespesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDespesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvDespesas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.dataGridViewTextBoxColumn1,
@@ -144,6 +144,7 @@
             this.dgvDespesas.ReadOnly = true;
             this.dgvDespesas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvDespesas.RowHeadersVisible = false;
+            this.dgvDespesas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDespesas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDespesas.Size = new System.Drawing.Size(500, 178);
@@ -157,6 +158,43 @@
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "valor";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "data_insercao";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Data";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // horainsercaoDataGridViewTextBoxColumn
+            // 
+            this.horainsercaoDataGridViewTextBoxColumn.DataPropertyName = "hora_insercao";
+            this.horainsercaoDataGridViewTextBoxColumn.HeaderText = "Hora";
+            this.horainsercaoDataGridViewTextBoxColumn.Name = "horainsercaoDataGridViewTextBoxColumn";
+            this.horainsercaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horainsercaoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // vwdespesaBindingSource
+            // 
+            this.vwdespesaBindingSource.DataSource = typeof(Granamiza.Modelo.vwdespesa);
             // 
             // lblInfo
             // 
@@ -174,9 +212,9 @@
             // 
             this.linhaDesc.BackColor = System.Drawing.Color.Gainsboro;
             this.linhaDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linhaDesc.Location = new System.Drawing.Point(53, 189);
+            this.linhaDesc.Location = new System.Drawing.Point(60, 189);
             this.linhaDesc.Name = "linhaDesc";
-            this.linhaDesc.Size = new System.Drawing.Size(358, 2);
+            this.linhaDesc.Size = new System.Drawing.Size(352, 2);
             this.linhaDesc.TabIndex = 103;
             // 
             // txtDesc
@@ -206,11 +244,11 @@
             // txtDsc
             // 
             this.txtDsc.AutoSize = true;
-            this.txtDsc.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.txtDsc.Font = new System.Drawing.Font("SF Pro Display", 9.75F);
             this.txtDsc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDsc.Location = new System.Drawing.Point(55, 124);
             this.txtDsc.Name = "txtDsc";
-            this.txtDsc.Size = new System.Drawing.Size(57, 14);
+            this.txtDsc.Size = new System.Drawing.Size(64, 15);
             this.txtDsc.TabIndex = 99;
             this.txtDsc.Text = "Descrição";
             // 
@@ -218,23 +256,23 @@
             // 
             this.txtHora.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHora.Font = new System.Drawing.Font("SF Pro Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHora.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtHora.Location = new System.Drawing.Point(445, 89);
             this.txtHora.Name = "txtHora";
             this.txtHora.ReadOnly = true;
-            this.txtHora.Size = new System.Drawing.Size(111, 20);
+            this.txtHora.Size = new System.Drawing.Size(111, 18);
             this.txtHora.TabIndex = 108;
             this.txtHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.lblHora.Font = new System.Drawing.Font("SF Pro Display", 9.75F);
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblHora.Location = new System.Drawing.Point(440, 63);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(31, 14);
+            this.lblHora.Size = new System.Drawing.Size(34, 15);
             this.lblHora.TabIndex = 107;
             this.lblHora.Text = "Hora";
             // 
@@ -251,7 +289,7 @@
             // 
             this.txtData.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtData.Font = new System.Drawing.Font("SF Pro Display", 11F);
+            this.txtData.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtData.Location = new System.Drawing.Point(327, 90);
             this.txtData.Name = "txtData";
@@ -272,22 +310,22 @@
             // lblData
             // 
             this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.lblData.Font = new System.Drawing.Font("SF Pro Display", 9.75F);
             this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblData.Location = new System.Drawing.Point(322, 63);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(31, 14);
+            this.lblData.Size = new System.Drawing.Size(34, 15);
             this.lblData.TabIndex = 104;
             this.lblData.Text = "Data";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.lblCategoria.Font = new System.Drawing.Font("SF Pro Display", 9.75F);
             this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCategoria.Location = new System.Drawing.Point(176, 63);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(56, 14);
+            this.lblCategoria.Size = new System.Drawing.Size(62, 15);
             this.lblCategoria.TabIndex = 98;
             this.lblCategoria.Text = "Categoria";
             // 
@@ -303,11 +341,11 @@
             // lblValor
             // 
             this.lblValor.AutoSize = true;
-            this.lblValor.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.lblValor.Font = new System.Drawing.Font("SF Pro Display", 9.75F);
             this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblValor.Location = new System.Drawing.Point(55, 61);
             this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(32, 14);
+            this.lblValor.Size = new System.Drawing.Size(35, 15);
             this.lblValor.TabIndex = 95;
             this.lblValor.Text = "Valor";
             // 
@@ -367,7 +405,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDespesasPagas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvDespesasPagas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDespesasPagas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvDespesasPagas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
@@ -385,14 +423,15 @@
             this.dgvDespesasPagas.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDespesasPagas.EnableHeadersVisualStyles = false;
             this.dgvDespesasPagas.GridColor = System.Drawing.Color.White;
-            this.dgvDespesasPagas.Location = new System.Drawing.Point(-2, 3);
+            this.dgvDespesasPagas.Location = new System.Drawing.Point(-1, -1);
             this.dgvDespesasPagas.Name = "dgvDespesasPagas";
             this.dgvDespesasPagas.ReadOnly = true;
             this.dgvDespesasPagas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvDespesasPagas.RowHeadersVisible = false;
+            this.dgvDespesasPagas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDespesasPagas.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvDespesasPagas.Size = new System.Drawing.Size(500, 175);
+            this.dgvDespesasPagas.Size = new System.Drawing.Size(500, 179);
             this.dgvDespesasPagas.TabIndex = 116;
             this.dgvDespesasPagas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDespesaPagas_CellDoubleClick);
             // 
@@ -403,6 +442,39 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "data_insercao";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Data";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "hora_insercao";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Hora";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Visible = false;
             // 
             // tabReceitasCadastradas
             // 
@@ -432,7 +504,7 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvReceitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvReceitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReceitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvReceitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
@@ -450,14 +522,15 @@
             this.dgvReceitas.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvReceitas.EnableHeadersVisualStyles = false;
             this.dgvReceitas.GridColor = System.Drawing.Color.White;
-            this.dgvReceitas.Location = new System.Drawing.Point(0, 1);
+            this.dgvReceitas.Location = new System.Drawing.Point(-3, -2);
             this.dgvReceitas.Name = "dgvReceitas";
             this.dgvReceitas.ReadOnly = true;
             this.dgvReceitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvReceitas.RowHeadersVisible = false;
+            this.dgvReceitas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvReceitas.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvReceitas.Size = new System.Drawing.Size(498, 173);
+            this.dgvReceitas.Size = new System.Drawing.Size(502, 180);
             this.dgvReceitas.TabIndex = 115;
             this.dgvReceitas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReceita_CellDoubleClick);
             // 
@@ -469,11 +542,44 @@
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Visible = false;
             // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "valor";
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "data_insercao";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Data";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "hora_insercao";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Hora";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
             // txtCategoria
             // 
             this.txtCategoria.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCategoria.Font = new System.Drawing.Font("SF Pro Display", 11F);
+            this.txtCategoria.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCategoria.Location = new System.Drawing.Point(176, 93);
             this.txtCategoria.Name = "txtCategoria";
@@ -568,9 +674,9 @@
             this.btnPagar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPagar.Image = ((System.Drawing.Image)(resources.GetObject("btnPagar.Image")));
             this.btnPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPagar.Location = new System.Drawing.Point(429, 145);
+            this.btnPagar.Location = new System.Drawing.Point(417, 145);
             this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(127, 46);
+            this.btnPagar.Size = new System.Drawing.Size(139, 46);
             this.btnPagar.TabIndex = 111;
             this.btnPagar.Text = "Definir como Paga";
             this.btnPagar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -581,7 +687,7 @@
             // 
             this.txtValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtValor.Font = new System.Drawing.Font("SF Pro Display", 11F);
+            this.txtValor.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtValor.Location = new System.Drawing.Point(60, 92);
             this.txtValor.Name = "txtValor";
@@ -589,109 +695,6 @@
             this.txtValor.Size = new System.Drawing.Size(99, 18);
             this.txtValor.TabIndex = 122;
             this.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "valor";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "data_insercao";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Data";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // horainsercaoDataGridViewTextBoxColumn
-            // 
-            this.horainsercaoDataGridViewTextBoxColumn.DataPropertyName = "hora_insercao";
-            this.horainsercaoDataGridViewTextBoxColumn.HeaderText = "Hora";
-            this.horainsercaoDataGridViewTextBoxColumn.Name = "horainsercaoDataGridViewTextBoxColumn";
-            this.horainsercaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horainsercaoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // vwdespesaBindingSource
-            // 
-            this.vwdespesaBindingSource.DataSource = typeof(Granamiza.Modelo.vwdespesa);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "data_insercao";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Data";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "hora_insercao";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Hora";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "valor";
-            dataGridViewCellStyle10.Format = "C2";
-            dataGridViewCellStyle10.NullValue = null;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "data_insercao";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Data";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "hora_insercao";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Hora";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Visible = false;
             // 
             // vwreceitaBindingSource
             // 
@@ -732,6 +735,7 @@
             this.Size = new System.Drawing.Size(591, 467);
             this.Load += new System.EventHandler(this.UserControlTransacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).EndInit();
             this.tcTransacao.ResumeLayout(false);
             this.tabDespesasAPagar.ResumeLayout(false);
             this.tabDespesasPagas.ResumeLayout(false);
@@ -740,7 +744,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceitas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwtransacaocategoriaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwreceitaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -779,11 +782,6 @@
         private System.Windows.Forms.TabPage tabReceitasCadastradas;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horainsercaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -797,5 +795,10 @@
         private System.Windows.Forms.BindingSource categoriaBindingSource;
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horainsercaoDataGridViewTextBoxColumn;
     }
 }
