@@ -1,31 +1,25 @@
-﻿using Granamiza.App.Autenticacao;
-using Granamiza.Forms.Popup;
-using Granamiza.Modelo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Granamiza.App.Autenticacao;
+using Granamiza.Forms.Popup;
+using Granamiza.Modelo;
 
-namespace Granamiza.App.CRUD
+namespace Granamiza.App.CRUD.Categoria
 {
-    class Categoria
+    class CategoriaReceita : ICategoriaReceita
     {
-
-        //Esse metodo é chamado quando vamos salvar uma categoria nova, caso ela já exista, retorna 
-        //o id para o usuário
-        internal static int Salvar(string nomeCategoria, sbyte isGasto)
+        public int Salvar(string nomeCategoria)
         {
+            int idCategoria = 0;
 
             try
             {
                 using (var bd = new granamizaEntities())
                 {
-
-
-
-                    //Recuperar categoria através do nome.
+                    //Tenta recuperar categoria através do nome:
                     categoria cat = (from c in bd.categoria
                                      where c.nome == nomeCategoria
                                      select c)
@@ -35,49 +29,43 @@ namespace Granamiza.App.CRUD
                     if (cat != null)
                     {
                         //Retorna o id para o usuario
-                        int id_categoria = cat.id;
-                        return id_categoria;
+                        idCategoria = cat.id;
                     }
 
-
-                    // se não encontrou.
+                    // se não encontrou:
                     else
                     {
-                        int id_user = Sessao.IdUsuario;
                         //cria uma nova
                         categoria nova_cat = new categoria
                         {
                             nome = nomeCategoria,
-                            is_gasto = isGasto,
-                            usuario_id = id_user
+                            is_gasto = 0,
+                            usuario_id = Sessao.IdUsuario
                         };
 
                         bd.categoria.Add(nova_cat);
+
                         bd.SaveChanges();
 
-                        int id = nova_cat.id;
-
                         //Retorna o id ao usuário
-                        return id;
-
+                        idCategoria = nova_cat.id;
                     }
-
                 }
 
+                return idCategoria;
             }
 
             //Se ocorrer erro ao conectar.
             catch (Exception)
             {
                 _ = new FrmPopupErro();
-                return 0;
+                return idCategoria;
             }
+
         }
 
-
-        internal static void Excluir(int idCategoria)
+        public void Excluir(int idCategoria)
         {
-            //Tenta se conectar com o banco de dados.
             try
             {
                 using (var bd = new granamizaEntities())
@@ -88,7 +76,7 @@ namespace Granamiza.App.CRUD
                     if (cat != null)
                     {
                         //Essa linha permite que transações que possuem id dessa categoria sejam removidas.
-                        cat.transacao.Clear();
+                        //cat.transacao.Clear();
                         bd.categoria.Remove(cat);
                         bd.SaveChanges();
                     }
@@ -100,48 +88,60 @@ namespace Granamiza.App.CRUD
             {
                 _ = new FrmPopupErro();
             }
-
         }
-        internal static List<vwcategoriareceita> ListarCategoriaReceita()
+
+        public List<vwcategoriareceita> Listar()
         {
             List<vwcategoriareceita> cr;
 
-            using (var bd = new granamizaEntities())
+            try
             {
+                using (var bd = new granamizaEntities())
+                {
+                    cr = bd.vwcategoriareceita.Where(c => c.usuario_id == Sessao.IdUsuario).ToList();
+                }
 
-                cr = bd.vwcategoriareceita.Where(c => c.usuario_id == Sessao.IdUsuario).ToList();
+                if (cr != null)
+                {
+                    return cr;
+                }
 
+                var listaCategoria = cr ?? null;
+                return listaCategoria;
             }
-
-            if (cr != null)
+            catch
             {
-                return cr;
-            }
-            else
-            {
+                _ = new FrmPopupErro();
                 return null;
             }
-
         }
-        internal static List<vwcategoriadespesa> ListarCategoriaDespesa()
+
+        public void VerificarCategorias()
         {
-            List<vwcategoriadespesa> cd;
 
-            using (var bd = new granamizaEntities())
+            List<vwcategoriareceita> listaCategoria = Listar();
+
+            using(var bd = new granamizaEntities())
             {
+                foreach (var cat in listaCategoria)
+                {
+                    var categoria = bd.vwtransacaocategoria.Where(c => c.nome == cat.nome).FirstOrDefault();
 
-                cd = bd.vwcategoriadespesa.Where(c => c.usuario_id == Sessao.IdUsuario).ToList();
+                    if (categoria != null)
+                    {
+                        continue;
+                    }
 
+                    else
+                    {
+                        Excluir(cat.id);
+                    }
+
+                }
             }
 
-            if (cd != null)
-            {
-                return cd;
-            }
-            else
-            {
-                return null;
-            }
+
         }
     }
 }
+

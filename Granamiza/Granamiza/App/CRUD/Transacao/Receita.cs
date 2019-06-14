@@ -12,6 +12,8 @@ namespace Granamiza.App.CRUD.Transacao
     class Receita : IReceita
     {
 
+        //CRUD
+
         public void Salvar(decimal valorInserido, int idCategoria, string descricaoInserida)
         {
             try
@@ -120,6 +122,8 @@ namespace Granamiza.App.CRUD.Transacao
                 return null;
             }
         }
+        
+        //Getters
 
         public int GetQuantidade()
         {
