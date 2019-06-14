@@ -141,6 +141,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPopupErro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPopupErro";
             this.pnlComponentes.ResumeLayout(false);
             this.pnlComponentes.PerformLayout();
