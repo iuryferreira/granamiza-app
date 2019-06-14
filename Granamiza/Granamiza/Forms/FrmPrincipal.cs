@@ -1,4 +1,5 @@
 ﻿using Granamiza.App.Autenticacao;
+using Granamiza.App.CRUD.Transacao;
 using Granamiza.Forms.UControl;
 using Granamiza.Modelo;
 using System;
@@ -13,93 +14,73 @@ namespace Granamiza.Forms
     public partial class FrmPrincipal : Form
     {
         //Valores padrões
-        int id_usuario_logado;
         readonly string nome_usuario = "John";
-        readonly string avatar_usuario = "C:\\Users\\Mag\\source\\repos\\iuryferreira\\granamiza-app\\Granamiza\\Granamiza\\Imagens\\female.png";
+        private Receita objReceita;
+        private Despesa objDespesa;
 
         public FrmPrincipal()
         {
             InitializeComponent();
+
+            lblBemVindo.Text = "Seja bem vindo(a), " + Sessao.NomeUsuario;
+            pbAvatar.ImageLocation = Sessao.AvatarUsuario;
+
+            objReceita = new Receita();
+            objDespesa = new Despesa();
+
+            AtualizarValores();
         }
 
-        //Formulario anterior, passa o id do usuario logado para cá.
-        public FrmPrincipal(int id_usuario, string nome, string avatar)
+        private void AtualizarValores()
         {
-            InitializeComponent();
-            this.id_usuario_logado = id_usuario;
-            this.nome_usuario = nome;
-            this.avatar_usuario = avatar;
 
-            lblBemVindo.Text = "Seja bem vindo(a), " + nome_usuario;
-            pbAvatar.ImageLocation = avatar_usuario;
+            //graficoGastoCategoria.DataSource = bd.vwtotalcategoria.Where(u => u.usuario_id == Sessao.IdUsuario).ToList();
 
-            ReceberValores();
+            decimal valorDespesas = objDespesa.GetValorTotal();
+            decimal valorDespesasPagas = objDespesa.GetValorTotalDespesasPagas();
+            decimal valorReceitaTotal = objReceita.GetValorTotal();
+            decimal valorDespesasAtivas = valorDespesas - valorDespesasPagas;
+            decimal saldoAtual = valorReceitaTotal - valorDespesasPagas;
 
-        }
+            
+            SetValorTexto(valorReceitaTotal, btnReceita);
+            SetValorTexto(saldoAtual, btnSaldoAtual);
 
-        private void ReceberValores()
-        {
-            decimal saldoAtual = 0;
-            using (var bd = new granamizaEntities())
+            if(saldoAtual > 0)
             {
-                graficoGastoCategoria.DataSource = bd.vwtotalcategoria.Where(u => u.usuario_id == Sessao.IdUsuario).ToList();
-
-                int qtdReceita = bd.vwreceita.Count(r => r.usuario_id == Sessao.IdUsuario);
-                int qtdDespesas = bd.vwdespesa.Count(d => d.usuario_id == Sessao.IdUsuario);
-                int qtdDespesasPagas = bd.vwdespesa.Where(dp => dp.usuario_id == Sessao.IdUsuario).Where(dp => dp.debitada == true).Count();
-                decimal despesasPagas;
-
-                if(qtdDespesasPagas != 0)
-                {
-                    despesasPagas = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Where(d => d.debitada == true).Sum(d => d.valor);
-                }
-
-                else
-                {
-                    despesasPagas = 0;
-                }
-
-                if (qtdReceita != 0)
-                {
-                    
-                    decimal valorReceitaTotal = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor);
-                    saldoAtual = valorReceitaTotal - despesasPagas;
-                    var valorReceitaTotalFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:#,###.##} R$", valorReceitaTotal);
-                    var saldoAtualFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:#,###.##} R$", saldoAtual);
-
-                    btnReceita.Text = valorReceitaTotalFormatado;
-                    btnSaldoAtual.Text = saldoAtualFormatado;
-                }
-
-                else
-                {
-                    btnReceita.Text = "0,00 R$";
-                }
-
-                if (qtdDespesas != 0)
-                {
-                    decimal valorDespesaTotal = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Sum(d => d.valor) - despesasPagas;
-                    var valorDespesaTotalFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), " {0:#,###.##} R$", valorDespesaTotal);
-                    btnDespesa.Text = valorDespesaTotalFormatado;
-
-                }
-
-                else
-                {
-                    btnDespesa.Text = "0,00 R$";
-                }
+                btnSaldoAtual.ForeColor = Color.FromArgb(119, 160, 112);
+                gpVisaoGeral.BackColor = Color.FromArgb(119, 160, 112);
             }
 
-            if(saldoAtual < 0)
+            else
             {
                 btnSaldoAtual.ForeColor = Color.FromArgb(191, 93, 101);
                 gpVisaoGeral.BackColor = Color.FromArgb(191, 93, 101);
             }
+
+
+            if(valorDespesasAtivas > 0)
+            {
+                SetValorTexto(valorDespesasAtivas, btnDespesa);
+
+            }
             else
             {
+                btnDespesa.Text = "R$ 0,00";
+            }
 
-                btnSaldoAtual.ForeColor = Color.FromArgb(119, 160, 112);
-                gpVisaoGeral.BackColor = Color.FromArgb(119, 160, 112);
+        }
+
+        private void SetValorTexto(decimal valor, Button btn)
+        {
+            if (valor != 0)
+            {
+                var valorFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "R$ {0:#,###.##}", valor);
+                btn.Text = valorFormatado;
+            }
+            else
+            {
+                btn.Text = "R$ 0,00";
             }
         }
 
@@ -134,10 +115,18 @@ namespace Granamiza.Forms
             pnlConteudo.Controls.Add(pbAjuda);
             pnlConteudo.Controls.Add(lblAjuda);
             pnlConteudo.Controls.Add(lblOla);
-            ReceberValores();
+            AtualizarValores();
         }
 
+        private void BtnDespesa_Click(object sender, EventArgs e)
+        {
+            this.BtnMenuDespesa_Click(sender, e);
+        }
 
+        private void BtnReceita_Click(object sender, EventArgs e)
+        {
+            this.BtnMenuReceita_Click(sender, e);
+        }
         //Limpa o painel de conteudo adicionar o titulo, e adiciona o usercontrol de transacao
         private void BtnMenuReceita_Click(object sender, EventArgs e)
         {
@@ -199,14 +188,5 @@ namespace Granamiza.Forms
             this.Close();
         }
 
-        private void BtnDespesa_Click(object sender, EventArgs e)
-        {
-            this.BtnMenuDespesa_Click(sender, e);
-        }
-
-        private void BtnReceita_Click(object sender, EventArgs e)
-        {
-            this.BtnMenuReceita_Click(sender, e);
-        }
     }
 }
