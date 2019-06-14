@@ -23,7 +23,7 @@ namespace Granamiza.App.CRUD
                 using (var bd = new granamizaEntities())
                 {
 
-                    
+
 
                     //Recuperar categoria através do nome.
                     categoria cat = (from c in bd.categoria
@@ -31,8 +31,8 @@ namespace Granamiza.App.CRUD
                                      select c)
                                      .Where(u => u.usuario_id == Sessao.IdUsuario)
                                      .FirstOrDefault();
-                    
-                    if(cat != null)
+
+                    if (cat != null)
                     {
                         //Retorna o id para o usuario
                         int id_categoria = cat.id;
@@ -99,6 +99,48 @@ namespace Granamiza.App.CRUD
             catch (Exception)
             {
                 _ = new FrmPopupErro();
+            }
+
+        }
+        internal static List<vwcategoriareceita> ListarCategoriaReceita()
+        {
+            List<vwcategoriareceita> cr;
+
+            using (var bd = new granamizaEntities())
+            {
+
+                cr = bd.vwcategoriareceita.Where(c => c.usuario_id == Sessao.IdUsuario).ToList();
+
+            }
+
+            if (cr != null)
+            {
+                return cr;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+        internal static List<vwcategoriadespesa> ListarCategoriaDespesa()
+        {
+            List<vwcategoriadespesa> cd;
+
+            using (var bd = new granamizaEntities())
+            {
+
+                cd = bd.vwcategoriadespesa.Where(c => c.usuario_id == Sessao.IdUsuario).ToList();
+
+            }
+
+            if (cd != null)
+            {
+                return cd;
+            }
+            else
+            {
+                return null;
             }
         }
     }
