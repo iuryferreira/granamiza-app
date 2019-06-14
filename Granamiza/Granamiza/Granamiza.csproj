@@ -83,7 +83,9 @@
     <Compile Include="App\Autenticacao\Autenticacao.cs" />
     <Compile Include="App\Autenticacao\Sessao.cs" />
     <Compile Include="App\Autenticacao\Validacao.cs" />
-    <Compile Include="App\CRUD\Categoria.cs" />
+    <Compile Include="App\CRUD\Categoria\CategoriaDespesa.cs" />
+    <Compile Include="App\CRUD\Categoria\CategoriaReceita.cs" />
+    <Compile Include="App\CRUD\Categoria\ICategoria.cs" />
     <Compile Include="App\CRUD\Transacao\ITransacao.cs" />
     <Compile Include="App\CRUD\Transacao\Receita.cs" />
     <Compile Include="App\CRUD\SimulacaoInvestimento.cs" />

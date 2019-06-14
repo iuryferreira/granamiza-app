@@ -6,19 +6,24 @@ using Granamiza.Modelo;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using Granamiza.App.CRUD.Categoria;
 
 namespace Granamiza.Forms
 {
     public partial class FrmDespesa : Form
     {
-        private int idTransacao;
-        private bool atualizar = false;
-        private Despesa despesa;
+        private readonly int idTransacao;
+        private readonly bool atualizar = false;
+        private readonly Despesa objDespesa;
+        private int idCategoria;
+        private readonly CategoriaDespesa objCategoriaDespesa;
 
         public FrmDespesa()
         {
             InitializeComponent();
-            cbCategoria.DataSource = Categoria.ListarCategoriaDespesa();
+            objCategoriaDespesa = new CategoriaDespesa();
+            objDespesa = new Despesa();
+            cbCategoria.DataSource = objCategoriaDespesa.Listar();
 
         }
 
@@ -36,28 +41,37 @@ namespace Granamiza.Forms
         {
 
             //passa a categoria digitada ou escolhida
-            string categoria = cbCategoria.Text;
+            string nomeCategoria = cbCategoria.Text;
             //Chama o salvar categoria enviando a categoria inserida e 0 como sendo não gasto
-            int idCategoria = Categoria.Salvar(categoria, 1);
+            idCategoria = objCategoriaDespesa.Salvar(nomeCategoria);
             //Recebe a descricao da transacao
             string descricao = txtDesc.Text;
             decimal valor = numValor.Value;
 
-            if (atualizar == true)
+            bool validou = Validacao.ValidarTransacao(valor, nomeCategoria);
+
+            if (validou)
             {
-                despesa = new Despesa();
-                MessageBox.Show("Dados atualizados com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                despesa.Atualizar(idTransacao, valor, idCategoria, descricao);
-                this.Close();
+                if (atualizar == true)
+                {
+                    MessageBox.Show("Dados atualizados com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    objDespesa.Atualizar(idTransacao, valor, idCategoria, descricao);
+                    this.Close();
+                }
+
+                else
+                {
+                    //Envia os valores já formatados para o metodo de salvar modificado
+                    objDespesa.Salvar(numValor.Value, idCategoria, descricao);
+                    this.Close();
+                }
+            }
+            else
+            {
+                _ = new FrmPopupInformacao();
             }
 
-            else
-            { 
-                despesa = new Despesa();
-                //Envia os valores já formatados para o metodo de salvar modificado
-                despesa.Salvar(numValor.Value, idCategoria, descricao);
-                this.Close();
-            }
+
         }
     }
 }

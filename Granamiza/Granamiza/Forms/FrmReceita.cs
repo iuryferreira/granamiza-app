@@ -1,5 +1,6 @@
 ﻿using Granamiza.App.Autenticacao;
 using Granamiza.App.CRUD;
+using Granamiza.App.CRUD.Categoria;
 using Granamiza.App.CRUD.Transacao;
 using Granamiza.Forms.Popup;
 using Granamiza.Modelo;
@@ -14,12 +15,16 @@ namespace Granamiza.Forms
 
         private readonly bool atualizar = false;
         private readonly int idTransacao;
-        private Receita objReceita;
+        private readonly Receita objReceita;
+        private readonly CategoriaReceita objCategoriaReceita;
+
 
         public FrmReceita()
         {
             InitializeComponent();
-            cbCategoria.DataSource = Categoria.ListarCategoriaReceita();
+            objCategoriaReceita = new CategoriaReceita();
+            objReceita = new Receita();
+            cbCategoria.DataSource = objCategoriaReceita.Listar();
 
         }
 
@@ -39,30 +44,39 @@ namespace Granamiza.Forms
         private void BtnSalvar_Click(object sender, EventArgs e)
 
         {
-
             //passa a categoria digitada ou escolhida
             string categoria = cbCategoria.Text;
             //Chama o salvar categoria enviando a categoria inserida e 0 como sendo não gasto
-            int idCategoria = Categoria.Salvar(categoria, 0);
+            int idCategoria = objCategoriaReceita.Salvar(categoria);
             //Recebe a descricao da transacao
             string descricao = txtDesc.Text;
             decimal valor = numValor.Value;
 
-            if (atualizar == true)
+            bool validou = Validacao.ValidarTransacao(valor, categoria);
+
+            if(validou)
             {
-                objReceita = new Receita();
-                objReceita.Atualizar(idTransacao, valor, idCategoria, descricao);
-                MessageBox.Show("Dados atualizados com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                if (atualizar == true)
+                {
+                    objReceita.Atualizar(idTransacao, valor, idCategoria, descricao);
+                    MessageBox.Show("Dados atualizados com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+
+                else
+                {
+                    //Envia os valores já formatados para o metodo de salvar modificado
+                    objReceita.Salvar(numValor.Value, idCategoria, descricao);
+                    this.Close();
+                }
             }
 
             else
             {
-                objReceita = new Receita();
-                //Envia os valores já formatados para o metodo de salvar modificado
-                objReceita.Salvar(numValor.Value, idCategoria, descricao);
-                this.Close();
+                _ = new FrmPopupInformacao();
             }
+
+
 
 
         }

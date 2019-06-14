@@ -1,4 +1,5 @@
 ﻿using Granamiza.App.Autenticacao;
+using Granamiza.App.CRUD.Categoria;
 using Granamiza.App.CRUD.Transacao;
 using Granamiza.Forms.UControl;
 using Granamiza.Modelo;
@@ -15,8 +16,9 @@ namespace Granamiza.Forms
     {
         //Valores padrões
         readonly string nome_usuario = "John";
-        private Receita objReceita;
-        private Despesa objDespesa;
+        private readonly Receita objReceita;
+        private readonly Despesa objDespesa;
+        private readonly CategoriaDespesa objCategoriaDespesa;
 
         public FrmPrincipal()
         {
@@ -27,14 +29,16 @@ namespace Granamiza.Forms
 
             objReceita = new Receita();
             objDespesa = new Despesa();
+            objCategoriaDespesa = new CategoriaDespesa();
 
             AtualizarValores();
         }
 
         private void AtualizarValores()
         {
+            graficoGastoCategoria.DataSource = null;
 
-            //graficoGastoCategoria.DataSource = bd.vwtotalcategoria.Where(u => u.usuario_id == Sessao.IdUsuario).ToList();
+            graficoGastoCategoria.DataSource = objCategoriaDespesa.ListarQuantidadeCategorias();
 
             decimal valorDespesas = objDespesa.GetValorTotal();
             decimal valorDespesasPagas = objDespesa.GetValorTotalDespesasPagas();
@@ -58,17 +62,14 @@ namespace Granamiza.Forms
                 gpVisaoGeral.BackColor = Color.FromArgb(191, 93, 101);
             }
 
-
             if(valorDespesasAtivas > 0)
             {
                 SetValorTexto(valorDespesasAtivas, btnDespesa);
-
             }
             else
             {
                 btnDespesa.Text = "R$ 0,00";
             }
-
         }
 
         private void SetValorTexto(decimal valor, Button btn)

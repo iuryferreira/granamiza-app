@@ -36,6 +36,7 @@ namespace Granamiza.Forms
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnPreferencias = new System.Windows.Forms.Button();
             this.btnCotacao = new System.Windows.Forms.Button();
@@ -59,9 +60,8 @@ namespace Granamiza.Forms
             this.btnDespesa = new System.Windows.Forms.Button();
             this.btnSaldoAtual = new System.Windows.Forms.Button();
             this.graficoGastoCategoria = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lnkLogout = new System.Windows.Forms.LinkLabel();
             this.vwtotalcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lnkLogout = new System.Windows.Forms.LinkLabel();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -91,6 +91,14 @@ namespace Granamiza.Forms
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(170, 562);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(4, 511);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(166, 2);
+            this.panel1.TabIndex = 2;
             // 
             // lblTitulo
             // 
@@ -451,6 +459,7 @@ namespace Granamiza.Forms
             this.graficoGastoCategoria.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.graficoGastoCategoria.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.graficoGastoCategoria.BorderSkin.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
             chartArea1.Name = "ChartArea1";
             this.graficoGastoCategoria.ChartAreas.Add(chartArea1);
             this.graficoGastoCategoria.DataSource = this.vwtotalcategoriaBindingSource;
@@ -465,23 +474,28 @@ namespace Granamiza.Forms
             this.graficoGastoCategoria.Name = "graficoGastoCategoria";
             this.graficoGastoCategoria.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
             series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.IsValueShownAsLabel = true;
-            series1.Label = "#PERCENT{P}";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Label = "#PERCENT{P1}";
             series1.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series1.LabelForeColor = System.Drawing.Color.Gray;
+            series1.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             series1.Legend = "Legend1";
             series1.LegendText = "#VALX";
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "Series1";
+            series1.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
             series1.XValueMember = "nome";
             series1.YValueMembers = "quantidade";
             this.graficoGastoCategoria.Series.Add(series1);
             this.graficoGastoCategoria.Size = new System.Drawing.Size(407, 208);
             this.graficoGastoCategoria.TabIndex = 3;
             this.graficoGastoCategoria.Text = "Gráfico";
+            // 
+            // vwtotalcategoriaBindingSource
+            // 
+            this.vwtotalcategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtotalcategoria);
             // 
             // lnkLogout
             // 
@@ -498,18 +512,6 @@ namespace Granamiza.Forms
             this.lnkLogout.Text = "SAIR";
             this.lnkLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLogout_LinkClicked);
             // 
-            // vwtotalcategoriaBindingSource
-            // 
-            this.vwtotalcategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtotalcategoria);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(4, 511);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 2);
-            this.panel1.TabIndex = 2;
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,6 +526,7 @@ namespace Granamiza.Forms
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.pnlMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
