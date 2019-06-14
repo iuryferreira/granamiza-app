@@ -98,7 +98,7 @@
             // 
             // pnlComponentes
             // 
-            this.pnlComponentes.BackColor = System.Drawing.Color.White;
+            this.pnlComponentes.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlComponentes.Controls.Add(this.pbIcone);
             this.pnlComponentes.Controls.Add(this.lblTextoSucesso);
             this.pnlComponentes.Controls.Add(this.btnConfirmar);
@@ -130,7 +130,7 @@
             this.lblTextoSucesso.Text = "Cadastro efetuado com sucesso!";
             this.lblTextoSucesso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FrmPopup
+            // FrmPopupSucesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +139,7 @@
             this.Controls.Add(this.pnlBarra);
             this.Controls.Add(this.pnlComponentes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmPopup";
+            this.Name = "FrmPopupSucesso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PopUpSucesso";
             this.pnlBarra.ResumeLayout(false);
