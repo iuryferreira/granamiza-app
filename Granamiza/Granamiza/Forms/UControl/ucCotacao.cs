@@ -11,13 +11,12 @@ using Granamiza.App.API;
 
 namespace Granamiza.Forms.UControl
 {
-    public partial class UserControlCotacao : UserControl
+    public partial class UcCotacao : UserControl
     {
-        public UserControlCotacao()
+        public UcCotacao()
         {
             InitializeComponent();
-
-            var cotacao = new Cotacao();
+            _ = new Cotacao();
 
             lblAltaDolarValor.Text = Dolar.ValorAlta + " R$";
             lblBaixaDolarValor.Text = Dolar.ValorBaixa + " R$";

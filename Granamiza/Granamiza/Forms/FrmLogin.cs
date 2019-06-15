@@ -47,7 +47,6 @@ namespace Granamiza.Forms
         private void TxtEmail_Enter(object sender, EventArgs e)
         {
             MeusWidgets.CorFocoLinhaForm(linhaEmail, txtEmail);
-            txtEmail.ForeColor = System.Drawing.Color.Khaki;
         }
         //cor da linha do email ao sair de foco
         private void TxtEmail_Leave(object sender, EventArgs e)
@@ -58,14 +57,14 @@ namespace Granamiza.Forms
         private void TxtSenha_Enter(object sender, EventArgs e)
         {
             MeusWidgets.CorFocoLinhaForm(linhaSenha, txtSenha);
-            txtSenha.ForeColor = System.Drawing.Color.Khaki;
         }
         //cor da linha da senha ao sair de foco
         private void TxtSenha_Leave(object sender, EventArgs e)
         {
             MeusWidgets.CorLinhaForm(linhaSenha, txtSenha);
-            txtSenha.ForeColor = System.Drawing.Color.White;
         }
+
+
 
         //Evento de clique do entrar
         private void BtnEntrar_Click(object sender, EventArgs e)
@@ -85,7 +84,7 @@ namespace Granamiza.Forms
                 
                 //chama o form principal
                 //var formPrincipal = new FrmPrincipal();
-                var formPrincipal = new FrmPrincipal(Sessao.IdUsuario, Sessao.NomeUsuario, Sessao.AvatarUsuario);
+                var formPrincipal = new FrmPrincipal();
                 formPrincipal.Closed += (s, args) => this.Show();
                 formPrincipal.Show();
                 

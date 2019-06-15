@@ -15,10 +15,10 @@ using Granamiza.App.CRUD;
 
 namespace Granamiza.Forms.UControl
 {
-    public partial class UserControlSimularInvestimento : UserControl
+    public partial class UcSimularInvestimento : UserControl
     {
         int idSimulacao;
-        public UserControlSimularInvestimento()
+        public UcSimularInvestimento()
         {
             InitializeComponent();
         }

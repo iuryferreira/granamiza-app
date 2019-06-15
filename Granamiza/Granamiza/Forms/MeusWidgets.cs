@@ -25,8 +25,8 @@ namespace Granamiza.Forms
         // Define a cor da linha em White
         public static void CorLinhaForm(Panel linha, TextBox txtbox) {
 
-            linha.BackColor = System.Drawing.Color.DarkGray;
-            txtbox.ForeColor = System.Drawing.Color.DarkGray;
+            linha.BackColor = System.Drawing.Color.DimGray;
+            txtbox.ForeColor = System.Drawing.Color.FromArgb(64,64,64);
         }
 
         //Escreve o texto no label de validação

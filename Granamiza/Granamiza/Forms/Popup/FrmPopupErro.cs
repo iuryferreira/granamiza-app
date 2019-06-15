@@ -15,7 +15,7 @@ namespace Granamiza.Forms.Popup
 
         int X = 0;
         int Y = 0;
-        private Form frmPai;
+        private readonly Form frmPai;
 
 
         public FrmPopupErro()
@@ -56,17 +56,35 @@ namespace Granamiza.Forms.Popup
         //Fechar pop-up através do botão close
         private void BtnClose_Click(object sender, EventArgs e)
         {
+            try
+            {
+                frmPai.Close();
+                Close();
+            }
 
-            frmPai.Close();
-            Close();
+            catch
+            {
+                Close();
+            }
+
         }
 
         //Fechar pop-up através do botão confirmar
         private void BtnConfirmar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                frmPai.Close();
+                Close();
+            }
+            catch
+            {
+                Close();
+            }
 
-            frmPai.Close();
-            Close();
+            
+            
+            
         }
 
 

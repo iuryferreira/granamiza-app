@@ -83,10 +83,13 @@
     <Compile Include="App\Autenticacao\Autenticacao.cs" />
     <Compile Include="App\Autenticacao\Sessao.cs" />
     <Compile Include="App\Autenticacao\Validacao.cs" />
-    <Compile Include="App\CRUD\Categoria.cs" />
+    <Compile Include="App\CRUD\Categoria\CategoriaDespesa.cs" />
+    <Compile Include="App\CRUD\Categoria\CategoriaReceita.cs" />
+    <Compile Include="App\CRUD\Categoria\ICategoria.cs" />
+    <Compile Include="App\CRUD\Transacao\ITransacao.cs" />
+    <Compile Include="App\CRUD\Transacao\Receita.cs" />
     <Compile Include="App\CRUD\SimulacaoInvestimento.cs" />
-    <Compile Include="App\CRUD\Transacao.cs" />
-    <Compile Include="App\CRUD\TransacaoTemp.cs" />
+    <Compile Include="App\CRUD\Transacao\Despesa.cs" />
     <Compile Include="App\CRUD\Usuario.cs" />
     <Compile Include="App\Email\Email.cs" />
     <Compile Include="Forms\FrmCadastro.cs">
@@ -168,23 +171,23 @@
     <Compile Include="Forms\RedefinirSenha\UserControlCodigoSenha.Designer.cs">
       <DependentUpon>UserControlCodigoSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UControl\UserControlTransacao.cs">
+    <Compile Include="Forms\UControl\UcTransacao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Ucontrol\UserControlTransacao.Designer.cs">
-      <DependentUpon>UserControlTransacao.cs</DependentUpon>
+    <Compile Include="Forms\UControl\UcTransacao.Designer.cs">
+      <DependentUpon>UcTransacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UControl\UserControlCotacao.cs">
+    <Compile Include="Forms\UControl\UcCotacao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\UControl\UserControlCotacao.Designer.cs">
-      <DependentUpon>UserControlCotacao.cs</DependentUpon>
+    <Compile Include="Forms\UControl\UcCotacao.Designer.cs">
+      <DependentUpon>UcCotacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UControl\UserControlSimularInvestimento.cs">
+    <Compile Include="Forms\UControl\UcSimularInvestimento.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\UControl\UserControlSimularInvestimento.Designer.cs">
-      <DependentUpon>UserControlSimularInvestimento.cs</DependentUpon>
+    <Compile Include="Forms\UControl\UcSimularInvestimento.Designer.cs">
+      <DependentUpon>UcSimularInvestimento.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\categoria.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
@@ -278,14 +281,14 @@
     <EmbeddedResource Include="Forms\RedefinirSenha\UserControlCodigoSenha.resx">
       <DependentUpon>UserControlCodigoSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UControl\UserControlCotacao.resx">
-      <DependentUpon>UserControlCotacao.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UControl\UcCotacao.resx">
+      <DependentUpon>UcCotacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UControl\UserControlTransacao.resx">
-      <DependentUpon>UserControlTransacao.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UControl\UcTransacao.resx">
+      <DependentUpon>UcTransacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UControl\UserControlSimularInvestimento.resx">
-      <DependentUpon>UserControlSimularInvestimento.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UControl\UcSimularInvestimento.resx">
+      <DependentUpon>UcSimularInvestimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -295,6 +298,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Modelo\Modelo.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -327,6 +331,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Imagens\background.jpg" />
+    <None Include="Imagens\plus%282%29.png" />
+    <None Include="Imagens\plus %282%29.png" />
+    <None Include="Imagens\edit.png" />
     <Content Include="Modelo\Modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Modelo.edmx</DependentUpon>

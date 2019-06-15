@@ -114,5 +114,22 @@ namespace Granamiza.App.Autenticacao
             //Usando algoritmo Sha256 + salt já implementados através da biblioteca Crypt.
             return Crypter.Sha256.Crypt(senhaText);
         }
+
+
+        internal static bool ValidarTransacao(decimal valor, string categoria)
+        {
+            if(valor <= 0)
+            {
+                return false;
+            }
+
+            if(categoria.Trim() == "")
+            {
+                return false;
+            }
+
+            return true;
+
+        }
     }
 }

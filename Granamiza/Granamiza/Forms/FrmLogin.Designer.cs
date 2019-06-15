@@ -167,7 +167,7 @@
             // 
             // linhaEmail
             // 
-            this.linhaEmail.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaEmail.BackColor = System.Drawing.Color.DimGray;
             this.linhaEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linhaEmail.Location = new System.Drawing.Point(82, 271);
             this.linhaEmail.Name = "linhaEmail";
@@ -185,10 +185,12 @@
             this.txtSenha.Size = new System.Drawing.Size(306, 20);
             this.txtSenha.TabIndex = 81;
             this.txtSenha.UseSystemPasswordChar = true;
+            this.txtSenha.Enter += new System.EventHandler(this.TxtSenha_Enter);
+            this.txtSenha.Leave += new System.EventHandler(this.TxtSenha_Leave);
             // 
             // linhaSenha
             // 
-            this.linhaSenha.BackColor = System.Drawing.Color.Gainsboro;
+            this.linhaSenha.BackColor = System.Drawing.Color.DimGray;
             this.linhaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linhaSenha.Location = new System.Drawing.Point(82, 338);
             this.linhaSenha.Name = "linhaSenha";
@@ -205,6 +207,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(306, 20);
             this.txtEmail.TabIndex = 80;
+            this.txtEmail.Enter += new System.EventHandler(this.TxtEmail_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
             // 
             // lblErroAutenticacao
             // 

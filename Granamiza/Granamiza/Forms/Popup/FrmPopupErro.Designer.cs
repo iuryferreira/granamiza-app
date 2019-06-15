@@ -43,7 +43,7 @@
             // 
             // pnlComponentes
             // 
-            this.pnlComponentes.BackColor = System.Drawing.Color.White;
+            this.pnlComponentes.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlComponentes.Controls.Add(this.pbIcone);
             this.pnlComponentes.Controls.Add(this.lblTextoSucesso);
             this.pnlComponentes.Controls.Add(this.btnConfirmar);
@@ -141,6 +141,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPopupErro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPopupErro";
             this.pnlComponentes.ResumeLayout(false);
             this.pnlComponentes.PerformLayout();

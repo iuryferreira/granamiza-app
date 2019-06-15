@@ -43,7 +43,7 @@
             // 
             // pnlComponentes
             // 
-            this.pnlComponentes.BackColor = System.Drawing.Color.White;
+            this.pnlComponentes.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlComponentes.Controls.Add(this.pbIcone);
             this.pnlComponentes.Controls.Add(this.lblTextoSucesso);
             this.pnlComponentes.Controls.Add(this.btnConfirmar);
@@ -68,11 +68,11 @@
             this.lblTextoSucesso.AutoSize = true;
             this.lblTextoSucesso.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextoSucesso.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTextoSucesso.Location = new System.Drawing.Point(55, 91);
+            this.lblTextoSucesso.Location = new System.Drawing.Point(78, 90);
             this.lblTextoSucesso.Name = "lblTextoSucesso";
-            this.lblTextoSucesso.Size = new System.Drawing.Size(254, 19);
+            this.lblTextoSucesso.Size = new System.Drawing.Size(206, 19);
             this.lblTextoSucesso.TabIndex = 79;
-            this.lblTextoSucesso.Text = "Este é um exemplo de mensagem.";
+            this.lblTextoSucesso.Text = "Preencha todos os campos.";
             this.lblTextoSucesso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnConfirmar
@@ -89,6 +89,7 @@
             this.btnConfirmar.TabIndex = 79;
             this.btnConfirmar.Text = "OK";
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
             // btnClose
             // 
@@ -103,6 +104,7 @@
             this.btnClose.TabIndex = 78;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // pnlBarra
             // 
@@ -135,6 +137,7 @@
             this.Controls.Add(this.pnlBarra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPopupInformacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPopupInformacao";
             this.pnlComponentes.ResumeLayout(false);
             this.pnlComponentes.PerformLayout();

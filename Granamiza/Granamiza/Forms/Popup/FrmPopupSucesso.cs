@@ -15,7 +15,7 @@ namespace Granamiza.Forms.Popup
         int X = 0;
         int Y = 0;
         //Atributo para receber referência de formulário de cadastro
-        Form frmPai;
+        readonly Form frmPai;
 
 
         public FrmPopupSucesso(Form frmPai)
