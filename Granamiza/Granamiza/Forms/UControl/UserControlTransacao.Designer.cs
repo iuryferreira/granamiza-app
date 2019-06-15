@@ -29,26 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransacao));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDespesas = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horainsercaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwdespesaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwtransacaocategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.picInfo = new System.Windows.Forms.PictureBox();
             this.pbIconeCategoria = new System.Windows.Forms.PictureBox();
@@ -70,34 +65,41 @@
             this.linhaValor = new System.Windows.Forms.Panel();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
-            this.tcTransacao = new System.Windows.Forms.TabControl();
+            this.tcDespesa = new System.Windows.Forms.TabControl();
             this.tabDespesasAPagar = new System.Windows.Forms.TabPage();
             this.tabDespesasPagas = new System.Windows.Forms.TabPage();
             this.dgvDespesasPagas = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tcReceita = new System.Windows.Forms.TabControl();
+            this.tabReceitas = new System.Windows.Forms.TabPage();
+            this.dgvReceitas = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horainsercaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwdespesaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabReceitasCadastradas = new System.Windows.Forms.TabPage();
-            this.dgvReceitas = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwreceitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwtransacaocategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconeCategoria)).BeginInit();
-            this.tcTransacao.SuspendLayout();
+            this.tcDespesa.SuspendLayout();
             this.tabDespesasAPagar.SuspendLayout();
             this.tabDespesasPagas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesasPagas)).BeginInit();
-            this.tabReceitasCadastradas.SuspendLayout();
+            this.tcReceita.SuspendLayout();
+            this.tabReceitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwreceitaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,14 +112,14 @@
             this.dgvDespesas.AutoGenerateColumns = false;
             this.dgvDespesas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDespesas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDespesas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDespesas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDespesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDespesas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -126,25 +128,25 @@
             this.dataGridViewTextBoxColumn2,
             this.horainsercaoDataGridViewTextBoxColumn});
             this.dgvDespesas.DataSource = this.vwdespesaBindingSource;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDespesas.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDespesas.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDespesas.EnableHeadersVisualStyles = false;
             this.dgvDespesas.GridColor = System.Drawing.Color.White;
             this.dgvDespesas.Location = new System.Drawing.Point(5, 3);
             this.dgvDespesas.Name = "dgvDespesas";
             this.dgvDespesas.ReadOnly = true;
             this.dgvDespesas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDespesas.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDespesas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDespesas.Size = new System.Drawing.Size(520, 168);
             this.dgvDespesas.TabIndex = 115;
-            this.dgvDespesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDespesas_CellDoubleClick);
+            this.dgvDespesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDespesa_CellDoubleClick);
             // 
             // id
             // 
@@ -153,41 +155,6 @@
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "valor";
-            dataGridViewCellStyle14.Format = "C2";
-            dataGridViewCellStyle14.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "data_insercao";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Data";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // horainsercaoDataGridViewTextBoxColumn
-            // 
-            this.horainsercaoDataGridViewTextBoxColumn.DataPropertyName = "hora_insercao";
-            this.horainsercaoDataGridViewTextBoxColumn.HeaderText = "Hora";
-            this.horainsercaoDataGridViewTextBoxColumn.Name = "horainsercaoDataGridViewTextBoxColumn";
-            this.horainsercaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vwdespesaBindingSource
-            // 
-            this.vwdespesaBindingSource.DataSource = typeof(Granamiza.Modelo.vwdespesa);
             // 
             // picInfo
             // 
@@ -430,21 +397,20 @@
             this.lblValor.TabIndex = 95;
             this.lblValor.Text = "Valor";
             // 
-            // tcTransacao
+            // tcDespesa
             // 
-            this.tcTransacao.Controls.Add(this.tabDespesasAPagar);
-            this.tcTransacao.Controls.Add(this.tabDespesasPagas);
-            this.tcTransacao.Controls.Add(this.tabReceitasCadastradas);
-            this.tcTransacao.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcTransacao.ItemSize = new System.Drawing.Size(130, 20);
-            this.tcTransacao.Location = new System.Drawing.Point(10, 256);
-            this.tcTransacao.Margin = new System.Windows.Forms.Padding(2);
-            this.tcTransacao.Name = "tcTransacao";
-            this.tcTransacao.SelectedIndex = 0;
-            this.tcTransacao.Size = new System.Drawing.Size(538, 200);
-            this.tcTransacao.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tcTransacao.TabIndex = 116;
-            this.tcTransacao.VisibleChanged += new System.EventHandler(this.tcDespesa_VisibleChanged);
+            this.tcDespesa.Controls.Add(this.tabDespesasAPagar);
+            this.tcDespesa.Controls.Add(this.tabDespesasPagas);
+            this.tcDespesa.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcDespesa.ItemSize = new System.Drawing.Size(130, 20);
+            this.tcDespesa.Location = new System.Drawing.Point(20, 257);
+            this.tcDespesa.Margin = new System.Windows.Forms.Padding(2);
+            this.tcDespesa.Name = "tcDespesa";
+            this.tcDespesa.SelectedIndex = 0;
+            this.tcDespesa.Size = new System.Drawing.Size(538, 200);
+            this.tcDespesa.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tcDespesa.TabIndex = 116;
+            this.tcDespesa.VisibleChanged += new System.EventHandler(this.tcDespesa_VisibleChanged);
             // 
             // tabDespesasAPagar
             // 
@@ -479,14 +445,14 @@
             this.dgvDespesasPagas.AutoGenerateColumns = false;
             this.dgvDespesasPagas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDespesasPagas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDespesasPagas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDespesasPagas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDespesasPagas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDespesasPagas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
@@ -495,22 +461,22 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.dgvDespesasPagas.DataSource = this.vwdespesaBindingSource;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDespesasPagas.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDespesasPagas.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDespesasPagas.EnableHeadersVisualStyles = false;
             this.dgvDespesasPagas.GridColor = System.Drawing.Color.White;
             this.dgvDespesasPagas.Location = new System.Drawing.Point(5, 3);
             this.dgvDespesasPagas.Name = "dgvDespesasPagas";
             this.dgvDespesasPagas.ReadOnly = true;
             this.dgvDespesasPagas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDespesasPagas.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDespesasPagas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDespesasPagas.Size = new System.Drawing.Size(520, 168);
             this.dgvDespesasPagas.TabIndex = 116;
             this.dgvDespesasPagas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDespesaPagas_CellDoubleClick);
@@ -523,12 +489,123 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Visible = false;
             // 
+            // tcReceita
+            // 
+            this.tcReceita.Controls.Add(this.tabReceitas);
+            this.tcReceita.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcReceita.ItemSize = new System.Drawing.Size(150, 20);
+            this.tcReceita.Location = new System.Drawing.Point(20, 257);
+            this.tcReceita.Margin = new System.Windows.Forms.Padding(2);
+            this.tcReceita.Name = "tcReceita";
+            this.tcReceita.SelectedIndex = 0;
+            this.tcReceita.Size = new System.Drawing.Size(538, 200);
+            this.tcReceita.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tcReceita.TabIndex = 117;
+            // 
+            // tabReceitas
+            // 
+            this.tabReceitas.Controls.Add(this.dgvReceitas);
+            this.tabReceitas.Location = new System.Drawing.Point(4, 24);
+            this.tabReceitas.Name = "tabReceitas";
+            this.tabReceitas.Padding = new System.Windows.Forms.Padding(3);
+            this.tabReceitas.Size = new System.Drawing.Size(530, 172);
+            this.tabReceitas.TabIndex = 0;
+            this.tabReceitas.Text = "Receitas Cadastradas";
+            this.tabReceitas.UseVisualStyleBackColor = true;
+            // 
+            // dgvReceitas
+            // 
+            this.dgvReceitas.AllowUserToAddRows = false;
+            this.dgvReceitas.AllowUserToDeleteRows = false;
+            this.dgvReceitas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvReceitas.AutoGenerateColumns = false;
+            this.dgvReceitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReceitas.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReceitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvReceitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReceitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.dgvReceitas.DataSource = this.vwdespesaBindingSource;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReceitas.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvReceitas.EnableHeadersVisualStyles = false;
+            this.dgvReceitas.GridColor = System.Drawing.Color.White;
+            this.dgvReceitas.Location = new System.Drawing.Point(5, 3);
+            this.dgvReceitas.Name = "dgvReceitas";
+            this.dgvReceitas.ReadOnly = true;
+            this.dgvReceitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvReceitas.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvReceitas.Size = new System.Drawing.Size(520, 168);
+            this.dgvReceitas.TabIndex = 115;
+            this.dgvReceitas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReceita_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn9.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "valor";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "data_insercao";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Data";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // horainsercaoDataGridViewTextBoxColumn
+            // 
+            this.horainsercaoDataGridViewTextBoxColumn.DataPropertyName = "hora_insercao";
+            this.horainsercaoDataGridViewTextBoxColumn.HeaderText = "Hora";
+            this.horainsercaoDataGridViewTextBoxColumn.Name = "horainsercaoDataGridViewTextBoxColumn";
+            this.horainsercaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vwdespesaBindingSource
+            // 
+            this.vwdespesaBindingSource.DataSource = typeof(Granamiza.Modelo.vwdespesa);
+            // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
-            dataGridViewCellStyle18.Format = "C2";
-            dataGridViewCellStyle18.NullValue = null;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -554,75 +631,12 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
-            // tabReceitasCadastradas
-            // 
-            this.tabReceitasCadastradas.Controls.Add(this.dgvReceitas);
-            this.tabReceitasCadastradas.Location = new System.Drawing.Point(4, 24);
-            this.tabReceitasCadastradas.Name = "tabReceitasCadastradas";
-            this.tabReceitasCadastradas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReceitasCadastradas.Size = new System.Drawing.Size(530, 172);
-            this.tabReceitasCadastradas.TabIndex = 2;
-            this.tabReceitasCadastradas.Text = "Receitas";
-            this.tabReceitasCadastradas.UseVisualStyleBackColor = true;
-            // 
-            // dgvReceitas
-            // 
-            this.dgvReceitas.AllowUserToAddRows = false;
-            this.dgvReceitas.AllowUserToDeleteRows = false;
-            this.dgvReceitas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvReceitas.AutoGenerateColumns = false;
-            this.dgvReceitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvReceitas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReceitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.dgvReceitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReceitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
-            this.dgvReceitas.DataSource = this.vwdespesaBindingSource;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvReceitas.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dgvReceitas.EnableHeadersVisualStyles = false;
-            this.dgvReceitas.GridColor = System.Drawing.Color.White;
-            this.dgvReceitas.Location = new System.Drawing.Point(0, 1);
-            this.dgvReceitas.Name = "dgvReceitas";
-            this.dgvReceitas.ReadOnly = true;
-            this.dgvReceitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvReceitas.RowsDefaultCellStyle = dataGridViewCellStyle24;
-            this.dgvReceitas.Size = new System.Drawing.Size(530, 171);
-            this.dgvReceitas.TabIndex = 115;
-            this.dgvReceitas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReceita_CellDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn9.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "valor";
-            dataGridViewCellStyle22.Format = "C2";
-            dataGridViewCellStyle22.NullValue = null;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn10.HeaderText = "Valor";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
@@ -677,21 +691,23 @@
             this.Controls.Add(this.linhaValor);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.lblValor);
-            this.Controls.Add(this.tcTransacao);
+            this.Controls.Add(this.tcDespesa);
+            this.Controls.Add(this.tcReceita);
             this.Name = "UserControlTransacao";
-            this.Size = new System.Drawing.Size(573, 467);
+            this.Size = new System.Drawing.Size(572, 467);
             this.Load += new System.EventHandler(this.UserControlTransacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwtransacaocategoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconeCategoria)).EndInit();
-            this.tcTransacao.ResumeLayout(false);
+            this.tcDespesa.ResumeLayout(false);
             this.tabDespesasAPagar.ResumeLayout(false);
             this.tabDespesasPagas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesasPagas)).EndInit();
-            this.tabReceitasCadastradas.ResumeLayout(false);
+            this.tcReceita.ResumeLayout(false);
+            this.tabReceitas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwreceitaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -729,7 +745,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn horainsercaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TabControl tcTransacao;
+        private System.Windows.Forms.TabControl tcDespesa;
         private System.Windows.Forms.TabPage tabDespesasAPagar;
         private System.Windows.Forms.TabPage tabDespesasPagas;
         private System.Windows.Forms.DataGridView dgvDespesasPagas;
@@ -738,12 +754,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.TabControl tcReceita;
+        private System.Windows.Forms.TabPage tabReceitas;
         private System.Windows.Forms.DataGridView dgvReceitas;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.TabPage tabReceitasCadastradas;
     }
 }

@@ -2545,7 +2545,7 @@
   <data name="pbAjuda.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAakSURBVGhD7VhbbBRVGK7giwnRBy8xAsqt1ZgQvASDhkt8
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAakSURBVGhD7VhbbBRVGK7giwnRBy8xAsqt1ZgQvASDhkt8
         AyHAgw/EgBp4UB/ExAc1aiQqJPKgMYK0VlGIvSBUoC1bYNvtLu3eZ+eyu7Mz053ZlLRc2sr2YgUstHv8
         /9nM7sx0761IzDY56ew55//P9/2Xc/5zKirKf2ULlC1QtsD/zgLNdnfidKeLsJKSbqI8etcR9Uaj9zOS
         XMdKcn0gFntAA2jp9l5vcbjNBLi7igAtyC8C+N6UlUWZC0jSQwjyvIvqb3V4TASU0zjW7mFOtXX7/rD5
@@ -2575,22 +2575,6 @@
         ZfskJ4o8ENhHi+JjJYMrRZDsqZiTaHhyJ9RCvcUSgYpUQVlCKu4pZe1ZlVGJ1C9bB0S+SDRWWRKNlRfN
         hLBPHcM5xyrXosysgphNZeR4xVyw8F4AG0+2qr3YN5trlHWVLVC2QNkCd4cF/gGQs+CRsNwNJwAAAABJ
         RU5ErkJggg==
-</value>
-  </data>
-  <data name="btnReceita.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAABVSURBVDhPY/hPImAgUf3/wa/hzfXrb/D7Ct0PXx+eO3z4
-        MB5d2D395jpOXXhCCajr3MOv6A7EoQFsBRbl/zHjAawUjyfQbHhzHauxSO4a/DFNOO0CAMCQ9iX4I4d3
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnDespesa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAABVSURBVDhPY/hPImAgUf3/wa/hzfXrb/D7Ct0PXx+eO3z4
-        MB5d2D395jpOXXhCCajr3MOv6A7EoQFsBRbl/zHjAawUjyfQbHhzHauxSO4a/DFNOO0CAMCQ9iX4I4d3
-        AAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="vwtotalcategoriaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
