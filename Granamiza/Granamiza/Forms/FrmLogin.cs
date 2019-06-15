@@ -85,7 +85,7 @@ namespace Granamiza.Forms
                 
                 //chama o form principal
                 //var formPrincipal = new FrmPrincipal();
-                var formPrincipal = new FrmPrincipal(Sessao.IdUsuario, Sessao.NomeUsuario, Sessao.AvatarUsuario);
+                var formPrincipal = new FrmPrincipal();
                 formPrincipal.Closed += (s, args) => this.Show();
                 formPrincipal.Show();
                 
