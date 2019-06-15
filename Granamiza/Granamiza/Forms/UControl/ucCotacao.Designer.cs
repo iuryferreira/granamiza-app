@@ -1,6 +1,6 @@
 ﻿namespace Granamiza.Forms.UControl
 {
-    partial class UserControlCotacao
+    partial class UcCotacao
     {
         /// <summary> 
         /// Variável de designer necessária.

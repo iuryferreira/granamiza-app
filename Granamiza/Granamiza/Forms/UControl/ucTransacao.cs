@@ -16,7 +16,7 @@ using Granamiza.App.CRUD.Transacao;
 
 namespace Granamiza.Forms.UControl
 {
-    public partial class UserControlTransacao : UserControl
+    public partial class UcTransacao : UserControl
     {
         readonly Button btn_clicado;
         int idTransacao;
@@ -31,7 +31,7 @@ namespace Granamiza.Forms.UControl
 
 
         //Construtor!
-        public UserControlTransacao(Button botao_clicado)
+        public UcTransacao(Button botao_clicado)
         {
             InitializeComponent();
             this.btn_clicado = botao_clicado;
@@ -41,7 +41,7 @@ namespace Granamiza.Forms.UControl
         }
 
         //Metodo mais relevante!
-        private void UserControlTransacao_Load(object sender, EventArgs e)
+        private void UcTransacao_Load(object sender, EventArgs e)
         {
             //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que não são gastos

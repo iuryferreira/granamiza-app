@@ -133,7 +133,7 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Gerenciamento de Receita";
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
-            UserControlTransacao uc = new UserControlTransacao(btnMenuReceita);
+            UcTransacao uc = new UcTransacao(btnMenuReceita);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
         }
@@ -143,7 +143,7 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Gerenciamento de Despesa";
             lblBemVindo.ForeColor = Color.FromArgb(191, 93, 101);
-            UserControlTransacao uc = new UserControlTransacao(btnMenuDespesa);
+            UcTransacao uc = new UcTransacao(btnMenuDespesa);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
         }
@@ -152,7 +152,7 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Simulador de Investimentos";
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
-            UserControlSimularInvestimento uc = new UserControlSimularInvestimento();
+            UcSimularInvestimento uc = new UcSimularInvestimento();
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
         }
@@ -161,7 +161,7 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Cotações";
             lblBemVindo.ForeColor = Color.FromArgb(191, 93, 101);
-            UserControlCotacao uc = new UserControlCotacao();
+            UcCotacao uc = new UcCotacao();
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
         }

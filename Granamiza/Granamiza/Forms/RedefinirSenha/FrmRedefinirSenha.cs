@@ -14,7 +14,7 @@ namespace Granamiza.Forms.RedefinirSenha
 {
     public partial class FrmRedefinirSenha : Form
     {
-        Form frmPai;
+        readonly Form frmPai;
 
         public FrmRedefinirSenha()
         {

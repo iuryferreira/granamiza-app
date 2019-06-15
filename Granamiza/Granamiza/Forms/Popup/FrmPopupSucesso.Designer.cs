@@ -124,6 +124,7 @@
             this.lblTextoSucesso.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextoSucesso.ForeColor = System.Drawing.Color.DimGray;
             this.lblTextoSucesso.Location = new System.Drawing.Point(56, 90);
+            this.lblTextoSucesso.MaximumSize = new System.Drawing.Size(242, 160);
             this.lblTextoSucesso.Name = "lblTextoSucesso";
             this.lblTextoSucesso.Size = new System.Drawing.Size(242, 19);
             this.lblTextoSucesso.TabIndex = 79;

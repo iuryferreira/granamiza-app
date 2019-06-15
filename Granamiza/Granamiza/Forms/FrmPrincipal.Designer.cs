@@ -60,8 +60,8 @@ namespace Granamiza.Forms
             this.btnDespesa = new System.Windows.Forms.Button();
             this.btnSaldoAtual = new System.Windows.Forms.Button();
             this.graficoGastoCategoria = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.vwtotalcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lnkLogout = new System.Windows.Forms.LinkLabel();
+            this.vwtotalcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -493,10 +493,6 @@ namespace Granamiza.Forms
             this.graficoGastoCategoria.TabIndex = 3;
             this.graficoGastoCategoria.Text = "Gráfico";
             // 
-            // vwtotalcategoriaBindingSource
-            // 
-            this.vwtotalcategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtotalcategoria);
-            // 
             // lnkLogout
             // 
             this.lnkLogout.AutoSize = true;
@@ -512,11 +508,17 @@ namespace Granamiza.Forms
             this.lnkLogout.Text = "SAIR";
             this.lnkLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLogout_LinkClicked);
             // 
+            // vwtotalcategoriaBindingSource
+            // 
+            this.vwtotalcategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtotalcategoria);
+            // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(784, 562);
@@ -527,6 +529,7 @@ namespace Granamiza.Forms
             this.Controls.Add(this.pnlMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

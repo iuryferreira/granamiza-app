@@ -1,6 +1,6 @@
 ﻿namespace Granamiza.Forms.UControl
 {
-    partial class UserControlTransacao
+    partial class UcTransacao
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -41,7 +41,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTransacao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcTransacao));
             this.dgvDespesas = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -733,7 +733,7 @@
             this.Controls.Add(this.tcTransacao);
             this.Name = "UserControlTransacao";
             this.Size = new System.Drawing.Size(591, 467);
-            this.Load += new System.EventHandler(this.UserControlTransacao_Load);
+            this.Load += new System.EventHandler(this.UcTransacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwdespesaBindingSource)).EndInit();
             this.tcTransacao.ResumeLayout(false);

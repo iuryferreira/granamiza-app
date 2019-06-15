@@ -14,7 +14,6 @@ namespace Granamiza.Forms.Popup
     {
         int X = 0;
         int Y = 0;
-        private readonly Form frmPai;
 
 
         public FrmPopupInformacao()
