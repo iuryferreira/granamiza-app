@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="granamizaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="granamizaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="categoria">
           <Key>
             <PropertyRef Name="id" />
@@ -20,9 +20,11 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="valor_baixa" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="valor_alta" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="valor_dolar" Type="decimal" Precision="10" Scale="3" Nullable="false" />
+          <Property Name="valor_euro" Type="decimal" Precision="10" Scale="3" Nullable="false" />
           <Property Name="data_consulta" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="valor_bitcoin" Type="decimal" Precision="10" Scale="3" Nullable="false" />
+          <Property Name="usuario_id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="preferencias">
           <Key>
@@ -248,6 +250,18 @@ warning 6002: The table/view 'def.granamiza.vwtransacaocategoria' does not have 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="usuario_ud">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="cotacao" Type="Self.cotacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cotacao">
+              <PropertyRef Name="usuario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="granamizaModelStoreContainer">
           <EntitySet Name="categoria" EntityType="Self.categoria" Schema="granamiza" store:Type="Tables" />
           <EntitySet Name="cotacao" EntityType="Self.cotacao" Schema="granamiza" store:Type="Tables" />
@@ -339,8 +353,13 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
             <End Role="usuario" EntitySet="usuario" />
             <End Role="transacao" EntitySet="transacao" />
           </AssociationSet>
+          <AssociationSet Name="usuario_ud" Association="Self.usuario_ud">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="cotacao" EntitySet="cotacao" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="granamizaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -361,9 +380,12 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="valor_baixa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="valor_alta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valor_dolar" Type="Decimal" Nullable="false" />
+          <Property Name="valor_euro" Type="Decimal" Nullable="false" />
           <Property Name="data_consulta" Type="DateTime" Nullable="false" />
+          <Property Name="valor_bitcoin" Type="Decimal" Nullable="false" />
+          <Property Name="usuario_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="usuario" Relationship="Self.usuario_ud" FromRole="cotacao" ToRole="usuario" />
         </EntityType>
         <EntityType Name="preferencias">
           <Key>
@@ -418,29 +440,30 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
           <Property Name="senha" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="data_criacao" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="categoria" Relationship="Self.fk_categoria_usuario1" FromRole="usuario" ToRole="categoria" />
+          <NavigationProperty Name="cotacao" Relationship="Self.usuario_ud" FromRole="usuario" ToRole="cotacao" />
           <NavigationProperty Name="preferencias" Relationship="Self.fk_preferencias_usuario1" FromRole="usuario" ToRole="preferencias" />
           <NavigationProperty Name="simulacao" Relationship="Self.fk_simulacao_usuario1" FromRole="usuario" ToRole="simulacao" />
           <NavigationProperty Name="transacao" Relationship="Self.fk_transacao_usuario1" FromRole="usuario" ToRole="transacao" />
         </EntityType>
         <EntityType Name="vwcategoriadespesa">
           <Key>
+            <PropertyRef Name="id" />
             <PropertyRef Name="nome" />
             <PropertyRef Name="usuario_id" />
-            <PropertyRef Name="id" />
           </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="nome" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="usuario_id" Type="Int32" Nullable="false" />
-          <Property Name="id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="vwcategoriareceita">
           <Key>
+            <PropertyRef Name="id" />
             <PropertyRef Name="nome" />
             <PropertyRef Name="usuario_id" />
-            <PropertyRef Name="id" />
           </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="nome" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="usuario_id" Type="Int32" Nullable="false" />
-          <Property Name="id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="vwdespesa">
           <Key>
@@ -549,6 +572,18 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="usuario_ud">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="cotacao" Type="Self.cotacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cotacao">
+              <PropertyRef Name="usuario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_preferencias_usuario1">
           <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
           <End Role="preferencias" Type="Self.preferencias" Multiplicity="*" />
@@ -606,6 +641,10 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
             <End Role="categoria" EntitySet="categoria" />
             <End Role="transacao" EntitySet="transacao" />
           </AssociationSet>
+          <AssociationSet Name="usuario_ud" Association="Self.usuario_ud">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="cotacao" EntitySet="cotacao" />
+          </AssociationSet>
           <AssociationSet Name="fk_preferencias_usuario1" Association="Self.fk_preferencias_usuario1">
             <End Role="usuario" EntitySet="usuario" />
             <End Role="preferencias" EntitySet="preferencias" />
@@ -640,9 +679,11 @@ FROM `vwtransacaocategoria` AS `vwtransacaocategoria`</DefiningQuery>
             <EntityTypeMapping TypeName="granamizaModel.cotacao">
               <MappingFragment StoreEntitySet="cotacao">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="valor_baixa" ColumnName="valor_baixa" />
-                <ScalarProperty Name="valor_alta" ColumnName="valor_alta" />
+                <ScalarProperty Name="valor_dolar" ColumnName="valor_dolar" />
+                <ScalarProperty Name="valor_euro" ColumnName="valor_euro" />
                 <ScalarProperty Name="data_consulta" ColumnName="data_consulta" />
+                <ScalarProperty Name="valor_bitcoin" ColumnName="valor_bitcoin" />
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

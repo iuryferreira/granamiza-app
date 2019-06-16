@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="App\API\Cotacao.cs" />
     <Compile Include="App\API\Dolar.cs" />
+    <Compile Include="App\API\Bitcoin.cs" />
     <Compile Include="App\API\Euro.cs" />
     <Compile Include="App\Autenticacao\Autenticacao.cs" />
     <Compile Include="App\Autenticacao\Sessao.cs" />
@@ -308,7 +309,9 @@
       <DependentUpon>Modelo.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Granamiza.App.API.Dolar.datasource" />
     <None Include="Properties\DataSources\Granamiza.Modelo.categoria.datasource" />
+    <None Include="Properties\DataSources\Granamiza.Modelo.cotacao.datasource" />
     <None Include="Properties\DataSources\Granamiza.Modelo.simulacao.datasource" />
     <None Include="Properties\DataSources\Granamiza.Modelo.vwcategoriadespesa.datasource" />
     <None Include="Properties\DataSources\Granamiza.Modelo.vwdespesa.datasource" />
@@ -331,9 +334,6 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Imagens\background.jpg" />
-    <None Include="Imagens\plus%282%29.png" />
-    <None Include="Imagens\plus %282%29.png" />
-    <None Include="Imagens\edit.png" />
     <Content Include="Modelo\Modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Modelo.edmx</DependentUpon>
@@ -344,6 +344,9 @@
       <DependentUpon>Modelo.edmx</DependentUpon>
       <LastGenOutput>Modelo.cs</LastGenOutput>
     </Content>
+    <None Include="Imagens\plus%282%29.png" />
+    <None Include="Imagens\plus %282%29.png" />
+    <None Include="Imagens\edit.png" />
     <None Include="Imagens\error-icon.png" />
     <None Include="Imagens\info-icon.png" />
   </ItemGroup>

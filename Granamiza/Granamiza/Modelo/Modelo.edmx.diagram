@@ -4,21 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="190012e4b12f493a960a1aa761453581" Name="Diagram1">
-        <EntityTypeShape EntityType="granamizaModel.categoria" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.cotacao" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.preferencias" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.simulacao" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.transacao" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.usuario" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.vwcategoriadespesa" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.vwcategoriareceita" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.vwdespesa" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.vwreceita" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.vwtotalcategoria" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="granamizaModel.vwtransacaocategoria" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+      <Diagram DiagramId="17b675aa22204115be0249b752d3d7fd" Name="Diagram1">
+        <EntityTypeShape EntityType="granamizaModel.categoria" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.cotacao" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.preferencias" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.simulacao" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.transacao" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.usuario" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.vwcategoriadespesa" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.vwcategoriareceita" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.vwdespesa" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.vwreceita" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.vwtotalcategoria" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="granamizaModel.vwtransacaocategoria" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="granamizaModel.fk_categoria_usuario1" ManuallyRouted="false" />
         <AssociationConnector Association="granamizaModel.fk_transacao_categoria1" ManuallyRouted="false" />
+        <AssociationConnector Association="granamizaModel.usuario_ud" ManuallyRouted="false" />
         <AssociationConnector Association="granamizaModel.fk_preferencias_usuario1" ManuallyRouted="false" />
         <AssociationConnector Association="granamizaModel.fk_simulacao_usuario1" ManuallyRouted="false" />
         <AssociationConnector Association="granamizaModel.fk_transacao_usuario1" ManuallyRouted="false" />

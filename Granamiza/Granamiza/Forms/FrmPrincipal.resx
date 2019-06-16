@@ -2574,22 +2574,6 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="btnReceita.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAABVSURBVDhPY/hPImAgUf3/wa/hzfXrb/D7Ct0PXx+eO3z4
-        MB5d2D395jpOXXhCCajr3MOv6A7EoQFsBRbl/zHjAawUjyfQbHhzHauxSO4a/DFNOO0CAMCQ9iX4I4d3
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnDespesa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAABVSURBVDhPY/hPImAgUf3/wa/hzfXrb/D7Ct0PXx+eO3z4
-        MB5d2D395jpOXXhCCajr3MOv6A7EoQFsBRbl/zHjAawUjyfQbHhzHauxSO4a/DFNOO0CAMCQ9iX4I4d3
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="vwtotalcategoriaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

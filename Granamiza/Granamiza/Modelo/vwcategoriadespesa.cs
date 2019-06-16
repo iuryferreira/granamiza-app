@@ -14,8 +14,8 @@ namespace Granamiza.Modelo
     
     public partial class vwcategoriadespesa
     {
+        public int id { get; set; }
         public string nome { get; set; }
         public int usuario_id { get; set; }
-        public int id { get; set; }
     }
 }
