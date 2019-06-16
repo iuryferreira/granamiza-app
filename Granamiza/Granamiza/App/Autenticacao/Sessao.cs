@@ -14,12 +14,15 @@ namespace Granamiza.App.Autenticacao
         private static String _emailUsuario;
         private static String _avatarUsuario;
         private static String _codigoUsuario;
+        private static sbyte _darkMode;
 
         public static int IdUsuario { get => _idUsuario; set => _idUsuario = value; }
         public static string NomeUsuario { get => _nomeUsuario; set => _nomeUsuario = value; }
         public static string EmailUsuario { get => _emailUsuario; set => _emailUsuario = value; }
         public static string AvatarUsuario { get => _avatarUsuario; set => _avatarUsuario = value; }
         public static string CodigoUsuario { get => _codigoUsuario; set => _codigoUsuario = value; }
+        public static sbyte DarkMode { get => _darkMode; set => _darkMode = value; }
+
 
         //Gerar código aleatório que é associado ao E-mail digitado.
         internal static void GerarCodigo()

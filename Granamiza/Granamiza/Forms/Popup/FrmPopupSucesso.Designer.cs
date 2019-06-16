@@ -123,10 +123,11 @@
             this.lblTextoSucesso.AutoSize = true;
             this.lblTextoSucesso.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextoSucesso.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTextoSucesso.Location = new System.Drawing.Point(56, 90);
-            this.lblTextoSucesso.MaximumSize = new System.Drawing.Size(242, 160);
+            this.lblTextoSucesso.Location = new System.Drawing.Point(15, 90);
+            this.lblTextoSucesso.MaximumSize = new System.Drawing.Size(340, 19);
+            this.lblTextoSucesso.MinimumSize = new System.Drawing.Size(320, 19);
             this.lblTextoSucesso.Name = "lblTextoSucesso";
-            this.lblTextoSucesso.Size = new System.Drawing.Size(242, 19);
+            this.lblTextoSucesso.Size = new System.Drawing.Size(320, 19);
             this.lblTextoSucesso.TabIndex = 79;
             this.lblTextoSucesso.Text = "Cadastro efetuado com sucesso!";
             this.lblTextoSucesso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

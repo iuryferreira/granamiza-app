@@ -15,7 +15,7 @@ namespace Granamiza.Forms
     public partial class FrmPrincipal : Form
     {
         //Valores padrões
-        readonly string nome_usuario = "John";
+        //readonly string nome_usuario = "John";
         private readonly Receita objReceita;
         private readonly Despesa objDespesa;
         private readonly CategoriaDespesa objCategoriaDespesa;
@@ -108,7 +108,7 @@ namespace Granamiza.Forms
         //Muda o nome de titulo, e mostra o usercontrol visão geral
         private void LblTitulo_Click(object sender, EventArgs e)
         {
-            lblBemVindo.Text = "Bem Vindo ao Granamiza, " + nome_usuario;
+            lblBemVindo.Text = "Bem Vindo ao Granamiza, " + Sessao.NomeUsuario;
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(gpVisaoGeral);
@@ -189,5 +189,13 @@ namespace Granamiza.Forms
             this.Close();
         }
 
+        private void btnPreferencias_Click(object sender, EventArgs e)
+        {
+            lblBemVindo.Text = "Preferências";
+            lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
+            UcPreferencias uc = new UcPreferencias();
+            pnlConteudo.Controls.Clear();
+            pnlConteudo.Controls.Add(uc);
+        }
     }
 }

@@ -60,8 +60,8 @@ namespace Granamiza.Forms
             this.btnDespesa = new System.Windows.Forms.Button();
             this.btnSaldoAtual = new System.Windows.Forms.Button();
             this.graficoGastoCategoria = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lnkLogout = new System.Windows.Forms.LinkLabel();
             this.vwtotalcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lnkLogout = new System.Windows.Forms.LinkLabel();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -89,7 +89,7 @@ namespace Granamiza.Forms
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(170, 562);
+            this.pnlMenu.Size = new System.Drawing.Size(170, 561);
             this.pnlMenu.TabIndex = 0;
             // 
             // panel1
@@ -116,7 +116,6 @@ namespace Granamiza.Forms
             // btnPreferencias
             // 
             this.btnPreferencias.BackColor = System.Drawing.Color.Transparent;
-            this.btnPreferencias.Enabled = false;
             this.btnPreferencias.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnPreferencias.FlatAppearance.BorderSize = 0;
             this.btnPreferencias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -133,6 +132,7 @@ namespace Granamiza.Forms
             this.btnPreferencias.Text = "Preferências";
             this.btnPreferencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPreferencias.UseVisualStyleBackColor = false;
+            this.btnPreferencias.Click += new System.EventHandler(this.btnPreferencias_Click);
             // 
             // btnCotacao
             // 
@@ -491,6 +491,10 @@ namespace Granamiza.Forms
             this.graficoGastoCategoria.TabIndex = 3;
             this.graficoGastoCategoria.Text = "Gráfico";
             // 
+            // vwtotalcategoriaBindingSource
+            // 
+            this.vwtotalcategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtotalcategoria);
+            // 
             // lnkLogout
             // 
             this.lnkLogout.AutoSize = true;
@@ -506,10 +510,6 @@ namespace Granamiza.Forms
             this.lnkLogout.Text = "SAIR";
             this.lnkLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLogout_LinkClicked);
             // 
-            // vwtotalcategoriaBindingSource
-            // 
-            this.vwtotalcategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtotalcategoria);
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -519,7 +519,7 @@ namespace Granamiza.Forms
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.lnkLogout);
             this.Controls.Add(this.pnlConteudo);
             this.Controls.Add(this.pbAvatar);

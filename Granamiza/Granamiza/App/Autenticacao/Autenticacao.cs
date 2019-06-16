@@ -24,18 +24,21 @@ namespace Granamiza.App.Autenticacao
                 using (var bd = new granamizaEntities())
                 {
                     //Consulta usando LINQ
-                    usuario user = (from u in bd.usuario
-                                    where u.email == email
-                                    select u).FirstOrDefault();
-
-                    //usuario user = bd.usuario.Where(u => u.email == email).FirstOrDefault<usuario>();
+                    var user = (from u in bd.usuario
+                                where u.email == email
+                                select new
+                                {
+                                    u.id,
+                                    u.nome,
+                                    u.senha
+                                }).FirstOrDefault();
 
                     //Testa se achou usuário, para poder verificar senha.
                     if (user != null)
                     {
                         if (VerificarSenha(senhaDigitada, user.senha))
                         {
-                            if(DefinirUsuario(user.id, user.nome)) {
+                            if (DefinirUsuario(user.id, user.nome)) {
                                 return true;
                             }
                             else
@@ -77,15 +80,20 @@ namespace Granamiza.App.Autenticacao
         {
             Sessao.IdUsuario = id_usuario;
             Sessao.NomeUsuario = nome_usuario;
-            string avatar_usuario;
+            //string avatar_usuario;
+            preferencias pref;
 
             try
             {
                 using (var bd = new granamizaEntities())
                 {
-                    avatar_usuario = (from p in bd.preferencias
+                    pref = (from p in bd.preferencias
                                       where p.usuario_id == id_usuario
-                                      select p.avatar).FirstOrDefault();
+                                      select p).FirstOrDefault();
+
+                    /*avatar_usuario = (from p in bd.preferencias
+                                      where p.usuario_id == id_usuario
+                                      select p.avatar).FirstOrDefault();*/
                 }
             }
             catch (Exception)
@@ -94,7 +102,9 @@ namespace Granamiza.App.Autenticacao
                 return false;
             }
 
-            Sessao.AvatarUsuario = avatar_usuario;
+            //Sessao.AvatarUsuario = avatar_usuario;
+            Sessao.AvatarUsuario = pref.avatar;
+            Sessao.DarkMode = pref.dark_mode;
             Sessao.CodigoUsuario = String.Empty;
 
             return true;

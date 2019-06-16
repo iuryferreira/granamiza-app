@@ -9,6 +9,8 @@ namespace Granamiza.App.CRUD
 {
     class Usuario
     {
+        private static readonly int id_usuario = Sessao.IdUsuario;
+
         internal static bool Salvar(TextBox txtNome, TextBox txtEmail, TextBox txtSenha, RadioButton rbJoana)
         {
             string caminhoAvatar = "C:\\Users\\Mag\\source\\repos\\iuryferreira\\granamiza-app\\Granamiza\\Granamiza\\Imagens\\male.png";
@@ -20,7 +22,7 @@ namespace Granamiza.App.CRUD
                 //Preencher os dados do usuário.
                 usuario u = new usuario
                 {
-                    nome = txtNome.Text,
+                    nome = txtNome.Text.Trim(),
                     email = txtEmail.Text.Trim(),
                     //Receber retorno de método que faz hash da senha.
                     senha = Validacao.CriptografarSenha(txtSenha.Text.Trim()),
@@ -34,7 +36,7 @@ namespace Granamiza.App.CRUD
                     caminhoAvatar = "C:\\Users\\Mag\\source\\repos\\iuryferreira\\granamiza-app\\Granamiza\\Granamiza\\Imagens\\female.png";
                 }
 
-                //Preenhcer dados de preferência de usuário.
+                //Preencher dados de preferência de usuário.
                 preferencias p = new preferencias
                 {
                     avatar = caminhoAvatar,
@@ -52,6 +54,68 @@ namespace Granamiza.App.CRUD
 
         }
 
+        //Recebe novo nome de usuário, busca usuário pelo id e o altera
+        internal static bool AtualizarNome(string novo_nome)
+        {
+            try
+            {
+                using (var bd = new granamizaEntities())
+                {
+                    //Consulta usando LINQ
+                    usuario user = (from u in bd.usuario
+                                    where u.id == id_usuario
+                                    select u).FirstOrDefault();
+
+                    if (user == null)
+                    {
+                        return false;
+                    }
+
+                    user.nome = novo_nome;
+                    bd.SaveChanges();
+                    Sessao.NomeUsuario = novo_nome;
+
+                    return true;
+                }
+
+            }
+            catch (Exception)
+            {
+                _ = new FrmPopupErro();
+                return false;
+            }
+        }
+
+        internal static bool AtualizarDarkMode(sbyte dark_mode)
+        {
+            try
+            {
+                using (var bd = new granamizaEntities())
+                {
+                    //Consulta usando LINQ
+                    preferencias pref = (from p in bd.preferencias
+                            where p.usuario_id == id_usuario
+                            select p).FirstOrDefault();
+
+                    if (pref == null)
+                    {
+                        return false;
+                    }
+
+                    pref.dark_mode = dark_mode;
+                    bd.SaveChanges();
+                    Sessao.DarkMode = dark_mode;
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                _ = new FrmPopupErro();
+                return false;
+            }
+        }
+
+        //Recebe senha em texto, criptografa, busca usuário pelo id e atríbui nova senha criptografada
         internal static bool RedefinirSenha(string senhaText)
         {
             string senha = Validacao.CriptografarSenha(senhaText);
@@ -62,7 +126,7 @@ namespace Granamiza.App.CRUD
                 {
                     //Consulta usando LINQ
                     usuario user = (from u in bd.usuario
-                                    where u.id == Sessao.IdUsuario
+                                    where u.id == id_usuario
                                     select u).FirstOrDefault();
 
                     if (user == null)
