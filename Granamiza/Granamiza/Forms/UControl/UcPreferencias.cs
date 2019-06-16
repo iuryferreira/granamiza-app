@@ -142,25 +142,31 @@ namespace Granamiza.Forms.UControl
         {
             if (dark_mode == 0)
             {
-                btnLigarDarkMode.BackColor = Color.Black;
-                btnLigarDarkMode.ForeColor = Color.DarkCyan;
+                btnLigarDarkMode.Text = "Ligar";
+                btnDesligarDarkMode.Text = "Desligado";
 
-                btnDesligarDarkMode.Enabled = false;
                 btnLigarDarkMode.Enabled = true;
+                btnDesligarDarkMode.Enabled = false;
 
-                btnDesligarDarkMode.ForeColor = Color.Black;
+                btnLigarDarkMode.BackColor = Color.FromArgb(119, 160, 112);
+                btnLigarDarkMode.ForeColor = Color.White;
+
                 btnDesligarDarkMode.BackColor = Color.White;
+                btnDesligarDarkMode.ForeColor = Color.Black;
             }
             else
             {
+                btnLigarDarkMode.Text = "Ligado";
+                btnDesligarDarkMode.Text = "Desligar";
+
                 btnLigarDarkMode.Enabled = false;
                 btnDesligarDarkMode.Enabled = true;
 
-                btnDesligarDarkMode.BackColor = Color.Black;
-                btnDesligarDarkMode.ForeColor = Color.DarkCyan;
-
-                btnLigarDarkMode.ForeColor = Color.Black;
                 btnLigarDarkMode.BackColor = Color.White;
+                btnLigarDarkMode.ForeColor = Color.Black;
+
+                btnDesligarDarkMode.BackColor = Color.FromArgb(119, 160, 112);
+                btnDesligarDarkMode.ForeColor = Color.White;
             }
         }
     }

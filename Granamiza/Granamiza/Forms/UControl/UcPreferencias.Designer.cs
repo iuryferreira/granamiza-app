@@ -34,9 +34,6 @@
             this.linhaNome = new System.Windows.Forms.Panel();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLigarDarkMode = new System.Windows.Forms.Button();
-            this.btnDesligarDarkMode = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -47,15 +44,19 @@
             this.btnAlterarSenha = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
+            this.btnDesligarDarkMode = new System.Windows.Forms.Button();
+            this.pnBotoesDarkMode = new System.Windows.Forms.Panel();
+            this.btnLigarDarkMode = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
+            this.pnBotoesDarkMode.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblNome.Location = new System.Drawing.Point(80, 87);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(41, 15);
@@ -90,60 +91,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // panel1
-            // 
-            this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnLigarDarkMode);
-            this.panel1.Controls.Add(this.btnDesligarDarkMode);
-            this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(83, 196);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(1);
-            this.panel1.Size = new System.Drawing.Size(218, 48);
-            this.panel1.TabIndex = 114;
-            // 
-            // btnLigarDarkMode
-            // 
-            this.btnLigarDarkMode.BackColor = System.Drawing.Color.Black;
-            this.btnLigarDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLigarDarkMode.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.btnLigarDarkMode.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnLigarDarkMode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnLigarDarkMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLigarDarkMode.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLigarDarkMode.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnLigarDarkMode.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLigarDarkMode.Location = new System.Drawing.Point(3, 4);
-            this.btnLigarDarkMode.Name = "btnLigarDarkMode";
-            this.btnLigarDarkMode.Size = new System.Drawing.Size(105, 39);
-            this.btnLigarDarkMode.TabIndex = 124;
-            this.btnLigarDarkMode.Text = "Ligar";
-            this.btnLigarDarkMode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLigarDarkMode.UseVisualStyleBackColor = false;
-            this.btnLigarDarkMode.Click += new System.EventHandler(this.BtnLigarDarkMode_Click);
-            // 
-            // btnDesligarDarkMode
-            // 
-            this.btnDesligarDarkMode.BackColor = System.Drawing.Color.White;
-            this.btnDesligarDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDesligarDarkMode.Enabled = false;
-            this.btnDesligarDarkMode.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.btnDesligarDarkMode.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnDesligarDarkMode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnDesligarDarkMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesligarDarkMode.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesligarDarkMode.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDesligarDarkMode.Location = new System.Drawing.Point(107, 4);
-            this.btnDesligarDarkMode.Name = "btnDesligarDarkMode";
-            this.btnDesligarDarkMode.Size = new System.Drawing.Size(105, 39);
-            this.btnDesligarDarkMode.TabIndex = 123;
-            this.btnDesligarDarkMode.Text = "Desligar";
-            this.btnDesligarDarkMode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDesligarDarkMode.UseVisualStyleBackColor = false;
-            this.btnDesligarDarkMode.Click += new System.EventHandler(this.BtnDesligarDarkMode_Click);
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.Text = "notifyIcon1";
@@ -153,7 +100,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(80, 178);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(80, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 15);
             this.label3.TabIndex = 121;
@@ -196,7 +144,7 @@
             this.btnAlterarSenha.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAlterarSenha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(83, 296);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(83, 299);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
             this.btnAlterarSenha.Size = new System.Drawing.Size(105, 39);
             this.btnAlterarSenha.TabIndex = 124;
@@ -247,6 +195,63 @@
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // btnDesligarDarkMode
+            // 
+            this.btnDesligarDarkMode.BackColor = System.Drawing.Color.White;
+            this.btnDesligarDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDesligarDarkMode.Enabled = false;
+            this.btnDesligarDarkMode.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnDesligarDarkMode.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnDesligarDarkMode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDesligarDarkMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesligarDarkMode.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesligarDarkMode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDesligarDarkMode.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDesligarDarkMode.Location = new System.Drawing.Point(82, 3);
+            this.btnDesligarDarkMode.Name = "btnDesligarDarkMode";
+            this.btnDesligarDarkMode.Size = new System.Drawing.Size(80, 30);
+            this.btnDesligarDarkMode.TabIndex = 123;
+            this.btnDesligarDarkMode.Text = "Desligado";
+            this.btnDesligarDarkMode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDesligarDarkMode.UseVisualStyleBackColor = false;
+            this.btnDesligarDarkMode.Click += new System.EventHandler(this.BtnDesligarDarkMode_Click);
+            // 
+            // pnBotoesDarkMode
+            // 
+            this.pnBotoesDarkMode.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.pnBotoesDarkMode.BackColor = System.Drawing.Color.Transparent;
+            this.pnBotoesDarkMode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnBotoesDarkMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnBotoesDarkMode.Controls.Add(this.btnDesligarDarkMode);
+            this.pnBotoesDarkMode.Controls.Add(this.btnLigarDarkMode);
+            this.pnBotoesDarkMode.ForeColor = System.Drawing.Color.Black;
+            this.pnBotoesDarkMode.Location = new System.Drawing.Point(83, 204);
+            this.pnBotoesDarkMode.Name = "pnBotoesDarkMode";
+            this.pnBotoesDarkMode.Padding = new System.Windows.Forms.Padding(1);
+            this.pnBotoesDarkMode.Size = new System.Drawing.Size(168, 38);
+            this.pnBotoesDarkMode.TabIndex = 114;
+            // 
+            // btnLigarDarkMode
+            // 
+            this.btnLigarDarkMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(160)))), ((int)(((byte)(112)))));
+            this.btnLigarDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLigarDarkMode.Enabled = false;
+            this.btnLigarDarkMode.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnLigarDarkMode.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnLigarDarkMode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnLigarDarkMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLigarDarkMode.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLigarDarkMode.ForeColor = System.Drawing.Color.White;
+            this.btnLigarDarkMode.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLigarDarkMode.Location = new System.Drawing.Point(3, 3);
+            this.btnLigarDarkMode.Name = "btnLigarDarkMode";
+            this.btnLigarDarkMode.Size = new System.Drawing.Size(80, 30);
+            this.btnLigarDarkMode.TabIndex = 125;
+            this.btnLigarDarkMode.Text = "Ligar";
+            this.btnLigarDarkMode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLigarDarkMode.UseVisualStyleBackColor = false;
+            this.btnLigarDarkMode.Click += new System.EventHandler(this.BtnLigarDarkMode_Click);
+            // 
             // UcPreferencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,15 +263,15 @@
             this.Controls.Add(this.picInfo);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnBotoesDarkMode);
             this.Controls.Add(this.linhaNome);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Name = "UcPreferencias";
             this.Size = new System.Drawing.Size(572, 467);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
+            this.pnBotoesDarkMode.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,7 +283,6 @@
         private System.Windows.Forms.Panel linhaNome;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
@@ -286,10 +290,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox picInfo;
         private System.Windows.Forms.Label lblInfo;
-        private System.Windows.Forms.Button btnDesligarDarkMode;
-        private System.Windows.Forms.Button btnLigarDarkMode;
         private System.Windows.Forms.Button btnAlterarSenha;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Panel pnBotoesDarkMode;
+        private System.Windows.Forms.Button btnDesligarDarkMode;
+        private System.Windows.Forms.Button btnLigarDarkMode;
     }
 }
