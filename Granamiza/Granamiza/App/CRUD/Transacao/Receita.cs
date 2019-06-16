@@ -79,7 +79,6 @@ namespace Granamiza.App.CRUD.Transacao
 
         public void Excluir(int idTransacao)
         {
-
             try
             {
                 using (var bd = new granamizaEntities())
