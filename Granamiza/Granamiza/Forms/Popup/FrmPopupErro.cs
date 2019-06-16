@@ -73,8 +73,16 @@ namespace Granamiza.Forms.Popup
         private void BtnConfirmar_Click(object sender, EventArgs e)
         {
 
-            frmPai.Close();
-            Close();
+            try
+            {
+                frmPai.Close();
+                Close();
+            }
+
+            catch
+            {
+                Close();
+            }
         }
 
 
