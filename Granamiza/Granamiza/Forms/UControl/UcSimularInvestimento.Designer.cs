@@ -29,24 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcSimularInvestimento));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSimulacao = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorinseridoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jurosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qntmesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datacriacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aplicacoesmensaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rendimentototalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.simulacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.picInfo = new System.Windows.Forms.PictureBox();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
@@ -74,13 +66,21 @@
             this.lblAplicacoesMensaisRs = new System.Windows.Forms.Label();
             this.linhaQntMeses = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.simulacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorinseridoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jurosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qntmesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datacriacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aplicacoesmensaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rendimentototalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simulacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numJuros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAplicacoesMensais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQntMeses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simulacaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSimulacao
@@ -93,14 +93,14 @@
             this.dgvSimulacao.AutoGenerateColumns = false;
             this.dgvSimulacao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSimulacao.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSimulacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSimulacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSimulacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSimulacao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -111,100 +111,25 @@
             this.aplicacoesmensaisDataGridViewTextBoxColumn,
             this.rendimentototalDataGridViewTextBoxColumn});
             this.dgvSimulacao.DataSource = this.simulacaoBindingSource;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSimulacao.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSimulacao.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvSimulacao.EnableHeadersVisualStyles = false;
             this.dgvSimulacao.GridColor = System.Drawing.Color.White;
             this.dgvSimulacao.Location = new System.Drawing.Point(20, 309);
             this.dgvSimulacao.Name = "dgvSimulacao";
             this.dgvSimulacao.ReadOnly = true;
             this.dgvSimulacao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSimulacao.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSimulacao.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSimulacao.Size = new System.Drawing.Size(538, 149);
             this.dgvSimulacao.TabIndex = 115;
             this.dgvSimulacao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSimulacao_CellClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // valorinseridoDataGridViewTextBoxColumn
-            // 
-            this.valorinseridoDataGridViewTextBoxColumn.DataPropertyName = "valor_inserido";
-            dataGridViewCellStyle26.Format = "C2";
-            dataGridViewCellStyle26.NullValue = null;
-            this.valorinseridoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
-            this.valorinseridoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
-            this.valorinseridoDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorinseridoDataGridViewTextBoxColumn.Name = "valorinseridoDataGridViewTextBoxColumn";
-            this.valorinseridoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jurosDataGridViewTextBoxColumn
-            // 
-            this.jurosDataGridViewTextBoxColumn.DataPropertyName = "juros";
-            dataGridViewCellStyle27.Format = "N2";
-            dataGridViewCellStyle27.NullValue = null;
-            this.jurosDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
-            this.jurosDataGridViewTextBoxColumn.FillWeight = 63.03066F;
-            this.jurosDataGridViewTextBoxColumn.HeaderText = "Juros";
-            this.jurosDataGridViewTextBoxColumn.Name = "jurosDataGridViewTextBoxColumn";
-            this.jurosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qntmesesDataGridViewTextBoxColumn
-            // 
-            this.qntmesesDataGridViewTextBoxColumn.DataPropertyName = "qnt_meses";
-            this.qntmesesDataGridViewTextBoxColumn.FillWeight = 60.9137F;
-            this.qntmesesDataGridViewTextBoxColumn.HeaderText = "Meses";
-            this.qntmesesDataGridViewTextBoxColumn.Name = "qntmesesDataGridViewTextBoxColumn";
-            this.qntmesesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datacriacaoDataGridViewTextBoxColumn
-            // 
-            this.datacriacaoDataGridViewTextBoxColumn.DataPropertyName = "data_criacao";
-            dataGridViewCellStyle28.Format = "d";
-            dataGridViewCellStyle28.NullValue = null;
-            this.datacriacaoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle28;
-            this.datacriacaoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
-            this.datacriacaoDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.datacriacaoDataGridViewTextBoxColumn.Name = "datacriacaoDataGridViewTextBoxColumn";
-            this.datacriacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aplicacoesmensaisDataGridViewTextBoxColumn
-            // 
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.DataPropertyName = "aplicacoes_mensais";
-            dataGridViewCellStyle29.Format = "C2";
-            dataGridViewCellStyle29.NullValue = null;
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle29;
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.FillWeight = 119.0139F;
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.HeaderText = "Aplicações Mensais";
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.Name = "aplicacoesmensaisDataGridViewTextBoxColumn";
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rendimentototalDataGridViewTextBoxColumn
-            // 
-            this.rendimentototalDataGridViewTextBoxColumn.DataPropertyName = "rendimento_total";
-            dataGridViewCellStyle30.Format = "C2";
-            dataGridViewCellStyle30.NullValue = null;
-            this.rendimentototalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle30;
-            this.rendimentototalDataGridViewTextBoxColumn.FillWeight = 119.0139F;
-            this.rendimentototalDataGridViewTextBoxColumn.HeaderText = "Rendimento Total";
-            this.rendimentototalDataGridViewTextBoxColumn.Name = "rendimentototalDataGridViewTextBoxColumn";
-            this.rendimentototalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // simulacaoBindingSource
-            // 
-            this.simulacaoBindingSource.DataSource = typeof(Granamiza.Modelo.simulacao);
             // 
             // picInfo
             // 
@@ -548,6 +473,88 @@
     " ";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // simulacaoBindingSource
+            // 
+            this.simulacaoBindingSource.DataSource = typeof(Granamiza.Modelo.simulacao);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // valorinseridoDataGridViewTextBoxColumn
+            // 
+            this.valorinseridoDataGridViewTextBoxColumn.DataPropertyName = "valor_inserido";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.valorinseridoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.valorinseridoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
+            this.valorinseridoDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorinseridoDataGridViewTextBoxColumn.Name = "valorinseridoDataGridViewTextBoxColumn";
+            this.valorinseridoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorinseridoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // jurosDataGridViewTextBoxColumn
+            // 
+            this.jurosDataGridViewTextBoxColumn.DataPropertyName = "juros";
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.jurosDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.jurosDataGridViewTextBoxColumn.FillWeight = 63.03066F;
+            this.jurosDataGridViewTextBoxColumn.HeaderText = "Juros";
+            this.jurosDataGridViewTextBoxColumn.Name = "jurosDataGridViewTextBoxColumn";
+            this.jurosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.jurosDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // qntmesesDataGridViewTextBoxColumn
+            // 
+            this.qntmesesDataGridViewTextBoxColumn.DataPropertyName = "qnt_meses";
+            this.qntmesesDataGridViewTextBoxColumn.FillWeight = 60.9137F;
+            this.qntmesesDataGridViewTextBoxColumn.HeaderText = "Meses";
+            this.qntmesesDataGridViewTextBoxColumn.Name = "qntmesesDataGridViewTextBoxColumn";
+            this.qntmesesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.qntmesesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // datacriacaoDataGridViewTextBoxColumn
+            // 
+            this.datacriacaoDataGridViewTextBoxColumn.DataPropertyName = "data_criacao";
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.datacriacaoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.datacriacaoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
+            this.datacriacaoDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.datacriacaoDataGridViewTextBoxColumn.Name = "datacriacaoDataGridViewTextBoxColumn";
+            this.datacriacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.datacriacaoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // aplicacoesmensaisDataGridViewTextBoxColumn
+            // 
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.DataPropertyName = "aplicacoes_mensais";
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.FillWeight = 119.0139F;
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.HeaderText = "Aplicações Mensais";
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.Name = "aplicacoesmensaisDataGridViewTextBoxColumn";
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // rendimentototalDataGridViewTextBoxColumn
+            // 
+            this.rendimentototalDataGridViewTextBoxColumn.DataPropertyName = "rendimento_total";
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.rendimentototalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.rendimentototalDataGridViewTextBoxColumn.FillWeight = 119.0139F;
+            this.rendimentototalDataGridViewTextBoxColumn.HeaderText = "Rendimento Total";
+            this.rendimentototalDataGridViewTextBoxColumn.Name = "rendimentototalDataGridViewTextBoxColumn";
+            this.rendimentototalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rendimentototalDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // UcSimularInvestimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,12 +592,12 @@
             this.Size = new System.Drawing.Size(572, 467);
             this.Load += new System.EventHandler(this.UserControlSimularInvestimento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simulacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numJuros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAplicacoesMensais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQntMeses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simulacaoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,6 +633,7 @@
         private System.Windows.Forms.Label lblJurosPorcentagem;
         private System.Windows.Forms.Label lblAplicacoesMensaisRs;
         private System.Windows.Forms.Panel linhaQntMeses;
+        private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorinseridoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jurosDataGridViewTextBoxColumn;
@@ -633,6 +641,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datacriacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aplicacoesmensaisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rendimentototalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label lblInfo;
     }
 }

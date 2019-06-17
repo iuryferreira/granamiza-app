@@ -98,11 +98,12 @@
             this.panel1.Controls.Add(this.btnLigarDarkMode);
             this.panel1.Controls.Add(this.btnDesligarDarkMode);
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(83, 196);
+            this.panel1.Location = new System.Drawing.Point(83, 231);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(1);
             this.panel1.Size = new System.Drawing.Size(218, 48);
             this.panel1.TabIndex = 114;
+            this.panel1.Visible = false;
             // 
             // btnLigarDarkMode
             // 
@@ -153,11 +154,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(80, 178);
+            this.label3.Location = new System.Drawing.Point(80, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 15);
             this.label3.TabIndex = 121;
             this.label3.Text = "Dark Mode";
+            this.label3.Visible = false;
             // 
             // picInfo
             // 
@@ -196,7 +198,7 @@
             this.btnAlterarSenha.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAlterarSenha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(83, 296);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(83, 156);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
             this.btnAlterarSenha.Size = new System.Drawing.Size(105, 39);
             this.btnAlterarSenha.TabIndex = 124;
@@ -215,7 +217,6 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(433, 405);
             this.btnCancelar.Name = "btnCancelar";
@@ -236,7 +237,6 @@
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
             this.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOk.Location = new System.Drawing.Point(433, 364);
             this.btnOk.Name = "btnOk";

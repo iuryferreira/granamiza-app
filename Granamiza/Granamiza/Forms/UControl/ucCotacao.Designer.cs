@@ -51,7 +51,6 @@
             this.picInfo = new System.Windows.Forms.PictureBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dgvCotacao = new System.Windows.Forms.DataGridView();
-            this.cotacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTituloGridView = new System.Windows.Forms.Label();
             this.picSetaLblTituloGridView = new System.Windows.Forms.PictureBox();
             this.lblSetaBaixaEuro = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.lblSetaAltaBitcoin = new System.Windows.Forms.Label();
             this.lblSetaBaixaBitcoin = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.cotacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data_consulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor_dolar = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,8 +68,8 @@
             this.valor_bitcoin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCotacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cotacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSetaLblTituloGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cotacaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloDolar
@@ -333,10 +333,6 @@
             this.dgvCotacao.TabIndex = 176;
             this.dgvCotacao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCotacao_CellClick);
             // 
-            // cotacaoBindingSource
-            // 
-            this.cotacaoBindingSource.DataSource = typeof(Granamiza.Modelo.cotacao);
-            // 
             // lblTituloGridView
             // 
             this.lblTituloGridView.AutoSize = true;
@@ -444,12 +440,17 @@
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
+            // cotacaoBindingSource
+            // 
+            this.cotacaoBindingSource.DataSource = typeof(Granamiza.Modelo.cotacao);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // data_consulta
@@ -461,6 +462,7 @@
             this.data_consulta.HeaderText = "Data";
             this.data_consulta.Name = "data_consulta";
             this.data_consulta.ReadOnly = true;
+            this.data_consulta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // valor_dolar
             // 
@@ -471,6 +473,7 @@
             this.valor_dolar.HeaderText = "Dolar (USD)";
             this.valor_dolar.Name = "valor_dolar";
             this.valor_dolar.ReadOnly = true;
+            this.valor_dolar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // valor_euro
             // 
@@ -481,6 +484,7 @@
             this.valor_euro.HeaderText = "Euro (EUR)";
             this.valor_euro.Name = "valor_euro";
             this.valor_euro.ReadOnly = true;
+            this.valor_euro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // valor_bitcoin
             // 
@@ -491,6 +495,7 @@
             this.valor_bitcoin.HeaderText = "Bitcoin (BTC)";
             this.valor_bitcoin.Name = "valor_bitcoin";
             this.valor_bitcoin.ReadOnly = true;
+            this.valor_bitcoin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // UcCotacao
             // 
@@ -524,8 +529,8 @@
             this.Size = new System.Drawing.Size(591, 467);
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCotacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cotacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSetaLblTituloGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cotacaoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
