@@ -17,7 +17,6 @@ namespace Granamiza.Forms.UControl
     public partial class UcPreferencias : UserControl
     {
         bool validou = true;
-        bool salvou = true;
         sbyte dark_mode = 0;
 
         public UcPreferencias()
@@ -38,14 +37,12 @@ namespace Granamiza.Forms.UControl
         {
             if (txtNome.Text.Trim().Length > 3)
             {
-                //e.Cancel = false;
                 validou = true;
                 errorProvider1.SetError(txtNome, "");
                 btnOk.Enabled = true;
             }
             else
             {
-                //e.Cancel = true;
                 validou = false;
                 txtNome.Focus();
                 errorProvider1.SetError(txtNome, "O nome precisa ser maior que 3 caracteres.");
@@ -61,9 +58,9 @@ namespace Granamiza.Forms.UControl
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            bool salvou = false;
             string novo_nome = txtNome.Text.Trim();
 
-            //if (ValidateChildren(ValidationConstraints.Enabled))
             if(Sessao.NomeUsuario != novo_nome || Sessao.DarkMode != dark_mode)
             {
                 if (Sessao.NomeUsuario != novo_nome)
@@ -109,14 +106,12 @@ namespace Granamiza.Forms.UControl
         {
             if (txtNome.Text.TrimEnd().Length > 3)
             {
-                //e.Cancel = false;
                 validou = true;
                 errorProvider1.SetError(txtNome, "");
                 btnOk.Enabled = true;
             }
             else
             {
-                //e.Cancel = true;
                 validou = false;
                 txtNome.Focus();
                 errorProvider1.SetError(txtNome, "O nome precisa ser maior que 3 caracteres.");
