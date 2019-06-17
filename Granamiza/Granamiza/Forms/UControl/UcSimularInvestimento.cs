@@ -21,6 +21,7 @@ namespace Granamiza.Forms.UControl
         public UcSimularInvestimento()
         {
             InitializeComponent();
+            
         }
 
         //Chama método para atualizar dados do data grid view
@@ -32,6 +33,12 @@ namespace Granamiza.Forms.UControl
         //Ao clicar no botão calcular, é calculado o valor e salva a simulação no banco de dados 
         private void BtnCalcular_Click(object sender, EventArgs e)
         {
+            if (numValor.Value <= 0 || numJuros.Value <= 0 || numQntMeses.Value <= 0)
+            {
+                MessageBox.Show("Preecha os campos obrigatórios adequadamente com valores maiores que 0.");
+                return;
+            }
+
             double rendTotal;
             rendTotal = CalcularInvestimento(numValor.Value, numJuros.Value, numAplicacoesMensais.Value, Convert.ToInt32(numQntMeses.Value));
 
@@ -89,6 +96,8 @@ namespace Granamiza.Forms.UControl
             try
             {
                 idSimulacao = int.Parse(dgvSimulacao.Rows[e.RowIndex].Cells[0].Value.ToString());
+                btnRemover.Enabled = true;
+                btnLimpar.Enabled = true;
                 CarregarDadosSimulacao();
             }
             catch (Exception)
@@ -153,8 +162,8 @@ namespace Granamiza.Forms.UControl
         //Limpa data e hora
         private void LimparDataHora()
         {
-            txtData.Text = String.Empty;
-            txtHora.Text = String.Empty;
+            txtData.Text = string.Empty;
+            txtHora.Text = string.Empty;
         }
 
         //Limpa todos os dados das caixas de texto
@@ -164,9 +173,16 @@ namespace Granamiza.Forms.UControl
             numJuros.Value = 0;
             numAplicacoesMensais.Value = 0;
             numQntMeses.Value = 0;
-            lblRendimentoTotal.Text = String.Empty;
-            txtData.Text = String.Empty;
-            txtHora.Text = String.Empty;
+            lblRendimentoTotal.Text = string.Empty;
+            txtData.Text = string.Empty;
+            txtHora.Text = string.Empty;
+            btnRemover.Enabled = false;
+            btnLimpar.Enabled = false;
+        }
+
+        private void BtnLimpar_Click_1(object sender, EventArgs e)
+        {
+            LimparDados();
         }
     }
 }

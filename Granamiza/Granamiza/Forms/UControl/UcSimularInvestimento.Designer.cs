@@ -29,26 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcSimularInvestimento));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSimulacao = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorinseridoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jurosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qntmesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datacriacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aplicacoesmensaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rendimentototalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.simulacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.picInfo = new System.Windows.Forms.PictureBox();
-            this.btnRemover = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.linhaAplicacoesMensais = new System.Windows.Forms.Panel();
             this.linhaHora = new System.Windows.Forms.Panel();
@@ -74,13 +65,27 @@
             this.lblAplicacoesMensaisRs = new System.Windows.Forms.Label();
             this.linhaQntMeses = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.lblObr1 = new System.Windows.Forms.Label();
+            this.lblObr2 = new System.Windows.Forms.Label();
+            this.lblObr3 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorinseridoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jurosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qntmesesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datacriacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aplicacoesmensaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rendimentototalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.simulacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simulacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numJuros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAplicacoesMensais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQntMeses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simulacaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSimulacao
@@ -93,14 +98,14 @@
             this.dgvSimulacao.AutoGenerateColumns = false;
             this.dgvSimulacao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSimulacao.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSimulacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSimulacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSimulacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSimulacao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -111,100 +116,25 @@
             this.aplicacoesmensaisDataGridViewTextBoxColumn,
             this.rendimentototalDataGridViewTextBoxColumn});
             this.dgvSimulacao.DataSource = this.simulacaoBindingSource;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSimulacao.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("SF Pro Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkSeaGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSimulacao.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvSimulacao.EnableHeadersVisualStyles = false;
             this.dgvSimulacao.GridColor = System.Drawing.Color.White;
             this.dgvSimulacao.Location = new System.Drawing.Point(20, 309);
             this.dgvSimulacao.Name = "dgvSimulacao";
             this.dgvSimulacao.ReadOnly = true;
             this.dgvSimulacao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSimulacao.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSimulacao.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSimulacao.Size = new System.Drawing.Size(538, 149);
             this.dgvSimulacao.TabIndex = 115;
             this.dgvSimulacao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSimulacao_CellClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // valorinseridoDataGridViewTextBoxColumn
-            // 
-            this.valorinseridoDataGridViewTextBoxColumn.DataPropertyName = "valor_inserido";
-            dataGridViewCellStyle26.Format = "C2";
-            dataGridViewCellStyle26.NullValue = null;
-            this.valorinseridoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
-            this.valorinseridoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
-            this.valorinseridoDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorinseridoDataGridViewTextBoxColumn.Name = "valorinseridoDataGridViewTextBoxColumn";
-            this.valorinseridoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jurosDataGridViewTextBoxColumn
-            // 
-            this.jurosDataGridViewTextBoxColumn.DataPropertyName = "juros";
-            dataGridViewCellStyle27.Format = "N2";
-            dataGridViewCellStyle27.NullValue = null;
-            this.jurosDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
-            this.jurosDataGridViewTextBoxColumn.FillWeight = 63.03066F;
-            this.jurosDataGridViewTextBoxColumn.HeaderText = "Juros";
-            this.jurosDataGridViewTextBoxColumn.Name = "jurosDataGridViewTextBoxColumn";
-            this.jurosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qntmesesDataGridViewTextBoxColumn
-            // 
-            this.qntmesesDataGridViewTextBoxColumn.DataPropertyName = "qnt_meses";
-            this.qntmesesDataGridViewTextBoxColumn.FillWeight = 60.9137F;
-            this.qntmesesDataGridViewTextBoxColumn.HeaderText = "Meses";
-            this.qntmesesDataGridViewTextBoxColumn.Name = "qntmesesDataGridViewTextBoxColumn";
-            this.qntmesesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datacriacaoDataGridViewTextBoxColumn
-            // 
-            this.datacriacaoDataGridViewTextBoxColumn.DataPropertyName = "data_criacao";
-            dataGridViewCellStyle28.Format = "d";
-            dataGridViewCellStyle28.NullValue = null;
-            this.datacriacaoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle28;
-            this.datacriacaoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
-            this.datacriacaoDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.datacriacaoDataGridViewTextBoxColumn.Name = "datacriacaoDataGridViewTextBoxColumn";
-            this.datacriacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aplicacoesmensaisDataGridViewTextBoxColumn
-            // 
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.DataPropertyName = "aplicacoes_mensais";
-            dataGridViewCellStyle29.Format = "C2";
-            dataGridViewCellStyle29.NullValue = null;
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle29;
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.FillWeight = 119.0139F;
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.HeaderText = "Aplicações Mensais";
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.Name = "aplicacoesmensaisDataGridViewTextBoxColumn";
-            this.aplicacoesmensaisDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rendimentototalDataGridViewTextBoxColumn
-            // 
-            this.rendimentototalDataGridViewTextBoxColumn.DataPropertyName = "rendimento_total";
-            dataGridViewCellStyle30.Format = "C2";
-            dataGridViewCellStyle30.NullValue = null;
-            this.rendimentototalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle30;
-            this.rendimentototalDataGridViewTextBoxColumn.FillWeight = 119.0139F;
-            this.rendimentototalDataGridViewTextBoxColumn.HeaderText = "Rendimento Total";
-            this.rendimentototalDataGridViewTextBoxColumn.Name = "rendimentototalDataGridViewTextBoxColumn";
-            this.rendimentototalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // simulacaoBindingSource
-            // 
-            this.simulacaoBindingSource.DataSource = typeof(Granamiza.Modelo.simulacao);
             // 
             // picInfo
             // 
@@ -217,27 +147,6 @@
             this.picInfo.TabIndex = 114;
             this.picInfo.TabStop = false;
             // 
-            // btnRemover
-            // 
-            this.btnRemover.BackColor = System.Drawing.Color.Transparent;
-            this.btnRemover.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRemover.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnRemover.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemover.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
-            this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(454, 254);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(103, 38);
-            this.btnRemover.TabIndex = 111;
-            this.btnRemover.Text = "      Remover";
-            this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRemover.UseVisualStyleBackColor = false;
-            this.btnRemover.Click += new System.EventHandler(this.BtnRemover_Click);
-            // 
             // btnAdicionar
             // 
             this.btnAdicionar.BackColor = System.Drawing.Color.Transparent;
@@ -247,14 +156,14 @@
             this.btnAdicionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdicionar.ForeColor = System.Drawing.Color.Gray;
             this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
             this.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionar.Location = new System.Drawing.Point(452, 213);
+            this.btnAdicionar.Location = new System.Drawing.Point(456, 211);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(105, 39);
+            this.btnAdicionar.Size = new System.Drawing.Size(101, 39);
             this.btnAdicionar.TabIndex = 110;
-            this.btnAdicionar.Text = "    Calcular";
+            this.btnAdicionar.Text = "   Calcular";
             this.btnAdicionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdicionar.UseVisualStyleBackColor = false;
             this.btnAdicionar.Click += new System.EventHandler(this.BtnCalcular_Click);
@@ -281,7 +190,7 @@
             // 
             this.lblAplicacoesMensais.AutoSize = true;
             this.lblAplicacoesMensais.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
-            this.lblAplicacoesMensais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblAplicacoesMensais.ForeColor = System.Drawing.Color.Gray;
             this.lblAplicacoesMensais.Location = new System.Drawing.Point(24, 125);
             this.lblAplicacoesMensais.Name = "lblAplicacoesMensais";
             this.lblAplicacoesMensais.Size = new System.Drawing.Size(106, 14);
@@ -292,7 +201,7 @@
             // 
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblHora.ForeColor = System.Drawing.Color.Gray;
             this.lblHora.Location = new System.Drawing.Point(451, 59);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(31, 14);
@@ -312,7 +221,7 @@
             // 
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
-            this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblData.ForeColor = System.Drawing.Color.Gray;
             this.lblData.Location = new System.Drawing.Point(329, 60);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(31, 14);
@@ -323,7 +232,7 @@
             // 
             this.lblJuros.AutoSize = true;
             this.lblJuros.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
-            this.lblJuros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblJuros.ForeColor = System.Drawing.Color.Gray;
             this.lblJuros.Location = new System.Drawing.Point(209, 60);
             this.lblJuros.Name = "lblJuros";
             this.lblJuros.Size = new System.Drawing.Size(35, 14);
@@ -343,7 +252,7 @@
             // 
             this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
-            this.lblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblValor.ForeColor = System.Drawing.Color.Gray;
             this.lblValor.Location = new System.Drawing.Point(26, 60);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(32, 14);
@@ -363,7 +272,7 @@
             // 
             this.lblTituloRendTotal.AutoSize = true;
             this.lblTituloRendTotal.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloRendTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTituloRendTotal.ForeColor = System.Drawing.Color.Gray;
             this.lblTituloRendTotal.Location = new System.Drawing.Point(24, 213);
             this.lblTituloRendTotal.Name = "lblTituloRendTotal";
             this.lblTituloRendTotal.Size = new System.Drawing.Size(167, 23);
@@ -374,7 +283,7 @@
             // 
             this.lblRendimentoTotal.AutoSize = true;
             this.lblRendimentoTotal.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRendimentoTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRendimentoTotal.ForeColor = System.Drawing.Color.Gray;
             this.lblRendimentoTotal.Location = new System.Drawing.Point(208, 213);
             this.lblRendimentoTotal.MinimumSize = new System.Drawing.Size(120, 23);
             this.lblRendimentoTotal.Name = "lblRendimentoTotal";
@@ -386,6 +295,7 @@
             this.numValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numValor.DecimalPlaces = 2;
             this.numValor.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.numValor.ForeColor = System.Drawing.Color.Black;
             this.numValor.Increment = new decimal(new int[] {
             50,
             0,
@@ -408,6 +318,7 @@
             this.numJuros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numJuros.DecimalPlaces = 2;
             this.numJuros.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.numJuros.ForeColor = System.Drawing.Color.Black;
             this.numJuros.Increment = new decimal(new int[] {
             1,
             0,
@@ -424,6 +335,7 @@
             this.txtData.BackColor = System.Drawing.SystemColors.Window;
             this.txtData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtData.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.txtData.ForeColor = System.Drawing.Color.Black;
             this.txtData.Location = new System.Drawing.Point(334, 86);
             this.txtData.Mask = "00/00/0000";
             this.txtData.Name = "txtData";
@@ -437,6 +349,7 @@
             this.txtHora.BackColor = System.Drawing.SystemColors.Window;
             this.txtHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHora.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.txtHora.ForeColor = System.Drawing.Color.Black;
             this.txtHora.Location = new System.Drawing.Point(456, 86);
             this.txtHora.Mask = "00:00";
             this.txtHora.Name = "txtHora";
@@ -450,6 +363,7 @@
             this.numAplicacoesMensais.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numAplicacoesMensais.DecimalPlaces = 2;
             this.numAplicacoesMensais.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.numAplicacoesMensais.ForeColor = System.Drawing.Color.Black;
             this.numAplicacoesMensais.Increment = new decimal(new int[] {
             50,
             0,
@@ -471,6 +385,7 @@
             // 
             this.numQntMeses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numQntMeses.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
+            this.numQntMeses.ForeColor = System.Drawing.Color.Black;
             this.numQntMeses.Location = new System.Drawing.Point(209, 151);
             this.numQntMeses.Maximum = new decimal(new int[] {
             800,
@@ -486,7 +401,7 @@
             // 
             this.lblQntMeses.AutoSize = true;
             this.lblQntMeses.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
-            this.lblQntMeses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblQntMeses.ForeColor = System.Drawing.Color.Gray;
             this.lblQntMeses.Location = new System.Drawing.Point(202, 125);
             this.lblQntMeses.Name = "lblQntMeses";
             this.lblQntMeses.Size = new System.Drawing.Size(117, 14);
@@ -496,20 +411,23 @@
             // lblValorRs
             // 
             this.lblValorRs.AutoSize = true;
+            this.lblValorRs.BackColor = System.Drawing.Color.White;
             this.lblValorRs.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
-            this.lblValorRs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblValorRs.Location = new System.Drawing.Point(28, 84);
+            this.lblValorRs.ForeColor = System.Drawing.Color.Black;
+            this.lblValorRs.Location = new System.Drawing.Point(31, 84);
+            this.lblValorRs.MinimumSize = new System.Drawing.Size(0, 22);
             this.lblValorRs.Name = "lblValorRs";
-            this.lblValorRs.Size = new System.Drawing.Size(29, 19);
+            this.lblValorRs.Size = new System.Drawing.Size(32, 22);
             this.lblValorRs.TabIndex = 126;
-            this.lblValorRs.Text = "R$";
+            this.lblValorRs.Text = "R$ ";
             // 
             // lblJurosPorcentagem
             // 
             this.lblJurosPorcentagem.AutoSize = true;
+            this.lblJurosPorcentagem.BackColor = System.Drawing.Color.White;
             this.lblJurosPorcentagem.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
-            this.lblJurosPorcentagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblJurosPorcentagem.Location = new System.Drawing.Point(255, 84);
+            this.lblJurosPorcentagem.ForeColor = System.Drawing.Color.Black;
+            this.lblJurosPorcentagem.Location = new System.Drawing.Point(255, 85);
             this.lblJurosPorcentagem.Name = "lblJurosPorcentagem";
             this.lblJurosPorcentagem.Size = new System.Drawing.Size(22, 19);
             this.lblJurosPorcentagem.TabIndex = 127;
@@ -518,13 +436,15 @@
             // lblAplicacoesMensaisRs
             // 
             this.lblAplicacoesMensaisRs.AutoSize = true;
+            this.lblAplicacoesMensaisRs.BackColor = System.Drawing.Color.White;
             this.lblAplicacoesMensaisRs.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
-            this.lblAplicacoesMensaisRs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAplicacoesMensaisRs.Location = new System.Drawing.Point(28, 151);
+            this.lblAplicacoesMensaisRs.ForeColor = System.Drawing.Color.Black;
+            this.lblAplicacoesMensaisRs.Location = new System.Drawing.Point(31, 151);
+            this.lblAplicacoesMensaisRs.MinimumSize = new System.Drawing.Size(0, 22);
             this.lblAplicacoesMensaisRs.Name = "lblAplicacoesMensaisRs";
-            this.lblAplicacoesMensaisRs.Size = new System.Drawing.Size(29, 19);
+            this.lblAplicacoesMensaisRs.Size = new System.Drawing.Size(32, 22);
             this.lblAplicacoesMensaisRs.TabIndex = 128;
-            this.lblAplicacoesMensaisRs.Text = "R$";
+            this.lblAplicacoesMensaisRs.Text = "R$ ";
             // 
             // linhaQntMeses
             // 
@@ -539,6 +459,7 @@
             // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("SF Pro Display", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Gray;
             this.lblInfo.Location = new System.Drawing.Point(41, 10);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(396, 26);
@@ -548,11 +469,170 @@
     " ";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.Enabled = false;
+            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLimpar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnLimpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLimpar.Image = global::Granamiza.Properties.Resources.edit;
+            this.btnLimpar.Location = new System.Drawing.Point(458, 255);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(45, 38);
+            this.btnLimpar.TabIndex = 132;
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click_1);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemover.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemover.Enabled = false;
+            this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRemover.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnRemover.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemover.Font = new System.Drawing.Font("SF Pro Display", 8.75F);
+            this.btnRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
+            this.btnRemover.Location = new System.Drawing.Point(509, 255);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(45, 38);
+            this.btnRemover.TabIndex = 131;
+            this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.BtnRemover_Click);
+            // 
+            // lblObr1
+            // 
+            this.lblObr1.AutoSize = true;
+            this.lblObr1.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObr1.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblObr1.Location = new System.Drawing.Point(181, 84);
+            this.lblObr1.Name = "lblObr1";
+            this.lblObr1.Size = new System.Drawing.Size(13, 15);
+            this.lblObr1.TabIndex = 133;
+            this.lblObr1.Text = "*";
+            this.toolTip1.SetToolTip(this.lblObr1, "Obrigatório valor maior que 0");
+            // 
+            // lblObr2
+            // 
+            this.lblObr2.AutoSize = true;
+            this.lblObr2.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObr2.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblObr2.Location = new System.Drawing.Point(312, 84);
+            this.lblObr2.Name = "lblObr2";
+            this.lblObr2.Size = new System.Drawing.Size(13, 15);
+            this.lblObr2.TabIndex = 134;
+            this.lblObr2.Text = "*";
+            this.toolTip1.SetToolTip(this.lblObr2, "Obrigatório valor maior que 0");
+            // 
+            // lblObr3
+            // 
+            this.lblObr3.AutoSize = true;
+            this.lblObr3.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObr3.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblObr3.Location = new System.Drawing.Point(312, 152);
+            this.lblObr3.Name = "lblObr3";
+            this.lblObr3.Size = new System.Drawing.Size(13, 15);
+            this.lblObr3.TabIndex = 135;
+            this.lblObr3.Text = "*";
+            this.toolTip1.SetToolTip(this.lblObr3, "Obrigatório valor inteiro maior que 0");
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 2;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // valorinseridoDataGridViewTextBoxColumn
+            // 
+            this.valorinseridoDataGridViewTextBoxColumn.DataPropertyName = "valor_inserido";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.valorinseridoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.valorinseridoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
+            this.valorinseridoDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorinseridoDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.valorinseridoDataGridViewTextBoxColumn.Name = "valorinseridoDataGridViewTextBoxColumn";
+            this.valorinseridoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jurosDataGridViewTextBoxColumn
+            // 
+            this.jurosDataGridViewTextBoxColumn.DataPropertyName = "juros";
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.jurosDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.jurosDataGridViewTextBoxColumn.FillWeight = 63.03066F;
+            this.jurosDataGridViewTextBoxColumn.HeaderText = "Juros";
+            this.jurosDataGridViewTextBoxColumn.Name = "jurosDataGridViewTextBoxColumn";
+            this.jurosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qntmesesDataGridViewTextBoxColumn
+            // 
+            this.qntmesesDataGridViewTextBoxColumn.DataPropertyName = "qnt_meses";
+            this.qntmesesDataGridViewTextBoxColumn.FillWeight = 60.9137F;
+            this.qntmesesDataGridViewTextBoxColumn.HeaderText = "Meses";
+            this.qntmesesDataGridViewTextBoxColumn.Name = "qntmesesDataGridViewTextBoxColumn";
+            this.qntmesesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datacriacaoDataGridViewTextBoxColumn
+            // 
+            this.datacriacaoDataGridViewTextBoxColumn.DataPropertyName = "data_criacao";
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.datacriacaoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.datacriacaoDataGridViewTextBoxColumn.FillWeight = 119.0139F;
+            this.datacriacaoDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.datacriacaoDataGridViewTextBoxColumn.Name = "datacriacaoDataGridViewTextBoxColumn";
+            this.datacriacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // aplicacoesmensaisDataGridViewTextBoxColumn
+            // 
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.DataPropertyName = "aplicacoes_mensais";
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.FillWeight = 119.0139F;
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.HeaderText = "Aplicações Mensais";
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.Name = "aplicacoesmensaisDataGridViewTextBoxColumn";
+            this.aplicacoesmensaisDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rendimentototalDataGridViewTextBoxColumn
+            // 
+            this.rendimentototalDataGridViewTextBoxColumn.DataPropertyName = "rendimento_total";
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.rendimentototalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.rendimentototalDataGridViewTextBoxColumn.FillWeight = 119.0139F;
+            this.rendimentototalDataGridViewTextBoxColumn.HeaderText = "Rendimento Total";
+            this.rendimentototalDataGridViewTextBoxColumn.Name = "rendimentototalDataGridViewTextBoxColumn";
+            this.rendimentototalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // simulacaoBindingSource
+            // 
+            this.simulacaoBindingSource.DataSource = typeof(Granamiza.Modelo.simulacao);
+            // 
             // UcSimularInvestimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lblObr3);
+            this.Controls.Add(this.lblObr2);
+            this.Controls.Add(this.lblObr1);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.linhaQntMeses);
             this.Controls.Add(this.lblAplicacoesMensaisRs);
@@ -569,7 +649,6 @@
             this.Controls.Add(this.lblTituloRendTotal);
             this.Controls.Add(this.dgvSimulacao);
             this.Controls.Add(this.picInfo);
-            this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.linhaAplicacoesMensais);
             this.Controls.Add(this.linhaHora);
@@ -585,12 +664,12 @@
             this.Size = new System.Drawing.Size(572, 467);
             this.Load += new System.EventHandler(this.UserControlSimularInvestimento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simulacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numJuros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAplicacoesMensais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQntMeses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simulacaoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,7 +679,6 @@
 
         private System.Windows.Forms.DataGridView dgvSimulacao;
         private System.Windows.Forms.PictureBox picInfo;
-        private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Panel linhaAplicacoesMensais;
         private System.Windows.Forms.Panel linhaHora;
@@ -626,6 +704,7 @@
         private System.Windows.Forms.Label lblJurosPorcentagem;
         private System.Windows.Forms.Label lblAplicacoesMensaisRs;
         private System.Windows.Forms.Panel linhaQntMeses;
+        private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorinseridoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jurosDataGridViewTextBoxColumn;
@@ -633,6 +712,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datacriacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aplicacoesmensaisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rendimentototalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Label lblObr1;
+        private System.Windows.Forms.Label lblObr2;
+        private System.Windows.Forms.Label lblObr3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -51,17 +51,17 @@ namespace Granamiza.Forms
             this.lblAjuda = new System.Windows.Forms.Label();
             this.pbAjuda = new System.Windows.Forms.PictureBox();
             this.lblOla = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblGastosPorCategoria = new System.Windows.Forms.Label();
             this.gpVisaoGeral = new System.Windows.Forms.GroupBox();
             this.lblSaldo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblReceita = new System.Windows.Forms.Label();
             this.btnReceita = new System.Windows.Forms.Button();
             this.lblDespesa = new System.Windows.Forms.Label();
             this.btnDespesa = new System.Windows.Forms.Button();
             this.btnSaldoAtual = new System.Windows.Forms.Button();
             this.graficoGastoCategoria = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.vwtotalcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lnkLogout = new System.Windows.Forms.LinkLabel();
+            this.vwtotalcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -238,6 +238,7 @@ namespace Granamiza.Forms
             // pbAvatar
             // 
             this.pbAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAvatar.BackColor = System.Drawing.Color.Transparent;
             this.pbAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAvatar.BackgroundImage")));
             this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -257,7 +258,7 @@ namespace Granamiza.Forms
             this.lblBemVindo.AutoSize = true;
             this.lblBemVindo.BackColor = System.Drawing.Color.Transparent;
             this.lblBemVindo.Font = new System.Drawing.Font("SF Pro Display", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBemVindo.ForeColor = System.Drawing.Color.DimGray;
+            this.lblBemVindo.ForeColor = System.Drawing.Color.Gray;
             this.lblBemVindo.Location = new System.Drawing.Point(206, 39);
             this.lblBemVindo.Name = "lblBemVindo";
             this.lblBemVindo.Size = new System.Drawing.Size(331, 20);
@@ -267,10 +268,11 @@ namespace Granamiza.Forms
             // 
             // pnlConteudo
             // 
+            this.pnlConteudo.BackColor = System.Drawing.Color.Transparent;
             this.pnlConteudo.Controls.Add(this.lblAjuda);
             this.pnlConteudo.Controls.Add(this.pbAjuda);
             this.pnlConteudo.Controls.Add(this.lblOla);
-            this.pnlConteudo.Controls.Add(this.label2);
+            this.pnlConteudo.Controls.Add(this.lblGastosPorCategoria);
             this.pnlConteudo.Controls.Add(this.gpVisaoGeral);
             this.pnlConteudo.Controls.Add(this.graficoGastoCategoria);
             this.pnlConteudo.Font = new System.Drawing.Font("SF Pro Display", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,9 +285,9 @@ namespace Granamiza.Forms
             // 
             this.lblAjuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblAjuda.AutoSize = true;
-            this.lblAjuda.BackColor = System.Drawing.Color.White;
+            this.lblAjuda.BackColor = System.Drawing.Color.Transparent;
             this.lblAjuda.Font = new System.Drawing.Font("SF Pro Display", 10.25F);
-            this.lblAjuda.ForeColor = System.Drawing.Color.DimGray;
+            this.lblAjuda.ForeColor = System.Drawing.Color.Gray;
             this.lblAjuda.Location = new System.Drawing.Point(21, 307);
             this.lblAjuda.Name = "lblAjuda";
             this.lblAjuda.Size = new System.Drawing.Size(151, 112);
@@ -297,6 +299,7 @@ namespace Granamiza.Forms
             // pbAjuda
             // 
             this.pbAjuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAjuda.BackColor = System.Drawing.Color.Transparent;
             this.pbAjuda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAjuda.BackgroundImage")));
             this.pbAjuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbAjuda.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -313,33 +316,33 @@ namespace Granamiza.Forms
             // 
             this.lblOla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblOla.AutoSize = true;
-            this.lblOla.BackColor = System.Drawing.Color.White;
+            this.lblOla.BackColor = System.Drawing.Color.Transparent;
             this.lblOla.Font = new System.Drawing.Font("SF Pro Display", 10.25F);
-            this.lblOla.ForeColor = System.Drawing.Color.DimGray;
+            this.lblOla.ForeColor = System.Drawing.Color.Gray;
             this.lblOla.Location = new System.Drawing.Point(84, 272);
             this.lblOla.Name = "lblOla";
             this.lblOla.Size = new System.Drawing.Size(32, 16);
             this.lblOla.TabIndex = 118;
             this.lblOla.Text = "Olá!";
             // 
-            // label2
+            // lblGastosPorCategoria
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("SF Pro Display", 10.25F);
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(445, 422);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 16);
-            this.label2.TabIndex = 115;
-            this.label2.Text = "Gastos por Categoria";
+            this.lblGastosPorCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblGastosPorCategoria.AutoSize = true;
+            this.lblGastosPorCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.lblGastosPorCategoria.Font = new System.Drawing.Font("SF Pro Display", 10.25F);
+            this.lblGastosPorCategoria.ForeColor = System.Drawing.Color.Gray;
+            this.lblGastosPorCategoria.Location = new System.Drawing.Point(445, 422);
+            this.lblGastosPorCategoria.Name = "lblGastosPorCategoria";
+            this.lblGastosPorCategoria.Size = new System.Drawing.Size(132, 16);
+            this.lblGastosPorCategoria.TabIndex = 115;
+            this.lblGastosPorCategoria.Text = "Gastos por Categoria";
             // 
             // gpVisaoGeral
             // 
             this.gpVisaoGeral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(160)))), ((int)(((byte)(112)))));
             this.gpVisaoGeral.Controls.Add(this.lblSaldo);
-            this.gpVisaoGeral.Controls.Add(this.label1);
+            this.gpVisaoGeral.Controls.Add(this.lblReceita);
             this.gpVisaoGeral.Controls.Add(this.btnReceita);
             this.gpVisaoGeral.Controls.Add(this.lblDespesa);
             this.gpVisaoGeral.Controls.Add(this.btnDespesa);
@@ -357,30 +360,30 @@ namespace Granamiza.Forms
             this.lblSaldo.AutoSize = true;
             this.lblSaldo.BackColor = System.Drawing.Color.White;
             this.lblSaldo.Font = new System.Drawing.Font("SF Pro Display", 10.25F);
-            this.lblSaldo.ForeColor = System.Drawing.Color.DimGray;
+            this.lblSaldo.ForeColor = System.Drawing.Color.Gray;
             this.lblSaldo.Location = new System.Drawing.Point(242, 56);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(72, 16);
             this.lblSaldo.TabIndex = 0;
             this.lblSaldo.Text = "Saldo atual";
             // 
-            // label1
+            // lblReceita
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("SF Pro Display", 10.25F);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(15, 178);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
-            this.label1.TabIndex = 113;
-            this.label1.Text = "Receita";
+            this.lblReceita.AutoSize = true;
+            this.lblReceita.BackColor = System.Drawing.Color.White;
+            this.lblReceita.Font = new System.Drawing.Font("SF Pro Display", 10.25F);
+            this.lblReceita.ForeColor = System.Drawing.Color.Gray;
+            this.lblReceita.Location = new System.Drawing.Point(15, 178);
+            this.lblReceita.Name = "lblReceita";
+            this.lblReceita.Size = new System.Drawing.Size(51, 16);
+            this.lblReceita.TabIndex = 113;
+            this.lblReceita.Text = "Receita";
             // 
             // btnReceita
             // 
             this.btnReceita.BackColor = System.Drawing.Color.White;
             this.btnReceita.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReceita.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnReceita.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnReceita.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnReceita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -402,7 +405,7 @@ namespace Granamiza.Forms
             this.lblDespesa.AutoSize = true;
             this.lblDespesa.BackColor = System.Drawing.Color.White;
             this.lblDespesa.Font = new System.Drawing.Font("SF Pro Display", 10.25F);
-            this.lblDespesa.ForeColor = System.Drawing.Color.DimGray;
+            this.lblDespesa.ForeColor = System.Drawing.Color.Gray;
             this.lblDespesa.Location = new System.Drawing.Point(15, 118);
             this.lblDespesa.Name = "lblDespesa";
             this.lblDespesa.Size = new System.Drawing.Size(107, 16);
@@ -413,7 +416,7 @@ namespace Granamiza.Forms
             // 
             this.btnDespesa.BackColor = System.Drawing.Color.White;
             this.btnDespesa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDespesa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDespesa.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnDespesa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnDespesa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnDespesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -432,19 +435,19 @@ namespace Granamiza.Forms
             // 
             // btnSaldoAtual
             // 
-            this.btnSaldoAtual.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSaldoAtual.BackColor = System.Drawing.Color.White;
             this.btnSaldoAtual.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnSaldoAtual.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSaldoAtual.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnSaldoAtual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnSaldoAtual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnSaldoAtual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaldoAtual.Font = new System.Drawing.Font("SF Pro Display", 16.75F, System.Drawing.FontStyle.Bold);
             this.btnSaldoAtual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(160)))), ((int)(((byte)(112)))));
             this.btnSaldoAtual.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaldoAtual.Location = new System.Drawing.Point(1, 7);
+            this.btnSaldoAtual.Location = new System.Drawing.Point(0, 8);
             this.btnSaldoAtual.Name = "btnSaldoAtual";
             this.btnSaldoAtual.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.btnSaldoAtual.Size = new System.Drawing.Size(551, 94);
+            this.btnSaldoAtual.Size = new System.Drawing.Size(552, 94);
             this.btnSaldoAtual.TabIndex = 114;
             this.btnSaldoAtual.Text = "R$ 12.452,00";
             this.btnSaldoAtual.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -453,16 +456,22 @@ namespace Granamiza.Forms
             // 
             // graficoGastoCategoria
             // 
+            this.graficoGastoCategoria.BackColor = System.Drawing.Color.Transparent;
             this.graficoGastoCategoria.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            this.graficoGastoCategoria.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.graficoGastoCategoria.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            this.graficoGastoCategoria.BackSecondaryColor = System.Drawing.Color.Transparent;
+            this.graficoGastoCategoria.BorderlineColor = System.Drawing.Color.Gainsboro;
             this.graficoGastoCategoria.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.graficoGastoCategoria.BorderSkin.BackColor = System.Drawing.Color.Transparent;
+            this.graficoGastoCategoria.BorderSkin.PageColor = System.Drawing.Color.Transparent;
             chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.graficoGastoCategoria.ChartAreas.Add(chartArea1);
             this.graficoGastoCategoria.DataSource = this.vwtotalcategoriaBindingSource;
+            legend1.BackColor = System.Drawing.Color.Transparent;
             legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.Color.DimGray;
+            legend1.ForeColor = System.Drawing.Color.Gray;
             legend1.IsTextAutoFit = false;
             legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
             legend1.Name = "Legend1";
@@ -478,11 +487,11 @@ namespace Granamiza.Forms
             series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series1.Label = "#PERCENT{P1}";
             series1.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series1.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            series1.LabelForeColor = System.Drawing.Color.Gray;
             series1.Legend = "Legend1";
             series1.LegendText = "#VALX";
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Series1";
+            series1.Name = "LblPorcentagemCategorias";
             series1.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
             series1.XValueMember = "nome";
             series1.YValueMembers = "quantidade";
@@ -490,10 +499,6 @@ namespace Granamiza.Forms
             this.graficoGastoCategoria.Size = new System.Drawing.Size(407, 208);
             this.graficoGastoCategoria.TabIndex = 3;
             this.graficoGastoCategoria.Text = "Gráfico";
-            // 
-            // vwtotalcategoriaBindingSource
-            // 
-            this.vwtotalcategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtotalcategoria);
             // 
             // lnkLogout
             // 
@@ -510,6 +515,10 @@ namespace Granamiza.Forms
             this.lnkLogout.Text = "SAIR";
             this.lnkLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLogout_LinkClicked);
             // 
+            // vwtotalcategoriaBindingSource
+            // 
+            this.vwtotalcategoriaBindingSource.DataSource = typeof(Granamiza.Modelo.vwtotalcategoria);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -517,7 +526,7 @@ namespace Granamiza.Forms
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(16)))), ((int)(((byte)(11)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.lnkLogout);
@@ -562,21 +571,21 @@ namespace Granamiza.Forms
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Panel pnlConteudo;
-        private System.Windows.Forms.GroupBox gpVisaoGeral;
-        private System.Windows.Forms.Button btnReceita;
-        private System.Windows.Forms.Button btnDespesa;
-        private System.Windows.Forms.Label lblDespesa;
-        private System.Windows.Forms.Label lblSaldo;
         private System.Windows.Forms.LinkLabel lnkLogout;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSaldoAtual;
         private System.Windows.Forms.Button btnPreferencias;
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoGastoCategoria;
         private System.Windows.Forms.BindingSource vwtotalcategoriaBindingSource;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblGastosPorCategoria;
         private System.Windows.Forms.Label lblAjuda;
         private System.Windows.Forms.PictureBox pbAjuda;
         private System.Windows.Forms.Label lblOla;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox gpVisaoGeral;
+        private System.Windows.Forms.Label lblSaldo;
+        private System.Windows.Forms.Label lblReceita;
+        private System.Windows.Forms.Button btnReceita;
+        private System.Windows.Forms.Label lblDespesa;
+        private System.Windows.Forms.Button btnDespesa;
+        private System.Windows.Forms.Button btnSaldoAtual;
     }
 }

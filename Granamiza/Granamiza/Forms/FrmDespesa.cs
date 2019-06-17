@@ -24,7 +24,6 @@ namespace Granamiza.Forms
             objCategoriaDespesa = new CategoriaDespesa();
             objDespesa = new Despesa();
             cbCategoria.DataSource = objCategoriaDespesa.Listar();
-
         }
 
         public FrmDespesa(int idTransacao, decimal valor, string nomeCategoria, string descricao)
@@ -35,6 +34,9 @@ namespace Granamiza.Forms
             numValor.Value = valor;
             cbCategoria.Text = nomeCategoria;
             txtDesc.Text = descricao;
+            objCategoriaDespesa = new CategoriaDespesa();
+            objDespesa = new Despesa();
+            cbCategoria.DataSource = objCategoriaDespesa.Listar();
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
