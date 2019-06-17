@@ -56,7 +56,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNome.ForeColor = System.Drawing.Color.Gray;
             this.lblNome.Location = new System.Drawing.Point(80, 87);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(41, 15);
@@ -77,7 +77,7 @@
             this.txtNome.BackColor = System.Drawing.Color.White;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNome.Font = new System.Drawing.Font("SF Pro Display", 11.75F, System.Drawing.FontStyle.Bold);
-            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNome.ForeColor = System.Drawing.Color.Black;
             this.txtNome.Location = new System.Drawing.Point(83, 106);
             this.txtNome.Name = "txtNome";
             this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -100,7 +100,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
             this.label3.Location = new System.Drawing.Point(80, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 15);
@@ -121,7 +121,9 @@
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblInfo.Font = new System.Drawing.Font("SF Pro Display", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Gray;
             this.lblInfo.Location = new System.Drawing.Point(41, 10);
             this.lblInfo.MaximumSize = new System.Drawing.Size(396, 26);
             this.lblInfo.MinimumSize = new System.Drawing.Size(100, 26);
@@ -142,7 +144,7 @@
             this.btnAlterarSenha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAlterarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterarSenha.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAlterarSenha.ForeColor = System.Drawing.Color.Gray;
             this.btnAlterarSenha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarSenha.Location = new System.Drawing.Point(83, 299);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
@@ -162,7 +164,7 @@
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Gray;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(433, 405);
@@ -183,7 +185,7 @@
             this.btnOk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOk.ForeColor = System.Drawing.Color.Gray;
             this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
             this.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOk.Location = new System.Drawing.Point(433, 364);
@@ -197,7 +199,7 @@
             // 
             // btnDesligarDarkMode
             // 
-            this.btnDesligarDarkMode.BackColor = System.Drawing.Color.White;
+            this.btnDesligarDarkMode.BackColor = System.Drawing.Color.Transparent;
             this.btnDesligarDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDesligarDarkMode.Enabled = false;
             this.btnDesligarDarkMode.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
@@ -205,7 +207,7 @@
             this.btnDesligarDarkMode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnDesligarDarkMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesligarDarkMode.Font = new System.Drawing.Font("SF Pro Display", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesligarDarkMode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDesligarDarkMode.ForeColor = System.Drawing.Color.Gray;
             this.btnDesligarDarkMode.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDesligarDarkMode.Location = new System.Drawing.Point(82, 3);
             this.btnDesligarDarkMode.Name = "btnDesligarDarkMode";
@@ -233,7 +235,7 @@
             // 
             // btnLigarDarkMode
             // 
-            this.btnLigarDarkMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(160)))), ((int)(((byte)(112)))));
+            this.btnLigarDarkMode.BackColor = System.Drawing.Color.Transparent;
             this.btnLigarDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLigarDarkMode.Enabled = false;
             this.btnLigarDarkMode.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
@@ -256,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnAlterarSenha);

@@ -9,7 +9,6 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Granamiza.Forms
 {
@@ -24,6 +23,8 @@ namespace Granamiza.Forms
         public FrmPrincipal()
         {
             InitializeComponent();
+
+            DefinirModoLayout();
 
             lblBemVindo.Text = "Seja bem vindo(a), " + Sessao.NomeUsuario;
             pbAvatar.ImageLocation = Sessao.AvatarUsuario;
@@ -47,11 +48,11 @@ namespace Granamiza.Forms
             decimal valorDespesasAtivas = valorDespesas - valorDespesasPagas;
             decimal saldoAtual = valorReceitaTotal - valorDespesasPagas;
 
-            
+
             SetValorTexto(valorReceitaTotal, btnReceita);
             SetValorTexto(saldoAtual, btnSaldoAtual);
 
-            if(saldoAtual > 0)
+            if (saldoAtual > 0)
             {
                 btnSaldoAtual.ForeColor = Color.FromArgb(119, 160, 112);
                 gpVisaoGeral.BackColor = Color.FromArgb(119, 160, 112);
@@ -63,7 +64,7 @@ namespace Granamiza.Forms
                 gpVisaoGeral.BackColor = Color.FromArgb(191, 93, 101);
             }
 
-            if(valorDespesasAtivas > 0)
+            if (valorDespesasAtivas > 0)
             {
                 SetValorTexto(valorDespesasAtivas, btnDespesa);
             }
@@ -134,7 +135,7 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Gerenciamento de Receita";
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
-            UcTransacao uc = new UcTransacao(btnMenuReceita);
+            UcTransacao uc = new UcTransacao(btnMenuReceita, this);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
         }
@@ -144,7 +145,7 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Gerenciamento de Despesa";
             lblBemVindo.ForeColor = Color.FromArgb(191, 93, 101);
-            UcTransacao uc = new UcTransacao(btnMenuDespesa);
+            UcTransacao uc = new UcTransacao(btnMenuDespesa, this);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
         }
@@ -153,7 +154,7 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Simulador de Investimentos";
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
-            UcSimularInvestimento uc = new UcSimularInvestimento();
+            UcSimularInvestimento uc = new UcSimularInvestimento(this);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
         }
@@ -194,9 +195,50 @@ namespace Granamiza.Forms
         {
             lblBemVindo.Text = "Preferências";
             lblBemVindo.ForeColor = Color.FromArgb(119, 160, 112);
-            UcPreferencias uc = new UcPreferencias();
+            UcPreferencias uc = new UcPreferencias(this);
             pnlConteudo.Controls.Clear();
             pnlConteudo.Controls.Add(uc);
+        }
+
+        internal void DefinirModoLayout()
+        {
+            sbyte dark_mode = Sessao.DarkMode;
+
+            if (dark_mode == 1)
+            {
+                var cor_borda = Color.DarkSlateGray;
+                var cor_fundo = Color.FromArgb(11, 16, 11);
+
+                BackColor = cor_fundo;
+                lblDespesa.BackColor = cor_fundo;
+                lblReceita.BackColor = cor_fundo;
+                lblSaldo.BackColor = cor_fundo;
+                btnDespesa.BackColor = cor_fundo;
+                btnDespesa.FlatAppearance.BorderColor = cor_borda;
+                btnReceita.BackColor = cor_fundo;
+                btnReceita.FlatAppearance.BorderColor = cor_borda;
+                btnSaldoAtual.BackColor = cor_fundo;
+                btnSaldoAtual.FlatAppearance.BorderColor = cor_borda;
+                graficoGastoCategoria.BorderlineColor = cor_borda;
+            }
+
+            else
+            {
+                var cor_borda = Color.Gainsboro;
+                var cor_fundo = Color.White;
+
+                BackColor = cor_fundo;
+                lblDespesa.BackColor = cor_fundo;
+                lblReceita.BackColor = cor_fundo;
+                lblSaldo.BackColor = cor_fundo;
+                btnDespesa.BackColor = cor_fundo;
+                btnDespesa.FlatAppearance.BorderColor = cor_borda;
+                btnReceita.BackColor = cor_fundo;
+                btnReceita.FlatAppearance.BorderColor = cor_borda;
+                btnSaldoAtual.BackColor = cor_fundo;
+                btnSaldoAtual.FlatAppearance.BorderColor = cor_borda;
+                graficoGastoCategoria.BorderlineColor = cor_borda;
+            }
         }
     }
 }

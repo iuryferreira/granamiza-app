@@ -18,9 +18,17 @@ namespace Granamiza.Forms.UControl
     {
         bool validou = true;
         sbyte dark_mode = 0;
+        FrmPrincipal frmPai;
 
         public UcPreferencias()
         {
+            InitializeComponent();
+            CarregarPreferenciasSalvas();
+        }
+
+        public UcPreferencias(FrmPrincipal frm_pai)
+        {
+            frmPai = frm_pai;
             InitializeComponent();
             CarregarPreferenciasSalvas();
         }
@@ -94,6 +102,7 @@ namespace Granamiza.Forms.UControl
                 }
                 //_ = new FrmPopupSucesso("Preferências atualizadas.", this.ParentForm);
                 MessageBox.Show("Preferências atualizadas.");
+                frmPai.DefinirModoLayout();
             }
         }
 

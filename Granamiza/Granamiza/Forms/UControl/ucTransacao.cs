@@ -26,18 +26,21 @@ namespace Granamiza.Forms.UControl
         decimal valor;
         string nomeCategoria;
         string descricao;
-        private readonly Receita objReceita;
-        private readonly Despesa objDespesa;
+        private Receita objReceita;
+        private Despesa objDespesa;
+        FrmPrincipal frmPai;
 
 
         //Construtor!
-        public UcTransacao(Button botao_clicado)
+        public UcTransacao(Button botao_clicado, FrmPrincipal frm_pai)
         {
             InitializeComponent();
             this.btn_clicado = botao_clicado;
+            this.frmPai = frm_pai;
+            //objReceita = new Receita();
+            //objDespesa = new Despesa();
 
-            objReceita = new Receita();
-            objDespesa = new Despesa();
+            DefinirModoLayout();
         }
 
         //Metodo mais relevante!
@@ -47,18 +50,20 @@ namespace Granamiza.Forms.UControl
             //do gridview para receber somente os dados de transacões que não são gastos
             if (btn_clicado.Name == "btnMenuReceita")
             {
+                objReceita = new Receita();
+
                 AtualizarGrid("receita");
 
                 btnAdicionar.Image = global::Granamiza.Properties.Resources.plus_2_;
-
-
-
             }
             //Se o botao clicado for de receita, deve se chamar um metodo que defina o datasource
             //do gridview para receber somente os dados de transacões que são gastos
             if (btn_clicado.Name == "btnMenuDespesa")
             {
+                objDespesa = new Despesa();
+
                 AtualizarGrid("despesa");
+
                 btnAdicionar.Image = global::Granamiza.Properties.Resources.plus__2_;
             }
         }
@@ -220,9 +225,9 @@ namespace Granamiza.Forms.UControl
         {
 
             decimal transacaoValorAPagar = objDespesa.GetDespesaSelecionada(idTransacao).valor;
-            decimal saldoAtual = objReceita.GetValorTotal() - objDespesa.GetValorTotalDespesasPagas(); 
+            decimal saldoAtual = objReceita.GetValorTotal() - objDespesa.GetValorTotalDespesasPagas();
 
-            if(transacaoValorAPagar < saldoAtual)
+            if (transacaoValorAPagar < saldoAtual)
             {
                 objDespesa.Pagar(idTransacao);
                 AtualizarGrid("despesa");
@@ -294,10 +299,10 @@ namespace Granamiza.Forms.UControl
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("Deseja Excluir esse Registro?", "Exclusão", 
+            DialogResult resultado = MessageBox.Show("Deseja Excluir esse Registro?", "Exclusão",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if(resultado == DialogResult.Yes)
+            if (resultado == DialogResult.Yes)
             {
                 if (btn_clicado.Name == "btnMenuReceita")
                 {
@@ -315,6 +320,145 @@ namespace Granamiza.Forms.UControl
 
             }
         }
+
+        private void DefinirModoLayout()
+        {
+            sbyte dark_mode = Sessao.DarkMode;
+
+            if (dark_mode == 1)
+            {
+                var cor_back = Color.FromArgb(255, 11, 16, 11);
+                var cor_front = Color.Gray;
+                var color_back_txt = Color.Gray;
+                var color_front_txt = Color.White;
+
+                //-- dgvDespesas
+                dgvDespesas.ColumnHeadersDefaultCellStyle.BackColor = cor_back;
+                dgvDespesas.ColumnHeadersDefaultCellStyle.ForeColor = cor_front;
+                dgvDespesas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvDespesas.BackgroundColor = cor_back;
+
+                dgvDespesas.DefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvDespesas.DefaultCellStyle.BackColor = cor_back;
+                dgvDespesas.DefaultCellStyle.ForeColor = cor_front;
+                //--
+
+                //-- dgvDespesasPagas
+                dgvDespesasPagas.ColumnHeadersDefaultCellStyle.BackColor = cor_back;
+                dgvDespesasPagas.ColumnHeadersDefaultCellStyle.ForeColor = cor_front;
+                dgvDespesasPagas.BackgroundColor = cor_back;
+
+                dgvDespesasPagas.DefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvDespesasPagas.DefaultCellStyle.BackColor = cor_back;
+                dgvDespesasPagas.DefaultCellStyle.ForeColor = cor_front;
+                //--
+
+                //-- dgvReceitas
+                dgvReceitas.ColumnHeadersDefaultCellStyle.BackColor = cor_back;
+                dgvReceitas.ColumnHeadersDefaultCellStyle.ForeColor = cor_front;
+                dgvReceitas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvReceitas.BackgroundColor = cor_back;
+
+                dgvReceitas.DefaultCellStyle.BackColor = cor_back;
+                dgvReceitas.DefaultCellStyle.ForeColor = cor_front;
+                //--
+
+                //-- tabDespesasApagar
+                tabDespesasAPagar.BackColor = cor_back;
+                tabDespesasAPagar.ForeColor = cor_front;
+                //--
+
+                //-- tabDespesasPagas
+                tabDespesasPagas.BackColor = cor_back;
+                tabDespesasPagas.ForeColor = cor_front;
+                //--
+
+                //-- tabDespesasPagas
+                tabReceitasCadastradas.BackColor = cor_back;
+                tabReceitasCadastradas.ForeColor = cor_front;
+                //--
+
+                /*//-- Caixa de valores
+                txtData.BackColor = color_back_txt;
+                txtDesc.BackColor = color_back_txt;
+                txtHora.BackColor = color_back_txt;
+                txtCategoria.BackColor = color_back_txt;
+                txtValor.BackColor = color_back_txt;
+
+                txtData.ForeColor = color_front_txt;
+                txtDesc.ForeColor = color_front_txt;
+                txtHora.ForeColor = color_front_txt;
+                txtCategoria.ForeColor = color_front_txt;
+                txtValor.ForeColor = color_front_txt;
+                //--*/
+
+            }
+
+            else
+            {
+                var cor_back = Color.White;
+                var cor_front = Color.Black;
+                var color_back_txt = Color.White;
+                var color_front_txt = Color.Black;
+
+                //-- dgvDespesas
+                dgvDespesas.ColumnHeadersDefaultCellStyle.BackColor = cor_back;
+                dgvDespesas.ColumnHeadersDefaultCellStyle.ForeColor = cor_front;
+                dgvDespesas.BackgroundColor = cor_back;
+
+                dgvDespesas.DefaultCellStyle.BackColor = cor_back;
+                dgvDespesas.DefaultCellStyle.ForeColor = cor_front;
+                //--
+
+                //-- dgvDespesasPagas
+                dgvDespesasPagas.ColumnHeadersDefaultCellStyle.BackColor = cor_back;
+                dgvDespesasPagas.ColumnHeadersDefaultCellStyle.ForeColor = cor_front;
+                dgvDespesasPagas.BackgroundColor = cor_back;
+
+                dgvDespesasPagas.DefaultCellStyle.BackColor = cor_back;
+                dgvDespesasPagas.DefaultCellStyle.ForeColor = cor_front;
+                //--
+
+                //-- dgvReceitas
+                dgvReceitas.ColumnHeadersDefaultCellStyle.BackColor = cor_back;
+                dgvReceitas.ColumnHeadersDefaultCellStyle.ForeColor = cor_front;
+                dgvReceitas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvReceitas.BackgroundColor = cor_back;
+
+                dgvReceitas.DefaultCellStyle.BackColor = cor_back;
+                dgvReceitas.DefaultCellStyle.ForeColor = cor_front;
+                //--
+
+                //-- tabDespesasApagar
+                tabDespesasAPagar.BackColor = cor_back;
+                tabDespesasAPagar.ForeColor = cor_front;
+                //--
+
+                //-- tabDespesasPagas
+                tabDespesasPagas.BackColor = cor_back;
+                tabDespesasPagas.ForeColor = cor_front;
+                //--
+
+                //-- tabDespesasPagas
+                tabReceitasCadastradas.BackColor = cor_back;
+                tabReceitasCadastradas.ForeColor = cor_front;
+                //--
+
+                /*//-- Caixas de valores
+                txtData.BackColor = color_back_txt;
+                txtDesc.BackColor = color_back_txt;
+                txtHora.BackColor = color_back_txt;
+                txtCategoria.BackColor = color_back_txt;
+                txtValor.BackColor = color_back_txt;
+
+                txtData.ForeColor = color_front_txt;
+                txtDesc.ForeColor = color_front_txt;
+                txtHora.ForeColor = color_front_txt;
+                txtCategoria.ForeColor = color_front_txt;
+                txtValor.ForeColor = color_front_txt;
+                //--*/
+
+            }
+        }
     }
 }
-

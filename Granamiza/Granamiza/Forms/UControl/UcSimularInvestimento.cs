@@ -18,10 +18,13 @@ namespace Granamiza.Forms.UControl
     public partial class UcSimularInvestimento : UserControl
     {
         int idSimulacao;
-        public UcSimularInvestimento()
+        FrmPrincipal frmPai;
+
+        public UcSimularInvestimento(FrmPrincipal frm_pai)
         {
             InitializeComponent();
-            
+            this.frmPai = frm_pai;
+            DefinirModoLayout();
         }
 
         //Chama método para atualizar dados do data grid view
@@ -33,12 +36,11 @@ namespace Granamiza.Forms.UControl
         //Ao clicar no botão calcular, é calculado o valor e salva a simulação no banco de dados 
         private void BtnCalcular_Click(object sender, EventArgs e)
         {
-            if (numValor.Value <= 0 || numJuros.Value <= 0 || numQntMeses.Value <= 0)
+            if (numValor.Value <= 0 && numJuros.Value <= 0 && numQntMeses.Value <= 0)
             {
-                MessageBox.Show("Preecha os campos obrigatórios adequadamente com valores maiores que 0.");
+                MessageBox.Show("Preencha os dados obrigatórios com valores maiores que 0.");
                 return;
             }
-
             double rendTotal;
             rendTotal = CalcularInvestimento(numValor.Value, numJuros.Value, numAplicacoesMensais.Value, Convert.ToInt32(numQntMeses.Value));
 
@@ -96,8 +98,9 @@ namespace Granamiza.Forms.UControl
             try
             {
                 idSimulacao = int.Parse(dgvSimulacao.Rows[e.RowIndex].Cells[0].Value.ToString());
-                btnRemover.Enabled = true;
+                btnCalcular.Enabled = true;
                 btnLimpar.Enabled = true;
+                btnRemover.Enabled = true;
                 CarregarDadosSimulacao();
             }
             catch (Exception)
@@ -137,7 +140,7 @@ namespace Granamiza.Forms.UControl
                 _ = new FrmPopupErro();
             }
         }
-        
+
         //--- Ao clicar em algum campo, invoca método que apagam data e hora
         private void NumValor_Click(object sender, EventArgs e)
         {
@@ -162,8 +165,8 @@ namespace Granamiza.Forms.UControl
         //Limpa data e hora
         private void LimparDataHora()
         {
-            txtData.Text = string.Empty;
-            txtHora.Text = string.Empty;
+            txtData.Text = String.Empty;
+            txtHora.Text = String.Empty;
         }
 
         //Limpa todos os dados das caixas de texto
@@ -173,17 +176,59 @@ namespace Granamiza.Forms.UControl
             numJuros.Value = 0;
             numAplicacoesMensais.Value = 0;
             numQntMeses.Value = 0;
-            lblRendimentoTotal.Text = string.Empty;
-            txtData.Text = string.Empty;
-            txtHora.Text = string.Empty;
-            btnRemover.Enabled = false;
+            lblRendimentoTotal.Text = String.Empty;
+            txtData.Text = String.Empty;
+            txtHora.Text = String.Empty;
             btnLimpar.Enabled = false;
+            btnRemover.Enabled = false;
         }
 
-        private void BtnLimpar_Click_1(object sender, EventArgs e)
+        private void DefinirModoLayout()
+        {
+            sbyte dark_mode = Sessao.DarkMode;
+
+            if (dark_mode == 1)
+            {
+                var cor_back = Color.FromArgb(255, 11, 16, 11);
+                var cor_front = Color.Gray;
+                var color_back_txt = Color.DimGray;
+
+                //-- DgvDespesasPagas
+                dgvSimulacao.ColumnHeadersDefaultCellStyle.BackColor = cor_back;
+                dgvSimulacao.ColumnHeadersDefaultCellStyle.ForeColor = cor_front;
+                dgvSimulacao.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvSimulacao.BackgroundColor = cor_back;
+
+                dgvSimulacao.DefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvSimulacao.DefaultCellStyle.BackColor = cor_back;
+                dgvSimulacao.DefaultCellStyle.ForeColor = cor_front;
+                //--
+
+            }
+
+            else
+            {
+                var cor_back = Color.White;
+                var cor_front = Color.Black;
+                var color_back_txt = Color.White;
+
+                //-- DgvDespesasPagas
+                dgvSimulacao.ColumnHeadersDefaultCellStyle.BackColor = cor_back;
+                dgvSimulacao.ColumnHeadersDefaultCellStyle.ForeColor = cor_front;
+                dgvSimulacao.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvSimulacao.BackgroundColor = cor_back;
+
+                dgvSimulacao.DefaultCellStyle.SelectionBackColor = Color.FromArgb(119, 160, 112);
+                dgvSimulacao.DefaultCellStyle.BackColor = cor_back;
+                dgvSimulacao.DefaultCellStyle.ForeColor = cor_front;
+                //--
+
+            }
+        }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
         {
             LimparDados();
         }
     }
 }
-
