@@ -1,4 +1,5 @@
-﻿using Granamiza.App.Autenticacao;
+﻿using Granamiza.App.API;
+using Granamiza.App.Autenticacao;
 using Granamiza.App.CRUD.Categoria;
 using Granamiza.App.CRUD.Transacao;
 using Granamiza.Forms.UControl;
@@ -23,7 +24,7 @@ namespace Granamiza.Forms
         public FrmPrincipal()
         {
             InitializeComponent();
-
+            _ = new Cotacao();
             lblBemVindo.Text = "Seja bem vindo(a), " + Sessao.NomeUsuario;
             pbAvatar.ImageLocation = Sessao.AvatarUsuario;
 
@@ -36,10 +37,9 @@ namespace Granamiza.Forms
 
         private void AtualizarValores()
         {
-            graficoGastoCategoria.DataSource = null;
-
+            graficoGastoCategoria.Series.Clear();
             graficoGastoCategoria.DataSource = objCategoriaDespesa.ListarQuantidadeCategorias();
-
+            graficoGastoCategoria.Series.Add(dadosGraficoTotalCategoria);
             decimal valorDespesas = objDespesa.GetValorTotal();
             decimal valorDespesasPagas = objDespesa.GetValorTotalDespesasPagas();
             decimal valorReceitaTotal = objReceita.GetValorTotal();

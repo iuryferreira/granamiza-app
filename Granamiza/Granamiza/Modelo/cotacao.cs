@@ -15,8 +15,12 @@ namespace Granamiza.Modelo
     public partial class cotacao
     {
         public int id { get; set; }
-        public string valor_baixa { get; set; }
-        public string valor_alta { get; set; }
+        public decimal valor_dolar { get; set; }
+        public decimal valor_euro { get; set; }
         public System.DateTime data_consulta { get; set; }
+        public decimal valor_bitcoin { get; set; }
+        public int usuario_id { get; set; }
+    
+        public virtual usuario usuario { get; set; }
     }
 }
