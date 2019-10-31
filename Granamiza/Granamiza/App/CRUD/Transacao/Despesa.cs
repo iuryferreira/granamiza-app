@@ -13,7 +13,7 @@ namespace Granamiza.App.CRUD.Transacao
     {
         public void Salvar(decimal valorInserido, int idCategoria, string descricaoInserida)
         {
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {
@@ -49,7 +49,7 @@ namespace Granamiza.App.CRUD.Transacao
 
         public void Atualizar(int idTransacao, decimal valor, int idCategoria, string descricao)
         {
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {
@@ -66,6 +66,7 @@ namespace Granamiza.App.CRUD.Transacao
                     bd.SaveChanges();
                 }
             }
+
             catch
             {
                 _ = new FrmPopupErro();
@@ -74,7 +75,7 @@ namespace Granamiza.App.CRUD.Transacao
 
         public void Excluir(int idTransacao)
         {
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {
@@ -89,6 +90,7 @@ namespace Granamiza.App.CRUD.Transacao
                     bd.SaveChanges();
                 }
             }
+
             catch
             {
                 _ = new FrmPopupErro();
@@ -97,7 +99,7 @@ namespace Granamiza.App.CRUD.Transacao
 
         public List<vwdespesa> Listar()
         {
-            try
+            try 
             {
                 List<vwdespesa> listaDespesas;
 
@@ -119,7 +121,7 @@ namespace Granamiza.App.CRUD.Transacao
 
         public List<vwdespesa> ListarDespesasAtivas()
         {
-            try
+            try 
             {
                 List<vwdespesa> listaDespesasAtivas;
 
@@ -141,7 +143,7 @@ namespace Granamiza.App.CRUD.Transacao
 
         public List<vwdespesa> ListarDespesasPagas()
         {
-            try
+            try 
             {
                 List<vwdespesa> listaDespesas;
 
@@ -163,7 +165,7 @@ namespace Granamiza.App.CRUD.Transacao
 
         public vwdespesa GetDespesaSelecionada(int idTransacao)
         {
-            try
+            try 
             {
                 vwdespesa d;
 
@@ -173,6 +175,7 @@ namespace Granamiza.App.CRUD.Transacao
                 }
                 return d;
             }
+
             catch
             {
                 _ = new FrmPopupErro();
@@ -183,13 +186,14 @@ namespace Granamiza.App.CRUD.Transacao
         public int GetQuantidade()
         {
             int qtdDespesas = 0;
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {
                     qtdDespesas = bd.vwdespesa.Count(r => r.usuario_id == Sessao.IdUsuario);
                 }
             }
+
             catch
             {
                 _ = new FrmPopupErro();
@@ -202,7 +206,7 @@ namespace Granamiza.App.CRUD.Transacao
         {
             int qtdDespesasPagas = 0;
 
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {
@@ -210,6 +214,7 @@ namespace Granamiza.App.CRUD.Transacao
                         .Where(dp => dp.debitada == true).Count();
                 }
             }
+
             catch
             {
                 _ = new FrmPopupErro();
@@ -222,13 +227,14 @@ namespace Granamiza.App.CRUD.Transacao
         {
             decimal valorDespesaTotal = 0;
 
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {
-                    valorDespesaTotal = bd.vwdespesa.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor);
+                    valorDespesaTotal = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario).Sum(d => (decimal?)d.valor) ?? 0;
                 }
             }
+             
             catch
             {
                 _ = new FrmPopupErro();
@@ -240,15 +246,15 @@ namespace Granamiza.App.CRUD.Transacao
         {
             decimal valorDespesasAtivas = 0;
 
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {
                     valorDespesasAtivas = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario)
-                        .Where(d => d.debitada == false).Sum(d => d.valor);
+                        .Where(d => d.debitada == false).Sum(d => (decimal?)d.valor) ?? 0;
                 }
             }
-
+             
             catch
             {
                 _ = new FrmPopupErro();
@@ -261,16 +267,17 @@ namespace Granamiza.App.CRUD.Transacao
         {
             decimal valorDespesasPagas = 0;
 
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {
                     valorDespesasPagas = bd.vwdespesa.Where(d => d.usuario_id == Sessao.IdUsuario)
-                        .Where(d => d.debitada == true).Sum(d => d.valor);
+                        .Where(d => d.debitada == true).Sum(d => (decimal?)d.valor) ?? 0;
                 }
             }
-
+             
             catch
+
             {
                 _ = new FrmPopupErro();
             }
@@ -280,7 +287,7 @@ namespace Granamiza.App.CRUD.Transacao
 
         public void Pagar(int idTransacao)
         {
-            try
+            try 
             {
                 using (var bd = new granamizaEntities())
                 {

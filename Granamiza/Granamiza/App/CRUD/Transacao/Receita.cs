@@ -170,7 +170,7 @@ namespace Granamiza.App.CRUD.Transacao
             {
                 using (var bd = new granamizaEntities())
                 {
-                    valorReceitaTotal = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => r.valor);
+                    valorReceitaTotal = bd.vwreceita.Where(r => r.usuario_id == Sessao.IdUsuario).Sum(r => (decimal?)r.valor) ?? 0;
 
                 }
             }
