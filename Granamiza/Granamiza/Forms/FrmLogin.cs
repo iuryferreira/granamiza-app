@@ -128,5 +128,13 @@ namespace Granamiza.Forms
         {
             lblErroAutenticacao.Visible = false;
         }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                BtnEntrar_Click(sender, e);
+            }
+        }
     }
 }

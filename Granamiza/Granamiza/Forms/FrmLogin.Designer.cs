@@ -186,6 +186,7 @@
             this.txtSenha.TabIndex = 81;
             this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
             // linhaSenha
             // 
