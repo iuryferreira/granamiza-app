@@ -118,5 +118,15 @@ namespace Granamiza.Forms
             this.Hide();
             frmRedefinirSenha.Show();
         }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            lblErroAutenticacao.Visible = false;
+        }
+
+        private void txtSenha_Click(object sender, EventArgs e)
+        {
+            lblErroAutenticacao.Visible = false;
+        }
     }
 }

@@ -56,7 +56,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(106, 12);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(292, 64);
+            this.lblTitulo.Size = new System.Drawing.Size(283, 64);
             this.lblTitulo.TabIndex = 63;
             this.lblTitulo.Text = "Granamiza";
             this.lblTitulo.MouseEnter += new System.EventHandler(this.LblTitulo_MouseEnter);
@@ -185,6 +185,7 @@
             this.txtSenha.Size = new System.Drawing.Size(306, 20);
             this.txtSenha.TabIndex = 81;
             this.txtSenha.UseSystemPasswordChar = true;
+            this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
             // 
             // linhaSenha
             // 
@@ -205,6 +206,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(306, 20);
             this.txtEmail.TabIndex = 80;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblErroAutenticacao
             // 
