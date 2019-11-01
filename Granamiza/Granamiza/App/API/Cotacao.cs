@@ -112,7 +112,7 @@ namespace Granamiza.App.API
         }
 
 
-        internal void Salvar(string valor_dolar, string valor_euro, string valor_bitcoin)
+        internal bool Salvar(string valor_dolar, string valor_euro, string valor_bitcoin)
         {
             //Currency utiliza as configurações regionais do Windows para detectar a moeda corrente
             decimal valorUSD = decimal.Parse(valor_dolar, NumberStyles.Currency); 
@@ -134,12 +134,14 @@ namespace Granamiza.App.API
 
                     bd.cotacao.Add(c);
                     bd.SaveChanges();
+                    return true;
                 }
             }
 
             catch
             {
                 _ = new FrmPopupErro();
+                return false;
             }
 
         }
