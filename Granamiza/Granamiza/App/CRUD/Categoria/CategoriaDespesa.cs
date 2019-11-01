@@ -54,6 +54,7 @@ namespace Granamiza.App.CRUD.Categoria
 
                 return idCategoria;
             }
+
             catch
             {
                 _ = new FrmPopupErro();
@@ -116,8 +117,8 @@ namespace Granamiza.App.CRUD.Categoria
         {
             List<vwtotalcategoria> tc;
 
-            try
-            {
+            //try
+            //{
                 using (var bd = new granamizaEntities())
                 {
                     tc = bd.vwtotalcategoria.Where(c => c.usuario_id == Sessao.IdUsuario).ToList();
@@ -130,12 +131,12 @@ namespace Granamiza.App.CRUD.Categoria
 
                 var listaCategoria = tc ?? null;
                 return listaCategoria;
-            }
+            /*}
             catch
             {
                 _ = new FrmPopupErro();
                 return null;
-            }
+            }*/
         }
 
         public List<vwcategoriadespesa> ListarCategoriasDespesasPagas()

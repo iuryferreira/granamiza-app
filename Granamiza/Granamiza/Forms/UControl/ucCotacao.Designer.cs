@@ -467,7 +467,7 @@
             // valor_dolar
             // 
             this.valor_dolar.DataPropertyName = "valor_dolar";
-            dataGridViewCellStyle3.Format = "C3";
+            dataGridViewCellStyle3.Format = "C2";
             dataGridViewCellStyle3.NullValue = null;
             this.valor_dolar.DefaultCellStyle = dataGridViewCellStyle3;
             this.valor_dolar.HeaderText = "Dolar (USD)";
@@ -478,7 +478,7 @@
             // valor_euro
             // 
             this.valor_euro.DataPropertyName = "valor_euro";
-            dataGridViewCellStyle4.Format = "C3";
+            dataGridViewCellStyle4.Format = "C2";
             dataGridViewCellStyle4.NullValue = null;
             this.valor_euro.DefaultCellStyle = dataGridViewCellStyle4;
             this.valor_euro.HeaderText = "Euro (EUR)";
@@ -489,7 +489,7 @@
             // valor_bitcoin
             // 
             this.valor_bitcoin.DataPropertyName = "valor_bitcoin";
-            dataGridViewCellStyle5.Format = "C3";
+            dataGridViewCellStyle5.Format = "C2";
             dataGridViewCellStyle5.NullValue = null;
             this.valor_bitcoin.DefaultCellStyle = dataGridViewCellStyle5;
             this.valor_bitcoin.HeaderText = "Bitcoin (BTC)";

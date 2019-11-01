@@ -8,7 +8,7 @@ namespace Granamiza.App.API
 {
     public static class Bitcoin
     {
-        private static String nomeMoeda;
+        private static string nomeMoeda;
         private static string valorAlta;
         private static string valorBaixa;
         private static DateTime dataConsulta;

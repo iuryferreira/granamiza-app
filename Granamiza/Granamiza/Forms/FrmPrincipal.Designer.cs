@@ -147,7 +147,7 @@ namespace Granamiza.Forms
             this.btnCotacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCotacao.Location = new System.Drawing.Point(0, 305);
             this.btnCotacao.Name = "btnCotacao";
-            this.btnCotacao.Size = new System.Drawing.Size(166, 55);
+            this.btnCotacao.Size = new System.Drawing.Size(170, 55);
             this.btnCotacao.TabIndex = 86;
             this.btnCotacao.Text = "Cotações";
             this.btnCotacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -167,7 +167,7 @@ namespace Granamiza.Forms
             this.btnSimulacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSimulacao.Location = new System.Drawing.Point(0, 250);
             this.btnSimulacao.Name = "btnSimulacao";
-            this.btnSimulacao.Size = new System.Drawing.Size(166, 55);
+            this.btnSimulacao.Size = new System.Drawing.Size(170, 55);
             this.btnSimulacao.TabIndex = 85;
             this.btnSimulacao.Text = "Simulação";
             this.btnSimulacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -187,7 +187,7 @@ namespace Granamiza.Forms
             this.btnMenuDespesa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuDespesa.Location = new System.Drawing.Point(0, 195);
             this.btnMenuDespesa.Name = "btnMenuDespesa";
-            this.btnMenuDespesa.Size = new System.Drawing.Size(166, 55);
+            this.btnMenuDespesa.Size = new System.Drawing.Size(170, 55);
             this.btnMenuDespesa.TabIndex = 84;
             this.btnMenuDespesa.Text = "Despesas";
             this.btnMenuDespesa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -215,7 +215,7 @@ namespace Granamiza.Forms
             this.btnMenuReceita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuReceita.Location = new System.Drawing.Point(0, 140);
             this.btnMenuReceita.Name = "btnMenuReceita";
-            this.btnMenuReceita.Size = new System.Drawing.Size(166, 55);
+            this.btnMenuReceita.Size = new System.Drawing.Size(170, 55);
             this.btnMenuReceita.TabIndex = 83;
             this.btnMenuReceita.Text = "Receita";
             this.btnMenuReceita.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
