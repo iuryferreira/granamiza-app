@@ -8,6 +8,7 @@ using Granamiza.Forms.Popup;
 using System.Collections.Generic;
 using Granamiza.App.Autenticacao;
 using System.Linq;
+using System.Globalization;
 
 namespace Granamiza.App.API
 {
@@ -17,8 +18,7 @@ namespace Granamiza.App.API
 
         public Cotacao()
         {
-            AtualizarMoedasAsync();
-
+            _ = AtualizarMoedasAsync();
         }
 
         private async Task<dynamic> EnviarRequisicaoAsync(string url)
@@ -32,7 +32,6 @@ namespace Granamiza.App.API
             // Send the request to the Internet resource and wait for
             // the response.
             using (WebResponse response = await webReq.GetResponseAsync())
-
             {
                 // Get the data stream that is associated with the specified url.
                 using (Stream responseStream = response.GetResponseStream())
@@ -59,6 +58,7 @@ namespace Granamiza.App.API
                 }
                 return listaCotacao;
             }
+
             catch
             {
                 _ = new FrmPopupErro();
@@ -79,13 +79,11 @@ namespace Granamiza.App.API
             string url;
             url = apiUrl + "USD-BRL";
 
-            var dados = await EnviarRequisicaoAsync(url);
+            dynamic dados = await EnviarRequisicaoAsync(url);
 
             Dolar.ValorAlta = dados.USD.high;
             Dolar.ValorBaixa = dados.USD.low;
             Dolar.DataConsulta = dados.USD.create_date;
-
-
         }
 
         internal async Task AtualizarEuroAsync()
@@ -116,10 +114,10 @@ namespace Granamiza.App.API
 
         internal void Salvar(string valor_dolar, string valor_euro, string valor_bitcoin)
         {
-
-            decimal valorUSD = Convert.ToDecimal(valor_dolar);
-            decimal valorEUR = Convert.ToDecimal(valor_euro);
-            decimal valorBTC = Convert.ToDecimal(valor_bitcoin);
+            //Currency utiliza as configurações regionais do Windows para detectar a moeda corrente
+            decimal valorUSD = decimal.Parse(valor_dolar, NumberStyles.Currency); 
+            decimal valorEUR = decimal.Parse(valor_euro, NumberStyles.Currency); 
+            decimal valorBTC = decimal.Parse(valor_bitcoin, NumberStyles.Currency); 
 
             try
             {
@@ -138,12 +136,11 @@ namespace Granamiza.App.API
                     bd.SaveChanges();
                 }
             }
+
             catch
             {
                 _ = new FrmPopupErro();
             }
-
-
 
         }
 
@@ -161,11 +158,11 @@ namespace Granamiza.App.API
                     bd.SaveChanges();
                 }
             }
+
             catch
             {
                 _ = new FrmPopupErro();
             }
         }
-
     }
 }

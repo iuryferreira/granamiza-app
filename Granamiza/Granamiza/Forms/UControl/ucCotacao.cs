@@ -35,11 +35,11 @@ namespace Granamiza.Forms.UControl
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            //Implementar teste antes de mandar salvar
             objCotacao.Salvar(Dolar.ValorAlta, Euro.ValorAlta, Bitcoin.ValorAlta);
             MessageBox.Show("Cotação salva com Sucesso!");
             AtualizarGrid();
             LimparSelecaoGrid();
-            
         }
 
         private void AtualizarGrid()
